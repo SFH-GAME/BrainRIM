@@ -1,0 +1,40 @@
+{
+   "name": "BrainRim",
+   "description": "BrainRim — приложение для развития и самосовершенствования. Узнайте, как становится лучше каждый день. Развивайся с помощью игр.",
+   "short_name": "BrainRim",
+   "lang": "en",
+   "orientation": "portrait",
+   "categories": [
+      "education",
+      "productivity",
+      "health"
+   ],
+   "screenshots": [
+      {
+         "src": "pages/main-page/img/2048.png",
+         "sizes": "872x1920",
+         "type": "image/png"
+      },
+      {
+         "src": "pages/main-page/img/Funct.png",
+         "sizes": "872x1920",
+         "type": "image/png"
+      }
+   ],
+   "start_url": "/",
+   "display": "fullscreen",
+   "background_color": "#273744",
+   "theme_color": "#273744",
+   "icons": [
+      {
+         "src": "/img/app_icon_with_larger_area_192.png",
+         "sizes": "192x192",
+         "type": "image/png"
+      },
+      {
+         "src": "/img/app_icon_with_larger_area_512.png",
+         "sizes": "512x512",
+         "type": "image/png"
+      }
+   ]
+}
