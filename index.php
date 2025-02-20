@@ -22,7 +22,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          let levelValue = Number(1);
          let memoneyValue = 1;
          let hintsValue = 1;
-         let receiveGiftValue = 1;//Хеллоууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууууу
+         let receiveGiftValue = 1;
          let viewedPopUpValue = 1;
       <?php endif; ?>
    </script>
