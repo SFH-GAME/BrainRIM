@@ -1,0 +1,619 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+ }
+ *,
+ *:before,
+ *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+ }
+ :focus,
+ :active {
+	outline: none;
+ }
+ a:focus,
+ a:active {
+	outline: none;
+ }
+ nav,
+ footer,
+ header,
+ aside {
+	display: block;
+ }
+ html,
+ body {
+	 background: #213242;
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	flex-direction: column;
+	align-items: center;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+ }
+ 
+ input,
+ button,
+ textarea {
+	font-family: 'Balsamiq Sans', cursive;
+ }
+ input::-ms-clear {
+	display: none;
+ }
+ button {
+	cursor: pointer;
+ }
+ button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+ }
+ a,
+ a:visited {
+	text-decoration: none;
+ }
+ a:active {
+	text-decoration: none;
+ }
+ ul li {
+	list-style: none;
+ }
+ img {
+	vertical-align: top;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+	font-size: inherit;
+	font-weight: 400;
+ }
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #213242;
+  font-family: 'Balsamiq Sans', cursive;
+  user-select: none;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	outline: none;
+}
+.start-menu{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 100%;
+   width: 100%;
+   background-color: #213242;
+   z-index: 3;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   -webkit-tap-highlight-color: transparent;
+}
+.button-start{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   height: 180px;
+   width: 180px;
+   font-weight: bold;
+   font-family: 'Balsamiq Sans', cursive;
+   color: #ffffff;
+   font-size: 38px;
+   border: 6px solid #05EFD4;
+   background-color: black;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   -webkit-tap-highlight-color: transparent;
+}
+.start-menu.activated{
+   transition: all 0.5s ;
+   visibility: hidden;
+}
+.button-start.activated{
+   transform: scale(0.0,0.0);
+   transition: 0.7s ;
+   color: rgba(240, 255, 255, 0);
+   background-color: rgba(115, 113, 114, 0);
+   height: 0px;
+   width: 0px;
+   font-size: 0px;
+}
+.game-info-title{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 20%;
+    position: absolute;
+    text-align: center;
+    gap: 15px;
+} 
+.game-info-name {
+    color: #05EFD4;
+	font-size: 24px;
+}
+.game-info{
+    max-width: 350px;
+    color: #ffffff;
+    font-size: 18px;
+}
+.start-menu__best-res-title{
+	display: flex;
+    justify-content: center;
+    position: absolute;
+	 top: 130px;
+	 flex-wrap: wrap;
+	 width: 80%;
+	 font-size: 23px;
+    text-align: center;
+    gap: 15px;
+	 color: white;
+}
+.best-res__value{
+	color: chartreuse;
+}
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#score {
+	position: fixed;
+	top: 60px;
+	left: 15px;
+	height: 50px;
+	width: auto;
+	font-size: 18px;
+	color: #ffffff;
+	z-index: 1;
+	margin: 20px 0 0 0;
+}
+.score-enemy-passed {
+	margin: 10px 0 0 0;
+}
+
+#player {
+	width: 50px;
+	height: 50px;
+	background: #03F0D6;
+	position: absolute;
+	bottom: 10px;
+	left: calc(50% - 25px);
+	border-radius: 5px;
+	border: 1px double #03F0D6;
+}
+
+.enemy {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.results-gameover{
+	display: none;
+}
+
+.results-container{
+	position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    background-color: #213242;
+    z-index: 99;
+	font-size: 24px;
+	color: white;
+
+}
+.results-head-text{
+    margin: 10% 0 0 0;
+    text-align: center;
+    font-size: 38px;
+}
+.results{
+	margin: 15% auto;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 26px;
+    width: 350px;
+	height: 450px;
+}
+.time{
+	display: flex;
+	margin: 10px auto;
+	gap:  10px;
+}
+.moves{
+	display: flex;
+	margin: 10px auto;
+	gap:  10px;
+}
+.best-results{
+	margin: 20px auto;
+}
+.time-count{
+	color: #05EFD4;
+}
+.moves-count{
+	color: #05EFD4;
+}
+.best-time-count{
+	color: rgb(0, 255, 0);
+}
+.best-moves-count{
+	color: rgb(0, 255, 0);
+}
+.congrats{
+    color: rgb(0, 255, 0);
+}
+.loose{
+	color: #ff0000;
+}
+.loose-win-value{
+	font-size: 28px;
+    margin: 20px 0;
+}
+.results-menu__buttons-container {
+    display: flex;
+    justify-content: space-around;
+}
+.results-menu__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 42px;
+    width: 140px;
+    height: 60px;
+    color: #05EFD4;
+    transition: 0.2s;
+    background: #213242;
+    box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Стили верхних кнопок начало*/ 
+.topButton-gameWords {
+	position: absolute;
+	top: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	z-index: 2;
+ }
+ .comeback-button-body{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	font-size: 44px;
+	color: #05EFD4;
+	z-index: 20;
+	transition: 0.1s;
+ }
+ .comeback-button-body:active{
+	transform: scale(0.8);
+ }
+ .linkToTheSettings{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 34px;
+	color: #05EFD4;
+	transition: 1.2s;
+ }
+ .linkToTheSettings:hover{
+	transform: rotate(180deg);
+ }
+ .linkToTheRestart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 34px;
+	font-weight: 900;
+	color: #05EFD4;
+	margin: 0px 10px 0 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	transition: 1.2s;
+ }
+ .linkToTheRestart:hover{
+	transform: rotate(540deg);
+ }
+  .pop-up__container {
+	visibility: hidden;
+	position: absolute;
+	background-color: #02000099;
+	height: 100%;
+	width: 100%;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+ .pop-up {
+	 min-height: 30%;
+	 border-radius: 20px;
+	 width: 85%;
+	 background-color: #213242;
+	 display: flex;
+	 justify-content: space-around;
+	 flex-direction: column;
+ }
+ .pop-up__title{
+	 font-size: 30px;
+	 font-family: 'Balsamiq Sans', cursive;
+	 font-weight: 600;
+	 text-align: center;
+	 color: #05EFD4;
+	 text-decoration: underline;
+ }
+ .pop-up__description{
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 30px;
+	font-family: 'Balsamiq Sans', cursive;
+	text-align: center;
+	padding: 0 20px ;
+	color: #ffffff;
+ }
+ .wrap__button{
+	
+	display: flex;
+	justify-content: center;
+	 align-items: center;
+ width: 100%;
+ height: 40px;
+ }
+ .pop-up__form{
+	display: flex;
+   justify-content: space-around;
+	align-items: center;
+	gap: 60px;
+ }
+ .pop-up__ok {
+	
+	font-size: 20px;
+	display: block;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	padding: 10px 0;
+	height:40px;
+	width: 100px;
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 10px;
+	background-color: rgb(17, 190, 75);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+   
+ }
+ .pop-up__ok:active{
+	transform: scale(0.7);
+ }
+ .pop-up__cancel{
+	font-family: 'Balsamiq Sans', cursive;
+	font-size: 20px;
+	display: block;
+	color: black;
+	padding: 10px 0;
+	font-weight: 600;
+	text-align: center;
+	height:40px;
+	border-radius: 10px;
+	width: 100px;
+	background-color: rgb(194, 45, 45);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+ }
+ .pop-up__cancel:active{
+	transform: scale(0.7);
+ }
+ .pop-up__container2 {
+	visibility: hidden;
+	position: absolute;
+	background-color: #02000099;
+	height: 100%;
+	width: 100%;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+ .pop-up2 {
+	 min-height: 30%;
+	 border-radius: 20px;
+	 width: 85%;
+	 background-color: #213242;
+	 display: flex;
+	 justify-content: space-around;
+	 flex-direction: column;
+ }
+ .pop-up__title2{
+	 font-size: 30px;
+	 font-family: 'Balsamiq Sans', cursive;
+	 font-weight: 600;
+	 text-align: center;
+	 color: #05EFD4;
+	 text-decoration: underline;
+ }
+ .pop-up__description2{
+	font-size: 20px;
+	font-weight: 600;
+	font-family: 'Balsamiq Sans', cursive;
+	text-align: center;
+	padding: 0 20px ;
+	color: #ffffff;
+ }
+ .wrap__button2{
+	
+	display: flex;
+	justify-content: center;
+	 align-items: center;
+ width: 100%;
+ height: 40px;
+ }
+ .pop-up__form2{
+	display: flex;
+   justify-content: space-around;
+	align-items: center;
+	gap: 60px;
+ }
+ .pop-up__ok2 {
+	font-size: 20px;
+	display: block;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	padding: 10px 0;
+	height:40px;
+	width: 100px;
+	background-color: rgb(17, 190, 75);
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+ }
+ .pop-up__ok2:active{
+	transform: scale(0.7);
+ }
+ .pop-up__cancel2{
+	font-size: 20px;
+	display: block;
+	color: black;
+	padding: 10px 0;
+	font-weight: 600;
+	text-align: center;
+	height:40px;
+	width: 100px;
+	background-color: rgb(194, 45, 45);
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+ }
+ .pop-up__cancel2:active{
+	transform: scale(0.7);
+ }
+ 
+ .pop-up__container3 {
+	visibility: hidden;
+	position: absolute;
+	background-color: #02000099;
+	height: 100%;
+	width: 100%;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+ .pop-up3{
+	 min-height: 30%;
+	 border-radius: 20px;
+	 width: 85%;
+	 background-color: #213242;
+	 display: flex;
+	 justify-content: space-around;
+	 flex-direction: column;
+ }
+ .pop-up__title3{
+	 font-size: 30px;
+	 font-family: 'Balsamiq Sans', cursive;
+	 font-weight: 600;
+	 text-align: center;
+	 color: #05EFD4;
+	 text-decoration: underline;
+ }
+ .pop-up__description3{
+	font-size: 20px;
+	font-weight: 600;
+	font-family: 'Balsamiq Sans', cursive;
+	text-align: center;
+	padding: 0 20px ;
+	color: #ffffff;
+ }
+ .wrap__button3{
+	
+	display: flex;
+	justify-content: center;
+	 align-items: center;
+ width: 100%;
+ height: 40px;
+ }
+ .pop-up__form3{
+	display: flex;
+   justify-content: space-around;
+	align-items: center;
+	gap: 60px;
+ }
+ .pop-up__ok3 {
+	font-size: 20px;
+	display: block;
+	color: black;
+	font-weight: 600;
+	text-align: center;
+	padding: 10px 0;
+	height:40px;
+	width: 100px;
+	background-color: rgb(17, 190, 75);
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+ }
+ .pop-up__ok3:active{
+	transform: scale(0.7);
+ }
+ .pop-up__cancel3{
+	font-size: 20px;
+	display: block;
+	color: black;
+	padding: 10px 0;
+	font-weight: 600;
+	text-align: center;
+	height:40px;
+	width: 100px;
+	background-color: rgb(194, 45, 45);
+	font-family: 'Balsamiq Sans', cursive;
+	border-radius: 10px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+ }
+ .pop-up__cancel3:active{
+	transform: scale(0.7);
+ }
+ /* Стили верхних кнопок конец*/ 
