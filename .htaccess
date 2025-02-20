@@ -1,2 +1,0 @@
-php_value session.gc_maxlifetime 604800
-php_value session.cookie_lifetime 60480
