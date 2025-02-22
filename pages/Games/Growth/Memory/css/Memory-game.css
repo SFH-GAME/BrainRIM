@@ -547,6 +547,7 @@ height: 40px;
    transform: scale(0.7);
 }
 
+
 .memory-game {
    width: 90%;
    height: 70%;
@@ -627,6 +628,8 @@ height: 40px;
    backface-visibility: hidden;
    display: none;
 }
+
+
 .topButton-gameWords {
 	display: flex;
 	justify-content: space-between;
