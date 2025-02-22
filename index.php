@@ -66,7 +66,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=1.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=2.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
@@ -365,9 +365,19 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             <div class="games-growth-container hidden">
                <div class="game-item-block">
                   <h2 class="title">Память</h2>
-                  <h2 class="icon"><span>3</span><img src="/img/Games/games_n2ykb0hqc3jy.svg" alt="иконка игр"></h2>
+                  <h2 class="icon"><span>4</span><img src="/img/Games/games_n2ykb0hqc3jy.svg" alt="иконка игр"></h2>
                </div>
                <div class="game-item-block__content">
+                  <a href="/pages/Games/Growth/Memory/saymonSays-game.php">
+                     <div class="game-item">
+                        <h2 class="title">Саймон говорит</h2>
+                        <p class="subtitle">Тренирует <span class="backlight">память</span>. Запомни цвета и повтори
+                           последовательность! 🎯🧠
+                        </p>
+                        <img src="/img/Games/GameSaymonSays.png" alt="память картинка">
+                        <div class="game-item__category">мини-игра</div>
+                     </div>
+                  </a>
                   <a href="/pages/Games/Growth/Memory/Memory-game.php">
                      <div class="game-item">
                         <h2 class="title">Зеркальная память</h2>
@@ -381,9 +391,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Chill/math3/math3.php">
                      <div class="game-item">
                         <h2 class="title">Числовой штурм</h2>
-                        <p class="subtitle">Испытание для <span class="backlight">памяти</span> и <span
-                              class="backlight">концентрации</span>! Запомните числа за <span
-                              class="backlight">20</span> секунд и восстановите их без ошибок! 🔢🧠⏳</p>
+                        <p class="subtitle">Испытание для <span class="backlight">памяти</span>! Запомните числа за
+                           <span class="backlight">20</span> секунд и восстановите их без ошибок! 🔢🧠⏳
+                        </p>
                         <img src="/img/Games/gameNumbrsImage.png" alt="числа картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
