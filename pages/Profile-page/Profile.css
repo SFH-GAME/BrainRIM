@@ -310,9 +310,95 @@ main {
     margin: 10px 0 0 0;
 }
 
-.achievements-txt{
-    margin: 50px auto;
+.achievements{
+	position: relative;
 }
+.achievements-txt{
+	margin: 50px 0 70px 0;
+}
+
+.currencies-popup{
+    background: #DCAC75;
+    border: 2px solid #4A3F35;
+    border-radius: 5px;
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+	position: absolute;
+    z-index: 2;
+}
+.currency-span{
+	color: #753E00;
+	font-size: 20px;
+}
+.currency-divider{
+	width: 120px;
+    height: 2px;
+	background-color: #753E00;
+	margin: 0 0 20px 0;
+}
+.currencies{
+	background: #313a41d2;
+    padding: 5px 15px;
+    border-radius: 8px;
+    width: 250px;
+}
+.currency-background{
+	background: black;
+	width: 200px;
+    height: 24px;
+	border-radius: 10px;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+	font-size: 16px;
+}
+.Braincurrencypct{
+	width: 30%;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.memoneypct{
+	width: 20px;
+}
+.memoney{
+	display: flex;
+    justify-content: center;
+}
+.currency-pct{
+	width: 30px;
+}
+.set-currency{
+	display: flex;
+	align-items: center;
+	margin: 15px auto;
+}
+.exp-currency{
+	display: flex;
+}
+.Braincurrencypctafter{
+	display: none;
+	width: 30%;
+    position: absolute;
+    right: 0;
+    top: -9px;
+	z-index: 2;
+}
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+
+
 .achieve{
     position: relative;
     display: grid;

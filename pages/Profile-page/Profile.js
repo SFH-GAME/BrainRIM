@@ -67,3 +67,31 @@ testButton.onclick = function popUpAlert() {
     alertContainer.style = 'display: none;';
   }, 2000);
 }
+
+
+//pop-up Валюта
+const brainButton = document.querySelector('.Braincurrencypct');
+const currencypopup = document.querySelector('.currencies-popup');
+const brainButtonafter = document.querySelector('.Braincurrencypctafter');
+const overlay = document.querySelector('.popup-overlay');
+
+document.body.appendChild(overlay);
+
+brainButton.onclick = function () {
+    currencypopup.style.display = 'flex';
+    brainButtonafter.style.display = 'flex';
+    brainButton.style.display = 'none';
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+};
+
+function closePopup() {
+    currencypopup.style.display = 'none';
+    brainButtonafter.style.display = 'none';
+    brainButton.style.display = 'flex';
+    overlay.style.display = 'none';
+	document.body.style.overflow = '';
+}
+
+brainButtonafter.onclick = closePopup;
+overlay.onclick = closePopup;

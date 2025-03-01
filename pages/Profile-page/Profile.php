@@ -125,6 +125,35 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
 
             <div class="achievements">
                 <h3 class="achievements-txt">Достижения</h3>
+				<img class="Braincurrencypct" src="/img/Menu/Braincurrency.svg" alt="">
+
+				<div class="popup-overlay"></div>
+
+				<img class="Braincurrencypctafter" src="/img/Menu/Braincurrency.svg" alt="">
+				<div class="currencies-popup">
+					<div class="currency-span">Капитал</div>
+					<div class="currency-divider"></div>
+
+					<div class="currencies">
+						<div class="set-currency">
+							<div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/lamp-idea.png" alt=""></div>
+							<div class="currency-background lamp-value">508</div>
+						</div>
+
+						<div class="set-currency">
+							<div class="currency-pct memoney"><img class="memoneypct" src="/img/Menu/memoney2.png" alt=""></div>
+							<div class="currency-background memoney-value">675</div>
+						</div>
+
+						<div class="set-currency">
+							<div class="currency-pct exp"><img class="exppct" src="/img/Menu/exp.png" alt=""></div>
+								<div class="currency-background exp-currency">
+								<div class="exp-level">0 уровень</div>
+								<div class="exp-value">6/250</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
                 <?php foreach ($achievements as $achieve): ?>
                     <?php
