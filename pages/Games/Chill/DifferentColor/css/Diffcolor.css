@@ -1,0 +1,76 @@
+*{
+	user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #213242;
+	overflow: -moz-hidden-unscrollable;
+}
+
+
+h1 {
+	margin: 30% 0 0 0;
+	color: #05EFD4;
+	font-size: 22px;
+}
+#timer {
+	font-size: 22px;
+	color: rgb(255, 255, 255);
+	margin-bottom: 20px;
+	display: flex;
+	width: 300px;
+	justify-content: center;
+	white-space: break-spaces;
+}
+.game{
+    margin: 20% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#score {
+	font-size: 20px;
+	margin-bottom: 10px;
+	color: greenyellow;
+}
+.grid {
+	display: grid;
+	gap: 5px;
+	justify-content: center;
+	transition: all 0.5s ease-in-out; /* Плавное изменение сетки */
+}
+.square {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	transition: transform 0.2s;
+	border-radius: 5px;
+	opacity: 1;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.square:hover {
+	transform: scale(1.1);
+}
+.hidden {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
