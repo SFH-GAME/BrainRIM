@@ -1,3 +1,5 @@
+const pauseAlert = document.querySelector(".pause-alert");
+
 let level = 2; // Начальный размер сетки
 let score = 0; // Счётчик очков
 const maxLevel = 6; // Максимальный размер сетки
@@ -5,6 +7,8 @@ let timeLeft = 5; // Время в секундах
 let timer; // Хранит setInterval
 let highScore = localStorage.getItem("highScore") || 0; // Рекорд
 let lastClickTime = Date.now(); // Время последнего клика
+let colorDifficulty = 40; // Начальная сложность различия цветов
+let isPaused = false; // Флаг паузы
 
 generateGrid();
 startTimer();
@@ -12,13 +16,14 @@ startTimer();
 function generateGrid() {
     const grid = document.querySelector(".grid");
     const scoreDisplay = document.querySelector("#score span");
+    const timerDisplay = document.querySelector("#timer span");
     grid.innerHTML = "";
     grid.style.gridTemplateColumns = `repeat(${level}, 50px)`;
     grid.style.transform = "scale(1.1)";
     setTimeout(() => grid.style.transform = "scale(1)", 300);
 
     let baseColor = getRandomColor();
-    let diffColor = changeColor(baseColor, 20); // Немного изменить цвет
+    let diffColor = changeColor(baseColor, colorDifficulty); // Усложнение оттенка
     let diffIndex = Math.floor(Math.random() * (level * level));
 
     for (let i = 0; i < level * level; i++) {
@@ -29,18 +34,16 @@ function generateGrid() {
         grid.appendChild(div);
     }
 
-    // Обновляем счёт
+    // Обновляем счёт и таймер на экране
     scoreDisplay.textContent = score;
+    timerDisplay.textContent = timeLeft;
     lastClickTime = Date.now(); // Запоминаем время создания сетки
 }
 
 function checkChoice(isCorrect) {
-    if (isCorrect) {
+    if (isCorrect && !isPaused) {
         score++;
         
-        // Добавляем 1 секунду к таймеру за правильный ответ
-        timeLeft += 1;
-
         // Увеличиваем уровень КАЖДЫЕ 5 очков
         if (score % 5 === 0 && level < maxLevel) {
             level++;
@@ -48,11 +51,14 @@ function checkChoice(isCorrect) {
         } else {
             generateGrid();
         }
-
-        // Перезапускаем таймер, но не сбрасываем время
-        clearInterval(timer);
-        startTimer();
-    } else {
+        
+        // Каждые 10 правильных ответов усложняем различие оттенка
+        if (score % 10 === 0 && colorDifficulty > 5) {
+            colorDifficulty -= 5;
+        }
+        
+        resetTimer(); // Сбрасываем таймер на 5 секунд после каждого правильного ответа
+    } else if (!isPaused) {
         gameOver();
     }
 }
@@ -71,16 +77,35 @@ function startTimer() {
     const timerDisplay = document.querySelector("#timer span");
     clearInterval(timer); // Очищаем предыдущий таймер
     timer = setInterval(() => {
-        timeLeft--;
-        timerDisplay.textContent = timeLeft;
-        if (timeLeft <= 0) gameOver(); // Если время закончилось – конец игры
+        if (!isPaused) {
+            timeLeft--;
+            timerDisplay.textContent = timeLeft;
+            if (timeLeft <= 0) gameOver(); // Если время закончилось – конец игры
+        }
     }, 1000);
 }
 
 function resetTimer() {
-    timeLeft = 5; // Обновляем время до 5 сек
+    timeLeft = 5// Обновляем время до 5 сек
+    const timerDisplay = document.querySelector("#timer span");
+    timerDisplay.textContent = timeLeft;
+    clearInterval(timer);
     startTimer(); // Запускаем таймер заново
 }
+
+function togglePause() {
+    const grid = document.querySelector(".grid");
+    isPaused = !isPaused;
+    if (isPaused) {
+        grid.style.filter = "blur(40px)"; // Размытие сетки
+		pauseAlert.style = 'display: flex;';
+    } else {
+        grid.style.filter = "none";
+		pauseAlert.style = 'display: none;';
+    }
+}
+
+document.querySelector(".pause-button").addEventListener("click", togglePause);
 
 function gameOver() {
     clearInterval(timer);
@@ -97,6 +122,8 @@ function gameOver() {
     level = 2;
     score = 0;
     timeLeft = 5;
+    colorDifficulty = 40; // Сбрасываем сложность различения цвета
+    isPaused = false;
     generateGrid();
     startTimer();
 }

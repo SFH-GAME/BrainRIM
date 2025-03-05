@@ -17,12 +17,69 @@ body {
 	overflow: -moz-hidden-unscrollable;
 }
 
-
+.pause-alert {
+	display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #05efd4;
+    font-size: 32px;
+	font-weight: bold;
+}
+.alert-span{
+	animation: fadeIn 1s forwards, colorChange 20s linear infinite; /* Анимация плавного появления, смены цвета */
+}
+@keyframes colorChange {
+    0% {
+        color: #05efd4;
+    }
+    50% {
+        color: #ff2600;
+    }
+    100% {
+        color: #05efd4;
+    }
+}
+.pause-button{
+	display: flex;
+	color: #05EFD4;
+	font-size: 34px
+}
 h1 {
 	margin: 30% 0 0 0;
 	color: #05EFD4;
-	font-size: 22px;
-}
+	font-size: 18px;
+	opacity: 1;
+	visibility: visible;
+	animation: text-focus-in 1s linear ,2s fadeOut 2s forwards;
+  }
+  
+  @keyframes text-focus-in {
+	0% {
+	  filter: blur(12px);
+	  opacity: 0;
+	  font-size: 24px;
+	}
+	100% {
+	  filter: blur(0px);
+	  opacity: 1;
+	  font-size: 18px;
+	}
+  }
+  @keyframes fadeOut {
+	0% {
+	  opacity: 1;
+	  visibility: visible;
+	}
+	100% {
+	  opacity: 0;
+	  visibility: hidden;
+	}
+  }
+
+
 #timer {
 	font-size: 22px;
 	color: rgb(255, 255, 255);
