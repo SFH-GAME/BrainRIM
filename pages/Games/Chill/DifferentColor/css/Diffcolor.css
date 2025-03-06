@@ -7,7 +7,6 @@
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
-	padding: 20px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -46,7 +45,7 @@ body {
 	display: flex;
 	color: #05EFD4;
 	font-size: 44px;
-    margin: 20% auto;
+    margin: 23% auto;
 }
 h1 {
 	margin: 0% 0 0 0;
