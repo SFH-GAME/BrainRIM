@@ -210,64 +210,62 @@ function enableTiles() {
 }
 
 function handleTileClick(index) {
-   const tiles = document.querySelectorAll('.tile');
-   if (path.includes(index) && !selectedTiles.has(index)) {
-      tiles[index].classList.add('correct');
-      selectedTiles.add(index);
-      if (selectedTiles.size === path.length) {
-         clearInterval(levelTimer); // Stop level timer on level complete
-         setTimeout(() => {
-            messageElement.style.visibility = 'visible';
+    const tiles = document.querySelectorAll('.tile');
+    if (path.includes(index) && !selectedTiles.has(index)) {
+        tiles[index].classList.add('correct');
+        selectedTiles.add(index);
+        if (selectedTiles.size === path.length) {
+            clearInterval(levelTimer); // Остановить таймер уровня
             setTimeout(() => {
-               messageElement.style.visibility = 'hidden';
-               nextLevel();
-            }, 2000);
-         }, 300);
-      }
-   } else if (!path.includes(index)) {
-      tiles[index].classList.add('incorrect');
-      resetMaze();
-   }
+                messageElement.style.visibility = 'visible';
+                setTimeout(() => {
+                    messageElement.style.visibility = 'hidden';
+                    nextLevel();
+                }, 2000);
+            }, 300);
+        }
+    } else if (!path.includes(index)) {
+        tiles[index].classList.add('incorrect');
+        endGame(); // Завершаем игру при неверном ответе
+    }
 }
 
 function resetMaze() {
-   setTimeout(() => {
-      generateMaze(gridSize);
-      selectedTiles.clear();
-   }, 500);
-}
+    setTimeout(() => {
+        clearInterval(levelTimer); // Остановить текущий таймер уровня
+        levelTime = 40; // Сбросить время уровня
+        levelTimerElement.textContent = `Осталось: ${levelTime} сек.`; // Обновить отображение времени
 
-function nextLevel() {
-   levelTime = 40; // Reset level time
-   gridSize++;
-   currentLevel++;
-   levelElement.textContent = `Уровень: ${currentLevel}`;
-   generateMaze(gridSize);
-}
+        generateMaze(gridSize);
+        selectedTiles.clear();
 
+        startLevelTimer(); // Запуск нового таймера уровня
+    }, 500);
+}
 function startLevelTimer() {
-   levelTimer = setInterval(() => {
-      levelTime--;
-      levelTimerElement.textContent = `Осталось: ${levelTime} сек.`;
-      if (levelTime <= 0) {
-         endGame();
-      }
-   }, 1000);
+    clearInterval(levelTimer); // Очистка предыдущего таймера, если он существует
+    levelTimer = setInterval(() => {
+        levelTime--;
+        levelTimerElement.textContent = `Осталось: ${levelTime} сек.`;
+        if (levelTime <= 0) {
+            endGame(); // Заканчиваем игру, если время на уровне закончилось
+        }
+    }, 1000);
 }
 
 function startTotalTimer() {
-   totalTimer = setInterval(() => {
-      totalTime++;
-   }, 1000);
+    totalTimer = setInterval(() => {
+        totalTime++;
+    }, 1000);
 }
 
 function endGame() {
-   if (!gameOver) {
-      clearInterval(levelTimer);
-      clearInterval(totalTimer);
-      gameOver = true;
-      showMessageLoose();
-   }
+    if (!gameOver) {
+        clearInterval(levelTimer);
+        clearInterval(totalTimer);
+        gameOver = true;
+        showMessageLoose();
+    }
 }
 
 function restartGame() {
@@ -321,3 +319,16 @@ BUTTON_START.onclick = function () {
 
    }
 }
+
+
+function nextLevel() {
+	levelTime = 40; // Reset level time
+	if (gridSize < 8) { // Ограничение размера сетки
+	   gridSize++;
+	}
+	currentLevel++;
+	levelElement.textContent = `Уровень: ${currentLevel}`;
+	generateMaze(gridSize);
+ }
+
+

@@ -1,4 +1,7 @@
 const pauseAlert = document.querySelector(".pause-alert");
+const grid = document.querySelector(".grid");
+const scoreDisplay = document.querySelector("#score span");
+const timerDisplay = document.querySelector("#timer span");
 
 let level = 2; // Начальный размер сетки
 let score = 0; // Счётчик очков
@@ -14,9 +17,6 @@ generateGrid();
 startTimer();
 
 function generateGrid() {
-    const grid = document.querySelector(".grid");
-    const scoreDisplay = document.querySelector("#score span");
-    const timerDisplay = document.querySelector("#timer span");
     grid.innerHTML = "";
     grid.style.gridTemplateColumns = `repeat(${level}, 50px)`;
     grid.style.transform = "scale(1.1)";

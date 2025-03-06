@@ -30,6 +30,7 @@
     <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
     <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
   </div>
+  
     <div id="level">Уровень: 1</div>
     <div id="level-timer">Осталось: 40 сек.</div>
     <div id="message">Уровень пройден!</div>
@@ -39,7 +40,7 @@
     <div class="results-gameover results-container">
         <h1 class="results-head-text">Результаты</h1>
         <div class="results">
-          <div class="time">Время:<div class="time-count"></div>c.</div>
+          <div class="time">Оставшееся время:<div class="time-count"></div>c.</div>
           <div class="level">Уровень:<div class="level-count"></div></div>
           <div class="best-results">Ваш лучший результат:</div>
           <div class="time">Время: <div class="best-time-count">0</div>с.</div>
