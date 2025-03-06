@@ -15,8 +15,8 @@
 </header> 
 
 <body>
+<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 <div class="pause-alert"><span class="alert-span">На паузе</span></div>
-
 <h1>Найди отличающийся квадрат!</h1>
 	<div class="game">
 		<div id="timer">Оставшееся время: <span>5</span> сек</div>
