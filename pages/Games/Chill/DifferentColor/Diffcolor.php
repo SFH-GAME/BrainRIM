@@ -10,19 +10,17 @@
 	<title>Color Different Game</title>
 </head>
 
-<header>
-	<div class="pause-button"><ion-icon name="pause-circle-outline"></ion-icon></div>
-</header> 
-
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
-<div class="pause-alert"><span class="alert-span">На паузе</span></div>
-<h1>Найди отличающийся квадрат!</h1>
+<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-top-button.php"); ?>
+<div class="pause-button"><ion-icon name="pause-circle-outline"></ion-icon></div>
+	<div class="pause-alert"><span class="alert-span">На паузе</span></div>
+	<h1>Найди отличающийся квадрат!</h1>
 	<div class="game">
 		<div id="timer">Оставшееся время: <span>5</span> сек</div>
 		<div id="score">Найдено: <span>0</span></div>
 	<div class="grid"></div>
-</div>
+	</div>
 
 	<script src ="/pages/Games/Chill/DifferentColor/js/Diffcolor.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
