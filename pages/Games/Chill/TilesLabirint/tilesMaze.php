@@ -8,7 +8,7 @@
   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Игра Лабиринт  рррррррр</title>
+  <title>Игра Лабиринт</title>
   <style>
     
   </style>
