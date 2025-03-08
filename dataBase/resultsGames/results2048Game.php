@@ -1,5 +1,6 @@
 <?php
-include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/dataBase/achievments/achievments.php");
 
 header('Content-Type: text/plain');
 
@@ -18,8 +19,10 @@ $resultsData = [
    'score' => $modeIdValue['score']
 ];
 
- insert('game_2048_results',$resultsData);
+insert('game_2048_results', $resultsData);
 
+// Проверяем достижение "20 000 очков в 2048"
+check2048Achievement($_SESSION['id'], $_POST['score']);
 
 
 ?>

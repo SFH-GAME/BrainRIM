@@ -125,35 +125,37 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
 
             <div class="achievements">
                 <h3 class="achievements-txt">Достижения</h3>
-				<img class="Braincurrencypct" src="/img/Menu/Braincurrency.svg" alt="">
+                <img class="Braincurrencypct" src="/img/Menu/Braincurrency.svg" alt="">
 
-				<div class="popup-overlay"></div>
+                <div class="popup-overlay"></div>
 
-				<img class="Braincurrencypctafter" src="/img/Menu/Braincurrency.svg" alt="">
-				<div class="currencies-popup">
-					<div class="currency-span">Капитал</div>
-					<div class="currency-divider"></div>
+                <img class="Braincurrencypctafter" src="/img/Menu/Braincurrency.svg" alt="">
+                <div class="currencies-popup">
+                    <div class="currency-span">Капитал</div>
+                    <div class="currency-divider"></div>
 
-					<div class="currencies">
-						<div class="set-currency">
-							<div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/lamp-idea.png" alt=""></div>
-							<div class="currency-background lamp-value">508</div>
-						</div>
+                    <div class="currencies">
+                        <div class="set-currency">
+                            <div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/lamp-idea.png" alt="">
+                            </div>
+                            <div class="currency-background lamp-value">508</div>
+                        </div>
 
-						<div class="set-currency">
-							<div class="currency-pct memoney"><img class="memoneypct" src="/img/Menu/memoney2.png" alt=""></div>
-							<div class="currency-background memoney-value">675</div>
-						</div>
+                        <div class="set-currency">
+                            <div class="currency-pct memoney"><img class="memoneypct" src="/img/Menu/memoney2.png"
+                                    alt=""></div>
+                            <div class="currency-background memoney-value">675</div>
+                        </div>
 
-						<div class="set-currency">
-							<div class="currency-pct exp"><img class="exppct" src="/img/Menu/exp.png" alt=""></div>
-								<div class="currency-background exp-currency">
-								<div class="exp-level">0 уровень</div>
-								<div class="exp-value">6/250</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                        <div class="set-currency">
+                            <div class="currency-pct exp"><img class="exppct" src="/img/Menu/exp.png" alt=""></div>
+                            <div class="currency-background exp-currency">
+                                <div class="exp-level">0 уровень</div>
+                                <div class="exp-value">6/250</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <?php foreach ($achievements as $achieve): ?>
                     <?php
@@ -162,8 +164,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                     $progress_percent = ($achieve['type'] === 'progress') ? min(100, ($progress / $goal) * 100) : 100;
                     $status = ($achieve['status'] === 'completed') ? 'completed' : 'inprogress';
                     ?>
-
-                    <div class="achieve">
+                    <div class="achieve" data-achievement-id="<?= $achieve['id'] ?>">
                         <h3 class="achieve-theme"><?= htmlspecialchars($achieve['name']) ?></h3>
                         <span class="achieve-descript"><?= htmlspecialchars($achieve['description']) ?></span>
 
@@ -173,7 +174,6 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                             <div class="progress-bar">
                                 <div class="progress" style="width: <?= $progress_percent ?>%;"></div>
                             </div>
-
                         <?php endif; ?>
 
                         <!-- Статус -->
@@ -185,13 +185,59 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                             <div></div>
                             <div></div>
                         </div>
-                        <div class="achieve-progress <?= $status ?>">
-                            <?= $achieve['status'] === 'completed' ? 'Выполнено' : 'В процессе' ?>
+                        <div class="achive__button-container">
+                            <div class="achieve-progress <?= $status ?>">
+                                <?= $achieve['status'] === 'completed' ? 'Выполнено' : 'В процессе' ?>
+                            </div>
+
+                            <!-- Награда -->
+                            <?php if ($achieve['status'] === 'completed' && ($achieve['reward_claimed'] ?? 0) == 0): ?>
+                                <div class="reward-info">
+                                    <button class="claim-reward" data-achievement-id="<?= $achieve['id'] ?>">
+                                        Забрать награду
+                                    </button>
+                                </div>
+                            <?php elseif (($achieve['reward_claimed'] ?? 0) == 1): ?>
+                                <div class="reward-info">
+                                    <span>Награда получена!</span>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
+
+        <!-- Подключаем jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!--скрипт для обновления наград в базе после получения-->
+        <script>
+            $(document).ready(function () {
+                $('.claim-reward').on('click', function () {
+                    var achievementId = $(this).data('achievement-id');
+                    var button = $(this);
+                    $.ajax({
+                        url: '/dataBase/achievments/claim_rewardAchievments.php', // Файл для обработки получения награды
+                        type: 'POST',
+                        data: { achievement_id: achievementId },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success) {
+                                alert(response.message);
+                                // Обновляем интерфейс: заменяем кнопку сообщением о получении награды
+                                button.closest('.reward-info').html('<span>Награда получена!</span>');
+                            } else {
+                                alert(response.message);
+                            }
+                        },
+                        error: function () {
+                            alert('Ошибка запроса.');
+                        }
+                    });
+                });
+            });
+        </script>
+
         <div class="leave-btn">
             <a href="<?php echo "/dataBase/logOut.php"; ?>" class="logout">Выйти из аккаунта</a>
         </div>

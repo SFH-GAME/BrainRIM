@@ -421,7 +421,6 @@ main {
 .achieve-progress{
     color: #05EFD4;
     font-size: 16px;
-    margin: 20px 0 0px 0;
 }
 .completed{
     color: #33FF00;
@@ -429,6 +428,25 @@ main {
 .inprogress{
     color: #FFAA04;
 }
+
+.achive__button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0 0 0;
+}
+button.claim-reward {
+    background-color: #327F2E;
+    color: #fdfdfd;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+.reward-info span {
+    font-size: 12px;
+    line-height: 18px;
+    color: #33fc24;
+}
+
 .leave-btn {
     display: flex;
     align-items: center;

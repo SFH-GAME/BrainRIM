@@ -157,6 +157,8 @@ function comparisonResBetterOrNot() {//возвращает правду или 
    }
 }
 
+let isResultSent = false; // Флаг для предотвращения дублирования
+
 var game = {
    mydata: [],     // Добавляем атрибут mydata для хранения игровых данных
    score: 0,	  	   // Добавляем атрибут оценки
@@ -212,29 +214,30 @@ var game = {
       }
       document.getElementById('score01').innerHTML = this.score;
       bestResultGameContainerValue.innerHTML = bestScoreRes;
-      //при проигрыше
-      if (this.status == this.gameover) {
+
+      // При завершении игры
+      if (this.status == this.gameover && !isResultSent) {
+         isResultSent = true; // Устанавливаем флаг, чтобы не отправлять запрос повторно
          timerCountResultsValue.innerHTML = timerCount;
          scoreResultsValue.innerHTML = this.score;
-         bestTimerCountResultsValue.innerHTML = bestTimeRes;//из базы данных
+         bestTimerCountResultsValue.innerHTML = bestTimeRes; // из базы данных
          bestScoreCountResultsValue.innerHTML = bestScoreRes;
-         if (comparisonResBetterOrNot() == true) {//если результат лучше
+
+         if (comparisonResBetterOrNot() == true) { // Если результат лучше
             winOrLooseResultsValue.classList.add('congrats');
             winOrLooseResultsValue.innerHTML = 'Лучший результат!';
             statusLoosOrWin = "win";
+            winForResults = 1;
             doAjaxWinBonuse();
-            doAjaxExperience();
-            doAjaxResults();
-         }
-         else {
+         } else {
             winOrLooseResultsValue.classList.add('loose');
-            winOrLooseResultsValue.innerHTML = 'вы проиграли';
+            winOrLooseResultsValue.innerHTML = 'Вы проиграли';
+            looseForResults = 1;
+            statusLoosOrWin = "loose";
+            doAjaxLooseBonuse();
+            doAjaxExperience();
          }
          resultContainer.style = "display: block;";
-         statusLoosOrWin = "loose";
-         looseForResults = 1;
-         doAjaxLooseBonuse();
-         doAjaxExperience();
          doAjaxResults();
       }
    },
