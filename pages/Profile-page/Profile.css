@@ -371,10 +371,15 @@ main {
 .currency-pct{
 	width: 30px;
 }
+.currency-pct img {
+    width: 24px;
+    height: 24px;
+}
 .set-currency{
 	display: flex;
 	align-items: center;
 	margin: 15px auto;
+    gap: 5px;
 }
 .exp-currency{
 	display: flex;
@@ -439,11 +444,16 @@ main {
 .reward-block {
     display: flex;
     align-items: center;
-    gap: 5%;
+    justify-content: center;
+    gap: 8%;
     border-radius: 15px;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #FFAA04;
     box-shadow: -1px -2px 4px -2px rgba(255, 255, 255, 0.25), 1px 5px 10px 1px rgba(1, 1, 1, 0.25);
+}
+.reward-block.pending-reward {
+    border: 1px solid #327f2e;
+    border-radius: 10px 10px 0 0;
 }
 .reward-item {
     display: flex;
@@ -455,11 +465,14 @@ main {
     font-size: 14px;
 }
 .reward-item img {
+    height: 20px;
+}
+.reward-item:nth-child(3) img {
+    height: 18px;
+}
+.reward-item:nth-child(4) img {
     height: 25px;
 }
-
-
-
 .achive__button-container {
     display: flex;
     align-items: center;
@@ -469,8 +482,13 @@ main {
 button.claim-reward {
     background-color: #327F2E;
     color: #fdfdfd;
-    border-radius: 5px;
+    border-radius: 0 0 10px 10px;
     padding: 3px 8px;
+    width: 100%;
+}
+.reward-block.claimed-reward {
+    border: 1px solid #327f2e;
+    opacity: 0.7;
 }
 .received-reward-info span {
     font-size: 12px;

@@ -142,22 +142,47 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
 
                     <div class="currencies">
                         <div class="set-currency">
-                            <div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/lamp-idea.png" alt="">
+                            <div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/icon-hints.png" alt="">
                             </div>
-                            <div class="currency-background lamp-value">508</div>
+                            <div class="currency-background lamp-value">
+                                <?php if (isset($_SESSION['id'])): ?>
+                                    <?php echo $EyeScore['sum_eye_hint']; ?>
+                                <?php else: ?>
+                                    0
+                                <?php endif; ?>
+                            </div>
                         </div>
 
                         <div class="set-currency">
-                            <div class="currency-pct memoney"><img class="memoneypct" src="/img/Menu/memoney2.png"
+                            <div class="currency-pct memoney"><img class="memoneypct" src="/img/Menu/Memoney.png"
                                     alt=""></div>
-                            <div class="currency-background memoney-value">675</div>
+                            <div class="currency-background memoney-value">
+                                <?php if (isset($_SESSION['id'])): ?>
+                                    <?php echo $memany['sum_memany']; ?>
+                                <?php else: ?>
+                                    0
+                                <?php endif; ?>
+                            </div>
                         </div>
 
                         <div class="set-currency">
                             <div class="currency-pct exp"><img class="exppct" src="/img/Menu/exp.png" alt=""></div>
                             <div class="currency-background exp-currency">
-                                <div class="exp-level">0 уровень</div>
-                                <div class="exp-value">6/250</div>
+                                <div class="exp-level">
+                                    <?php if (isset($_SESSION['id'])): ?>
+                                        <?php echo $level['Level']; ?>
+                                    <?php else: ?>
+                                        0
+                                    <?php endif; ?>
+                                    уровень
+                                </div>
+                                <div class="exp-value">
+                                    <?php if (isset($_SESSION['id'])): ?>
+                                        <?php echo $level['experience']; ?> / <?php echo $level['nextLvlExp']; ?>
+                                    <?php else: ?>
+                                        0
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -192,36 +217,35 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                             <div></div>
                         </div>
                         <div class="reward-container">
-                            <!-- Награда -->
-                            <?php if ($achieve['status'] === 'completed' && ($achieve['reward_claimed'] ?? 0) == 0): ?>
-                                <div class="reward-info">
-                                    <div class="reward-block">
-                                        <div class="reward-item">
-                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
-                                            <span>10</span>
-                                        </div>
-                                        <div class="reward-item">
-                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
-                                            <span>5</span>
-                                        </div>
-                                        <div class="reward-item">
-                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
-                                            <span>0</span>
-                                        </div>
-                                        <div class="reward-item">
-                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
-                                            <span>0</span>
-                                        </div>
+                            <div class="reward-info <?= ($achieve['reward_claimed'] ?? 0) == 1 ? 'claimed' : '' ?>">
+                                <!--здесть я добавляю классы со стилями под разные статусы -->
+                                <div class="reward-block 
+                                <?= ($achieve['status'] === 'completed' && ($achieve['reward_claimed'] ?? 0) == 0) ? 'pending-reward' : '' ?> 
+                                <?= ($achieve['reward_claimed'] ?? 0) == 1 ? 'claimed-reward' : '' ?>">
+                                    <div class="reward-item">
+                                        <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
+                                        <span><?= $achieve['currency'] ?></span>
                                     </div>
+                                    <div class="reward-item">
+                                        <img src="/img/Menu/icon-hints.png" alt="подсказки" title="подсказки">
+                                        <span><?= $achieve['hints'] ?></span>
+                                    </div>
+                                    <div class="reward-item">
+                                        <img src="/img/Menu/IQ.svg" alt="IQ" title="IQ">
+                                        <span><?= $achieve['IQ'] ?></span>
+                                    </div>
+                                    <div class="reward-item">
+                                        <img src="/img/Menu/exp-icon.svg" alt="опыт" title="опыт">
+                                        <span><?= $achieve['exp'] ?></span>
+                                    </div>
+                                </div>
+
+                                <?php if ($achieve['status'] === 'completed' && ($achieve['reward_claimed'] ?? 0) == 0): ?>
                                     <button class="claim-reward" data-achievement-id="<?= $achieve['id'] ?>">
                                         Забрать награду
                                     </button>
-                                </div>
-                            <?php elseif (($achieve['reward_claimed'] ?? 0) == 1): ?>
-                                <div class="received-reward-info">
-                                    <span>Награда получена!</span>
-                                </div>
-                            <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
                         </div>
                         <div class="achive__button-container">
                             <div class="achieve-progress <?= $status ?>">
