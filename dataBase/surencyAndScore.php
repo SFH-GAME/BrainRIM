@@ -1,20 +1,21 @@
-<?php 
-   include $_SERVER['DOCUMENT_ROOT']."/dataBase/controllers/users.php";
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/users.php";
 
 //Запрос на получение одной строки с выбранной таблицы
-function select($table,$params = []){
+function select($table, $params = [])
+{
    global $pdo;
    $sql = "SELECT * FROM $table";
- 
-   if(!empty($params)){
+
+   if (!empty($params)) {
       $i = 0;
-      foreach($params as $key => $value){
-         if(!is_numeric($value)){
-            $value = "'".$value."'";
+      foreach ($params as $key => $value) {
+         if (!is_numeric($value)) {
+            $value = "'" . $value . "'";
          }
-         if($i === 0){
+         if ($i === 0) {
             $sql = $sql . " WHERE $key = $value";
-         }else{
+         } else {
             $sql = $sql . " AND $key = $value";
          }
          $i++;
@@ -27,16 +28,17 @@ function select($table,$params = []){
    return $query->fetch();
 }
 //Обновление данных в таблице
-function updateTo($table, $id ,$params){
+function updateTo($table, $id, $params)
+{
    global $pdo;
    $i = 0;
-   $str ='';
-   foreach($params as $key => $value){
-      if($i === 0){
-         $str = $str.$key." = '".$value. "'";
-      }else{
-      
-         $str = $str. ", ".$key." = '".$value."'";
+   $str = '';
+   foreach ($params as $key => $value) {
+      if ($i === 0) {
+         $str = $str . $key . " = '" . $value . "'";
+      } else {
+
+         $str = $str . ", " . $key . " = '" . $value . "'";
       }
       $i++;
    }
@@ -48,12 +50,14 @@ function updateTo($table, $id ,$params){
 }
 
 $level = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
+$completedAchievements = selectAll('user_achievements', ['user_id' => $_SESSION['id'], 'status' => 'completed']);
+$completedAchievementsCount = count($completedAchievements);
 
 $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 $userInfo = select('users', ['id' => $_SESSION['id']]);
-$dateForComparison = select('dateForComparison',['user_id' => $_SESSION['id']]);
+$dateForComparison = select('dateForComparison', ['user_id' => $_SESSION['id']]);
 $rusDayWord = selectAll('rusWords');
 $historyFacts = selectAll('historyFacts');
 $engDayWord = selectAll('engWords');
@@ -85,9 +89,12 @@ $rusIndex = array_search($rusWordsCount, $rusWordsIds);
 $historyIndex = array_search($historyFactsCount, $historyFactsIds);
 $engIndex = array_search($engWordsCount, $engWordsIds);
 
-if ($rusIndex === false) $rusIndex = 0;
-if ($historyIndex === false) $historyIndex = 0;
-if ($engIndex === false) $engIndex = 0;
+if ($rusIndex === false)
+   $rusIndex = 0;
+if ($historyIndex === false)
+   $historyIndex = 0;
+if ($engIndex === false)
+   $engIndex = 0;
 
 // Получаем текущие значения
 $insertRusWord = $rusDayWord[$rusIndex]['word'] ?? "Нет данных";
@@ -105,25 +112,25 @@ $interval = $current->diff($last);
 
 // Проверяем, прошло ли 24 часа
 if ($interval->h >= 24 || $interval->d >= 1) {
-    // Обновляем дату в базе данных
-    $lastDateTime = $current->format('Y-m-d H:i:s');
-    update('dateForComparison', $_SESSION['id'], ['lastSaveDate' => $lastDateTime]);
+   // Обновляем дату в базе данных
+   $lastDateTime = $current->format('Y-m-d H:i:s');
+   update('dateForComparison', $_SESSION['id'], ['lastSaveDate' => $lastDateTime]);
 
-    // Если прошло 24 часа, обновляем дату и переключаем параметры
-if ($interval->h >= 24 || $interval->d >= 1) {
-   update('dateForComparison', $_SESSION['id'], ['lastSaveDate' => $current->format('Y-m-d H:i:s')]);
+   // Если прошло 24 часа, обновляем дату и переключаем параметры
+   if ($interval->h >= 24 || $interval->d >= 1) {
+      update('dateForComparison', $_SESSION['id'], ['lastSaveDate' => $current->format('Y-m-d H:i:s')]);
 
-   // Переход к следующему ID (циклично)
-   $rusIndex = ($rusIndex + 1) % count($rusWordsIds);
-   $historyIndex = ($historyIndex + 1) % count($historyFactsIds);
-   $engIndex = ($engIndex + 1) % count($engWordsIds);
+      // Переход к следующему ID (циклично)
+      $rusIndex = ($rusIndex + 1) % count($rusWordsIds);
+      $historyIndex = ($historyIndex + 1) % count($historyFactsIds);
+      $engIndex = ($engIndex + 1) % count($engWordsIds);
 
-   update('dateForComparison', $_SESSION['id'], [
-       'rusWordsCount' => $rusWordsIds[$rusIndex],
-       'historyFactsCount' => $historyFactsIds[$historyIndex],
-       'engWordsCount' => $engWordsIds[$engIndex]
-   ]);
-}
+      update('dateForComparison', $_SESSION['id'], [
+         'rusWordsCount' => $rusWordsIds[$rusIndex],
+         'historyFactsCount' => $historyFactsIds[$historyIndex],
+         'engWordsCount' => $engWordsIds[$engIndex]
+      ]);
+   }
 
 }
 ?>

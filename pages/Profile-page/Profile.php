@@ -69,7 +69,13 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
             <div class="progress-container">
                 <div class="progress-item">
                     <ion-icon name="ribbon-outline"></ion-icon>
-                    <div class="progress-value">0</div>
+                    <div class="progress-value">
+                        <?php if (isset($_SESSION['id'])): ?>
+                            <?php echo $completedAchievementsCount; ?>
+                        <?php else: ?>
+                            0
+                        <?php endif; ?>
+                    </div>
                     <div class="progress-label">Достижений получено</div>
                 </div>
                 <div class="divider"></div>
@@ -253,7 +259,8 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                 <div class="message">
                     <span class="message-txt">Подарок за регистрацию</span>
                     <div class="message-reward">
-                        <div class="currency"><img class="currency-memoney-icon" src="img/Memoney.svg" alt="memoney"> 10
+                        <div class="currency"><img class="currency-memoney-icon" src="/img/Menu/Memoney.png"
+                                alt="memoney"> 10
                         </div>
                         <div class="hints"><img class="currency-icons" src="img/Hints.svg" alt="hints"> 20</div>
                         <div class="iq"><span class="iq-name">IQ</span> 10</div>

@@ -127,7 +127,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
          <div class="header-score-container">
             <div class="memany-container currency-container">
-               <img class="currency-memoney-icon" src="/img/Menu/Memoney.svg" alt="memoney">
+               <img class="currency-memoney-icon" src="/img/Menu/Memoney.png" alt="memoney">
                <div class="memany-count home-memony-body">
                   <?php if (isset($_SESSION['id'])): ?>
                      <?php echo $memany['sum_memany']; ?>
@@ -278,7 +278,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <div class="bonus-rewards">
                   <div class="rewards-item">+10 <span class="iq-name">IQ</span></div>
                   <div class="rewards-item">+20 <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints"></div>
-                  <div class="rewards-item">+10 <img class="currency-memoney-icon" src="/img/Menu/Memoney.svg"
+                  <div class="rewards-item">+10 <img class="currency-memoney-icon" src="/img/Menu/Memoney.png"
                         alt="memoney"></div>
                </div>
                <div class="bonus_container_continue">Принять</div>
@@ -361,11 +361,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <div class="game-item__category">мини-игра</div>
                   </div>
                </a>
-			   <a href="/pages/Games/Chill/DifferentColor/Diffcolor.php">
+               <a href="/pages/Games/Chill/DifferentColor/Diffcolor.php">
                   <div class="game-item">
                      <h2 class="title">Найди цвет</h2>
                      <p class="subtitle">Проверяет <span class="backlight">моторику</span> и <span
-                           class="backlight">Внимательность</span>. Найдите фигуру, которая отличается по цвету. Каждые 5 правильных ответов сетка повышается до 6x6!⚡🏃‍♂️</p>
+                           class="backlight">Внимательность</span>. Найдите фигуру, которая отличается по цвету. Каждые
+                        5 правильных ответов сетка повышается до 6x6!⚡🏃‍♂️</p>
                      <img src="/img/Games/DiffColorgm.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -565,7 +566,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          <div class="time">23:59</div>-->
          <div class="currency">
             <div class="currency-memoney">
-               <img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">
+               <img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">
                <div class="count count-memoney">
                   <?php if (isset($_SESSION['id'])): ?>
                      <?php echo $memany['sum_memany']; ?>
@@ -588,7 +589,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          <div class="convert-currency-body">
             <div class="convert-currency-text">Конвертировать валюту</div>
             <div class="trade-price">
-               <span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">
+               <span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">
                <div class="reverse"><ion-icon name="repeat-outline"></ion-icon></div>
                <span>8</span><img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
             </div>
@@ -601,7 +602,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
          <div class="buy-currency">
             <div class="buy-memoney">
-               <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">=
+               <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">=
                   0.50$<div class="points_wrapper">
                      <i class="point"></i>
                      <i class="point"></i>
@@ -615,7 +616,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <i class="point"></i>
                   </div>
                </div>
-               <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">=
+               <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">=
                   0.99$<div class="points_wrapper">
                      <i class="point"></i>
                      <i class="point"></i>
@@ -629,7 +630,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <i class="point"></i>
                   </div>
                </div>
-               <div id="buy" class="buy third-offer">50<img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">=
+               <div id="buy" class="buy third-offer">50<img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">=
                   2.99$<div class="points_wrapper">
                      <i class="point"></i>
                      <i class="point"></i>
@@ -643,7 +644,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <i class="point"></i>
                   </div>
                </div>
-               <div id="buy" class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">=
+               <div id="buy" class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">=
                   5.99$<div class="points_wrapper">
                      <i class="point"></i>
                      <i class="point"></i>
@@ -657,7 +658,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <i class="point"></i>
                   </div>
                </div>
-               <div id="buy" class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">=
+               <div id="buy" class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">=
                   13.62$<div class="points_wrapper">
                      <i class="point"></i>
                      <i class="point"></i>
@@ -671,7 +672,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <i class="point"></i>
                   </div>
                </div>
-               <div id="buy" class="buy six-offer">666<img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">=
+               <div id="buy" class="buy six-offer">666<img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">=
                   22.22$<div class="points_wrapper">
                      <i class="point"></i>
                      <i class="point"></i>
@@ -687,7 +688,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="special-offers">Специальные предложения</div>
-            <!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"/></div>-->
+            <!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.pn"/></div>-->
             <div class="special-offers-body">В данный момент специальных предложений нет.</div>
          </div>
       </div>

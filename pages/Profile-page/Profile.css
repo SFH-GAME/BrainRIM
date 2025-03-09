@@ -115,7 +115,7 @@ header {
 /* pop-up */
 
 ion-icon{
-    color: #05EFD4;
+    color: #ffffff;
 }
 h3{
     font-size: 22px; 
@@ -236,6 +236,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     margin: 5px auto;
+    color: #956afa;
 }
 .progress-label {
     font-size: 14px;
@@ -605,39 +606,41 @@ button.claim-reward {
     cursor: pointer;
 }
 
-.message-txt {
+.user-messages .message-txt {
     margin-bottom: 18px;
     display: flex;
     justify-content: start;
     font-size: 20px;
 }
 
-.message-reward {
+.user-messages .message-reward {
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 14px;
 }
 
-.currency {
+.user-messages .currency {
     width: 22px;
     display: flex;
     gap: 4px;
     align-items: center;
 }
-
-.iq-name {
+.user-messages .currency img {
+    width: 22px;
+}
+.user-messages .iq-name {
     color: #05EFD4;
     font-size: 17px;
 }
 
-.hints {
+.user-messages .hints {
     display: flex;
     align-items: center;
     gap: 5px;
     line-height: 126%;
 }
-.message-description {
+.user-messages .message-description {
     margin-top: 10px;
     font-size: 14px;
     color: #ffffff;
