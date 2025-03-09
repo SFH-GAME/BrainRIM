@@ -191,23 +191,42 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                             <div></div>
                             <div></div>
                         </div>
-                        <div class="achive__button-container">
-                            <div class="achieve-progress <?= $status ?>">
-                                <?= $achieve['status'] === 'completed' ? 'Выполнено' : 'В процессе' ?>
-                            </div>
-
+                        <div class="reward-container">
                             <!-- Награда -->
                             <?php if ($achieve['status'] === 'completed' && ($achieve['reward_claimed'] ?? 0) == 0): ?>
                                 <div class="reward-info">
+                                    <div class="reward-block">
+                                        <div class="reward-item">
+                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
+                                            <span>10</span>
+                                        </div>
+                                        <div class="reward-item">
+                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
+                                            <span>5</span>
+                                        </div>
+                                        <div class="reward-item">
+                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
+                                            <span>0</span>
+                                        </div>
+                                        <div class="reward-item">
+                                            <img src="/img/Menu/Memoney.png" alt="игровая валюта" title="игровая валюта">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
                                     <button class="claim-reward" data-achievement-id="<?= $achieve['id'] ?>">
                                         Забрать награду
                                     </button>
                                 </div>
                             <?php elseif (($achieve['reward_claimed'] ?? 0) == 1): ?>
-                                <div class="reward-info">
+                                <div class="received-reward-info">
                                     <span>Награда получена!</span>
                                 </div>
                             <?php endif; ?>
+                        </div>
+                        <div class="achive__button-container">
+                            <div class="achieve-progress <?= $status ?>">
+                                <?= $achieve['status'] === 'completed' ? 'Выполнено' : 'В процессе' ?>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>

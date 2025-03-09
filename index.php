@@ -137,7 +137,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="hint-container currency-container">
-               <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints">
+               <img class="currency-icons" src="/img/Menu/icon-hints.png" alt="hints">
                <div class="memany-count home-hints-body">
                   <?php if (isset($_SESSION['id'])): ?>
                      <?php echo $EyeScore['sum_eye_hint']; ?>
@@ -277,7 +277,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <p class="bonus-text-second">Подарок</p>
                <div class="bonus-rewards">
                   <div class="rewards-item">+10 <span class="iq-name">IQ</span></div>
-                  <div class="rewards-item">+20 <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints"></div>
+                  <div class="rewards-item">+20 <img class="currency-icons" src="/img/Menu/icon-hints.png" alt="hints">
+                  </div>
                   <div class="rewards-item">+10 <img class="currency-memoney-icon" src="/img/Menu/Memoney.png"
                         alt="memoney"></div>
                </div>
@@ -576,7 +577,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="currency-hints">
-               <img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
+               <img class="hintsicon" src="/img/Menu/icon-hints.png" alt="иконка подсказки">
                <div class="count count-hints">
                   <?php if (isset($_SESSION['id'])): ?>
                      <?php echo $EyeScore['sum_eye_hint']; ?>
@@ -591,7 +592,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             <div class="trade-price">
                <span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">
                <div class="reverse"><ion-icon name="repeat-outline"></ion-icon></div>
-               <span>8</span><img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
+               <span>8</span><img class="hintsicon" src="/img/Menu/icon-hints.png" alt="">
             </div>
             <div class="trade-currency">
                <input placeholder="1" type="number" class="input-trade" id="myInput" oninput="trackInput()">

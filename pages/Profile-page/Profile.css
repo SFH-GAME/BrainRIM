@@ -400,6 +400,8 @@ main {
 
 
 
+
+
 .achieve{
     position: relative;
     display: grid;
@@ -430,6 +432,34 @@ main {
     color: #FFAA04;
 }
 
+.reward-container {
+    width: 80%;
+    margin: 10px 0 0 0;
+}
+.reward-block {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid #FFAA04;
+    box-shadow: -1px -2px 4px -2px rgba(255, 255, 255, 0.25), 1px 5px 10px 1px rgba(1, 1, 1, 0.25);
+}
+.reward-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.reward-item span {
+    color: white;
+    font-size: 14px;
+}
+.reward-item img {
+    height: 25px;
+}
+
+
+
 .achive__button-container {
     display: flex;
     align-items: center;
@@ -442,7 +472,7 @@ button.claim-reward {
     border-radius: 5px;
     padding: 3px 8px;
 }
-.reward-info span {
+.received-reward-info span {
     font-size: 12px;
     line-height: 18px;
     color: #33fc24;

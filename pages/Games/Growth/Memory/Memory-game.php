@@ -120,7 +120,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
       </div>
       <div class="game-mode"></div>
       <div class="hint-button">
-         <ion-icon class="icon-eye" name="eye-outline"></ion-icon>
+         <img src="/img/Menu/icon-hints.png" alt="иконка подсказки">
          <div class="hint-counter"><?php if (isset($_SESSION['id'])): ?>    <?php echo $EyeScore['sum_eye_hint']; ?>
             <?php else: ?>0<?php endif; ?>
          </div>

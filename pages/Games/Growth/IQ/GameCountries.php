@@ -1,5 +1,5 @@
 <?php
-   include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
+include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,13 +11,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/pages/Games/Growth/IQ/GameCountries.css">
 	<link rel="canonical" href="https://brainrim.site">
-   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
+	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<title>Игра - страны</title>
 </head>
-	<script>
-            let eyeValue = '<?= $eyeValue ?>';
-   </script>
-<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
+<script>
+	let eyeValue = '<?= $eyeValue ?>';
+</script>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
+
 <body>
 	<div class="victory-loose-screen-container">
 		<div class="victory-loose-screen__mode-container">
@@ -39,11 +40,13 @@
 			<div class="screen-title items-container__win-loose-item">Победа</div>
 			<ion-icon class="star" name="star"></ion-icon>
 		</div>
-		
+
 		<div class="results-menu__items-container items-container">
 			<div class="items-container__each-item-container">
 				<div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
-				<div class="items-container__done-cards-item"><div class="opened-cards"></div>/10</div>
+				<div class="items-container__done-cards-item">
+					<div class="opened-cards"></div>/10
+				</div>
 			</div>
 			<div class="items-container__each-item-container">
 				<div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
@@ -76,10 +79,11 @@
 			</div>
 			<a href="#" class="button-start">START</a>
 			<div class="game-info-title">
-			<span class="game-info-name">Угадай страну</span>
-			<span class="game-info">В этой игре вам надо будет выбрать правильное название страны, изображённой на картинке </span>
-	   </div>
-	</div>
+				<span class="game-info-name">Угадай страну</span>
+				<span class="game-info">В этой игре вам надо будет выбрать правильное название страны, изображённой на
+					картинке </span>
+			</div>
+		</div>
 	</div>
 	<div class="wrapper">
 		<div class="mode-options-container">
@@ -104,34 +108,39 @@
 			</div>
 		</div>
 		<div class="topButton-gameWords">
-         <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div></a>
-         <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
-         <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
-      </div>
+			<a class="comeback-button" href="#">
+				<div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div>
+			</a>
+			<a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
+			<div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
+		</div>
 		<main>
 			<div class="game-mode"></div>
 			<div class="deadLineWrapper">
 				<div id="deadeLine"></div>
 			</div>
-				<div class="hints-container"><img src="/img/Menu/Hints.svg" alt="Подсказки" class="hints"><div class="hint-counter"><?php if(isset($_SESSION['id'])): ?> <?php echo $EyeScore['sum_eye_hint']; ?> <?php else: ?>0<?php endif;?></div></div>
+			<div class="hints-container"><img src="/img/Menu/icon-hints.png" alt="Подсказки" class="hints">
+				<div class="hint-counter"><?php if (isset($_SESSION['id'])): ?> 	<?php echo $EyeScore['sum_eye_hint']; ?>
+					<?php else: ?>0<?php endif; ?></div>
+			</div>
 
-			</div>
-			<div class="flags-container">
-				<div class="flags-body-img">
-				</div>
-			</div>
-			<div class="country-answers-container">
-				<div class="button-count__1 country-button"></div>
-				<div class="button-count__2 country-button"></div>
-				<div class="button-count__3 country-button"></div>
-				<div class="button-count__4 country-button"></div>
-				<div class="button-hardMode-container">
-					<div class="button-count__5 country-button"></div>
-					<div class="button-count__6 country-button"></div>
-				</div>
+	</div>
+	<div class="flags-container">
+		<div class="flags-body-img">
+		</div>
+	</div>
+	<div class="country-answers-container">
+		<div class="button-count__1 country-button"></div>
+		<div class="button-count__2 country-button"></div>
+		<div class="button-count__3 country-button"></div>
+		<div class="button-count__4 country-button"></div>
+		<div class="button-hardMode-container">
+			<div class="button-count__5 country-button"></div>
+			<div class="button-count__6 country-button"></div>
+		</div>
 
-			</div>
-		</main>
+	</div>
+	</main>
 	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

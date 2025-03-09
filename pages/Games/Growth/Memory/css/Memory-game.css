@@ -716,7 +716,10 @@ height: 40px;
     align-items: center;
     justify-content: center;
     gap: 5px;
-	margin: 10px auto;
+    margin: 15px auto;
+}
+.hint-button img {
+   height: 35px;
 }
 .hint-counter{
    font-size: 26px;
