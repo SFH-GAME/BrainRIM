@@ -23,7 +23,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="Profile.css?v=4.0">
+    <link rel="stylesheet" href="Profile.css?v=1.0">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
     <title>Профиль</title>
 </head>
@@ -142,25 +142,34 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
 
                     <div class="currencies">
                         <div class="set-currency">
-                            <div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/icon-hints.png" alt="">
-                            </div>
-                            <div class="currency-background lamp-value">
-                                <?php if (isset($_SESSION['id'])): ?>
-                                    <?php echo $EyeScore['sum_eye_hint']; ?>
-                                <?php else: ?>
-                                    0
-                                <?php endif; ?>
-                            </div>
-                        </div>
-
-                        <div class="set-currency">
                             <div class="currency-pct memoney"><img class="memoneypct" src="/img/Menu/Memoney.png"
                                     alt=""></div>
                             <div class="currency-background memoney-value">
                                 <?php if (isset($_SESSION['id'])): ?>
-                                    <?php echo $memany['sum_memany']; ?>
+                                    <span class="currency-value"><?php echo $memany['sum_memany']; ?></span>
                                 <?php else: ?>
-                                    0
+                                    <span class="currency-value">0</span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="set-currency">
+                            <div class="currency-pct lamp"><img class="lamppct" src="/img/Menu/icon-hints.png" alt="">
+                            </div>
+                            <div class="currency-background lamp-value">
+                                <?php if (isset($_SESSION['id'])): ?>
+                                    <span class="hints-value"><?php echo $EyeScore['sum_eye_hint']; ?></span>
+                                <?php else: ?>
+                                    <span class="hints-value">0</span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="set-currency">
+                            <div class="currency-pct "><img src="/img/Menu/IQ.svg" alt="IQ" title="IQ"></div>
+                            <div class="currency-background ">
+                                <?php if (isset($_SESSION['id'])): ?>
+                                    <span class="iq-value"><?php echo $IQscore['sum_iq']; ?></span>
+                                <?php else: ?>
+                                    <span class="iq-value">0</span>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -176,9 +185,10 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                                     <?php endif; ?>
                                     уровень
                                 </div>
-                                <div class="exp-value">
+                                <div class="exp-value-container">
                                     <?php if (isset($_SESSION['id'])): ?>
-                                        <?php echo $level['experience']; ?> / <?php echo $level['nextLvlExp']; ?>
+                                        <span class="exp-value"><?php echo $level['experience']; ?></span> /
+                                        <?php echo $level['nextLvlExp']; ?>
                                     <?php else: ?>
                                         0
                                     <?php endif; ?>
@@ -262,26 +272,60 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
         <!--скрипт для обновления наград в базе после получения-->
         <script>
             $(document).ready(function () {
-                $('.claim-reward').on('click', function () {
-                    var achievementId = $(this).data('achievement-id');
+                $(document).on('click', '.claim-reward', function () {
                     var button = $(this);
-                    $.ajax({
-                        url: '/dataBase/achievments/claim_rewardAchievments.php', // Файл для обработки получения награды
-                        type: 'POST',
-                        data: { achievement_id: achievementId },
-                        dataType: 'json',
-                        success: function (response) {
-                            if (response.success) {
-                                alert(response.message);
-                                // Обновляем интерфейс: заменяем кнопку сообщением о получении награды
-                                button.closest('.reward-info').html('<span>Награда получена!</span>');
-                            } else {
-                                alert(response.message);
-                            }
-                        },
-                        error: function () {
-                            alert('Ошибка запроса.');
+                    var achievementId = button.data('achievement-id');
+                    var achievementContainer = button.closest('.achieve');
+                    var rewardBlock = achievementContainer.find('.reward-block');
+
+                    // Определяем иконки валют
+                    var currencyIcons = [
+                        "/img/Menu/Memoney.png",
+                        "/img/Menu/icon-hints.png",
+                        "/img/Menu/IQ.svg",
+                        "/img/Menu/exp-icon.svg"
+                    ];
+
+                    // Определяем целевой блок (Braincurrencypct)
+                    var target = $('.Braincurrencypct');
+                    var targetOffset = target.offset();
+
+                    $.post('/dataBase/achievments/claim_rewardAchievments.php', { achievement_id: achievementId }, function (response) {
+                        if (response.success) {
+                            // Обновляем стиль кнопки
+                            button.css({ 'opacity': '0.7', 'cursor': 'default' }).prop('disabled', true).text('Награда получена');
+                            rewardBlock.addClass('claimed-reward');
+
+                            // Анимация "летящих" валют
+                            currencyIcons.forEach((icon, index) => {
+                                setTimeout(function () {
+                                    var flyingReward = $('<img class="flying-currency" src="' + icon + '">').appendTo('body');
+
+                                    flyingReward.css({
+                                        left: button.offset().left + 'px',
+                                        top: button.offset().top + 'px',
+                                        position: 'absolute',
+                                        zIndex: 1000,
+                                        width: '25px',
+                                        height: '25px',
+                                        opacity: 1
+                                    });
+
+                                    flyingReward.animate({
+                                        left: targetOffset.left + (Math.random() * 30 - 15) + 'px',
+                                        top: targetOffset.top + 'px',
+                                        opacity: 0
+                                    }, 2500, function () {
+                                        $(this).remove();
+                                    });
+                                }, index * 200); // Последовательный полёт
+                            });
+
+                        } else {
+                            alert(response.message);
                         }
+                    }, 'json').fail(function () {
+                        alert('Ошибка запроса.');
                     });
                 });
             });
@@ -337,6 +381,6 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
 
     </main>
 </body>
-<script src="Profile.js?v=2.0"></script>
+<script src="Profile.js?v=1.0"></script>
 
 </html>

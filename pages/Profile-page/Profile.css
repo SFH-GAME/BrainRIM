@@ -318,20 +318,20 @@ main {
 	margin: 50px 0 70px 0;
 }
 
-.currencies-popup{
-    background: #DCAC75;
-    border: 2px solid #4A3F35;
-    border-radius: 5px;
+.currencies-popup {
+    background: #fefefe;
+    border: 2px solid #000000;
+    border-radius: 10px;
     padding: 30px;
     display: none;
     flex-direction: column;
     align-items: center;
-	position: absolute;
+    position: absolute;
     z-index: 2;
 }
-.currency-span{
-	color: #753E00;
-	font-size: 20px;
+.currency-span {
+    color: #753E00;
+    font-size: 22px;
 }
 .currency-divider{
 	width: 120px;
@@ -346,9 +346,9 @@ main {
     width: 250px;
 }
 .currency-background{
-	background: black;
+    background: #2f2f2f;
 	width: 200px;
-    height: 24px;
+    padding: 5px;
 	border-radius: 10px;
 	display: flex;
     align-items: center;
@@ -384,6 +384,9 @@ main {
 .exp-currency{
 	display: flex;
 }
+span.exp-value {
+    color: #8e69fa;
+}
 .Braincurrencypctafter{
 	display: none;
 	width: 30%;
@@ -402,7 +405,6 @@ main {
     display: none;
     z-index: 1;
 }
-
 
 
 
