@@ -66,7 +66,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=2.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=1.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
