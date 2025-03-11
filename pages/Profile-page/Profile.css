@@ -522,9 +522,11 @@ button.claim-reward {
     width: 35.2px;
     height: 35.2px;
     --clr: rgb(247, 197, 159);
-    --clr-alpha: rgb(247, 197, 159,.1);
-    animation: spinner 9s infinite ease;
+    --clr-alpha: rgb(247, 197, 159, .1);
+    animation: spinner 12s infinite ease;
+    -webkit-animation: spinner 9s infinite ease; /* Для Safari */
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Для Safari */
     top: 17%;
     right: 25px;
 }
@@ -540,6 +542,7 @@ button.claim-reward {
     position: absolute;
     width: 100%;
     border: 3.5px solid var(--clr);
+    
 }
 
 .spinner div:nth-of-type(1) {
@@ -576,11 +579,11 @@ button.claim-reward {
 }
 
 50% {
-    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    transform: rotate(45deg) rotateX(-338deg) rotateY(25deg);
 }
 
 100% {
-    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    transform: rotate(45deg) rotateX(-338deg) rotateY(338deg);
 }
 }
 
