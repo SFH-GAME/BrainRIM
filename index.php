@@ -372,6 +372,17 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <div class="game-item__category">мини-игра</div>
                   </div>
                </a>
+			   <a href="/pages/Games/Chill/Connections/Connections.php">
+                  <div class="game-item">
+                     <h2 class="title">Соединения</h2>
+                     <p class="subtitle">Тренирует <span class="backlight">логику</span> и <span
+                           class="backlight">стратегическое </span>мышление.
+						   Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
+                     <img src="/img/Games/Connections.png" alt="картинка">
+                     <div class="game-item__category">мини-игра</div>
+                  </div>
+               </a>
+
 
 
 
