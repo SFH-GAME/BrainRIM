@@ -336,8 +336,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <div class="game-item">
                      <h2 class="title">2048</h2>
                      <p class="subtitle">Тренирует <span class="backlight">логику</span>, <span
-                           class="backlight">внимание</span> и <span class="backlight">стратегическое</span> мышление.
-                        Объединяйте числа, чтобы достичь заветной плитки 2048! 🚀🧠</p>
+                           class="backlight">внимательность</span> и <span class="backlight">стратегическое</span> мышление.
+                        Объединяйте числа, чтобы достичь заветной плитки 2048! 🧩🔍🧠</p>
                      <img src="/img/Games/2048gameImage.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -347,7 +347,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <h2 class="title">Лабиринт</h2>
                      <p class="subtitle">Развивает <span class="backlight">память</span> и <span
                            class="backlight">концентрацию</span>. Запомните расположение тайлов, а затем восстановите
-                        путь из памяти! 🧩🧠</p>
+                        путь из памяти! 🧠🧘</p>
                      <img src="/img/Games/mazeGameImage.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -357,7 +357,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <h2 class="title">Забег</h2>
                      <p class="subtitle">Проверяет <span class="backlight">реакцию</span> и <span
                            class="backlight">скорость</span>. Уворачивайтесь от падающих кубиков, пока темп игры не
-                        станет по-настоящему безумным! ⚡🏃‍♂️</p>
+                        станет по-настоящему безумным! ⚡🚀</p>
                      <img src="/img/Games/runnerImg.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -367,7 +367,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <h2 class="title">Найди цвет</h2>
                      <p class="subtitle">Проверяет <span class="backlight">моторику</span> и <span
                            class="backlight">Внимательность</span>. Найдите фигуру, которая отличается по цвету. Каждые
-                        5 правильных ответов сетка повышается до 6x6!⚡🏃‍♂️</p>
+                        5 правильных ответов сетка повышается до 6x6!⚙️🔍</p>
                      <img src="/img/Games/DiffColorgm.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -379,6 +379,16 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                            class="backlight">стратегическое </span>мышление.
 						   Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
                      <img src="/img/Games/Connections.png" alt="картинка">
+                     <div class="game-item__category">мини-игра</div>
+                  </div>
+               </a>
+			   <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
+                  <div class="game-item">
+                     <h2 class="title">Найди шарик</h2>
+                     <p class="subtitle">Тренирует <span class="backlight">Внимательность</span> и <span
+                           class="backlight">Память. </span>
+						   Найдите шарик в стаканах, которые перемешиваются! 🔍🧠</p>
+                     <img src="/img/Games/Cupgame.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
                </a>

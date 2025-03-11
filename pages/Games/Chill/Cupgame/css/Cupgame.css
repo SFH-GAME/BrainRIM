@@ -1,0 +1,144 @@
+*{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+body {
+	font-family: 'Balsamiq Sans', cursive;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #213242;
+	overflow: -moz-hidden-unscrollable;
+	user-select: none;
+}
+
+h1 {
+	margin: 0% 0 0 0;
+	color: #05EFD4;
+	font-size: 18px;
+	opacity: 1;
+	visibility: visible;
+	animation: text-focus-in 1s linear, 2s fadeOut 2s forwards;
+	width: 100%;
+	position: fixed;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+@keyframes text-focus-in {
+	0% {
+	filter: blur(12px);
+	opacity: 0;
+	font-size: 24px;
+	}
+	100% {
+	filter: blur(0px);
+	opacity: 1;
+	font-size: 18px;
+	}
+	}
+	@keyframes fadeOut {
+	0% {
+	opacity: 1;
+	visibility: visible;
+	}
+	100% {
+	opacity: 0;
+	visibility: hidden;
+}
+}
+
+
+
+
+.game-container {
+	display: flex;
+	width: 344px;
+	height: 150px;
+	position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cup {
+    width: 100px;
+    height: 130px;
+    background: linear-gradient(145deg, #d4d4d4, #a0a0a0); /* Градиент для объёмного эффекта */
+    position: absolute;
+    border-radius: 20px 20px 10px 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    transition: transform 0.8s ease-in-out;
+    cursor: pointer;
+    z-index: 2; /* Стакан выше шарика */
+
+    /* Тени для глубины */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 -2px 4px rgba(255, 255, 255, 0.2);
+    border: 2px solid #b0b0b0; /* Тонкая рамка для чёткости */
+}
+.cup::before {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	width: 140px;
+	height: 50px;
+	background: #c0c0c0;
+	border-radius: 50%;
+	transform: translateX(-50%);
+	top: 95%;
+}
+/* Верхняя часть стакана (объёмная крышка) */
+.cup::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100px;
+    height: 25px;
+    background: radial-gradient(circle, #a0a0a0, #808080);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ещё немного глубины */
+}
+.ball {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 10px;
+	left: 25px;
+	transition: transform 0.8s ease-in-out;
+	z-index: 1; /* Шарик ниже стакана */
+}
+#restart {
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	display: none;
+	position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.score-container {
+	font-size: 24px;
+	font-weight: bold;
+	color: #05EFD4;
+	position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
