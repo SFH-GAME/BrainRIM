@@ -48,11 +48,14 @@ function updateTo($table, $id, $params)
    $query->execute($params);
    dbCheckError($query);
 }
-
+//уровень
 $level = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
+// достижения
 $completedAchievements = selectAll('user_achievements', ['user_id' => $_SESSION['id'], 'status' => 'completed']);
 $completedAchievementsCount = count($completedAchievements);
 
+
+//валюта и общая инфо.
 $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);

@@ -7,10 +7,13 @@ function getUserAchievements($user_id)
     // Добавлено поле reward_claimed для отслеживания забранной награды
     $query = $pdo->prepare("
         SELECT a.id, a.name, a.description, a.type, a.goal, 
-               ua.status, ua.progress, ua.reward_claimed
+               ua.status, ua.progress, ua.reward_claimed,
+               ar.currency, ar.hints, ar.IQ, ar.exp
         FROM achievements a
         LEFT JOIN user_achievements ua 
             ON a.id = ua.achievement_id AND ua.user_id = :user_id
+        LEFT JOIN achievement_rewards ar 
+            ON a.id = ar.achievement_id
         ORDER BY a.id
     ");
     $query->execute(['user_id' => $user_id]);
