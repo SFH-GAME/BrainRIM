@@ -336,7 +336,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <div class="game-item">
                      <h2 class="title">2048</h2>
                      <p class="subtitle">Тренирует <span class="backlight">логику</span>, <span
-                           class="backlight">внимательность</span> и <span class="backlight">стратегическое</span> мышление.
+                           class="backlight">внимательность</span> и <span class="backlight">стратегическое</span>
+                        мышление.
                         Объединяйте числа, чтобы достичь заветной плитки 2048! 🧩🔍🧠</p>
                      <img src="/img/Games/2048gameImage.png" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
@@ -349,7 +350,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                            class="backlight">концентрацию</span>. Запомните расположение тайлов, а затем восстановите
                         путь из памяти! 🧠🧘</p>
                      <img src="/img/Games/mazeGameImage.png" alt="картинка">
-                     <div class="game-item__category">мини-игра</div>
+                     <div class="game-item__category spotlight">в разработке</div>
                   </div>
                </a>
                <a href="/pages/Games/Chill/runingGame/runingGame.php">
@@ -372,24 +373,24 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <div class="game-item__category">мини-игра</div>
                   </div>
                </a>
-			   <a href="/pages/Games/Chill/Connections/Connections.php">
+               <a href="/pages/Games/Chill/Connections/Connections.php">
                   <div class="game-item">
                      <h2 class="title">Соединения</h2>
                      <p class="subtitle">Тренирует <span class="backlight">логику</span> и <span
                            class="backlight">стратегическое </span>мышление.
-						   Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
+                        Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
                      <img src="/img/Games/Connections.png" alt="картинка">
-                     <div class="game-item__category">мини-игра</div>
+                     <div class="game-item__category spotlight">в разработке</div>
                   </div>
                </a>
-			   <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
+               <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
                   <div class="game-item">
                      <h2 class="title">Найди шарик</h2>
                      <p class="subtitle">Тренирует <span class="backlight">Внимательность</span> и <span
                            class="backlight">Память. </span>
-						   Найдите шарик в стаканах, которые перемешиваются! 🔍🧠</p>
+                        Найдите шарик в стаканах, которые перемешиваются! 🔍🧠</p>
                      <img src="/img/Games/Cupgame.png" alt="картинка">
-                     <div class="game-item__category">мини-игра</div>
+                     <div class="game-item__category spotlight">в разработке</div>
                   </div>
                </a>
 

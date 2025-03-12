@@ -278,12 +278,12 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                     var achievementContainer = button.closest('.achieve');
                     var rewardBlock = achievementContainer.find('.reward-block');
 
-                    // Определяем иконки валют
-                    var currencyIcons = [
-                        "/img/Menu/Memoney.png",
-                        "/img/Menu/icon-hints.png",
-                        "/img/Menu/IQ.svg",
-                        "/img/Menu/exp-icon.svg"
+                    // Определяем иконки валют и соответствующие элементы в интерфейсе
+                    var currencyData = [
+                        { icon: "/img/Menu/Memoney.png", target: $('.currency-background .currency-value') },
+                        { icon: "/img/Menu/icon-hints.png", target: $('.currency-background .hints-value') },
+                        { icon: "/img/Menu/IQ.svg", target: $('.currency-background .iq-value') },
+                        { icon: "/img/Menu/exp-icon.svg", target: $('.currency-background .exp-value') }
                     ];
 
                     // Определяем целевой блок (Braincurrencypct)
@@ -296,29 +296,37 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                             button.css({ 'opacity': '0.7', 'cursor': 'default' }).prop('disabled', true).text('Награда получена');
                             rewardBlock.addClass('claimed-reward');
 
-                            // Анимация "летящих" валют
-                            currencyIcons.forEach((icon, index) => {
-                                setTimeout(function () {
-                                    var flyingReward = $('<img class="flying-currency" src="' + icon + '">').appendTo('body');
+                            // Запускаем анимацию полёта валют
+                            currencyData.forEach((data, index) => {
+                                let rewardValue = parseInt(rewardBlock.find(`.reward-item:eq(${index}) span`).text()) || 0;
+                                let targetCurrency = data.target;
 
-                                    flyingReward.css({
-                                        left: button.offset().left + 'px',
-                                        top: button.offset().top + 'px',
-                                        position: 'absolute',
-                                        zIndex: 1000,
-                                        width: '25px',
-                                        height: '25px',
-                                        opacity: 1
-                                    });
+                                if (rewardValue > 0) {
+                                    setTimeout(function () {
+                                        var flyingReward = $('<img class="flying-currency" src="' + data.icon + '">').appendTo('body');
 
-                                    flyingReward.animate({
-                                        left: targetOffset.left + (Math.random() * 30 - 15) + 'px',
-                                        top: targetOffset.top + 'px',
-                                        opacity: 0
-                                    }, 2500, function () {
-                                        $(this).remove();
-                                    });
-                                }, index * 200); // Последовательный полёт
+                                        flyingReward.css({
+                                            left: button.offset().left + 'px',
+                                            top: button.offset().top + 'px',
+                                            position: 'absolute',
+                                            zIndex: 1000,
+                                            width: '25px',
+                                            height: '25px',
+                                            opacity: 1
+                                        });
+
+                                        flyingReward.animate({
+                                            left: targetOffset.left + (Math.random() * 30 - 15) + 'px',
+                                            top: targetOffset.top + 'px',
+                                            opacity: 0
+                                        }, 2500, function () {
+                                            $(this).remove();
+
+                                            // **Обновляем значение валюты в интерфейсе**
+                                            targetCurrency.text(parseInt(targetCurrency.text()) + rewardValue);
+                                        });
+                                    }, index * 200);
+                                }
                             });
 
                         } else {
@@ -329,6 +337,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                     });
                 });
             });
+
         </script>
 
         <div class="leave-btn">
