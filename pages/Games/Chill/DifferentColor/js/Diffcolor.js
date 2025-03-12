@@ -10,7 +10,7 @@ let timeLeft = 5; // Время в секундах
 let timer; // Хранит setInterval
 let highScore = localStorage.getItem("highScore") || 0; // Рекорд
 let lastClickTime = Date.now(); // Время последнего клика
-let colorDifficulty = 40; // Начальная сложность различия цветов
+let colorDifficulty = 80; // Начальная сложность различия цветов
 let isPaused = false; // Флаг паузы
 
 generateGrid();
@@ -53,8 +53,8 @@ function checkChoice(isCorrect) {
         }
         
         // Каждые 10 правильных ответов усложняем различие оттенка
-        if (score % 10 === 0 && colorDifficulty > 5) {
-            colorDifficulty -= 5;
+        if (score % 10 === 0 && colorDifficulty > 10) {
+            colorDifficulty -= 3;
         }
         
         resetTimer(); // Сбрасываем таймер на 5 секунд после каждого правильного ответа
