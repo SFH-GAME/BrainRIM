@@ -2283,6 +2283,13 @@ text-decoration: none;
 	font-size: 14px;
 	color: #f62c2c;
 }
+.game-item__category_spotlight_second {
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	font-size: 14px;
+	color: #f62c2c;
+}
 
 /*Анимация для текста в шапке НАЧАЛО*/
 .card {

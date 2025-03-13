@@ -381,6 +381,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                         Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
                      <img src="/img/Games/Connections.png" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
+					 <div class="game-item__category_spotlight_second">есть баги!</div>
                   </div>
                </a>
                <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
