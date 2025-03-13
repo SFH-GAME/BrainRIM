@@ -208,3 +208,12 @@ h3 {
     }
 
 }
+.bold{
+	font-weight: bold;
+}
+.end-image{
+	display: flex;
+	width: 210px;
+	margin: 0 auto;
+	padding: 10px;
+}
