@@ -217,3 +217,7 @@ h3 {
 	margin: 0 auto;
 	padding: 10px;
 }
+.article-link{
+	color: white;
+	font-weight: bold;
+}
