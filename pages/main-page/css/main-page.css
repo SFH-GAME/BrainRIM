@@ -1948,6 +1948,7 @@ text-decoration: none;
 	text-align: center;
 	position: relative;
 	background-image: url(/img/Shop/PacksBackground.png);
+	overflow: hidden;
 }
 .pack-name{
 	position: absolute;
@@ -1969,9 +1970,32 @@ text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #05EFD4;
-    height: 20px;
+    border-top: 1px solid #ffffff57;
+    height: 30px;
 }
+
+
+.star {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+	box-shadow: 0 0 10px white;
+	animation: fall linear infinite;
+}
+
+@keyframes fall {
+	0% {
+		transform: translate(-10vw, -10vh); /* Начинаем чуть выше верхней границы */
+		opacity: 1;
+	}
+	100% {
+		transform: translate(100vw, 100vh); /* Заканчиваем внизу контейнера */
+		opacity: 0.5; /* Можно регулировать эффект исчезновения */
+	}
+}
+
+
 
  .analytic-container{
 	 position: absolute;

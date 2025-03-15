@@ -214,6 +214,42 @@ document.querySelector(".convert-button").onclick = function () {//конвер�
 
 
 
+const maxStars = 10; // Максимальное количество звёзд на контейнер
+
+const createStar = (container) => {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    // Рандомная горизонтальная позиция в пределах контейнера
+    star.style.left = Math.random() * 148 + 'px';
+    star.style.animationDuration = Math.random() * 16 + 24 + 's'; // Анимация от 24 до 40 секунд
+
+    // Добавление звезды в контейнер
+    container.appendChild(star);
+
+    // Проверка и удаление лишних звёзд
+    const stars = container.querySelectorAll('.star'); // Находим только звёзды
+    if (stars.length > maxStars) {
+        stars[0].remove(); // Удаляем только первую звезду
+    }
+
+    // Удаление звезды после завершения анимации
+    setTimeout(() => {
+        if (container.contains(star)) {
+            star.remove();
+        }
+    }, 40000); // Устанавливаем время жизни звезды
+};
+
+const packs = document.querySelectorAll('.pack');
+
+// Создаём звёзды для каждого контейнера с интервалом
+packs.forEach((pack) => {
+    setInterval(() => createStar(pack), 500);
+});
+
+
+
 function ShowFireworks() {
 
   const duration = 5 * 1000,
