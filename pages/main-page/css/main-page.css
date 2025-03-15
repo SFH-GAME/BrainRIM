@@ -1958,7 +1958,7 @@ text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
+    height: 40px;
 }
 .pack-img{
 	width: 80px;
@@ -1974,7 +1974,6 @@ text-decoration: none;
     height: 30px;
 }
 
-
 .star {
 	position: absolute;
 	width: 2px;
@@ -1983,7 +1982,6 @@ text-decoration: none;
 	box-shadow: 0 0 10px white;
 	animation: fall linear infinite;
 }
-
 @keyframes fall {
 	0% {
 		transform: translate(-10vw, -10vh); /* Начинаем чуть выше верхней границы */
