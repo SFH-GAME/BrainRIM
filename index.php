@@ -712,8 +712,31 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="special-offers">Специальные предложения</div>
-            <!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.pn"/></div>-->
-            <div class="special-offers-body">В данный момент специальных предложений нет.</div>
+            <div class="special-offers-body">
+				<div class="pack">
+					<div class="pack-name">Начальный капитал</div>
+					<img src="/img/Shop/MoneyPack1.png" class="pack-img" alt="">
+					<div class="pack-price">?$</div>
+				</div>
+
+				<div class="pack">
+					<div class="pack-name">Пак новичка</div>
+					<img src="/img/Shop/MoneyPack2.png" class="pack-img" alt="">
+					<div class="pack-price">?$</div>
+				</div>
+
+				<div class="pack">
+					<div class="pack-name">Запасливый игрок</div>
+					<img src="/img/Shop/MoneyPack3.png" class="pack-img" alt="">
+					<div class="pack-price">?$</div>
+				</div>
+
+				<div class="pack">
+					<div class="pack-name">Запасливый игрок</div>
+					<img src="/img/Shop/MoneyPack3.png" class="pack-img" alt="">
+					<div class="pack-price">?$</div>
+				</div>
+			</div>
          </div>
       </div>
 

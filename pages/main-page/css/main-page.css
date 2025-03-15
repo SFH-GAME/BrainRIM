@@ -1538,7 +1538,7 @@ flex-direction: column;
 	 font-family: 'Balsamiq Sans', cursive;
 	 position: absolute;
 	 display: none;
-	 height: 90%;
+	 height: 92%;
 	 width: 100%;
 	 min-width: 340px;
 	 background: rgb(0,8,82);
@@ -1785,12 +1785,6 @@ text-decoration: none;
 	color: #000;
 	background-color: #05EFD4;
 }
-.special-offers-body{
-	display: flex;
-	justify-content: center;
-	margin: 200px auto;
-	color: #ffffff;
-}
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;
@@ -1918,7 +1912,7 @@ text-decoration: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 100px auto;
+	margin: 100px auto 50px;
 	max-width: 320px;
 	height: 50px;
 	border: 2px solid #05EFD4;
@@ -1932,7 +1926,52 @@ text-decoration: none;
 	color: #000;
 	background-color: #05EFD4;
 }
-
+.special-offers-body{
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	color: #ffffff;
+	flex-direction: row;
+    flex-wrap: wrap;
+	gap: 15px;
+}
+.pack{
+	border: 1px solid #ffffff36;;
+	border-radius: 20px;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	background-image: url(/img/Shop/PacksBackground.png);
+}
+.pack-name{
+	position: absolute;
+    top: 0;
+    /* border-bottom: 1px solid #05EFD4; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+.pack-img{
+	width: 80px;
+}
+.pack-price{
+	width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #05EFD4;
+    height: 20px;
+}
 
  .analytic-container{
 	 position: absolute;
