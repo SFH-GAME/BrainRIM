@@ -78,6 +78,8 @@
  }
  img {
 	vertical-align: top;
+	pointer-events: none; /* Запрещает взаимодействие с изображением */
+	user-select: none; /* Запрещает выделение изображения */
  }
  h1,
  h2,
