@@ -127,6 +127,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
          <div class="header-score-container">
             <div class="memany-container currency-container">
+				<div role="tooltip" id="help-tooltip" class="tooltip">
+					<i>💡</i><strong>Memoney</strong>
+				</div>
                <img class="currency-memoney-icon" src="/img/Menu/Memoney.png" alt="memoney">
                <div class="memany-count home-memony-body">
                   <?php if (isset($_SESSION['id'])): ?>
@@ -137,6 +140,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="hint-container currency-container">
+				<div role="tooltip" id="help-tooltip" class="tooltip">
+					<i>💡</i><strong>Подсказки</strong>
+				</div>
                <img class="currency-icons" src="/img/Menu/icon-hints.png" alt="hints">
                <div class="memany-count home-hints-body">
                   <?php if (isset($_SESSION['id'])): ?>
@@ -147,6 +153,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="iq-container currency-container">
+				<div role="tooltip" id="help-tooltip" class="tooltip">
+					<i>💡</i><strong>Интеллект</strong>
+				</div>
                <span class="iq-name">IQ</span>
                <div class="memany-count home-iq-body">
                   <?php if (isset($_SESSION['id'])): ?>
