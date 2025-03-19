@@ -146,7 +146,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    bottom: 20%;
+    bottom: 10%;
     position: absolute;
     text-align: center;
     gap: 15px;
@@ -180,6 +180,15 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(180deg, rgb(0, 100, 0), rgb(100, 40, 0), rgb(100, 0, 100), rgb(0, 0, 100), #000000);
+  animation: changeColors 400s ease-in-out forwards;
+}
+@keyframes changeColors {
+    0% { background: rgb(0, 100, 0); }
+    25% { background: rgb(100, 40, 0); }
+    50% { background: rgb(100, 0, 100); }
+    75% { background: rgb(0, 0, 100); }
+    100% { background: #000000; }
 }
 
 #score {
@@ -214,7 +223,11 @@ body {
   background-color: red;
   position: absolute;
   border-radius: 5px;
+  filter: blur(1px);
 }
+
+
+
 
 .results-gameover{
 	display: none;
@@ -616,4 +629,106 @@ body {
  .pop-up__cancel3:active{
 	transform: scale(0.7);
  }
- /* Стили верхних кнопок конец*/ 
+/* Стили верхних кнопок конец*/ 
+
+/*Информация о бустах на старте*/ 
+.game-info-boosts{
+	display: flex;
+    max-width: 350px;
+    color: #ffffff;
+    font-size: 18px;
+	align-items: center;
+}
+.heart-info{
+	height: 40px;
+	width: 40px;
+	aspect-ratio: 1;
+	--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+	-webkit-mask-box-image: var(--_m);
+	mask-border: var(--_m);
+	clip-path: polygon(-41% 0,50% 91%, 141% 0);
+	background: #cc333f;
+}
+
+@supports not (-webkit-mask-box-image: var(--_m)) { 
+	.heart {
+	mask:
+	radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+	radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+	conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+	}
+}
+.boost-container-info {
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+.triangle-info {
+    width: 20px;
+    height: 30px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background: linear-gradient(60deg, #cb00ff66, #000000);
+    margin-left: -8px;
+    border: 1px solid #c50d0d;
+}
+
+.triangle-info:first-child {
+    margin-left: 0;
+}
+
+/*Информация о бустах в игре*/ 
+.boosts-ui {
+    position:absolute;
+    display: flex;
+    top: 400px;
+	right: 10px;
+    justify-content: flex-end;
+    margin: 0 10px;
+    font-size: 18px;
+    color: #05efd4;
+}
+
+/*Бусты*/ 
+.heart {
+	position: absolute;
+	left: calc(50% - 25px);
+	height: 40px;
+	aspect-ratio: 1;
+	--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+	-webkit-mask-box-image: var(--_m);
+			   mask-border: var(--_m);
+	clip-path: polygon(-41% 0,50% 91%, 141% 0);
+	background: #cc333f;
+  }
+  /* fallback until better support for mask-border */
+  @supports not (-webkit-mask-box-image: var(--_m)) { 
+	.heart {
+	  mask:
+	   radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+	   radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+	   conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+	}
+  }
+
+  .boost-container {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle {
+    width: 20px;
+    height: 30px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background: linear-gradient(60deg, #cb00ff66, #000000);
+    margin-left: -8px;
+    border: 1px solid #c50d0d;
+}
+
+.triangle:first-child {
+    margin-left: 0;
+}
+

@@ -60,7 +60,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                   <div class="developer">Порфирий Романовский<br>
                      <span>(tg: @PorfiriyRoma)</span>
                   </div>
-                  <div class="developer">Алексей Бутор</div>
+                  <div class="developer">Aleksey Butor</div>
                   <div class="close"><ion-icon name="close-outline"></ion-icon></div>
                </div>
             </div>
@@ -109,7 +109,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                   <br>Мы не программисты,просто интузиасты (инди разработчики).
                   <br>Мы будем поддерживать этот проект настолько долго, насколько долго будет жить наше комьюнити, не
                   сомневайтесь в нас.
-                  <br>*И да, мы не собираем данные наших пользователей.
                   <br><br><span class="lasttxt">Будьте здоровы!</span></span>
                <div class="close-about-us"><ion-icon name="close-outline"></ion-icon></div>
             </div>

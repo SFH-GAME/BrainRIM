@@ -31,6 +31,8 @@
         <div class="game-info-title">
           <span class="game-info-name">Забег</span>
           <span class="game-info">В этой игре вам надо уворачиваться от падающих кубиков и продержаться как можно дольше</span>
+		  <span class="game-info-boosts"><div class="heart-info"></div>- буст, дающий доп. жизнь при столкновении</span>
+		  <span class="game-info-boosts"><div class="boost-container-info"><div class="triangle-info"></div><div class="triangle-info"></div><div class="triangle-info"></div></div> - буст, дающий замедление врагов на 5 секунд</span>
         </div>
       </div>
    </div>
@@ -41,8 +43,21 @@
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
   </div>
     <div class="game-container">
-        <div id="player"></div>
-      <div id="score">Время: <span id="timer">0</span>с <div class="score-enemy-passed">Врагов пройдено: <span id="score-num">0</span></div></div>
+    <div id="player"></div>
+
+	<!-- <div class="heart"></div>
+    <div class="boost-container">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div> -->
+
+
+	<div id="score">Время: <span id="timer">0</span>с <div class="score-enemy-passed">Врагов пройдено: <span id="score-num">0</span></div></div>
+	<div class="boosts-ui">
+		<div id="lives-counter">❤️<span id="lives-count">1</span></div>
+	</div>
+
 
 	  <div class="results-gameover results-container">
 	    <h1 class="results-head-text">Результаты</h1>
