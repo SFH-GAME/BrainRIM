@@ -11,6 +11,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css?v=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <title>Настройки</title>
 </head>
 
@@ -21,12 +22,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
          <a class="comeback-button" href="/index.php">
             <ion-icon name="arrow-back-outline"></ion-icon></a>
          <div class="social-list">
-            <a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><ion-icon
-                  name="logo-tiktok"></ion-icon></a>
-            <a href="https://vk.com/brainrim" target="_blank" class="settings-top-icon"><img
-                  src="/img/free-icon-vk-3670055.png" alt=""></a>
-            <a href="https://t.me/brainrim" target="_blank" class="settings-top-icon"><img src="/img/telegram.png"
-                  alt=""></a>
+<a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i class="fa-brands fa-tiktok fa-2x"alt="TikTok"></i></a>
+<a target="_blank" class="settings-top-icon" href="https://vk.com/brainrim"><i class="fa-brands fa-vk fa-2x" alt="Telegram"></i></a>
+<a class="settings-top-icon" target="_blank" href="https://t.me/brainrim"><i class="fa-brands fa-telegram fa-2x" alt="Vk"></i></a>
          </div>
       </header>
       <main class="main">
@@ -36,8 +34,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                <div class="mark"><ion-icon name="log-in-outline"></ion-icon></div>
                <div class="main-item connect">
                   <a class="sign-in" href="/pages/page-registration/registration-page.php">Войти</a>
-                  <a href="/pages/page-registration/registration-page.php"><img src="/img/Settings/PlayGamesGamepad.svg"
-                        alt="Gamepad" class="gamepad"></a>
+                  <a href="/pages/page-registration/registration-page.php"></a>
                </div>
             </div>
 
@@ -58,9 +55,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                <div class="main-item developers-button">Разработчики</div>
                <div class="developers-container_body">
                   <div class="developer">Порфирий Романовский<br>
-                     <span>(tg: @PorfiriyRoma)</span>
+                     <span><a href="https://t.me/PorfiriyRoma" class="dev-social">(tg: @PorfiriyRoma)</a></span>
                   </div>
-                  <div class="developer">Aleksey Butor</div>
+                  <div class="developer">Aleksey Butor<br>
+				     <span class="dev-social">(tg: None)</span>
+					 </div>
                   <div class="close"><ion-icon name="close-outline"></ion-icon></div>
                </div>
             </div>
@@ -70,7 +69,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                <div class="main-item language-button">Язык</div>
                <div class="language-container">
                   <div class="EN language in-dev">Английский</div>
-                  <div class="RU language">Русский</div>
+                  <div class="RU language active">Русский</div>
                   <div class="EN language in-dev">中文</div>
                   <div class="EN language in-dev">español</div>
                   <div class="EN language in-dev">français</div>
@@ -114,16 +113,18 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
             </div>
             <div class="item-body">
                <div class="mark"><ion-icon name="at-outline"></ion-icon></div>
-               <a href="mailto:porf2002@mail.ru" class="main-item about">Написать разработчику</a>
+               <a href="mailto:brainriminfo@gmail.com" class="main-item about">Написать разработчикам</a>
             </div>
          </div>
 
-      </main>
-      <footer class="footer">
-         <span class="version">| Beta version 1.4</span>
-         <a href="/Privacy-Policy.php" class="privacy"><ion-icon name="shield-outline"></ion-icon></a>
-      </footer>
-   </div>
+</main>
+<footer class="footer">
+        <span class="version">| Beta version 1.4</span>
+        <a href="/Privacy-Policy.php" class="privacy">
+			<ion-icon class="default" name="shield-outline"></ion-icon>
+			<ion-icon class="hover" name="shield-half-outline"></ion-icon>
+		</a>
+</footer>
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    <script src="/pages/settings-page/settings-page.js?v=1.0"></script>

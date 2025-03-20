@@ -62,3 +62,24 @@ CloseNews.onclick = function () { //Поддержка - при закрытии
 	News.style = 'display: none;';
 	containerGrayBackground.style = 'display: none;';
 }
+
+//Раздел "Язык"
+const languages = document.querySelectorAll(".language");
+const defaultLanguage = document.querySelector(".RU"); // RU — язык по умолчанию
+const languageContainer = document.querySelector(".language-container"); // Контейнер с языками
+
+languages.forEach(language => {
+    language.addEventListener("click", () => {
+        document.querySelector(".language.active")?.classList.remove("active");
+        language.classList.add("active");
+    });
+});
+
+//Сброс языка на RU
+function closeLanguageMenu() {
+    document.querySelector(".language.active")?.classList.remove("active");
+    defaultLanguage.classList.add("active");
+    languageContainer.style.display = "none";
+}
+
+document.querySelector(".close-language").addEventListener("click", closeLanguageMenu);
