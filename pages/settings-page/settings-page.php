@@ -22,9 +22,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
          <a class="comeback-button" href="/index.php">
             <ion-icon name="arrow-back-outline"></ion-icon></a>
          <div class="social-list">
-<a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i class="fa-brands fa-tiktok fa-2x"alt="TikTok"></i></a>
-<a target="_blank" class="settings-top-icon" href="https://vk.com/brainrim"><i class="fa-brands fa-vk fa-2x" alt="Telegram"></i></a>
-<a class="settings-top-icon" target="_blank" href="https://t.me/brainrim"><i class="fa-brands fa-telegram fa-2x" alt="Vk"></i></a>
+			<a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i class="fa-brands fa-tiktok fa-2x" alt="TikTok"></i></a>
+			<a class="settings-top-icon" target="_blank" href="https://vk.com/brainrim"><i class="fa-brands fa-vk fa-2x" alt="Telegram"></i></a>
+			<a class="settings-top-icon" target="_blank" href="https://t.me/brainrim"><i class="fa-brands fa-telegram fa-2x" alt="Vk"></i></a>
          </div>
       </header>
       <main class="main">

@@ -484,33 +484,32 @@ justify-content: center;
 .settings-top-icon{
 	font-size: 20px;
 	color: #ffffff;
+	transition: transform 0.2s ease-in-out;
 }
-.settings-top-icon img {
-	width: 40px;
+.settings-top-icon:active{
+	transform: scale(0.85);
+	color: #05ef4b;
+	filter: blur(0.3px);
 }
 .dev-social{
 	color: gray;
 }
 
 
-
+/* Изменение иконки политики при нажатии */
 .privacy ion-icon{
-	transition: opacity 0.2s ease;
+	transition: opacity 0.3s ease;
 }
-
 .privacy .default{
 	opacity: 1;
 }
-
 .privacy .hover{
 	opacity: 0;
 	position: absolute;
 }
-
 .privacy:hover .default{
 	opacity: 0;
 }
-
 .privacy:hover .hover{
 	opacity: 1;
 }
