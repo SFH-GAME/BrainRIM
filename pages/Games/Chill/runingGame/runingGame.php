@@ -31,8 +31,8 @@
         <div class="game-info-title">
           <span class="game-info-name">Забег</span>
           <span class="game-info">В этой игре вам надо уворачиваться от падающих кубиков и продержаться как можно дольше</span>
-		  <span class="game-info-boosts"><div class="heart-info"></div>- буст, дающий доп. жизнь при столкновении</span>
-		  <span class="game-info-boosts"><div class="boost-container-info"><div class="triangle-info"></div><div class="triangle-info"></div><div class="triangle-info"></div></div> - буст, дающий замедление врагов на 5 секунд</span>
+		  <span class="game-info-boosts"><div class="heart-info"></div>- доп. жизнь при столкновении </span>
+		  <span class="game-info-boosts"><div class="boost-container-info"><div class="triangle-info"></div><div class="triangle-info"></div><div class="triangle-info"></div></div>- замедление врагов(5 секунд)</span>
         </div>
       </div>
    </div>

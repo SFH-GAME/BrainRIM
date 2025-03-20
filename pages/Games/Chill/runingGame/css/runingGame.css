@@ -634,10 +634,12 @@ body {
 /*Информация о бустах на старте*/ 
 .game-info-boosts{
 	display: flex;
-    max-width: 350px;
+    width: 350px;
     color: #ffffff;
     font-size: 18px;
 	align-items: center;
+	justify-content: center;
+	gap: 5px;
 }
 .heart-info{
 	height: 40px;
@@ -684,7 +686,7 @@ body {
 	right: 10px;
     justify-content: flex-end;
     margin: 0 10px;
-    font-size: 18px;
+    font-size: 22px;
     color: #05efd4;
 }
 
