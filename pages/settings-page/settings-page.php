@@ -10,7 +10,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css?v=1.0">
+   <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css?v=2.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <title>Настройки</title>
 </head>
@@ -22,9 +22,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
          <a class="comeback-button" href="/index.php">
             <ion-icon name="arrow-back-outline"></ion-icon></a>
          <div class="social-list">
-			<a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i class="fa-brands fa-tiktok fa-2x" alt="TikTok"></i></a>
-			<a class="settings-top-icon" target="_blank" href="https://vk.com/brainrim"><i class="fa-brands fa-vk fa-2x" alt="Telegram"></i></a>
-			<a class="settings-top-icon" target="_blank" href="https://t.me/brainrim"><i class="fa-brands fa-telegram fa-2x" alt="Vk"></i></a>
+            <a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i
+                  class="fa-brands fa-tiktok fa-2x" alt="TikTok"></i></a>
+            <a class="settings-top-icon" target="_blank" href="https://vk.com/brainrim"><i class="fa-brands fa-vk fa-2x"
+                  alt="Telegram"></i></a>
+            <a class="settings-top-icon" target="_blank" href="https://t.me/brainrim"><i
+                  class="fa-brands fa-telegram fa-2x" alt="Vk"></i></a>
          </div>
       </header>
       <main class="main">
@@ -58,8 +61,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                      <span><a href="https://t.me/PorfiriyRoma" class="dev-social">(tg: @PorfiriyRoma)</a></span>
                   </div>
                   <div class="developer">Aleksey Butor<br>
-				     <span class="dev-social">(tg: None)</span>
-					 </div>
+                     <span class="dev-social">(tg: None)</span>
+                  </div>
                   <div class="close"><ion-icon name="close-outline"></ion-icon></div>
                </div>
             </div>
@@ -117,17 +120,17 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
             </div>
          </div>
 
-</main>
-<footer class="footer">
-        <span class="version">| Beta version 1.4</span>
-        <a href="/Privacy-Policy.php" class="privacy">
-			<ion-icon class="default" name="shield-outline"></ion-icon>
-			<ion-icon class="hover" name="shield-half-outline"></ion-icon>
-		</a>
-</footer>
-   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="/pages/settings-page/settings-page.js?v=1.0"></script>
+      </main>
+      <footer class="footer">
+         <span class="version">| Beta version 1.4</span>
+         <a href="/Privacy-Policy.php" class="privacy">
+            <ion-icon class="default" name="shield-outline"></ion-icon>
+            <ion-icon class="hover" name="shield-half-outline"></ion-icon>
+         </a>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="/pages/settings-page/settings-page.js?v=2.0"></script>
 </body>
 
 </html>

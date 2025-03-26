@@ -106,8 +106,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
       <div class="gray-background-container"></div>
       <header class="header">
          <div class="header__top-button-container">
-            <a href="/pages/settings-page/settings-page.php" class="settings"><ion-icon class="icon-settings"
-                  name="settings-outline"></ion-icon></a>
+            <a href="/pages/settings-page/settings-page.php" class="settings"><img src="/img/icons/settings-outline.svg"
+                  class="icon-settings" alt="иконка настроек" title="иконка настроек"></a>
             <!--<span class="header__top-button-title">BrainRIM</span>-->
             <div class="card">
                <div class="loader">
@@ -127,9 +127,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
          <div class="header-score-container">
             <div class="memany-container currency-container">
-				<div role="tooltip" id="help-tooltip" class="tooltip">
-					<i>💡</i><strong>Memoney</strong>
-				</div>
+               <div role="tooltip" id="help-tooltip" class="tooltip">
+                  <i>💡</i><strong>Memoney</strong>
+               </div>
                <img class="currency-memoney-icon" src="/img/Menu/Memoney.png" alt="memoney">
                <div class="memany-count home-memony-body">
                   <?php if (isset($_SESSION['id'])): ?>
@@ -140,9 +140,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="hint-container currency-container">
-				<div role="tooltip" id="help-tooltip" class="tooltip">
-					<i>💡</i><strong>Подсказки</strong>
-				</div>
+               <div role="tooltip" id="help-tooltip" class="tooltip">
+                  <i>💡</i><strong>Подсказки</strong>
+               </div>
                <img class="currency-icons" src="/img/Menu/icon-hints.png" alt="hints">
                <div class="memany-count home-hints-body">
                   <?php if (isset($_SESSION['id'])): ?>
@@ -153,9 +153,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="iq-container currency-container">
-				<div role="tooltip" id="help-tooltip" class="tooltip">
-					<i>💡</i><strong>Интеллект</strong>
-				</div>
+               <div role="tooltip" id="help-tooltip" class="tooltip">
+                  <i>💡</i><strong>Интеллект</strong>
+               </div>
                <span class="iq-name">IQ</span>
                <div class="memany-count home-iq-body">
                   <?php if (isset($_SESSION['id'])): ?>
@@ -213,10 +213,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <span class="reg-hint-text"><span>Войдите</span>, чтобы сохранить прогресс.<br> <span>Подарок</span> при
                      регистрации!</span>
                </a>
-			   <div class="tree-button">
-				<img src="/img/Menu/Tree.png" alt="Дерево навыков">
-				<span class="tree-span">Дерево навыков</span>
-			   </div>
+               <div class="tree-button">
+                  <img src="/img/Menu/Tree.png" alt="Дерево навыков">
+                  <span class="tree-span">Дерево навыков</span>
+               </div>
 
             <?php endif; ?>
             <div class="tasks-bonus-iq-container">
@@ -304,31 +304,36 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             <ul>
                <li class="list list-analytic">
                   <a href="#analitycs">
-                     <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                     <span class="icon"><img src="/img/icons/bar-chart-outline.svg" class="navig-icon"
+                           alt="иконка настроек" title="иконка настроек"></span>
                      <span class="text">Аналитика</span>
                   </a>
                </li>
                <li class="list list-store">
                   <a href="#shop">
-                     <span class="icon"><ion-icon name="storefront-outline"></ion-icon></span>
+                     <span class="icon"><img src="/img/icons/storefront-outline.svg" class="navig-icon"
+                           alt="иконка настроек" title="иконка настроек"></span>
                      <span class="text">Магазин</span>
                   </a>
                </li>
                <li class="list list-home active">
                   <a href="#home">
-                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                     <span class="icon"><img src="/img/icons/home-outline.svg" class="navig-icon" alt="иконка настроек"
+                           title="иконка настроек"></span>
                      <span class="text active">Главная</span>
                   </a>
                </li>
                <li class="list list-improve">
                   <a href="#improve">
-                     <span class="icon"><ion-icon name="trending-up-outline"></ion-icon></span>
+                     <span class="icon"><img src="/img/icons/trending-up-outline.svg" class="navig-icon"
+                           alt="иконка настроек" title="иконка настроек"></span>
                      <span class="text">Развитие</span>
                   </a>
                </li>
                <li class="list list-games">
                   <a href="#games">
-                     <span class="icon"><ion-icon name="game-controller-outline"></ion-icon></span>
+                     <span class="icon"><img src="/img/icons/game-controller-outline.svg" class="navig-icon"
+                           alt="иконка настроек" title="иконка настроек"></span>
                      <span class="text">Игры</span>
                   </a>
                </li>
@@ -394,7 +399,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                         Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
                      <img src="/img/Games/Connections.png" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
-					 <div class="game-item__category_spotlight_second">есть баги!</div>
+                     <div class="game-item__category_spotlight_second">есть баги!</div>
                   </div>
                </a>
                <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
@@ -726,30 +731,30 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
             <div class="special-offers">Специальные предложения</div>
             <div class="special-offers-body">
-				<div class="pack">
-					<div class="pack-name">Начальный капитал</div>
-					<img src="/img/Shop/MoneyPack1.png" class="pack-img" alt="">
-					<div class="pack-price">?$</div>
-				</div>
+               <div class="pack">
+                  <div class="pack-name">Начальный капитал</div>
+                  <img src="/img/Shop/MoneyPack1.png" class="pack-img" alt="">
+                  <div class="pack-price">?$</div>
+               </div>
 
-				<div class="pack">
-					<div class="pack-name">Пак новичка</div>
-					<img src="/img/Shop/MoneyPack2.png" class="pack-img" alt="">
-					<div class="pack-price">?$</div>
-				</div>
+               <div class="pack">
+                  <div class="pack-name">Пак новичка</div>
+                  <img src="/img/Shop/MoneyPack2.png" class="pack-img" alt="">
+                  <div class="pack-price">?$</div>
+               </div>
 
-				<div class="pack">
-					<div class="pack-name">Запасливый игрок</div>
-					<img src="/img/Shop/MoneyPack3.png" class="pack-img" alt="">
-					<div class="pack-price">?$</div>
-				</div>
+               <div class="pack">
+                  <div class="pack-name">Запасливый игрок</div>
+                  <img src="/img/Shop/MoneyPack3.png" class="pack-img" alt="">
+                  <div class="pack-price">?$</div>
+               </div>
 
-				<div class="pack">
-					<div class="pack-name">Хитрюга</div>
-					<img src="/img/Shop/Improvization.png" class="pack-img" alt="">
-					<div class="pack-price">?$</div>
-				</div>
-			</div>
+               <div class="pack">
+                  <div class="pack-name">Хитрюга</div>
+                  <img src="/img/Shop/Improvization.png" class="pack-img" alt="">
+                  <div class="pack-price">?$</div>
+               </div>
+            </div>
          </div>
       </div>
 

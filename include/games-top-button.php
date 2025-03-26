@@ -2,7 +2,8 @@
    <a class="comeback-button" href="#">
       <div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div>
    </a>
-   <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
+   <a href="#" class="linkToTheSettings"><img src="/img/icons/settings-outline.svg" class="imgSettings"
+         alt="иконка настроек" title="иконка настроек"></a>
    <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
 </div>
 
@@ -33,12 +34,10 @@
       transform: scale(0.8);
    }
 
-   .linkToTheSettings {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      color: #fff;
+   .linkToTheSettings img {
+      height: 40px;
+      width: 40px;
+      filter: invert(1);
       transition: 1.2s;
    }
 

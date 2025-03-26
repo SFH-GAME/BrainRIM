@@ -57,7 +57,6 @@ try {
 </head>
 
 <body>
-	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
 	<div class="leaderboard-container">
 		<div class="leaderboard__back-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
 		<h2>Лидеры</h2>
@@ -88,13 +87,8 @@ try {
 		</div>
 	</div>
 	</div>
-	<div class="topButton-gameWords">
-		<a class="comeback-button" href="#">
-			<div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div>
-		</a>
-		<a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
-		<div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
-	</div>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
 
 	<div class="wrapper">
 		<div class="score_container">

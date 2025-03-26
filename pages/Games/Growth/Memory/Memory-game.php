@@ -22,7 +22,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 <body>
    <?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
 
-
    <div class="victory-loose-screen-container">
       <div class="victory-loose-screen__mode-container">
          <div class="victory-loose-screen__mode-title">Сложность</div>

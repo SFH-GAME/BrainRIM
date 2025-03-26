@@ -121,7 +121,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 			</div>
 			<div class="hints-container"><img src="/img/Menu/icon-hints.png" alt="Подсказки" class="hints">
 				<div class="hint-counter"><?php if (isset($_SESSION['id'])): ?> 	<?php echo $EyeScore['sum_eye_hint']; ?>
-					<?php else: ?>0<?php endif; ?></div>
+					<?php else: ?>0<?php endif; ?>
+				</div>
 			</div>
 
 	</div>

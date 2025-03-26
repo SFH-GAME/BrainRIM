@@ -12,61 +12,64 @@
    <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 </head>
 
-<?php 
-   include $_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"; 
-   include $_SERVER['DOCUMENT_ROOT']."/dataBase/surencyAndScore.php";
-?>
-<body>
-<div class="victory-loose-screen-container">
-		<div class="victory-loose-screen__mode-container">
-			<div class="victory-loose-screen__mode-title">Сложность</div>
-			<div class="victory-loose-screen__mode"></div>
-		</div>
-		<div class="victory-loose-screen__win-loose-text">Победа!</div>
-		<div class="victory-loose-screen__results-button">Результаты</div>
-	</div>
-	<div class="results-menu-container">
-		<div class="results-menu__title">Результаты</div>
-		<div class="results-menu__mode-container">
-			<div class="results-menu__mode-title">Сложность</div>
-			<div class="results-menu__mode"></div>
-		</div>
+<?php
+include $_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php";
 
-		<div class="win-loose-screen">
-		<ion-icon class="star" name="star"></ion-icon>
-		<div class="screen-title items-container__win-loose-item">Победа</div>
-		<ion-icon class="star" name="star"></ion-icon>
-		</div>
-		
-		<div class="results-menu__items-container items-container">
-			<div class="items-container__each-item-container">
-				<div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
-				<div class="items-container__done-cards-item"><div class="opened-cards"></div>/20</div>
-			</div>
-			<div class="items-container__each-item-container">
-				<div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
-				<div class="items-container__time-item">
-					<div class="results-menu__time"></div> с.
-				</div>
-			</div>
-			<div class="items-container__each-item-container">
-				<div class="items-container__iq-icon">IQ</div>
-				<div class="items-container__iq-item">+</div>
-			</div>
-			<div class="items-container__each-item-container">
-				<div class="items-container__exp-icon">Exp</div>
-				<div class="items-container__exp-item">+</div>
-			</div>
-			</div>
-		<div class="results-menu__buttons-container">
-			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
-					name="refresh-outline"></ion-icon>
-			</div>
-			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
-					name="home-outline"></ion-icon></a>
-		</div>
-	</div>
-	
+?>
+
+<body>
+   <div class="victory-loose-screen-container">
+      <div class="victory-loose-screen__mode-container">
+         <div class="victory-loose-screen__mode-title">Сложность</div>
+         <div class="victory-loose-screen__mode"></div>
+      </div>
+      <div class="victory-loose-screen__win-loose-text">Победа!</div>
+      <div class="victory-loose-screen__results-button">Результаты</div>
+   </div>
+   <div class="results-menu-container">
+      <div class="results-menu__title">Результаты</div>
+      <div class="results-menu__mode-container">
+         <div class="results-menu__mode-title">Сложность</div>
+         <div class="results-menu__mode"></div>
+      </div>
+
+      <div class="win-loose-screen">
+         <ion-icon class="star" name="star"></ion-icon>
+         <div class="screen-title items-container__win-loose-item">Победа</div>
+         <ion-icon class="star" name="star"></ion-icon>
+      </div>
+
+      <div class="results-menu__items-container items-container">
+         <div class="items-container__each-item-container">
+            <div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
+            <div class="items-container__done-cards-item">
+               <div class="opened-cards"></div>/20
+            </div>
+         </div>
+         <div class="items-container__each-item-container">
+            <div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
+            <div class="items-container__time-item">
+               <div class="results-menu__time"></div> с.
+            </div>
+         </div>
+         <div class="items-container__each-item-container">
+            <div class="items-container__iq-icon">IQ</div>
+            <div class="items-container__iq-item">+</div>
+         </div>
+         <div class="items-container__each-item-container">
+            <div class="items-container__exp-icon">Exp</div>
+            <div class="items-container__exp-item">+</div>
+         </div>
+      </div>
+      <div class="results-menu__buttons-container">
+         <div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
+               name="refresh-outline"></ion-icon>
+         </div>
+         <a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
+               name="home-outline"></ion-icon></a>
+      </div>
+   </div>
+
    <div class="button-start-container">
       <div class="start-menu">
          <div class="start-menu__game-mode-container">
@@ -74,10 +77,11 @@
             <div class="start-menu__game-mode"></div>
          </div>
          <a href="#" class="button-start">START</a>
-		 <div class="game-info-title">
-		<span class="game-info-name">Верю - Не Верю</span>
-		<span class="game-info">В этой игре вам надо будет ответить, правильный ли цвет имеет прямоугольник вокруг слова по центру</span>
-	  </div>
+         <div class="game-info-title">
+            <span class="game-info-name">Верю - Не Верю</span>
+            <span class="game-info">В этой игре вам надо будет ответить, правильный ли цвет имеет прямоугольник вокруг
+               слова по центру</span>
+         </div>
       </div>
    </div>
    <div class="wrapper">
@@ -102,9 +106,12 @@
             </div>
          </div>
       </div>
-	  <div class="topButton-gameWords">
-         <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div></a>
-         <a href="/pages/settings-page/settings-page.php" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
+      <div class="topButton-gameWords">
+         <a class="comeback-button" href="#">
+            <div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div>
+         </a>
+         <a href="/pages/settings-page/settings-page.php" class="linkToTheSettings"><ion-icon class="imgSettings"
+               name="settings-outline"></ion-icon></a>
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>
       <div class="container-play-area">
