@@ -733,7 +733,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 				</div>
 
 				<div class="pack">
-					<div class="pack-name">Пак новичка</div>
+					<div class="pack-name">Мешочек новичка</div>
 					<img src="/img/Shop/MoneyPack2.png" class="pack-img" alt="">
 					<div class="pack-price">?$</div>
 				</div>
