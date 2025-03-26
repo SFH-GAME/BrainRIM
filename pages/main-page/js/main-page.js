@@ -566,4 +566,27 @@ Profile.onclick = function () {
 }
 
 
+//Анимация звёзд на кнопке "Дерево навыков"
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".tree-button");
 
+    function createSparkle() {
+        const sparkle = document.createElement("div");
+        sparkle.classList.add("sparkle");
+
+        const size = Math.random() * 1.5 + 0.2; // Размер звезды
+        const posX = Math.random() * button.clientWidth;
+        const posY = Math.random() * button.clientHeight;
+
+        sparkle.style.width = `${size}px`;
+        sparkle.style.height = `${size}px`;
+        sparkle.style.left = `${posX}px`;
+        sparkle.style.top = `${posY}px`;
+
+        button.appendChild(sparkle);
+
+        setTimeout(() => sparkle.remove(), 5000); // Удаляем через 5 сек
+    }
+
+    setInterval(createSparkle, 60); // Создаём новую точку каждые 60 мс
+});

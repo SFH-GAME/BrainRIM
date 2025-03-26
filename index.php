@@ -213,6 +213,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <span class="reg-hint-text"><span>Войдите</span>, чтобы сохранить прогресс.<br> <span>Подарок</span> при
                      регистрации!</span>
                </a>
+			   <div class="tree-button">
+				<img src="/img/Menu/Tree.png" alt="Дерево навыков">
+				<span class="tree-span">Дерево навыков</span>
+			   </div>
 
             <?php endif; ?>
             <div class="tasks-bonus-iq-container">
