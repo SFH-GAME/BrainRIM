@@ -19,8 +19,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
-         <a class="comeback-button" href="/index.php">
-            <ion-icon name="arrow-back-outline"></ion-icon></a>
+	    <a class="comeback-button" href="/index.php"><img class="comeback-icon" src="/img/Icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
          <div class="social-list">
             <a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i
                   class="fa-brands fa-tiktok fa-2x" alt="TikTok"></i></a>
@@ -34,7 +33,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
          <div class="settings-main-item">
 
             <div class="item-body">
-               <div class="mark"><ion-icon name="log-in-outline"></ion-icon></div>
+               <div class="mark"><img src="/img/icons/log-in-outline.svg" class="mark-icon" alt="иконка-вход" title="иконка-вход"></div>
                <div class="main-item connect">
                   <a class="sign-in" href="/pages/page-registration/registration-page.php">Войти</a>
                   <a href="/pages/page-registration/registration-page.php"></a>
@@ -42,7 +41,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
             </div>
 
             <div class="item-body">
-               <div class="mark"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
+			   <div class="mark"><img src="/img/icons/chatbubble-ellipses-outline.svg" class="mark-icon" alt="иконка-вход" title="иконка-вход"></div>
                <div class="main-item support">Поддержка</div>
             </div>
             <div class="support-body">
@@ -50,11 +49,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                   <textarea name="questoinValue" placeholder="Опишите свою проблему" class="input-trouble"></textarea>
                   <button type="submit" name="button-send-questions" class="submit-button">Отправить</button>
                </form>
-               <div class="close-support"><ion-icon name="close-outline"></ion-icon></div>
+			   <div class="close-support"><img src="/img/icons/close-outline.svg" class="mark-icon" alt="иконка-закрыть" title="иконка-закрыть"></div>
             </div>
 
             <div class="item-body">
-               <div class="mark"><ion-icon name="help-circle-outline"></ion-icon></div>
+			<div class="mark"><img src="/img/icons/help-circle-outline.svg" class="mark-icon" alt="иконка-вопрос" title="иконка-вопрос"></div>
                <div class="main-item developers-button">Разработчики</div>
                <div class="developers-container_body">
                   <div class="developer">Порфирий Романовский<br>
@@ -63,12 +62,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                   <div class="developer">Aleksey Butor<br>
                      <span class="dev-social">(tg: None)</span>
                   </div>
-                  <div class="close"><ion-icon name="close-outline"></ion-icon></div>
+				  <div class="close"><img src="/img/icons/close-outline.svg" class="mark-icon" alt="иконка-закрыть" title="иконка-закрыть"></div>
                </div>
             </div>
 
             <div class="item-body">
-               <div class="mark"><ion-icon name="language-outline"></ion-icon></div>
+			<div class="mark"><img src="/img/icons/language-outline.svg" class="mark-icon" alt="иконка-язык" title="иконка-язык"></div>
                <div class="main-item language-button">Язык</div>
                <div class="language-container">
                   <div class="EN language in-dev">Английский</div>
@@ -76,12 +75,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                   <div class="EN language in-dev">中文</div>
                   <div class="EN language in-dev">español</div>
                   <div class="EN language in-dev">français</div>
-                  <div class="close-language"><ion-icon name="close-outline"></ion-icon></div>
+				  <div class="close-language mark"><img src="/img/icons/close-outline.svg" class="mark-icon" alt="иконка-закрыть" title="иконка-закрыть"></div>
                </div>
             </div>
 
             <div class="item-body">
-                <div class="mark"><ion-icon name="newspaper-outline"></ion-icon></div>
+				<div class="mark"><img src="/img/icons/newspaper-outline.svg" class="mark-icon" alt="иконка-язык" title="иконка-язык"></div>
                 <div class="main-item news">Новости</div>
             </div>
             <div class="news-body">
@@ -143,11 +142,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
 					</ul>
 
 				</div>
-                <div class="close-news"><ion-icon name="close-outline"></ion-icon></div>
+				<div class="close-news mark"><img src="/img/icons/close-outline.svg" class="mark-icon" alt="иконка-закрыть" title="иконка-закрыть"></div>
             </div>
 
             <div class="item-body">
-               <div class="mark"><ion-icon name="information-circle-outline"></ion-icon></div>
+			<div class="mark"><img src="/img/icons/information-circle-outline.svg" class="mark-icon" alt="иконка-информация" title="иконка-информация"></div>
                <div class="main-item about">О нас</div>
             </div>
             <div class="about-us-container">
@@ -157,10 +156,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                   <br>Мы будем поддерживать этот проект настолько долго, насколько долго будет жить наше комьюнити, не
                   сомневайтесь в нас.
                   <br><br><span class="lasttxt">Будьте здоровы!</span></span>
-               <div class="close-about-us"><ion-icon name="close-outline"></ion-icon></div>
+				  <div class="close-about-us"><img src="/img/icons/close-outline.svg" class="mark-icon" alt="иконка-закрыть" title="иконка-закрыть"></div>
             </div>
             <div class="item-body">
-               <div class="mark"><ion-icon name="at-outline"></ion-icon></div>
+			<div class="mark"><img src="/img/icons/at-outline.svg" class="mark-icon" alt="иконка-почта" title="иконка-почта"></div>
                <a href="mailto:brainriminfo@gmail.com" class="main-item about">Написать разработчикам</a>
             </div>
          </div>
@@ -169,8 +168,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
       <footer class="footer">
          <span class="version">| Beta version 1.4</span>
          <a href="/Privacy-Policy.php" class="privacy">
-            <ion-icon class="default" name="shield-outline"></ion-icon>
-            <ion-icon class="hover" name="shield-half-outline"></ion-icon>
+			<div class="default mark"><img src="/img/icons/shield-outline.svg" class="mark-icon" alt="иконка-щит" title="иконка-щит"></div>
+			<div class="hover mark"><img src="/img/icons/shield-half-outline.svg" class="mark-icon" alt="иконка-щит" title="иконка-щит"></div>
          </a>
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

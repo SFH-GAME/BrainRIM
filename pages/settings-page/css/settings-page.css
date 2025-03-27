@@ -106,10 +106,13 @@ body {
 	font-size: 44px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
-	color: #ffffff;
+	filter: invert(1);
 }
 .comeback-button:active{
-	transform: scale(0.5);
+	transform: scale(0.96);
+}
+.comeback-icon{
+	width: 50px;
 }
 .social-list{
 	display: flex;
@@ -144,7 +147,14 @@ body {
 }
 .mark:hover {
     background: #05EFD4;
-    color: #000000;
+}
+.mark-icon{
+	width: 25px;
+	filter: invert(1);
+	transition: 0.4s;
+}
+.mark-icon:hover {
+	filter: none;
 }
 .main-item {
 	display: flex;

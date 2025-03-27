@@ -6,15 +6,16 @@
 	  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
       <title>Privacy Policy</title>
       <style> body {font-family: 'Balsamiq Sans'; padding:1em; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}</style>
-	  <style> header {display: flex; justify-content: space-between; align-items: center; font-size: 34px;}</style>
+	  <style> header {display: flex; justify-content: space-between; align-items: center; font-size: 34px; margin: 0 auto 20px 0;}</style>
 	  <style> .comeback-button {display: flex; font-size: 44px;}</style>
+	  <style> img {width: 40px;}</style>
 	  <style> #Dark-theme {Display: none;}</style>
     </head>
     <body>
 		<header>
-		<a class="comeback-button" href="/pages/settings-page/settings-page.php"><ion-icon name="chevron-back-outline"></ion-icon></a>
-		<ion-icon id="Light-theme" name="bulb-outline"></ion-icon>
-		<ion-icon id="Dark-theme" name="bulb"></ion-icon>
+		<a class="comeback-button" href="/pages/settings-page/settings-page.php"><img class="comeback-icon img" src="/img/Icons/chevron-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
+		<img class="img" id="Light-theme" src="/img/Icons/bulb-outline.svg">
+		<img class="img" id="Dark-theme" src="/img/Icons/bulb.svg">
 		</header>
 		<strong>Privacy Policy</strong> 
                 <p>
@@ -47,7 +48,7 @@
                   </p> <p>
                     Link to the privacy policy of third-party service providers used
                     by the app
-                  </p> <ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
+                  </p><ul><li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
 				</ul></div> <p><strong>Log Data</strong></p> <p>
                   I want to inform you that whenever you
                   use my Service, in a case of an error in the app
@@ -115,22 +116,27 @@
                 </p> <p>This policy is effective as of 2023-03-23</p> <p><strong>Contact Us</strong></p> <p>
                   If you have any questions or suggestions about my
                   Privacy Policy, do not hesitate to contact me at brainriminfo@gmail.com.
-	    
-		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 		<script>
 			const DarkTheme = document.querySelector('#Dark-theme');
 			const LightTheme = document.querySelector('#Light-theme');
+			const img = document.querySelectorAll('.img');
 			const Body = document.querySelector('body');
 			LightTheme.onclick = function () {
 				LightTheme.style = 'display: none;';
                 DarkTheme.style = 'display: flex;';
 				Body.style = 'color: White; background: #171717;'
+				img.forEach(element => {
+				element.style.filter = 'invert(1)';
+});
 			}
 			DarkTheme.onclick = function () {
 				LightTheme.style = 'display: flex;';
                 DarkTheme.style = 'display: none;';
 				Body.style = 'color: Black; background: White;'
+				img.forEach(element => {
+				element.style.filter = 'none';
+});
             }
 	    </script>
 	</body>
