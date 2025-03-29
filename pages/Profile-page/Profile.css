@@ -178,7 +178,7 @@ main {
     max-width: 250px;
     font-size: 26px;
     margin: 0 auto;
-    color: #05EFD4;
+    color: #ffffff9c;
 }
 .change-name{
 	display: flex;
@@ -240,14 +240,13 @@ main {
 }
 .progress-label {
     font-size: 14px;
+    color: #ffffff9c;
 }
 .divider {
     width: 2px;
     height: 60px;
     background-color: white;
 }
-
-
 .skill-txt{
     margin-bottom: 30px;
 }
@@ -288,6 +287,7 @@ main {
 .skill {
     margin-top: 5px;
     margin-bottom: 30px;
+    color: #ffffff9c;
 }
 .actual-num{
     display: inline;
@@ -424,7 +424,7 @@ span.exp-value {
 }
 .achieve-descript{
     font-size: 15px;
-    color: gray;
+    color: #ffffff9c;
     margin: 10px 0 0px 0;
     width: 80%;
 }

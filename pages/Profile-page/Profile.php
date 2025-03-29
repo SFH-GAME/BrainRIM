@@ -110,19 +110,19 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                     </div>
                 </div>
                 <div class="skill">
-                    <span>Память <span>(<div class="actual-num">0</div>/100)</span></span>
+                    <span>Реакция <span>(<div class="actual-num">0</div>/100)</span></span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 1%;"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>Память <span>(<div class="actual-num">0</div>/100)</span></span>
+                    <span>Внимательность <span>(<div class="actual-num">0</div>/100)</span></span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 1%;"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>Память <span>(<div class="actual-num">0</div>/100)</span></span>
+                    <span>Интеллект <span>(<div class="actual-num">0</div>/100)</span></span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 1%;"></div>
                     </div>
