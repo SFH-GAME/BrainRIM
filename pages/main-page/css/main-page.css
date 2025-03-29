@@ -1188,6 +1188,8 @@ font-size: 18px;
 	width: 100%;
 	text-align: left;
 	color: #956afa;
+	display: flex;
+    justify-content: center;
 }
 .game-item .subtitle{
 	font-size: 18px;
@@ -2596,3 +2598,12 @@ text-decoration: none;
 	}
  }
  /*Анимация для текста в шапке КОНЕЦ*/
+
+ .img-icon{
+	width: 35px;
+	filter: invert(1);
+}
+.lvl-icon{
+	width: 20px;
+	filter: invert(1);
+}

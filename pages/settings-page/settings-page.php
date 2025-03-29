@@ -12,6 +12,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css?v=2.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <link rel="stylesheet" href="/BrimFont/css/brim.css">
    <title>Настройки</title>
 </head>
 
@@ -172,8 +173,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
 			<div class="hover mark"><img src="/img/icons/shield-half-outline.svg" class="mark-icon" alt="иконка-щит" title="иконка-щит"></div>
          </a>
       </footer>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <script src="/pages/settings-page/settings-page.js?v=2.0"></script>
 </body>
 

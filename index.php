@@ -198,7 +198,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <div class="level level-eight">Уровень 8</div>
                <div class="level level-nine">Уровень 9</div>
                <div class="level level-ten">Уровень 10</div>
-               <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
+               <div class="close-levels-container"><img src="/img/icons/close-outline.svg" class="lvl-icon" alt="иконка закрытия" title="иконка закрытия"></div>
             </div>
 
             <script
@@ -213,7 +213,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             <?php else: ?>
                <a class="reg-hint" href="/pages/page-registration/registration-page.php">
-                  <ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
+                  <img src="/img/icons/gift-outline.svg" class="reg-hint-icon img-icon" alt="иконка подарка" title="иконка подарка">
                   <span class="reg-hint-text"><span>Войдите</span>, чтобы сохранить прогресс.<br> <span>Подарок</span> при
                      регистрации!</span>
                </a>
@@ -221,15 +221,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
             <?php endif; ?>
             <div class="tasks-bonus-iq-container">
-               <div class="everyday-word-button"><ion-icon name="calendar-number-outline"></ion-icon></div>
-               <div class="everyday-tasks-button"><ion-icon name="receipt-outline"></ion-icon>
-               </div>
+               <div class="everyday-word-button"><img src="/img/icons/calendar-number-outline.svg" class="img-icon" alt="иконка календаря" title="иконка календаря"></div>
+               <div class="everyday-tasks-button"><img src="/img/icons/receipt-outline.svg" class="img-icon" alt="иконка рецепта" title="иконка рецепта"></div>
             </div>
-
-
             <div class="about-us-container">
                <div class="about-us-header">
-                  <ion-icon class="close-about-us" name="arrow-back-outline"></ion-icon>
+                  <img src="/img/icons/arrow-forward-outline.svg" class="close-about-us img-icon" alt="иконка закрытия" title="иконка закрытия">
                   <h1 class="about-app-text">О приложении</h1>
                </div>
                <div class="about-us-first about-us-body">
@@ -306,35 +303,35 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <li class="list list-analytic">
                   <a href="#analitycs">
                      <span class="icon"><img src="/img/icons/bar-chart-outline.svg" class="navig-icon"
-                           alt="иконка настроек" title="иконка настроек"></span>
+                           alt="иконка аналитики" title="иконка аналитики"></span>
                      <span class="text">Аналитика</span>
                   </a>
                </li>
                <li class="list list-store">
                   <a href="#shop">
                      <span class="icon"><img src="/img/icons/storefront-outline.svg" class="navig-icon"
-                           alt="иконка настроек" title="иконка настроек"></span>
+                           alt="иконка магазина" title="иконка магазина"></span>
                      <span class="text">Магазин</span>
                   </a>
                </li>
                <li class="list list-home active">
                   <a href="#home">
-                     <span class="icon"><img src="/img/icons/home-outline.svg" class="navig-icon" alt="иконка настроек"
-                           title="иконка настроек"></span>
+                     <span class="icon"><img src="/img/icons/home-outline.svg" class="navig-icon" alt="иконка дома"
+                           title="иконка дома"></span>
                      <span class="text active">Главная</span>
                   </a>
                </li>
                <li class="list list-improve">
                   <a href="#improve">
                      <span class="icon"><img src="/img/icons/trending-up-outline.svg" class="navig-icon"
-                           alt="иконка настроек" title="иконка настроек"></span>
+                           alt="иконка роста" title="иконка роста"></span>
                      <span class="text">Развитие</span>
                   </a>
                </li>
                <li class="list list-games">
                   <a href="#games">
                      <span class="icon"><img src="/img/icons/game-controller-outline.svg" class="navig-icon"
-                           alt="иконка настроек" title="иконка настроек"></span>
+                           alt="иконка игр" title="иконка игр"></span>
                      <span class="text">Игры</span>
                   </a>
                </li>
@@ -546,7 +543,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <div id="improve-container">
                   <a href="/pages/ImproveFunctional/Articles/ArticleMain.html">
                      <div class="container-improve">
-                        <div class="improve">Зона роста<ion-icon class="improve-icon" name="book-outline"></ion-icon>
+                        <div class="improve">Зона роста<img src="/img/icons/book-outline.svg" class="improve-icon img-icon" alt="иконка книги" title="иконка книги">
                         </div>
                         <div class="forimprove">Свежие идеи, ценные знания и мощные инсайты для тех, кто хочет большего!
                            🚀🔥</div>
@@ -554,36 +551,35 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   </a>
                   <a href="/pages/ImproveFunctional/Planning/Planning-page.php">
                      <div class="container-improve">
-                        <div class="improve">Планирование<ion-icon class="improve-icon"
-                              name="calendar-outline"></ion-icon></div>
+                        <div class="improve">Планирование<img src="/img/icons/calendar-outline.svg" class="improve-icon img-icon" alt="иконка календаря" title="иконка календаря"></div>
                         <div class="forimprove">Ставь цели, достигай их!</div>
                      </div>
                   </a>
                   <div class="container-improve improve-in-dev">
-                     <div class="improve">Финансы<ion-icon class="improve-icon" name="cash-outline"></ion-icon></div>
+                     <div class="improve">Финансы<img src="/img/icons/cash-outline.svg" class="improve-icon img-icon" alt="иконка денег" title="иконка денег"></div>
                      <div class="forimprove">Планируй расходы и узнавай стратегии!</div>
                   </div>
                   <div class="container-improve improve-in-dev">
-                     <div class="improve">Медитация<ion-icon class="improve-icon" name="pulse-outline"></ion-icon></div>
+                     <div class="improve">Медитация<img src="/img/icons/pulse-outline.svg" class="improve-icon img-icon" alt="иконка пульса" title="иконка пульса"></div>
                      <div class="forimprove">Расслабляйся , настраивайся на рабочий лад , отдыхай!</div>
                   </div>
                   <div class="container-improve improve-in-dev">
-                     <div class="improve">Упражнения<ion-icon class="improve-icon" name="bicycle-outline"></ion-icon>
+                     <div class="improve">Упражнения<img src="/img/icons/bicycle-outline.svg" class="improve-icon img-icon" alt="иконка велосипеда" title="иконка велосипеда">
                      </div>
                      <div class="forimprove">Построй свой план тренировок, разминок!</div>
                   </div>
                   <div class="container-improve improve-in-dev">
-                     <div class="improve">Развитие<ion-icon class="improve-icon" name="rocket-outline"></ion-icon></div>
+                     <div class="improve">Развитие<img src="/img/icons/rocket-outline.svg" class="improve-icon img-icon" alt="иконка ракеты" title="иконка ракеты"></div>
                      <div class="forimprove"> Уверенность, самодисциплина, общительность и др.</div>
                   </div>
                   <div class="container-improve improve-in-dev">
-                     <div class="improve">Продуктивность<ion-icon class="improve-icon" name="time-outline"></ion-icon>
+                     <div class="improve">Продуктивность<img src="/img/icons/time-outline.svg" class="improve-icon img-icon" alt="иконка времени" title="иконка времени">
                      </div>
                      <div class="forimprove">Управление временем, планирования задач, список дел, напоминания!</div>
                   </div>
                </div>
                <div class="DownButton">
-                  <div class="scroll"><ion-icon class="Up-button" name="chevron-up-outline"></ion-icon></div>
+                  <div class="scroll"><img src="/img/icons/chevron-up-outline.svg" class="Up-button img-icon" alt="иконка вниз" title="иконка вниз"></div>
                </div>
             </main>
          </div>
@@ -633,7 +629,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             <div class="convert-currency-text">Конвертировать валюту</div>
             <div class="trade-price">
                <span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.png" alt="">
-               <div class="reverse"><ion-icon name="repeat-outline"></ion-icon></div>
+               <div class="reverse"><img src="/img/icons/repeat-outline.svg" class="img-icon" alt="иконка повтора" title="иконка повтора"></div>
                <span>8</span><img class="hintsicon" src="/img/Menu/icon-hints.png" alt="">
             </div>
             <div class="trade-currency">
@@ -760,8 +756,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
       </div>
 
       <div class="everyday-tasks-container">
-         <div class="info-button tasks-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window every-day-tasks-close-button"><ion-icon name="close-outline"></ion-icon></div>
+	  <div class="info-button tasks-info-button"><img src="/img/icons/information-outline.svg" class="img-icon" alt="иконка информации" title="иконка информации"></div>
+      <div class="close-window every-day-tasks-close-button"><img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия"></div>
          <Span class="everyday-tasks-title">Еженедельные задачи</Span>
          <div class="everyday-tasks-body">
             <div class="task-body">
@@ -789,17 +785,17 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
       <div class="info-button-body">
          <span>Еженедельные задания - задания которые вы можете выполнять в течении недели и получать бонусы и подарки.
             <br>В конце каждой недели они обновляются. На данный момент функция в разработке.</span>
-         <div class="close-every-day-tasks-info every-day-tasks-close-button"><ion-icon name="close-outline"></ion-icon>
+		 <div class="close-every-day-tasks-info every-day-tasks-close-button"><img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия">
          </div>
       </div>
 
       <div class="day-word-container">
-         <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window word-day-close-button"><ion-icon name="close-outline"></ion-icon></div>
+		 <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon" alt="иконка информации" title="иконка информации"></div>
+		 <div class="close-window word-day-close-button"><img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия"></div>
          <div class="everyday-title">Ежедневно</div>
          <div class="everyday_body">
             <div class="everyday_word">
-               <div class="everyday_icon_body everyday-glowing"><ion-icon name="book-outline"></ion-icon></div>
+               <div class="everyday_icon_body everyday-glowing"><img src="/img/icons/book-outline.svg" class="img-icon" alt="иконка книги" title="иконка книги"></div>
                <div class="everyday_text_body everyday-glowing">Слово дня
                   <?php if ($rusWordsCount == $historyFactsCount && $historyFactsCount < $engWordsCount): ?>
                      <!--добавляю точку к каждому обновлённому элементу-->
@@ -808,7 +804,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="day_history">
-               <div class="everyday_icon_body"><ion-icon name="library-outline"></ion-icon></div>
+               <div class="everyday_icon_body"><img src="/img/icons/library-outline.svg" class="img-icon" alt="иконка книг" title="иконка книг"></div>
                <div class="everyday_text_body">Историч. дата
                   <?php if ($historyFactsCount > $rusWordsCount && $historyFactsCount == $engWordsCount): ?>
                      <?php echo '<div class="red-update dot">обновлено</div>'; ?>
@@ -816,7 +812,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="new_word">
-               <div class="everyday_icon_body"><ion-icon name="language-outline"></ion-icon></div>
+               <div class="everyday_icon_body"><img src="/img/icons/language-outline.svg" class="img-icon" alt="иконка языка" title="иконка языка"></div>
                <div class="everyday_text_body">Англ. слово дня
                   <?php if ($rusWordsCount < $historyFactsCount && $historyFactsCount < $engWordsCount && $rusWordsCount !== 1): ?>
                      <?php echo '<div class="red-update dot">обновлено</div>'; ?>
@@ -828,12 +824,13 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             <span>Каждый день здесь будет появляться новая интересная и полезная информация.
                <br>Она будет расширять ваш кругозор.
                <br>Не пропустите!</span>
-            <div class="close-everyday-info-button-body"><ion-icon name="close-outline"></ion-icon></div>
+            <div class="close-everyday-info-button-body"><img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия"></div>
          </div>
       </div>
       <div class="everyday_day-word-container">
-         <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window everyday_day-word-close-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
+		 <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon" alt="иконка информации" title="иконка информации"></div>
+		 <div class="close-window everyday_day-word-close-button"><img src="/img/icons/arrow-forward-outline.svg" class="img-icon" alt="иконка назад" title="иконка назад"></div>
+
          <div class="everyday-title">Слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
@@ -842,8 +839,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
       </div>
       <div class="everyday_date-container">
-         <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window everyday_date-close-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
+	  <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon" alt="иконка информации" title="иконка информации"></div>
+	  <div class="close-window everyday_date-close-button"><img src="/img/icons/arrow-forward-outline.svg" class="img-icon" alt="иконка назад" title="иконка назад"></div>
          <div class="everyday-title">Историческая дата</div>
          <div class="day-word__body">
             <div class="day-date">
@@ -852,8 +849,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
       </div>
       <div class="everyday_new-word-container">
-         <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window everyday_new-word-close-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
+		 <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon" alt="иконка информации" title="иконка информации"></div>
+		 <div class="close-window everyday_new-word-close-button"><img src="/img/icons/arrow-forward-outline.svg" class="img-icon" alt="иконка назад" title="иконка назад"></div>
          <div class="everyday-title">Англ. слово дня</div>
          <div class="day-word__body">
             <div class="day-word">

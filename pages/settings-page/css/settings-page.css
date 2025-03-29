@@ -536,3 +536,8 @@ justify-content: center;
 .privacy:hover .hover{
 	opacity: 1;
 }
+
+.img-icon{
+	width: 35px;
+	filter: invert(1);
+}
