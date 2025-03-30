@@ -181,12 +181,12 @@ z-index: 1;
 	}
  }
  */
- .header-score-container{
+.header-score-container{
 	margin: 20px 0 ;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
- }
+}
 
 /* Подсказки валюты */ 
 .tooltip-container {
@@ -367,6 +367,7 @@ z-index: 1;
 	padding: 10px;
 	border: 2px solid #05EFD4;
 	border-radius: 10px;
+	z-index: 100;
  }
  .level{
 	transition: 0.2s;
@@ -561,7 +562,6 @@ font-size: 18px;
 }
 .tree-button:active {
     transform: scale(1);
-    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
 }
 .tree-button::before {
 	content: '';
@@ -1188,8 +1188,6 @@ font-size: 18px;
 	width: 100%;
 	text-align: left;
 	color: #956afa;
-	display: flex;
-    justify-content: center;
 }
 .game-item .subtitle{
 	font-size: 18px;

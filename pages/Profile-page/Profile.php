@@ -38,11 +38,11 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
     <!-- alert -->
     <header>
         <a class="comeback-button" href="/index.php">
-            <ion-icon name="arrow-back-outline" role="img" class="md hydrated"
-                aria-label="arrow back outline"></ion-icon>
+            <img src="/img/icons/arrow-back-outline.svg" class="close-about-us img-icon" alt="иконка закрытия"
+                title="иконка закрытия">
         </a>
-        <div class="mail-messages" onclick="toggleMailContainer()"><ion-icon name="mail-outline"
-                class="mail md hydrated" role="img" aria-label="mail outline"></ion-icon>
+        <div class="mail-messages" onclick="toggleMailContainer()">
+            <img src="/img/icons/mail-outline.svg" alt="письмо" title="письмо">
             <div class="circle"></div>
         </div>
     </header>
@@ -57,8 +57,8 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                 <?php else: ?>
                     Логин
                 <?php endif; ?>
-                <div class="change-name"><ion-icon name="pencil-outline" role="img" class="md hydrated"
-                        aria-label="pencil outline"></ion-icon></div>
+                <div class="change-name"><img src="/img/icons/pencil-outline.svg" class="close-about-us img-icon"
+                        alt="карандаш" title="карандаш"></div>
             </div>
             <div class="rank-container">
                 <h3>Статус:</h3>
@@ -68,7 +68,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
             <h3>Прогресс</h3>
             <div class="progress-container">
                 <div class="progress-item">
-                    <ion-icon name="ribbon-outline"></ion-icon>
+                    <img src="/img/icons/ribbon-outline.svg" alt="достижения" title="достижения">
                     <div class="progress-value">
                         <?php if (isset($_SESSION['id'])): ?>
                             <?php echo $completedAchievementsCount; ?>
@@ -80,7 +80,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                 </div>
                 <div class="divider"></div>
                 <div class="progress-item">
-                    <ion-icon name="stats-chart-outline"></ion-icon>
+                    <img src="/img/icons/stats-chart-outline.svg" alt="иконка уровней" title="иконка уровней">
                     <div class="progress-value">
                         <?php if (isset($_SESSION['id'])): ?>
                             <span class="playerLvlCounterBody"></span>
@@ -92,7 +92,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                 </div>
                 <div class="divider"></div>
                 <div class="progress-item">
-                    <ion-icon name="checkbox-outline"></ion-icon>
+                    <img src="/img/icons/checkbox-outline.svg" alt="иконка задач" title="иконка задач">
                     <div class="progress-value">0</div>
                     <div class="progress-label">Задач выполнено</div>
                 </div>
@@ -347,8 +347,8 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
 
         <div class="mail-container">
             <div class="mail-header">
-                <ion-icon name="arrow-back-outline" role="img" class="md hydrated mail-back"
-                    aria-label="arrow back outline" onclick="toggleMailContainer()"></ion-icon>
+                <img src="/img/icons/arrow-back-outline.svg" class="md hydrated mail-back"
+                    onclick="toggleMailContainer()" alt="иконка закрытия" title="иконка закрытия">
                 <h3 class="msg">Сообщения</h3>
             </div>
             <div class="user-messages">

@@ -133,6 +133,21 @@ main {
     align-items: center;
     justify-content: center;
 }
+.comeback-button img {
+	height: 40px;
+	width: 40px;
+	filter: invert(1);
+}
+.mail-messages img {
+    height: 40px;
+    width: 40px;
+    filter: invert(1);
+}
+.mail-header img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+}
 .comeback-button:active{
     transform: scale(0.8);
 }
@@ -192,6 +207,11 @@ main {
 	box-shadow: 0px -2px 4px rgba(255, 255, 255, 0.25), 1px 3px 0px rgba(1, 1, 1, 0.25);
 	border-radius: 10px;
 }
+.change-name img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
 .change-name:active{
     transform: scale(0.8);
 }
@@ -227,7 +247,15 @@ main {
     border-radius: 10px;
     margin: 20px 0 60px 0;
 }
+.progress-container img {
+    height: 35px;
+    width: 35px;
+    filter: invert(1);
+}
 .progress-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     font-size: 32px;
     gap: 5px;
