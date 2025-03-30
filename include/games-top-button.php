@@ -1,10 +1,10 @@
 <div class="topButton-gameWords">
    <a class="comeback-button" href="#">
-      <div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div>
+      <div class="comeback-button-body"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
    </a>
    <a href="#" class="linkToTheSettings"><img src="/img/icons/settings-outline.svg" class="imgSettings"
          alt="иконка настроек" title="иконка настроек"></a>
-   <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
+   <div class="linkToTheRestart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
 </div>
 
 <style>
@@ -24,8 +24,6 @@
       position: relative;
       width: 40px;
       height: 40px;
-      font-size: 44px;
-      color: #fff;
       z-index: 2;
       transition: 0.1s;
    }
@@ -41,17 +39,12 @@
       transition: 1.2s;
    }
 
-   .linkToTheSettings:hover {
+    .linkToTheSettings:hover {
       transform: rotate(180deg);
-   }
+   } 
 
    .linkToTheRestart {
-      display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      font-weight: 900;
-      color: #fff;
       margin: 0px 5px 0 0;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       -webkit-tap-highlight-color: transparent;
@@ -61,4 +54,10 @@
    .linkToTheRestart:hover {
       transform: rotate(540deg);
    }
+
+   .img-icon{
+	width: 40px;
+    height: 40px;
+	filter: invert(1);
+}
 </style>

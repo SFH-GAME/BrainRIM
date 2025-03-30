@@ -45,8 +45,8 @@ html,body{
 }
 .leaderboard__back-button{
 	position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 20px;
     font-size: 44px;
     color: #ffffff;
     z-index: 2;
@@ -736,3 +736,13 @@ p{
 .n2048{background-color:#09c;font-size:30px;color:#FFF;}
 .n4096{background-color:#a6c;font-size:30px;color:#FFF;}
 .n8192{background-color:#93c;font-size:30px;color:#FFF;}
+
+.img-icon{
+	width: 40px;
+    height: 40px;
+	filter: invert(1);
+	 user-select: none;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+}

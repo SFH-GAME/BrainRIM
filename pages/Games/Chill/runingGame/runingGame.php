@@ -81,18 +81,14 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicRuningGame.php";
         <div class="loose-win-value">Вы проиграли</div>
       </div>
       <div class="results-menu__buttons-container">
-        <div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
-            name="refresh-outline" role="img" class="md hydrated" aria-label="refresh outline"></ion-icon>
+        <div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
         </div>
-        <a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon name="home-outline"
-            role="img" class="md hydrated" aria-label="home outline"></ion-icon></a>
+        <a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/Icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
       </div>
     </div>
   </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="/pages/Games/Chill/runingGame/js/runingGame.js?v=1.0"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

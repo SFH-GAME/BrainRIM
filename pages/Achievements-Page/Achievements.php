@@ -16,7 +16,7 @@
    <link rel="canonical" href="https://brainrim.site">
 </head>
 <header>
-<a class="comeback-button" href="/pages/Profile-page/Profile.php"><ion-icon name="arrow-back-outline"></ion-icon></a>
+<a class="comeback-button" href="/pages/Profile-page/Profile.php"><img class="comeback-icon" src="/img/Icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
 </header>
 <body>
 <div class="page-achievments-container">
@@ -38,12 +38,10 @@
                   </div>
                </div>
                <div class="DownButton">
-                  <div class="scroll"><ion-icon class="Up-button" name="chevron-down-outline"></ion-icon></div>
+                  <div class="scroll"><img class="Up-button" src="/img/Icons/chevron-down-outline.svg" alt="иконка-назад" title="иконка-назад"></div>
                </div>
             </main>
          </div>
       </div>
 </body>
-	  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <script src="/pages/Achievements-Page/Achievements.js"></script>

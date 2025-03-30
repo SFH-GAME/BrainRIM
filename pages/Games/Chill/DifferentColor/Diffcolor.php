@@ -13,7 +13,7 @@
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-top-button.php"); ?>
-<div class="pause-button"><ion-icon name="pause-circle-outline"></ion-icon></div>
+<div class="pause-button"><img src="/img/Icons/pause-circle-outline.svg" class="img-icon" alt="иконка-паузы" title="иконка-паузы"></div>
 	<div class="pause-alert"><span class="alert-span">На паузе</span></div>
 	<h1>Найди отличающийся квадрат!</h1>
 	<div class="game">
@@ -23,7 +23,5 @@
 	</div>
 
 	<script src ="/pages/Games/Chill/DifferentColor/js/Diffcolor.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

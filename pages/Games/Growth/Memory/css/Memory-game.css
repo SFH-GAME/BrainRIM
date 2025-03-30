@@ -1249,3 +1249,13 @@ height: 40px;
 	background-color: #05EFD4;
  color: #000000;
  } 
+ 
+ .img-icon{
+	width: 40px;
+    height: 40px;
+	filter: invert(1);
+	 user-select: none;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+}

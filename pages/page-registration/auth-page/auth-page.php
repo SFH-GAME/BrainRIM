@@ -77,8 +77,6 @@
 		<footer>
                 <a class="Support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
             </footer>
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             <script src="/pages/page-registration/registration-page.js"></script>
 			</div>
 </body>

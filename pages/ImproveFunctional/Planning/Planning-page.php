@@ -28,12 +28,12 @@
 
 <body>
     <header>
-         <a class="comeback-button" href="/index.php"><ion-icon name="arrow-back-outline"></ion-icon></a>
-			<div class="page-title">Планирование<ion-icon class="page-title-icon" name="calendar-outline"></ion-icon></div>
+         <a class="comeback-button" href="/index.php"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
+			<div class="page-title">Планирование<img src="/img/Icons/calendar-outline.svg" class="img-icon page-title-icon" alt="иконка-календаря" title="иконка-календаря"></div>
 	</header>
 	<main>
 	   <div class="info-body">
-	        <div class="info-button"><ion-icon name="information-outline" role="img" class="md hydrated" aria-label="information outline"></ion-icon></div>
+	        <div class="info-button"><img src="/img/Icons/information-outline.svg" class="img-icon page-title-icon" alt="иконка-информации" title="иконка-информации"></div>
 	        <div class="info-text">Выбирай дату и записывай задачу</div>
 	   </div>
 		<div class="alerts-container err">
@@ -52,7 +52,7 @@
 		<form action="Planning-page.php" method="post">
 
 		<div class="new-plan-body">
-		    	<div class="comeback-button back"><ion-icon name="arrow-back-outline"></ion-icon></div>
+		    	<div class="comeback-button back"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
 		    	<div class="new-plan-title">Новый план</div>
 			<div class="new-plan-date-body">
 				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">
@@ -76,8 +76,6 @@
 </body>
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
    <script src="/pages/ImproveFunctional/Planning/Planning-page.js"></script>
-   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
 
 

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="change-plan-body">
-            <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><ion-icon name="chevron-back-outline"></ion-icon></a>
+            <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><img src="/img/Icons/chevron-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
 		    	<div class="new-plan-title">План</div>
 			<div class="new-plan-date-body">
 				<div class="plan-date"><?php echo $valueFromDBPlan4['planDate'];?></div>
@@ -30,6 +30,4 @@
 		</div>
 </body>
 <script src="/pages/ImproveFunctional/Planning/plansPages/js/firstPlan.js"></script>
-   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>

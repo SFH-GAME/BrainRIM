@@ -36,20 +36,20 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 		</div>
 
 		<div class="win-loose-screen">
-			<ion-icon class="star" name="star"></ion-icon>
+			<img src="/img/Icons/star.svg" class="star img-icon" alt="иконка-звезды" title="иконка-звезды">
 			<div class="screen-title items-container__win-loose-item">Победа</div>
-			<ion-icon class="star" name="star"></ion-icon>
+			<img src="/img/Icons/star.svg" class="star img-icon" alt="иконка-звезды" title="иконка-звезды">
 		</div>
 
 		<div class="results-menu__items-container items-container">
 			<div class="items-container__each-item-container">
-				<div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
+				<div class="items-container__done-cards-icon"><img src="/img/Icons/checkmark-outline.svg" class="img-icon" alt="иконка-галочки" title="иконка-галочки"></div>
 				<div class="items-container__done-cards-item">
 					<div class="opened-cards"></div>/10
 				</div>
 			</div>
 			<div class="items-container__each-item-container">
-				<div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
+				<div class="items-container__time-icon"><img src="/img/Icons/stopwatch-outline.svg" class="img-icon" alt="иконка-секундомера" title="иконка-секундомера"></div>
 				<div class="items-container__time-item">
 					<div class="results-menu__time"></div> с.
 				</div>
@@ -64,11 +64,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 			</div>
 		</div>
 		<div class="results-menu__buttons-container">
-			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
-					name="refresh-outline"></ion-icon>
+			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
 			</div>
-			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
-					name="home-outline"></ion-icon></a>
+			<a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/Icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
 		</div>
 	</div>
 	<div class="button-start-container">
@@ -109,10 +107,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 		</div>
 		<div class="topButton-gameWords">
 			<a class="comeback-button" href="#">
-				<div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div>
+				<div class="comeback-button-body"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
 			</a>
-			<a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
-			<div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
+			<a href="#" class="linkToTheSettings"><img src="/img/Icons/settings-outline.svg" class="img-icon imgSettings" alt="иконка-настройки" title="иконка-настройки"></a>
+			<div class="linkToTheRestart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить"></div>
 		</div>
 		<main>
 			<div class="game-mode"></div>
@@ -144,8 +142,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 	</main>
 	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script src="/pages/Games/Growth/IQ/GameCountries.js"></script>
 </body>
 
