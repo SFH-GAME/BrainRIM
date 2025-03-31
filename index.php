@@ -391,7 +391,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/Connections/Connections.php">
                   <div class="game-item">
                      <h2 class="title">Соединения</h2>
-                     <p class="subtitle">Тренирует <span class="backlight">логику</span> и <span
+                     <p class="subtitle">Тренирует <span class="backlight">логику </span> и <span
                            class="backlight">стратегическое </span>мышление.
                         Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
                      <img src="/img/Games/Connections.png" alt="картинка">
@@ -402,14 +402,23 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
                   <div class="game-item">
                      <h2 class="title">Найди шарик</h2>
-                     <p class="subtitle">Тренирует <span class="backlight">Внимательность</span> и <span
-                           class="backlight">Память. </span>
+                     <p class="subtitle">Тренирует <span class="backlight">Внимательность </span> и <span
+                           class="backlight">Память.</span>
                         Найдите шарик в стаканах, которые перемешиваются! 🔍🧠</p>
                      <img src="/img/Games/Cupgame.png" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
                   </div>
                </a>
-
+               <a href="/pages/Games/Chill/TapCircle/Tapcircle.php">
+                  <div class="game-item">
+                     <h2 class="title">?</h2>
+                     <p class="subtitle"> Тренирует<span class="backlight"> Реакцию</span> и <span
+                           class="backlight">скорость.</span>
+                        Попадите кружком в зелёную зону круга ⚡🚀</p>
+                     <img src="/img/Games/Tapcircle.png" alt="картинка">
+                     <div class="game-item__category spotlight">в разработке</div>
+                  </div>
+               </a>
 
 
 
