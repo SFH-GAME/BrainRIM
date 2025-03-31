@@ -90,10 +90,15 @@ if ('serviceWorker' in navigator) {
 //pop-up alert
 const GamesInDev = document.querySelectorAll('.game-in-dev');
 const alertContainer = document.querySelector('.pop-up-alert-container');
+const TreeBtn = document.querySelector('.tree-button');
 
 GamesInDev.forEach(element => {
   element.addEventListener('click', popUpAlert);
 });
+
+if (TreeBtn) {
+	TreeBtn.addEventListener('click', popUpAlert);
+  }
 
 function popUpAlert() {
   alertContainer.style = 'display: flex;';

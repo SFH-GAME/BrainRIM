@@ -100,7 +100,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <div class="pop-up-alert-container">
       <div class="alert-text">Функция в разработке!</div>
    </div>
-   </div>
    <!-- alert -->
    <div class="wrapper">
       <div class="gray-background-container"></div>
