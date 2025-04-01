@@ -25,8 +25,6 @@
 <button id="restart" style="display: none;">Далее</button>
 
 	<script src ="/pages/Games/Chill/Cupgame/js/Cupgame.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
 
