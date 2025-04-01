@@ -51,14 +51,15 @@ try {
 	<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>2048</title>
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/pages/Games/Chill/2048/css/2048-Game.css">
+	<link rel="stylesheet" href="/pages/Games/Chill/2048/css/2048-Game.css?v=1.0">
 	<link rel="canonical" href="https://brainrim.site">
 	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 </head>
 
 <body>
 	<div class="leaderboard-container">
-		<div class="leaderboard__back-button"><img class="img-icon" src="/img/Icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></div>
+		<div class="leaderboard__back-button"><img class="img-icon" src="/img/Icons/arrow-back-outline.svg"
+				alt="иконка-назад" title="иконка-назад"></div>
 		<h2>Лидеры</h2>
 		<div class="leaderboard-list-container">
 			<h3>2048</h3>
@@ -69,7 +70,8 @@ try {
 						<div class="leaderboard-item__id"><?php echo $index + 1; ?></div>
 						<div class="leaderboard-item__name"><?php echo htmlspecialchars($row['user_name']); ?></div>
 						<div class="leaderboard-item__score"><?php echo htmlspecialchars($row['best_score']); ?></div>
-						<div class="leaderboard-item__img"><img class="img-icon comeback-icon" src="/img/Icons/ribbon-outline.svg" alt="иконка-заслуги" title="иконка-заслуги"></div>
+						<div class="leaderboard-item__img"><img class="img-icon comeback-icon"
+								src="/img/Icons/ribbon-outline.svg" alt="иконка-заслуги" title="иконка-заслуги"></div>
 					</div>
 				<?php endforeach; ?>
 			</div>

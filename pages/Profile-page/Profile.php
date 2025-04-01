@@ -21,9 +21,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="Profile.css?v=1.0">
+    <link rel="stylesheet" href="Profile.css?v=2.0">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
     <title>Профиль</title>
 </head>

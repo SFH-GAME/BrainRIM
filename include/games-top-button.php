@@ -1,10 +1,12 @@
 <div class="topButton-gameWords">
    <a class="comeback-button" href="#">
-      <div class="comeback-button-body"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
+      <div class="comeback-button-body"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад"
+            title="иконка-назад"></div>
    </a>
    <a href="#" class="linkToTheSettings"><img src="/img/icons/settings-outline.svg" class="imgSettings"
          alt="иконка настроек" title="иконка настроек"></a>
-   <div class="linkToTheRestart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
+   <div class="linkToTheRestart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-назад"
+         title="иконка-назад"></div>
 </div>
 
 <style>
@@ -14,7 +16,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+      width: -webkit-fill-available;
       padding: 14px 10px 0 10px;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       -webkit-tap-highlight-color: transparent;
@@ -39,9 +41,9 @@
       transition: 1.2s;
    }
 
-    .linkToTheSettings:hover {
+   .linkToTheSettings:hover {
       transform: rotate(180deg);
-   } 
+   }
 
    .linkToTheRestart {
       align-items: center;
@@ -55,9 +57,9 @@
       transform: rotate(540deg);
    }
 
-   .img-icon{
-	width: 40px;
-    height: 40px;
-	filter: invert(1);
-}
+   .img-icon {
+      width: 40px;
+      height: 40px;
+      filter: invert(1);
+   }
 </style>
