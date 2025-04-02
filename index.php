@@ -416,7 +416,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </a>
                <a href="/pages/Games/Chill/TapCircle/Tapcircle.php">
                   <div class="game-item">
-                     <h2 class="title">?</h2>
+                     <h2 class="title">Тап ось</h2>
                      <p class="subtitle"> Тренирует<span class="backlight"> Реакцию</span> и <span
                            class="backlight">скорость.</span>
                         Попадите кружком в зелёную зону круга ⚡🚀</p>
