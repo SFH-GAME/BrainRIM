@@ -61,7 +61,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
                      <span><a href="https://t.me/PorfiriyRoma" class="dev-social">(tg: @PorfiriyRoma)</a></span>
                   </div>
                   <div class="developer">Aleksey Butor<br>
-                     <span class="dev-social">(tg: None)</span>
+                     <span><a href="https://t.me/moonmistx" class="dev-social">(tg: @MooNMisTX)</span>
                   </div>
 				  <div class="close"><img src="/img/icons/close-outline.svg" class="mark-icon" alt="иконка-закрыть" title="иконка-закрыть"></div>
                </div>
