@@ -13,9 +13,9 @@
     </head>
     <body>
 		<header>
-		<a class="comeback-button" href="/pages/settings-page/settings-page.php"><img class="comeback-icon img" src="/img/Icons/chevron-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
-		<img class="img" id="Light-theme" src="/img/Icons/bulb-outline.svg">
-		<img class="img" id="Dark-theme" src="/img/Icons/bulb.svg">
+		<a class="comeback-button" href="/pages/settings-page/settings-page.php"><img class="comeback-icon img" src="/img/icons/chevron-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
+		<img class="img" id="Light-theme" src="/img/icons/bulb-outline.svg">
+		<img class="img" id="Dark-theme" src="/img/icons/bulb.svg">
 		</header>
 		<strong>Privacy Policy</strong> 
                 <p>

@@ -1,11 +1,11 @@
 <div class="topButton-gameWords">
     <a class="comeback-button" href="#">
-        <div class="comeback-button-body"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon"
+        <div class="comeback-button-body"><img src="/img/icons/arrow-back-outline.svg" class="img-icon"
                 alt="иконка-назад" title="иконка-назад"></div>
     </a>
     <a href="#" class="linkToTheSettings"><img src="/img/icons/settings-outline.svg" class="img-icon"
             alt="иконка настроек" title="иконка настроек"></a>
-    <div class="linkToTheRestart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-назад"
+    <div class="linkToTheRestart"><img src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-назад"
             title="иконка-назад"></div>
 </div>
 
