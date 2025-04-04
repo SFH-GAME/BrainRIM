@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="change-plan-body">
-            <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><img src="/img/Icons/chevron-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
+            <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><img src="/img/icons/chevron-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
 		    	<div class="new-plan-title">План</div>
 			<div class="new-plan-date-body">
 				<div class="plan-date"><?php echo $valueFromDBPlan2['planDate'];?></div>

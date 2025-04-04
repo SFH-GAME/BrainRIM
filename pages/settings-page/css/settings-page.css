@@ -520,7 +520,7 @@ justify-content: center;
 
 
 /* Изменение иконки политики при нажатии */
-.privacy ion-icon{
+.privacy {
 	transition: opacity 0.3s ease;
 }
 .privacy .default{

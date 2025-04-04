@@ -58,7 +58,7 @@ try {
 
 <body>
 <div class="leaderboard-container">
-		<div class="leaderboard__back-button"><img class="img-icon" src="/img/Icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></div>
+		<div class="leaderboard__back-button"><img class="img-icon" src="/img/icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></div>
 		<h2>Лидеры</h2>
 		<div class="leaderboard-list-container">
 			<h3>Тап ось</h3>
@@ -70,7 +70,7 @@ try {
 						<div class="leaderboard-item__name"><?php echo htmlspecialchars($row['user_name']); ?></div>
 						<div class="leaderboard-item__score"><?php echo htmlspecialchars($row['best_score']); ?></div>
 						<div class="leaderboard-item__img"><img class="img-icon comeback-icon"
-								src="/img/Icons/ribbon-outline.svg" alt="иконка-заслуги" title="иконка-заслуги"></div>
+								src="/img/icons/ribbon-outline.svg" alt="иконка-заслуги" title="иконка-заслуги"></div>
 					</div>
 				<?php endforeach; ?>
 			</div>
@@ -106,9 +106,9 @@ try {
         <div class="loose-win-value">Вы проиграли</div>
       </div>
       <div class="results-menu__buttons-container">
-        <div onclick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
+        <div onclick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
         </div>
-        <a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/Icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
+        <a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
       </div>
     </div>
 </div>

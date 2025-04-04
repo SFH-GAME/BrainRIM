@@ -34,20 +34,20 @@ include $_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php";
       </div>
 
       <div class="win-loose-screen">
-	  <img src="/img/Icons/star.svg" class="star img-icon" alt="иконка-звезды" title="иконка-звезды">
+	  <img src="/img/icons/star.svg" class="star img-icon" alt="иконка-звезды" title="иконка-звезды">
          <div class="screen-title items-container__win-loose-item">Победа</div>
-		 <img src="/img/Icons/star.svg" class="star img-icon" alt="иконка-звезды" title="иконка-звезды">
+		 <img src="/img/icons/star.svg" class="star img-icon" alt="иконка-звезды" title="иконка-звезды">
       </div>
 
       <div class="results-menu__items-container items-container">
          <div class="items-container__each-item-container">
-		 <div class="items-container__done-cards-icon"><img src="/img/Icons/checkmark-outline.svg" class="img-icon" alt="иконка-галочки" title="иконка-галочки"></div>
+		 <div class="items-container__done-cards-icon"><img src="/img/icons/checkmark-outline.svg" class="img-icon" alt="иконка-галочки" title="иконка-галочки"></div>
             <div class="items-container__done-cards-item">
                <div class="opened-cards"></div>/20
             </div>
          </div>
          <div class="items-container__each-item-container">
-		 <div class="items-container__time-icon"><img src="/img/Icons/stopwatch-outline.svg" class="img-icon" alt="иконка-секундомера" title="иконка-секундомера"></div>
+		 <div class="items-container__time-icon"><img src="/img/icons/stopwatch-outline.svg" class="img-icon" alt="иконка-секундомера" title="иконка-секундомера"></div>
             <div class="items-container__time-item">
                <div class="results-menu__time"></div> с.
             </div>
@@ -62,9 +62,9 @@ include $_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php";
          </div>
       </div>
       <div class="results-menu__buttons-container">
-	  <div onClick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
+	  <div onClick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
          </div>
-         <a href="/index.php" class="results-menu__button result-menu__button-home"><img src="/img/Icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
+         <a href="/index.php" class="results-menu__button result-menu__button-home"><img src="/img/icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
       </div>
    </div>
 
@@ -106,10 +106,10 @@ include $_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php";
       </div>
       <div class="topButton-gameWords">
          <a class="comeback-button" href="#">
-		 <div class="comeback-button-body"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
+		 <div class="comeback-button-body"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
          </a>
-         <a href="/pages/settings-page/settings-page.php" class="linkToTheSettings"><img src="/img/Icons/settings-outline.svg" class="img-icon imgSettings" alt="иконка-настройки" title="иконка-настройки"></a>
-         <div class="linkToTheRestart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить"></div>
+         <a href="/pages/settings-page/settings-page.php" class="linkToTheSettings"><img src="/img/icons/settings-outline.svg" class="img-icon imgSettings" alt="иконка-настройки" title="иконка-настройки"></a>
+         <div class="linkToTheRestart"><img src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить"></div>
       </div>
       <div class="container-play-area">
          <div class="game-mode"></div>

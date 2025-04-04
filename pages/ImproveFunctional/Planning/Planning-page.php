@@ -28,12 +28,12 @@
 
 <body>
     <header>
-         <a class="comeback-button" href="/index.php"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
-			<div class="page-title">Планирование<img src="/img/Icons/calendar-outline.svg" class="img-icon page-title-icon" alt="иконка-календаря" title="иконка-календаря"></div>
+         <a class="comeback-button" href="/index.php"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
+			<div class="page-title">Планирование<img src="/img/icons/calendar-outline.svg" class="img-icon page-title-icon" alt="иконка-календаря" title="иконка-календаря"></div>
 	</header>
 	<main>
 	   <div class="info-body">
-	        <div class="info-button"><img src="/img/Icons/information-outline.svg" class="img-icon page-title-icon" alt="иконка-информации" title="иконка-информации"></div>
+	        <div class="info-button"><img src="/img/icons/information-outline.svg" class="img-icon page-title-icon" alt="иконка-информации" title="иконка-информации"></div>
 	        <div class="info-text">Выбирай дату и записывай задачу</div>
 	   </div>
 		<div class="alerts-container err">
@@ -52,7 +52,7 @@
 		<form action="Planning-page.php" method="post">
 
 		<div class="new-plan-body">
-		    	<div class="comeback-button back"><img src="/img/Icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
+		    	<div class="comeback-button back"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></div>
 		    	<div class="new-plan-title">Новый план</div>
 			<div class="new-plan-date-body">
 				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">

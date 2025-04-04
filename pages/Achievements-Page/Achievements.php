@@ -16,7 +16,7 @@
    <link rel="canonical" href="https://brainrim.site">
 </head>
 <header>
-<a class="comeback-button" href="/pages/Profile-page/Profile.php"><img class="comeback-icon" src="/img/Icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
+<a class="comeback-button" href="/pages/Profile-page/Profile.php"><img class="comeback-icon" src="/img/icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
 </header>
 <body>
 <div class="page-achievments-container">
@@ -38,7 +38,7 @@
                   </div>
                </div>
                <div class="DownButton">
-                  <div class="scroll"><img class="Up-button" src="/img/Icons/chevron-down-outline.svg" alt="иконка-назад" title="иконка-назад"></div>
+                  <div class="scroll"><img class="Up-button" src="/img/icons/chevron-down-outline.svg" alt="иконка-назад" title="иконка-назад"></div>
                </div>
             </main>
          </div>

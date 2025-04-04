@@ -20,7 +20,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
-	    <a class="comeback-button" href="/index.php"><img class="comeback-icon" src="/img/Icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
+	    <a class="comeback-button" href="/index.php"><img class="comeback-icon" src="/img/icons/arrow-back-outline.svg" alt="иконка-назад" title="иконка-назад"></a>
          <div class="social-list">
             <a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><i
                   class="fa-brands fa-tiktok fa-2x" alt="TikTok"></i></a>

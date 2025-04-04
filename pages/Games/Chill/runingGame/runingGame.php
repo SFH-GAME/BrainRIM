@@ -81,9 +81,9 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicRuningGame.php";
         <div class="loose-win-value">Вы проиграли</div>
       </div>
       <div class="results-menu__buttons-container">
-        <div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><img src="/img/Icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
+        <div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><img src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
         </div>
-        <a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/Icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
+        <a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
       </div>
     </div>
   </div>
