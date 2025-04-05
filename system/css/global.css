@@ -3,11 +3,13 @@
    --bg-color: #ffffff;
    --btn-bg-color-none: white;
    --btn-bg-color-dark: #2B2A31;
+   --btn-bg-color-light: #c4c4c4;
    --btn-border: 1px solid #a2a2a2;
    --text-color: #000000;
    --text-color-gray: rgb(124, 124, 124);
    --icon-color: brightness(0);
    --main-color: #7655f5;
+   --main-gradient: linear-gradient(0deg, rgba(118, 85, 245, 1) 30%, rgba(118, 85, 245, 1) 40%, rgba(255, 253, 253, 1) 140%);
 }
  
 /* Тёмная тема */
@@ -15,9 +17,11 @@
    --bg-color: #161618;
    --btn-bg-color-none: #2B2A31;
    --btn-bg-color-dark: #2B2A31;
+   --btn-bg-color-light: #212121;
    --btn-border: 0px solid gray;
    --text-color: #ffffff;
    --main-color: #7655f5;
+   --main-gradient: linear-gradient(0deg, rgba(118, 85, 245, 1) 30%, rgba(118, 85, 245, 1) 40%, rgba(255, 253, 253, 1) 140%);
    --icon-color: brightness(0) invert(1);
 }
 
@@ -56,7 +60,7 @@
  body {
 	background-color: var(--bg-color);
 	color: var(--text-color);
-	transition: background-color 0.3s, color 0.3s;
+	transition: background-color 1s, color 1s;
 	height: 100%;
 	width: 100%;
 	font-size: 100%;

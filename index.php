@@ -84,7 +84,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/system/css/global.css?v=1.0">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=1.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=2.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
@@ -183,45 +183,27 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
          </div>
+         <div class="player-level">Уровень
+            <?php if (isset($_SESSION['id'])): ?>
+               <span class="playerLvlCounterBody"></span>
+            <?php else: ?>
+               <span class="playerLvlCounterBody"></span>
+            <?php endif; ?>
+         </div>
 
+         <div id="loading-bar" class="player-exp-scale">
+            <div id="progress" class="player-exp__line-blue"></div>
+            <p class="player-exp__text"><?php if (isset($_SESSION['id'])): ?> <span class="expValueFromDB"></span>
+               <?php else: ?><span class="expValueFromDB"></span><?php endif; ?>/<?php if (isset($_SESSION['id'])): ?>
+                  <span class="nextLvl-value"></span> <?php else: ?><span class="nextLvl-value"></span><?php endif; ?>
+            </p>
+         </div>
       </header>
       <main class="main">
          <div class="lvl-container">
-            <div class="player-level">Уровень
-               <?php if (isset($_SESSION['id'])): ?>
-                  <span class="playerLvlCounterBody"></span>
-               <?php else: ?>
-                  <span class="playerLvlCounterBody"></span>
-               <?php endif; ?>
-            </div>
-
-            <div id="loading-bar" class="player-exp-scale">
-               <div id="progress" class="player-exp__line-blue"></div>
-               <p class="player-exp__text"><?php if (isset($_SESSION['id'])): ?> <span class="expValueFromDB"></span>
-                  <?php else: ?><span
-                        class="expValueFromDB"></span><?php endif; ?>/<?php if (isset($_SESSION['id'])): ?>
-                     <span class="nextLvl-value"></span> <?php else: ?><span class="nextLvl-value"></span><?php endif; ?>
-               </p>
-            </div>
-
-            <div class="all-lvls-container">
-               <div class="level level-one">Уровень 1</div>
-               <div class="level level-two">Уровень 2</div>
-               <div class="level level-three">Уровень 3</div>
-               <div class="level level-four">Уровень 4</div>
-               <div class="level level-five">Уровень 5</div>
-               <div class="level level-six">Уровень 6</div>
-               <div class="level level-seven">Уровень 7</div>
-               <div class="level level-eight">Уровень 8</div>
-               <div class="level level-nine">Уровень 9</div>
-               <div class="level level-ten">Уровень 10</div>
-               <div class="close-levels-container"><img src="/img/icons/close-outline.svg" class="lvl-icon"
-                     alt="иконка закрытия" title="иконка закрытия"></div>
-            </div>
 
             <script
                src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
-
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
             <button class="level-up magic" style="display:none;">Улучшить</button>
             <?php if (isset($_SESSION['id'])): ?>

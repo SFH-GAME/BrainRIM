@@ -28,6 +28,7 @@ ul.news-text li{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
 	filter: var(--icon-color);
+	transition: 2s all;
 }
 .comeback-button:active{
 	transform: scale(0.96);
@@ -463,10 +464,11 @@ justify-content: center;
 	position: absolute;
 	top: 60px;
 	right: 10px;
-}
-#theme-toggle-button {
+	z-index: 1000;
+ }
+ 
+ #theme-toggle-button {
 	font-size: 16px;
-	position: relative;
 	display: inline-block;
 	width: 5em;
 	cursor: pointer;
@@ -485,9 +487,14 @@ justify-content: center;
  #sun,
  #moon,
  #cloud {
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 0.25s;
+	transition: all 0.3s ease;
+ }
+ 
+ #sun,
+ #moon,
+ #cloud,
+ #stars {
+	display: block;
  }
  
  #toggle:checked + svg #container {
@@ -497,36 +504,29 @@ justify-content: center;
  #toggle:checked + svg #button {
 	transform: translate(28px, 2.333px);
  }
-
+ 
+ /* Светлая тема */
  #sun {
 	opacity: 1;
  }
- 
- #toggle:checked + svg #sun {
+ #moon,
+ #stars {
 	opacity: 0;
  }
- 
- #moon {
-	opacity: 0;
- }
- 
- #toggle:checked + svg #moon {
-	opacity: 1;
- }
- 
  #cloud {
 	opacity: 1;
  }
  
+ /* Тёмная тема */
+ #toggle:checked + svg #sun {
+	opacity: 0;
+ }
+ #toggle:checked + svg #moon,
+ #toggle:checked + svg #stars {
+	opacity: 1;
+ }
  #toggle:checked + svg #cloud {
 	opacity: 0;
  }
  
- #stars {
-	opacity: 0;
- }
- 
- #toggle:checked + svg #stars {
-	opacity: 1;
- }
  

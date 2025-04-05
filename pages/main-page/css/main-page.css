@@ -47,11 +47,10 @@ z-index: 1;
 }
  .header{
 	width: 100%;
-	background: var(--bg-color);
-    border-style: solid;
-   /* border-bottom: 2px solid #05EFD4; 
-    box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25), inset 0px 6px 12px -3px rgba(255, 255, 255, 0.25);*/
-	border-radius: 0px 0px 20px 20px;
+	background: var(--main-gradient);
+   border-style: solid;
+	border-radius: 0px 0px 30px 30px;
+	padding: 0 0 10px 0;
  } 
  .header__top-button-container{
 	display: flex;
@@ -60,35 +59,7 @@ z-index: 1;
 	margin: 15px 0 0 0;
 	font-size: 18px;
 	color: #FFFFFF;
- }	
- /*
- .header__top-button-title{
-	font-size: 34px;
-	font-weight: 800;
-	transition: 1s;
-	position: relative;
-  overflow: hidden;
  }
- .header__top-button-title::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(90deg, #21324200 0%, #213242d3 50%, #21324200 100%);
-	animation: glow-move 2s infinite;
- }
- 
- @keyframes glow-move {
-	0% {
-	  left: -100%;
-	}
-	100% {
-	  left: 100%;
-	}
- }
- */
 .header-score-container{
 	margin: 20px 0 ;
 	display: flex;
@@ -180,11 +151,10 @@ z-index: 1;
 	justify-content: space-around;
 	width: 97px;
 	height: 34px;
-	border: var(--btn-border);
-   background-color: var(--btn-bg-color-none);
+   background-color: var(--btn-bg-color-dark);
    border-radius: 10px;
 	font-size: 18px;
-	color: var(--text-color);
+	color: white;
 	transition:
 	transform 0.2s ease,
 	box-shadow 0.2s ease;
@@ -201,8 +171,8 @@ z-index: 1;
  .memany-container{
 	font-size: 16px;
 	font-weight: 900;
-	border: var(--btn-border);
-   background-color: var(--btn-bg-color-none);
+	color: white;
+   background-color: var(--btn-bg-color-dark);
    border-radius: 10px;
  }
  .memany-count{
@@ -220,7 +190,7 @@ z-index: 1;
 	width: fit-content;
 	padding: 10px 20px;
 	height: 30px;
-	/* background: #00000061; */
+	color: white;
 	border-radius: 10px;
 	font-style: normal;
 	font-weight: 700;
@@ -241,7 +211,7 @@ z-index: 1;
 	text-align: center;
 	margin: 10px auto;
 	overflow: hidden;
-	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(255, 255, 255, 0.25);
+	box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.40), -1px -1px 2px rgba(255, 255, 255, 0.35);
 }
  #progress{
 	width: 10px;
@@ -261,86 +231,6 @@ z-index: 1;
 .reg-hint-text span {
 	color: #05EFD4;
 }
-
- .all-lvls-container{
-	display: none;
-	flex-direction: column;
-	position: absolute;
-	text-align: center;
-	gap: 5px;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	color: #05EFD4;
-	font-size: 18px;
-	background: #213242;
-	padding: 10px;
-	border: 2px solid #05EFD4;
-	border-radius: 10px;
-	z-index: 100;
- }
- .level{
-	transition: 0.2s;
-	color: #fff;
- }
- .level:hover{
-	background-color: #000;
-	border-radius: 10px;
-	padding: 10px;
- }
- .close-levels-container{
-	margin: 6px 0 0px 0;
-	border: 2px solid #05EFD4;
-	border-radius: 10px;
-	text-align: center;
-	transition: 0.1s;
- }
- .close-levels-container:active{
-	transform: scale(0.95);
-    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
-	background-color: #05EFD4;
-	color: #000;
- }
-    .level-one:hover{
-		background-color: rgb(255, 255, 255);
-		color: rgb(0, 0, 0);
-	}
-	.level-two:hover{
-		background-color: rgb(196, 227, 252);
-		color: rgb(0, 0, 0);
-		}
-	.level-three:hover{
-		background-color: rgb(0, 140, 255);
-		color: rgb(0, 0, 0);
-		}
-	.level-four:hover{
-		background-color: rgb(255, 255, 0);
-		color: rgb(0, 0, 0);
-		}
-	.level-five:hover{
-		background-color: rgb(255, 150, 0);
-		color: rgb(0, 0, 0);
-		}
-	.level-six:hover{
-		background-color: rgb(20, 196, 20);
-		color: rgb(0, 0, 0);
-		}
-	.level-seven:hover{
-		background-color: rgb(0, 0, 255);
-		color: rgb(0, 0, 0);
-		}
-	.level-eight:hover{
-		background-color: rgb(255, 0, 255);
-		color: rgb(0, 0, 0);
-		}
-	.level-nine:hover{
-		background-color: rgb(100, 0, 255);
-		color: rgb(0, 0, 0);
-		}
-	.level-ten:hover{
-		background-color: rgb(255, 0, 0);
-		color: rgb(0, 0, 0);
-		}
 
 .level-up{
 	display: none;
@@ -369,12 +259,10 @@ z-index: 1;
         display: none;
         opacity: 0;
     }
-
     1% {
         display: flex;
         opacity: 0;
     }
-
     100% {
         display: flex;
         opacity: 1;
@@ -461,7 +349,7 @@ font-size: 18px;
     border-radius: 10px;
     width: 240px;
     justify-content: center;
-    margin: 30px auto;
+    margin: 50px auto;
     height: 45px;
     align-items: center;
     font-size: 20px;
@@ -536,7 +424,7 @@ font-size: 18px;
 	width: 50px;
 	height: 50px;
 	border-radius: 30px;
-	Background-image: conic-gradient(transparent,transparent,transparent, #956afa);
+	Background-image: conic-gradient(transparent,transparent,transparent, #ffffff);
     animation: rotate 2s linear infinite;
 }
 
@@ -548,7 +436,7 @@ font-size: 18px;
 	inset: 5px;
 	border-radius: 30px;
 	border: var(--btn-border);
-   background-color: var(--btn-bg-color-none);
+   background: var(--btn-bg-color-dark);
 }
 @keyframes rotate {
 	0% {
@@ -568,13 +456,16 @@ font-size: 18px;
 
 
  
- .tasks-bonus-iq-container{
+.tasks-bonus-iq-container{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 50px 0 0 0;
 	padding: 0 5%;
- }
+}
+.tasks-bonus-iq-container img {
+	filter: var(--icon-color);
+}
  .everyday-word-button{
 	display: flex;
 	align-items: center;
@@ -584,7 +475,7 @@ font-size: 18px;
 	/* box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.20), 0px 2px 3px 1px rgba(0, 0, 0, 0.45); */
 	border-radius: 15px;
 	font-size: 40px;
-	background: var(--main-color);
+	background: var(--btn-bg-color-light);
 	transition: 0.2s;
  }
  .everyday-word-button:active{
@@ -686,7 +577,7 @@ font-size: 18px;
 	height: 82px;
 	border-radius: 15px;
 	font-size: 40px;
-	background: var(--main-color);
+	background: var(--btn-bg-color-light);
 	transition: 0.2s;
  }
  .bonus_container{
@@ -900,8 +791,7 @@ font-size: 18px;
 	display: flex;
 	width: 100%;
 	height: 100%;
-	background-color: var(--btn-bg-color-none);
-	border: var(--btn-border);
+	background-color: var(--bg-color);
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px 15px 0px 0px;

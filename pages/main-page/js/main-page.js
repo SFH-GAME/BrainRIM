@@ -97,8 +97,8 @@ GamesInDev.forEach(element => {
 });
 
 if (TreeBtn) {
-	TreeBtn.addEventListener('click', popUpAlert);
-  }
+  TreeBtn.addEventListener('click', popUpAlert);
+}
 
 function popUpAlert() {
   alertContainer.style = 'display: flex;';
@@ -222,35 +222,35 @@ document.querySelector(".convert-button").onclick = function () {//конвер�
 const maxStars = 10; // Максимальное количество звёзд на контейнер
 
 const createStar = (container) => {
-    const star = document.createElement('div');
-    star.classList.add('star');
+  const star = document.createElement('div');
+  star.classList.add('star');
 
-    // Рандомная горизонтальная позиция в пределах контейнера
-    star.style.left = Math.random() * 148 + 'px';
-    star.style.animationDuration = Math.random() * 16 + 24 + 's'; // Анимация от 24 до 40 секунд
+  // Рандомная горизонтальная позиция в пределах контейнера
+  star.style.left = Math.random() * 148 + 'px';
+  star.style.animationDuration = Math.random() * 16 + 24 + 's'; // Анимация от 24 до 40 секунд
 
-    // Добавление звезды в контейнер
-    container.appendChild(star);
+  // Добавление звезды в контейнер
+  container.appendChild(star);
 
-    // Проверка и удаление лишних звёзд
-    const stars = container.querySelectorAll('.star'); // Находим только звёзды
-    if (stars.length > maxStars) {
-        stars[0].remove(); // Удаляем только первую звезду
+  // Проверка и удаление лишних звёзд
+  const stars = container.querySelectorAll('.star'); // Находим только звёзды
+  if (stars.length > maxStars) {
+    stars[0].remove(); // Удаляем только первую звезду
+  }
+
+  // Удаление звезды после завершения анимации
+  setTimeout(() => {
+    if (container.contains(star)) {
+      star.remove();
     }
-
-    // Удаление звезды после завершения анимации
-    setTimeout(() => {
-        if (container.contains(star)) {
-            star.remove();
-        }
-    }, 40000); // Устанавливаем время жизни звезды
+  }, 40000); // Устанавливаем время жизни звезды
 };
 
 const packs = document.querySelectorAll('.pack');
 
 // Создаём звёзды для каждого контейнера с интервалом
 packs.forEach((pack) => {
-    setInterval(() => createStar(pack), 500);
+  setInterval(() => createStar(pack), 500);
 });
 
 
@@ -520,15 +520,7 @@ ImproveScrollButton.onclick = function scrollToDown() {
 ImproveScrollButton.onclick = function scrollToTop() {
   document.getElementById('improve-container').scrollTo(0, 0);
 };
-//Уровни
-AllLevelsButton.onclick = function () { // Открыть уровни
-  AllLevels.style = 'display: flex;';
-  audioClick.play();
-}
-CloseAllLevels.onclick = function () { //Закрыть уровни
-  AllLevels.style = 'display: none;';
-  audioClick.play();
-}
+
 
 
 
@@ -573,25 +565,25 @@ Profile.onclick = function () {
 
 //Анимация звёзд на кнопке "Дерево навыков"
 document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector(".tree-button");
+  const button = document.querySelector(".tree-button");
 
-    function createSparkle() {
-        const sparkle = document.createElement("div");
-        sparkle.classList.add("sparkle");
+  function createSparkle() {
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
 
-        const size = Math.random() * 1.5 + 0.2; // Размер звезды
-        const posX = Math.random() * button.clientWidth;
-        const posY = Math.random() * button.clientHeight;
+    const size = Math.random() * 1.5 + 0.2; // Размер звезды
+    const posX = Math.random() * button.clientWidth;
+    const posY = Math.random() * button.clientHeight;
 
-        sparkle.style.width = `${size}px`;
-        sparkle.style.height = `${size}px`;
-        sparkle.style.left = `${posX}px`;
-        sparkle.style.top = `${posY}px`;
+    sparkle.style.width = `${size}px`;
+    sparkle.style.height = `${size}px`;
+    sparkle.style.left = `${posX}px`;
+    sparkle.style.top = `${posY}px`;
 
-        button.appendChild(sparkle);
+    button.appendChild(sparkle);
 
-        setTimeout(() => sparkle.remove(), 5000); // Удаляем через 5 сек
-    }
+    setTimeout(() => sparkle.remove(), 5000); // Удаляем через 5 сек
+  }
 
-    setInterval(createSparkle, 60); // Создаём новую точку каждые 60 мс
+  setInterval(createSparkle, 60); // Создаём новую точку каждые 60 мс
 });
