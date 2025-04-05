@@ -27,6 +27,23 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
       <?php endif; ?>
    </script>
 
+   <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
+   <script>
+         (function () {
+            try {
+               const userPref = localStorage.getItem('theme');
+               let theme;
+               if (userPref) {
+                  theme = userPref;
+               } else {
+                  theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+               }
+               document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) { }
+         })();
+   </script>
+
+
    <!-- Основные метатеги -->
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,6 +83,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/system/css/global.css?v=1.0">
    <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=1.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
@@ -74,12 +92,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
    <!-- Yandex.Metrika counter -->
    <script type="text/javascript">
-         (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-         })
+      (function (m, e, t, r, i, k, a) {
+         m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+         m[i].l = 1 * new Date();
+         for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+         k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })
          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
       ym(99567764, "init", {
@@ -903,6 +921,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
 
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="/system/js/global.js"></script>
       <script src="/pages/main-page/js/main-page.js?v=1.0"></script>
 </body>
 

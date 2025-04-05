@@ -69,17 +69,20 @@ const defaultLanguage = document.querySelector(".RU"); // RU — язык по �
 const languageContainer = document.querySelector(".language-container"); // Контейнер с языками
 
 languages.forEach(language => {
-    language.addEventListener("click", () => {
-        document.querySelector(".language.active")?.classList.remove("active");
-        language.classList.add("active");
-    });
+	language.addEventListener("click", () => {
+		document.querySelector(".language.active")?.classList.remove("active");
+		language.classList.add("active");
+	});
 });
 
 //Сброс языка на RU
 function closeLanguageMenu() {
-    document.querySelector(".language.active")?.classList.remove("active");
-    defaultLanguage.classList.add("active");
-    languageContainer.style.display = "none";
+	document.querySelector(".language.active")?.classList.remove("active");
+	defaultLanguage.classList.add("active");
+	languageContainer.style.display = "none";
 }
 
 document.querySelector(".close-language").addEventListener("click", closeLanguageMenu);
+
+
+
