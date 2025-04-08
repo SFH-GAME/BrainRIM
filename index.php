@@ -55,7 +55,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
       content="самосовершенствование, развитие, мини-игры, логика, память, внимание, английский язык, интересные слова, исторические даты, 2048, баллы, награды, мотивация">
    <meta name="author" content="Романовский Порфирий">
    <meta name="robots" content="index, follow">
-   <meta name="theme-color" content="#213242">
+   <meta name="theme-color" content="#161618">
 
    <!-- Open Graph (для соцсетей) -->
    <meta property="og:title" content="BrainRim — развивайся каждый день!">
@@ -83,8 +83,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/system/css/global.css?v=1.0">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=2.0">
+   <link rel="stylesheet" href="/system/css/global.css?v=2.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=5.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
@@ -551,7 +551,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
       <div class="page-improve-container">
          <div class="wrapper-improve">
-            <span class="improve-title">Улучшай себя !</span>
+
             <main class="main-improve">
                <div id="improve-container">
                   <a href="/pages/ImproveFunctional/Articles/ArticleMain.html">
