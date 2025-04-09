@@ -33,3 +33,30 @@
 
    setInitialTheme();
 })();
+
+//Анимация полоски (Прогресс бара)
+function initializeProgressBar(progressBarId, expValueId, targetPercentage, targetXP) {
+	const progressBar = document.getElementById(progressBarId);
+	const expValue = document.getElementById(expValueId);
+  
+	let currentXP = 0;
+	const duration = 1200; // общая длительность (мс)
+	const stepTime = 20;
+	const steps = duration / stepTime;
+	const increment = targetXP / steps;
+  
+	// Запуск прогресс-бара
+	setTimeout(() => {
+	  progressBar.style.width = targetPercentage + '%';
+	}, 400);
+  
+	// Анимация XP чисел
+	const counter = setInterval(() => {
+	  currentXP += increment;
+	  if (currentXP >= targetXP) {
+		currentXP = targetXP;
+		clearInterval(counter);
+	  }
+	  expValue.textContent = `+${Math.floor(currentXP)} XP`;
+	}, stepTime);
+  }
