@@ -16,9 +16,12 @@
 				<span class="head-span">Улучшил:</span>
 				<div class="upgrade-item">Память</div>
 			</div>
-			<div class="loading-bar" class="player-exp-scale">
-            <div id="progress" class="player-exp__line-blue" style="width: 0%;"></div>
-        </div>
+				<div class="exp-wrapper">
+					<div class="loading-bar">
+						<div id="progress" class="player-exp__line-blue"></div>
+					</div>
+					<div id="exp-value" class="exp-value">+0 XP</div>
+				</div>
 		</div>
 
 		<div class="reward block-item-column">
@@ -234,6 +237,13 @@ width: 400px;
     margin: 10px auto;
     overflow: hidden;
 }
+.player-exp__line-blue {
+  background-color: #05EFD4;
+  height: 100%;
+  width: 0;
+  transition: width 1.8s ease-out;
+}
+
 
 .upgrade-block{
     display: flex;
@@ -332,5 +342,59 @@ width: 400px;
     height: 20px;
   }
 }
+.exp-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-value {
+  font-size: 18px;
+  color: #05EFD4;
+  font-weight: bold;
+  animation: floatIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 </style>
+
+<script>
+  window.addEventListener('load', () => {
+    const progressBar = document.getElementById('progress');
+    const expValue = document.getElementById('exp-value');
+    const targetPercentage = 72; // Процент ширины полоски
+    const targetXP = 120;        // Реальное значение XP (можешь подставлять)
+
+    let currentXP = 0;
+    const duration = 1200; // общая длительность (мс)
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = targetXP / steps;
+
+    // Запуск прогресс-бара
+    setTimeout(() => {
+      progressBar.style.width = targetPercentage + '%';
+    }, 400);
+
+    // Анимация XP чисел
+    const counter = setInterval(() => {
+      currentXP += increment;
+      if (currentXP >= targetXP) {
+        currentXP = targetXP;
+        clearInterval(counter);
+      }
+      expValue.textContent = `+${Math.floor(currentXP)} XP`;
+    }, stepTime);
+  });
+</script>
