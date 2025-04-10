@@ -587,3 +587,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(createSparkle, 60); // Создаём новую точку каждые 60 мс
 });
+
+// включаем анимации цифр
+animateCountUpWhenVisible('.home-memony-body');
+animateCountUpWhenVisible('.home-hints-body');
+animateCountUpWhenVisible('.home-iq-body');
+animateCountUpWhenVisible('.expValueFromDB');
+animateCountUpWhenVisible('.count-hints');
+animateCountUpWhenVisible('.count-memoney');

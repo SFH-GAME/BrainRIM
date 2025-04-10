@@ -217,26 +217,26 @@ var game = {
 
       // При завершении игры
       if (this.status == this.gameover && !isResultSent) {
-         isResultSent = true; // Устанавливаем флаг, чтобы не отправлять запрос повторно
-         timerCountResultsValue.innerHTML = timerCount;
-         scoreResultsValue.innerHTML = this.score;
-         bestTimerCountResultsValue.innerHTML = bestTimeRes; // из базы данных
-         bestScoreCountResultsValue.innerHTML = bestScoreRes;
-
-         if (comparisonResBetterOrNot() == true) { // Если результат лучше
-            winOrLooseResultsValue.classList.add('congrats');
-            winOrLooseResultsValue.innerHTML = 'Лучший результат!';
-            statusLoosOrWin = "win";
-            winForResults = 1;
-            doAjaxWinBonuse();
-         } else {
-            winOrLooseResultsValue.classList.add('loose');
-            winOrLooseResultsValue.innerHTML = 'Вы проиграли';
-            looseForResults = 1;
-            statusLoosOrWin = "loose";
-            doAjaxLooseBonuse();
-            doAjaxExperience();
-         }
+         /* isResultSent = true; // Устанавливаем флаг, чтобы не отправлять запрос повторно
+          timerCountResultsValue.innerHTML = timerCount;
+          scoreResultsValue.innerHTML = this.score;
+          bestTimerCountResultsValue.innerHTML = bestTimeRes; // из базы данных
+          bestScoreCountResultsValue.innerHTML = bestScoreRes;
+ 
+          if (comparisonResBetterOrNot() == true) { // Если результат лучше
+             winOrLooseResultsValue.classList.add('congrats');
+             winOrLooseResultsValue.innerHTML = 'Лучший результат!';
+             statusLoosOrWin = "win";
+             winForResults = 1;
+             doAjaxWinBonuse();
+          } else {
+             winOrLooseResultsValue.classList.add('loose');
+             winOrLooseResultsValue.innerHTML = 'Вы проиграли';
+             looseForResults = 1;
+             statusLoosOrWin = "loose";
+             doAjaxLooseBonuse();
+             doAjaxExperience();
+          }*/
          resultContainer.style = "display: block;";
          doAjaxResults();
       }
@@ -524,3 +524,23 @@ BUTTON_START.onclick = function () {
 
    }
 }
+
+let results = {
+   difficulty: '',
+   activity_type: 'rest', // 'upgrade' или 'rest'
+   upgrade: '',
+   exp: '+50',
+   money: '100',
+   hints: '3',
+   iq: '15',
+   enemies: undefined,
+   time: timerCount,
+   score: game.score,
+   level: undefined,
+   moves: undefined,
+   best_enemies: undefined,
+   best_time: bestTimeRes,
+   best_score: bestScoreRes,
+   best_level: undefined,
+   best_moves: undefined
+};
