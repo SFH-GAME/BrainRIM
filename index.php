@@ -420,7 +420,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      <p class="subtitle"> Тренирует<span class="backlight"> Реакцию</span> и <span
                            class="backlight">скорость.</span>
                         Попадите кружком в зелёную зону круга ⚡🚀</p>
-                     <img src="/img/Games/Tapcircle.png" alt="картинка">
+                     <img src="/img/Games/TapCircle.png" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
                   </div>
                </a>
