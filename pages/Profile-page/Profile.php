@@ -15,6 +15,21 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
         let levelValue = Number(1);
     <?php endif; ?>
 </script>
+<!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
+<script>
+		(function () {
+		try {
+			const userPref = localStorage.getItem('theme');
+			let theme;
+			if (userPref) {
+				theme = userPref;
+			} else {
+				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (e) { }
+		})();
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -22,6 +37,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
     <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Profile.css?v=1.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
     <title>Профиль</title>
 </head>
@@ -389,5 +405,5 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
     </main>
 </body>
 <script src="Profile.js?v=1.0"></script>
-
+<script src="/system/js/global.js"></script>
 </html>

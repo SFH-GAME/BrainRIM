@@ -10,9 +10,12 @@
     <title>Интересные статьи</title>
 </head>
 
+<link rel="stylesheet" href="/system/css/global.css?v=1.0">
+<script src="/system/js/global.js"></script>
+
 <body>
     <header>
-        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.html"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
+        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.php"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
     </header>
 
     <main>

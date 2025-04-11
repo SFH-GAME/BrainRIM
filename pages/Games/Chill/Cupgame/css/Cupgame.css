@@ -13,14 +13,14 @@ body {
 	align-items: center;
 	height: 100vh;
 	overflow: hidden;
-	background-color: #213242;
+	background-color: var(--bg-color);
 	overflow: -moz-hidden-unscrollable;
 	user-select: none;
 }
 
 h1 {
 	margin: 0% 0 0 0;
-	color: #05EFD4;
+	color: var(--main-color);
 	font-size: 18px;
 	opacity: 1;
 	visibility: visible;
@@ -61,7 +61,7 @@ h1 {
 .game-container {
 	display: flex;
 	width: 344px;
-	height: 150px;
+	height: 130px;
 	position: fixed;
     top: 45%;
     left: 50%;
@@ -136,7 +136,7 @@ h1 {
 .score-container {
 	font-size: 24px;
 	font-weight: bold;
-	color: #05EFD4;
+	color: var(--main-color);
 	position: fixed;
     top: 25%;
     left: 50%;

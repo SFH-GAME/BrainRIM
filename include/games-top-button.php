@@ -20,6 +20,7 @@
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
         z-index: 2;
+		filter: var(--icon-color);
     }
 
     .comeback-button-body {
@@ -64,6 +65,6 @@
     .img-icon {
         width: 40px;
         height: 40px;
-        filter: invert(1);
+		filter: var(--icon-color);
     }
 </style>

@@ -522,7 +522,7 @@ hintsButton.onclick = function () {
       let copyRandNumber = randomNumberBtn;//сделано в связи с багом покраски в зелйный кнопки
       arrButtons[copyRandNumber].style = 'background:green;';
       setTimeout(() => {
-         arrButtons[copyRandNumber].style = 'background:#213242;';
+         arrButtons[copyRandNumber].style = 'background:var(--bg-color);';
       }, 500);
    }
 };

@@ -33,8 +33,7 @@ body {
     font-size: 16px; 
     line-height: 1.4;
     font-family: 'Balsamiq Sans', sans-serif;
-    background: #213242;
-    color: white;
+	color: var(--text-color);
     padding: 10px;
 }
 
@@ -94,10 +93,6 @@ h3 {
 .comeback-button:active {
     transform: scale(0.85);
 }
-.comeback-button .hydrated {
-    color: white;
-    font-size: 42px;
-}
 
 
 .article-container {
@@ -109,7 +104,7 @@ h3 {
 }
 
 .page-title {
-    color: #7136cb;
+    color: var(--main-color);
     font-size: 28px;
 }
 
@@ -140,7 +135,7 @@ h3 {
     left: 0px;
     width: 3px;
     height: 100%;
-    background-color: #7136cb;
+    background-color: var(--main-color);
 }
 
 .text-block {
@@ -153,7 +148,7 @@ h3 {
 
 .page-title2 {
     font-size: 22px;
-    color: #7136cb;
+    color: var(--main-color);
     margin: 50px 0 0 0;
 }
 
@@ -181,7 +176,7 @@ h3 {
 }
 
 .conclusion-title {
-    color: #7136cb;
+    color: var(--main-color);
     font-size: 22px;
 }
 
@@ -218,14 +213,14 @@ h3 {
 	padding: 10px;
 }
 .article-link{
-	color: white;
+	color: var(--text-color);
 	font-weight: bold;
 }
 
 .img-icon{
 	width: 40px;
     height: 40px;
-	filter: invert(1);
+	filter: var(--icon-color);
 	 user-select: none;
 	 -webkit-user-select: none;
 	 -moz-user-select: none;

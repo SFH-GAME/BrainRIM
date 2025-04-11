@@ -28,7 +28,7 @@
  }
  html,
  body {
-	background: #223243;
+	background: #161618;
 	min-height: 100vh;
 	height: 100%;
 	width: 100%;
@@ -134,7 +134,7 @@
  padding: 12px 10px 12px 48px;
  border: none;
  width: 100%;
- background: #223243;
+ background: #161618;
  border: 1px solid rgba(0, 0, 0, 0.1);
  color: #fff;
  font-weight: 300;
@@ -184,7 +184,7 @@
  }
  .btn-send{
 	 background: #00dfc4;
-	 color: #223243;
+	 color: #161618;
 	 padding: 10px 0;
 	 font-weight: 500;
 	 height: 40px;

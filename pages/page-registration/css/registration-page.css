@@ -28,7 +28,7 @@
  }
  html,
  body {
-	background: #223243;
+	background: #161618;
 	min-height: 100vh;
 	height: 100%;
 	width: 100%;
@@ -142,7 +142,7 @@
  padding: 12px 10px 12px 48px;
  border: none;
  width: 100%;
- background: #223243;
+ background: #161618;
  border: 1px solid rgba(0, 0, 0, 0.1);
  color: #fff;
  font-weight: 300;
@@ -194,7 +194,7 @@
     padding: 12px 10px 12px 48px;
     border: none;
     width: 100%;
-    background: #223243;
+    background: #161618;
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: #fff;
     font-weight: 300;
@@ -265,7 +265,7 @@
 	color: #1d9bf0;
 }
 .facebook-path {
-    fill: white;
+    fill: var(--bg-color)
 }
  /* pop-up */
 .pop-up-alert-container{

@@ -10,9 +10,12 @@
     <title>Интересные статьи</title>
 </head>
 
+<link rel="stylesheet" href="/system/css/global.css?v=1.0">
+<script src="/system/js/global.js"></script>
+
 <body>
     <header>
-        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.html"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
+        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.php"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
     </header>
 
     <main>
@@ -52,7 +55,7 @@
                 <div class="step-description">Разговаривай о своих чувствах с друзьями, близкими или психологом, практикуй медитацию или дыхательные упражнения, чтобы научиться расслабляться, веди дневник благодарности: каждый день записывай 1–3 вещи, за которые ты благодарен.</div>
 
 				<div class="step-number">Шаг 6</div>
-                <div class="step-title"><a href="/pages/ImproveFunctional/Articles/Pages/Article/Food.html" class="article-link">Умей сказать "нет"</a></div>
+                <div class="step-title"><a href="/pages/ImproveFunctional/Articles/Pages/Article/Food.php" class="article-link">Умей сказать "нет"</a></div>
                 <div class="step-description">Не бойся отказываться от задач, которые ты не можешь или не хочешь выполнять, перестань брать на себя лишние обязательства ради того, чтобы угодить другим, освобождай время для своих интересов и отдыха.</div>
 
 				<div class="step-number">Шаг 7</div>

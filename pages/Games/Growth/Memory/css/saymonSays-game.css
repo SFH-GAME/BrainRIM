@@ -78,8 +78,8 @@ body {
    align-items: center;
    justify-content: center;
    height: 100vh;
-   background-color: #213242;
-   color: white;
+   background-color: var(--bg-color);
+   color: var(--bg-color);
    font-family: Arial, sans-serif;
    user-select: none;
    -webkit-user-select: none;
@@ -109,7 +109,7 @@ h2 {
 .start-menu__game-mode-title{
    margin: 10px auto;
    font-size: 38px;
-   color: #05EFD4;
+   color: var(--main-color);
 }
 .start-menu__game-mode{
    display: flex;
@@ -140,7 +140,7 @@ h2 {
    left: 0px;
    height: 100%;
    width: 100%;
-   background-color: #213242;
+   background-color: var(--bg-color);
    z-index: 3;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    -webkit-tap-highlight-color: transparent;
@@ -157,7 +157,7 @@ h2 {
    font-family: 'Balsamiq Sans', cursive;
    color: #ffffff;
    font-size: 38px;
-   background-color: #213242;
+   background-color: var(--bg-color);
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    -webkit-tap-highlight-color: transparent;
    box-shadow: 2px 3px 2px 5px rgba(0, 0, 0, 0.25), -2px -1px 8px rgba(255, 255, 255, 0.25);
@@ -186,7 +186,7 @@ h2 {
     gap: 15px;
 } 
 .game-info-name {
-    color: #05EFD4;
+    color: var(--main-color);
 	font-size: 24px;
 }
 .game-info{

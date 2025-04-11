@@ -680,7 +680,7 @@ height: 40px;
     gap: 15px;
 } 
 .game-info-name {
-    color: #05EFD4;
+    color: var(--main-color);
 	font-size: 24px;
 }
 .game-info{

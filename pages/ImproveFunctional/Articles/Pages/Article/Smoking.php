@@ -10,9 +10,12 @@
     <title>Интересные статьи</title>
 </head>
 
+<link rel="stylesheet" href="/system/css/global.css?v=1.0">
+<script src="/system/js/global.js"></script>
+
 <body>
     <header>
-        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.html"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
+        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.php"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
     </header>
 
     <main>
@@ -52,7 +55,7 @@
                 <div class="step-description">Избегай ситуаций, которые провоцируют желание закурить, и заменяй ритуалы (например, чай вместо сигареты).</div>
 
                 <h2 class="conclusion-title">Заключение</h2>
-                <div class="conclusion">Исследования показывают, что люди, бросившие курить, в долгосрочной перспективе становятся менее <a href="/pages/ImproveFunctional/Articles/Pages/Article/Anxiety.html" class="article-link">тревожными</a> и более эмоционально стабильными. Настоящий способ борьбы со стрессом — это осознанные техники, такие как дыхательные упражнения, физическая активность и медитация.</div>
+                <div class="conclusion">Исследования показывают, что люди, бросившие курить, в долгосрочной перспективе становятся менее <a href="/pages/ImproveFunctional/Articles/Pages/Article/Anxiety.php" class="article-link">тревожными</a> и более эмоционально стабильными. Настоящий способ борьбы со стрессом — это осознанные техники, такие как дыхательные упражнения, физическая активность и медитация.</div>
             </div>
         </div>
 		<div><img src="/img/Pages/Articles/BrainLearning.png" class="end-image" alt="Ну очень интересные факты"></div>

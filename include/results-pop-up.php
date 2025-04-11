@@ -96,7 +96,7 @@
     background-color: #161618;
     z-index: 99;
     font-size: 24px;
-    color: white;
+    color: var(--bg-color);
     overflow: auto;
   }
 

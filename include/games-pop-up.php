@@ -66,7 +66,7 @@
       min-height: 30%;
       border-radius: 20px;
       width: 85%;
-      background-color: #213242;
+      background-color: var(--bg-color);
       display: flex;
       justify-content: space-around;
       flex-direction: column;
@@ -77,7 +77,7 @@
       font-family: 'Balsamiq Sans', cursive;
       font-weight: 600;
       text-align: center;
-      color: #956afa;
+	  color: var(--main-color);
    }
 
    .pop-up__description {
@@ -87,7 +87,7 @@
       font-family: 'Balsamiq Sans', cursive;
       text-align: center;
       padding: 0 20px;
-      color: #ffffff;
+	  color: var(--text-color);
    }
 
    .wrap__button {
@@ -164,7 +164,7 @@
       min-height: 30%;
       border-radius: 20px;
       width: 85%;
-      background-color: #213242;
+      background-color: var(--bg-color);
       display: flex;
       justify-content: space-around;
       flex-direction: column;
@@ -176,7 +176,7 @@
       font-family: 'Balsamiq Sans', cursive;
       text-align: center;
       padding: 0 20px;
-      color: #ffffff;
+	  color: var(--text-color);
    }
 
    .wrap__button2 {
@@ -212,7 +212,7 @@
       min-height: 30%;
       border-radius: 20px;
       width: 85%;
-      background-color: #213242;
+      background-color: var(--bg-color);
       display: flex;
       justify-content: space-around;
       flex-direction: column;
@@ -224,7 +224,7 @@
       font-family: 'Balsamiq Sans', cursive;
       text-align: center;
       padding: 0 20px;
-      color: #ffffff;
+	  color: var(--text-color);
    }
 
    .wrap__button3 {

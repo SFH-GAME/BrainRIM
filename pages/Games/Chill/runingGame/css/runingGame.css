@@ -27,7 +27,7 @@
  }
  html,
  body {
-	 background: #213242;
+	 background: var(--bg-color);
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -89,7 +89,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #213242;
+  background-color: var(--bg-color);
   font-family: 'Balsamiq Sans', cursive;
   user-select: none;
   -webkit-user-select: none;
@@ -107,7 +107,7 @@ body {
    left: 0px;
    height: 100%;
    width: 100%;
-   background-color: #213242;
+   background-color: var(--bg-color);
    z-index: 3;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    -webkit-tap-highlight-color: transparent;
@@ -123,7 +123,7 @@ body {
    font-family: 'Balsamiq Sans', cursive;
    color: #ffffff;
    font-size: 38px;
-   border: 6px solid #05EFD4;
+   border: 6px solid var(--main-color);
    background-color: black;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    -webkit-tap-highlight-color: transparent;
@@ -152,7 +152,7 @@ body {
     gap: 15px;
 } 
 .game-info-name {
-    color: #05EFD4;
+    color: var(--main-color);
 	font-size: 24px;
 }
 .game-info{
@@ -170,7 +170,7 @@ body {
 	 font-size: 23px;
     text-align: center;
     gap: 15px;
-	 color: white;
+	 color: var(--bg-color);
 }
 .best-res__value{
 	color: chartreuse;
@@ -241,10 +241,10 @@ body {
     justify-content: space-around;
     height: 100%;
     width: 100%;
-    background-color: #213242;
+    background-color: var(--bg-color);
     z-index: 99;
 	font-size: 24px;
-	color: white;
+	color: var(--bg-color);
 
 }
 .results-head-text{
@@ -277,10 +277,10 @@ body {
 	margin: 20px auto;
 }
 .time-count{
-	color: #05EFD4;
+	color: var(--main-color);
 }
 .moves-count{
-	color: #05EFD4;
+	color: var(--main-color);
 }
 .best-time-count{
 	color: rgb(0, 255, 0);
@@ -310,9 +310,9 @@ body {
     font-size: 42px;
     width: 140px;
     height: 60px;
-    color: #05EFD4;
+    color: var(--main-color);
     transition: 0.2s;
-    background: #213242;
+    background: var(--bg-color);
     box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
 }
 
@@ -333,7 +333,7 @@ body {
 	 min-height: 30%;
 	 border-radius: 20px;
 	 width: 85%;
-	 background-color: #213242;
+	 background-color: var(--bg-color);
 	 display: flex;
 	 justify-content: space-around;
 	 flex-direction: column;
@@ -343,7 +343,7 @@ body {
 	 font-family: 'Balsamiq Sans', cursive;
 	 font-weight: 600;
 	 text-align: center;
-	 color: #05EFD4;
+	 color: var(--main-color);
 	 text-decoration: underline;
  }
  .pop-up__description{
@@ -422,7 +422,7 @@ body {
 	 min-height: 30%;
 	 border-radius: 20px;
 	 width: 85%;
-	 background-color: #213242;
+	 background-color: var(--bg-color);
 	 display: flex;
 	 justify-content: space-around;
 	 flex-direction: column;
@@ -432,7 +432,7 @@ body {
 	 font-family: 'Balsamiq Sans', cursive;
 	 font-weight: 600;
 	 text-align: center;
-	 color: #05EFD4;
+	 color: var(--main-color);
 	 text-decoration: underline;
  }
  .pop-up__description2{
@@ -509,7 +509,7 @@ body {
 	 min-height: 30%;
 	 border-radius: 20px;
 	 width: 85%;
-	 background-color: #213242;
+	 background-color: var(--bg-color);
 	 display: flex;
 	 justify-content: space-around;
 	 flex-direction: column;
@@ -519,7 +519,7 @@ body {
 	 font-family: 'Balsamiq Sans', cursive;
 	 font-weight: 600;
 	 text-align: center;
-	 color: #05EFD4;
+	 color: var(--main-color);
 	 text-decoration: underline;
  }
  .pop-up__description3{

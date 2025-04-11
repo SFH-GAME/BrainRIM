@@ -20,9 +20,26 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicRuningGame.php";
   <title>Игра - бега</title>
   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/pages/Games/Chill/runingGame/css/runingGame.css?v=1.0" />
+  <link rel="stylesheet" href="/system/css/global.css?v=1.0">
   <link rel="canonical" href="https://brainrim.site">
   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 </head>
+
+<!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
+<script>
+		(function () {
+		try {
+			const userPref = localStorage.getItem('theme');
+			let theme;
+			if (userPref) {
+				theme = userPref;
+			} else {
+				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (e) { }
+		})();
+</script>
 
 <body>
   <div class="button-start-container">
@@ -89,6 +106,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicRuningGame.php";
   </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="/pages/Games/Chill/runingGame/js/runingGame.js?v=1.0"></script>
+  <script src="/system/js/global.js"></script>
 </body>
 
 </html>

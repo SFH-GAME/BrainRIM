@@ -12,7 +12,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	overflow: hidden;
-	background-color: #213242;
+	background-color: var(--bg-color);
 	overflow: -moz-hidden-unscrollable;
 }
 
@@ -43,13 +43,13 @@ body {
 }
 .pause-button{
 	display: flex;
-	color: #05EFD4;
+	color: var(--main-color);
 	font-size: 44px;
     margin: 23% auto;
 }
 h1 {
 	margin: 0% 0 0 0;
-	color: #05EFD4;
+	color: var(--main-color);
 	font-size: 18px;
 	opacity: 1;
 	visibility: visible;
@@ -139,7 +139,7 @@ h1 {
 .img-icon{
 	width: 40px;
     height: 40px;
-	filter: invert(1);
+	filter: var(--icon-color);
 	 user-select: none;
 	 -webkit-user-select: none;
 	 -moz-user-select: none;

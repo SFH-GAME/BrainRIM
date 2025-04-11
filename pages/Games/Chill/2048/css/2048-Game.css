@@ -33,7 +33,7 @@ html,body{
    align-items: center;
    justify-content: center;
    overflow: hidden;
-   background-color: #213242;
+   background-color: var(--bg-color);
    font-family: 'Balsamiq Sans', cursive;
    user-select: none;
 	-webkit-user-select: none;
@@ -47,8 +47,7 @@ html,body{
 	position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 44px;
-    color: #ffffff;
+	filter: var(--icon-color);
     z-index: 2;
     transition: 0.1s;
 }
@@ -57,24 +56,24 @@ html,body{
 	display: none;
 	width: 100%;
 	height: 100%;
-	background-color: #213242;
+	background-color: var(--bg-color);
 	z-index: 4;
 }
 .leaderboard-container h2{
 	text-align: center;
 	margin: 70px 0 0 0;
-	color: #05EFD4;
+	color: var(--main-color);
 	letter-spacing: 8%;
 	font-size: 32px;
 }
-.leaderboard-list-container{
-	padding: 20px 0;
-	margin: 50px auto 0 auto;
-	border-radius: 20px;
-	border: solid #05EFD4 1px;
-	height: auto;
-	width: 90%;
-	box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.25), -1px -2px 6px rgba(255, 255, 255, 0.25);
+.leaderboard-list-container {
+    padding: 20px 0;
+    margin: 50px auto 0 auto;
+    border-radius: 20px;
+    border: solid var(--main-color) 1px;
+    height: auto;
+    width: 90%;
+    box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.25), -1px -2px 6px rgba(255, 255, 255, 0.25);
 }
 .leaderboard-list-container h3{
 	font-size: 24px;
@@ -105,7 +104,7 @@ html,body{
 	height: 50px;
 	background-color: #1D2228;
 	border-radius: 10px;
-	color: #fff;
+	color: var(--text-color);
 }
 .leaderboard-item__id {
 	display: flex;
@@ -115,7 +114,7 @@ html,body{
 	border-radius: 5px;
 	height: 30px;
 	width: 30px;
-	color: #05EFD4;
+	color: var(--main-color);
 	font-size: 20px;
 }
 .leaderboard-item__name {
@@ -151,16 +150,18 @@ html,body{
 	height: 50px;
 	width: 50px;
 	border-radius: 10px;
-	box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.25), -1px -2px 6px rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 0px 0px 1px rgb(107 9 127 / 25%), 3px 3px 6px 0px rgb(66 14 101 / 30%);
+	border: 2px solid var(--main-color);
 }
 .leaderboard-button:hover {
 	transform: scale(0.9);
-	box-shadow: 0px 1px 3px 5px rgba(0, 0, 0, 0.512), 0px 0px 6px rgba(255, 255, 255, 0.529);
+    box-shadow: 0px 0px 3px 1px rgb(89 9 105 / 50%);
 	
 }
 .leaderboard-button img {
 	height: 30px;
 	width: 30px;
+	filter: var(--icon-color);
 }
 
 
@@ -174,7 +175,7 @@ html,body{
    left: 0px;
    height: 100%;
    width: 100%;
-   background-color: #213242;
+   background-color: var(--bg-color);
    z-index: 3;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
    -webkit-tap-highlight-color: transparent;
@@ -188,9 +189,9 @@ html,body{
     width: 180px;
     font-weight: bold;
     font-family: 'Balsamiq Sans', cursive;
-    color: #05efd4;
+    color: var(--main-color);
     font-size: 38px;
-    background-color: #213242;
+    background-color: var(--btn-bg-color-dark);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
     box-shadow: 2px 3px 2px 5px rgba(0, 0, 0, 0.25), -2px -1px 8px rgba(255, 255, 255, 0.25);
@@ -219,12 +220,12 @@ html,body{
     gap: 15px;
 } 
 .game-info-name {
-    color: #05EFD4;
+    color: var(--main-color);
 	font-size: 24px;
 }
 .game-info{
     max-width: 350px;
-    color: #ffffff;
+	color: var(--text-color);
     font-size: 18px;
 }
 .value-best{
@@ -244,13 +245,13 @@ p{
     width: 100%;
     height: 50px;
     line-height: 50px;
-    color: #FFF;
+	color: var(--text-color);
     display: flex;
     justify-content: center;
 	gap: 20px;
 }
 .score_container>p span{
-	color: #05EFD4;
+	color: var(--main-color);
 }
 
  /* Устанавливаем стиль большой коробки, обернутой Jiugongge */
@@ -261,6 +262,7 @@ p{
 	border-radius: 15px;
 	font-size: 30px;
 	margin: 0 auto;
+	color: var(--btn-bg-color-dark);
 }
 
  /* Устанавливаем все мелкие стили сетки */
@@ -309,7 +311,7 @@ p{
 	line-height: 50px;
 	font-size: 30px;
 	font-weight: bold;
-	color: #fff;
+	color: var(--text-color);
 	outline: none;
 	border: none;
 	border-radius: 4px;
@@ -320,7 +322,7 @@ p{
 .best-score{
     width: 350px;
     font-size: 22px;
-    color: rgb(255, 255, 255);
+	color: var(--text-color);
     text-align: center;
 	margin: 40px auto;
  }
@@ -334,10 +336,10 @@ p{
 	display: none;
 	height: 100%;
 	width: 100%;
-	background-color: #213242;
+	background-color: var(--bg-color);
 	z-index: 99;
 	font-size: 24px;
-	color: white;
+	color: var(--bg-color);
 	overflow: auto;
 	padding: 40px 0;
 }
@@ -358,9 +360,9 @@ p{
     font-size: 42px;
     width: 140px;
     height: 60px;
-    color: #05EFD4;
+    color: var(--main-color);
     transition: 0.2s;
-    background: #213242;
+    background: var(--bg-color);
     box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
 }
 
@@ -384,7 +386,7 @@ p{
 .img-icon{
 	width: 40px;
     height: 40px;
-	filter: invert(1);
+	filter: var(--icon-color);
 	 user-select: none;
 	 -webkit-user-select: none;
 	 -moz-user-select: none;

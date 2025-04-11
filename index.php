@@ -554,7 +554,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
             <main class="main-improve">
                <div id="improve-container">
-                  <a href="/pages/ImproveFunctional/Articles/ArticleMain.html">
+                  <a href="/pages/ImproveFunctional/Articles/ArticleMain.php">
                      <div class="container-improve">
                         <div class="improve">Зона роста<img src="/img/icons/book-outline.svg"
                               class="improve-icon img-icon" alt="иконка книги" title="иконка книги">

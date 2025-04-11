@@ -53,8 +53,25 @@ try {
     <link rel="canonical" href="https://brainrim.site">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 	<title>Tap Circle</title>
 </head>
+
+<!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
+<script>
+		(function () {
+		try {
+			const userPref = localStorage.getItem('theme');
+			let theme;
+			if (userPref) {
+				theme = userPref;
+			} else {
+				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (e) { }
+		})();
+</script>
 
 <body>
 <div class="leaderboard-container">
@@ -115,6 +132,7 @@ try {
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src ="/pages/Games/Chill/TapCircle/js/Tapcircle.js"></script>
+	<script src="/system/js/global.js"></script>
 </body>
 </html>
 

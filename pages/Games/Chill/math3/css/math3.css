@@ -7,7 +7,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	background-color: #213242;
+	background-color: var(--bg-color);
 }
 
 .grid {
@@ -20,7 +20,7 @@ body {
 }
 
 .cell {
-	color: #05EFD4;
+	color: var(--main-color);
     background-color: #36414c;
     text-align: center;
     user-select: none;
@@ -51,7 +51,7 @@ body {
 }
 
 .key {
-	background-color: #213242;
+	background-color: var(--bg-color);
 	color: #fff;
 	width: auto;
 	text-align: center;
@@ -112,7 +112,7 @@ body {
 
 .restart {
 	background-color: #007BFF;
-	color: white;
+	color: var(--bg-color);
 }
 
 .restart:active {
@@ -121,7 +121,7 @@ body {
 
 .home {
 	background-color: #6c757d;
-	color: white;
+	color: var(--bg-color);
 }
 
 .home:active {

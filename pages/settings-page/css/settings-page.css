@@ -67,7 +67,7 @@ ul.news-text li{
 }
 .mark-icon{
 	width: 25px;
-	filter: invert(1);
+	filter: var(--icon-color);
 	transition: 0.4s;
 }
 .mark-icon:hover {
@@ -124,9 +124,9 @@ ul.news-text li{
 	text-align: center;
 	width: 250px;
     height: 250px;
-	background-color:#213242;
+	background-color:var(--bg-color);
 	z-index: 3;
-	border: 4px solid #05EFD4;
+	border: 4px solid var(--main-color);
 	border-radius: 15px;
 	top:50%;
 	left:50%;
@@ -135,7 +135,7 @@ ul.news-text li{
 .input-trouble{
 	height: 200px;
     overflow: scroll;
-    background-color: #213242;
+    background-color: var(--bg-color);
     padding: 12px;
     color: #ffffff;
     transition: 1s;
@@ -144,29 +144,28 @@ ul.news-text li{
 	width: 230px;
 }
 .submit-button{ border-radius: 15px;
-	border: 2px solid #05EFD4;
+	border: 2px solid var(--main-color);
 	width: 180px; height: 35px; 
 	font-size: 20px; 
-	background-color: #213242; 
-	color: #ffffff; 
+	background-color: var(--bg-color); 
+	color: var(--text-color); 
 	transition: 0.8s; 
 	margin: 22px auto; 
 }
 .submit-button:active{
 	transform: scale(0.95);
-	box-shadow: 0px 0px 20px -4px #05efd4;
+	box-shadow: 0px 0px 20px -4px var(--main-color);
 	color: #000;
-	background-color: #05EFD4;
+	background-color: var(--main-color);
 }
 .close-support {
 	position: absolute;
-	border: 2px solid #05EFD4;
+	border: 2px solid var(--main-color);
 	border-radius: 10px;
 	transition: 0.1s;
-	color: red;
 	right: -15px;
 	top: -15px;
-	background: #213242;
+	background: var(--bg-color);
 	font-size: 26px;
 	width: 34px;
 	height: 34px;
@@ -176,8 +175,8 @@ ul.news-text li{
 }
 .close-support:active{
 	transform: scale(0.95);
-    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
-	background-color: #05EFD4;
+    box-shadow: 0px 0px 20px 2px var(--main-color);
+	background-color: var(--main-color);
 	color: #000;
 }
 .developers-container_body{
@@ -188,9 +187,9 @@ ul.news-text li{
 	position: absolute;
 	text-align: center;
 	width: 190px;
-	background-color:#213242;
+	background-color:var(--bg-color);
 	z-index: 3;
-	border: 4px solid #05EFD4;
+	border: 4px solid var(--main-color);
 	border-radius: 15px;
 	top:50%;
 	left:50%;
@@ -234,13 +233,8 @@ ul.news-text li{
 	-webkit-tap-highlight-color: transparent;
 }
 .close{
-	color: red;
 	font-size: 28px;
-	box-shadow: -1px -1px 2px rgb(255 255 255 / 10%), 2px 3px 1px rgb(1 1 1 / 25%);
-}
-.close:active{
-	transition: 0.2s;
-	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
+	border-top: 1px solid var(--text-color);
 }
 .news-body{
     display: none;
@@ -248,9 +242,9 @@ ul.news-text li{
     position: absolute;
     text-align: center;
     width: 300px;
-    background-color: #213242;
+    background-color: var(--text-color);
     z-index: 3;
-    border: 4px solid #05EFD4;
+    border: 4px solid var(--main-color);
     border-radius: 15px;
     top: 50%;
     left: 50%;
@@ -267,7 +261,7 @@ ul.news-text li{
 }
 .news-title{
     font-size: 20px;
-    color: #05EFD4;
+    color: var(--main-color);
 	font-weight: 600;
 }
 .news-text{
@@ -286,7 +280,6 @@ ul.news-text li{
 }
 .close-news{
     border-radius: 10px;
-    color: red;
     font-size: 26px;
     box-shadow: -1px -1px 2px rgb(255 255 255 / 10%), 2px 3px 1px rgb(1 1 1 / 25%);
     width: 200px;
@@ -294,17 +287,18 @@ ul.news-text li{
     bottom: 10px;
     left: 45px;
     height: 30px;
-    background: #213242;
+    background: var(--bg-color);
+	border: 1px solid var(--main-color);
 }
 .close-news:hover{
 	transition: 0.4s;
 	transform: scale(0.97);
-    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
-	background-color: #05EFD4;
+    box-shadow: 0px 0px 20px 2px var(--main-color);
+	background-color: var(--main-color);
 	color: #000;
 }
 .developer{
-	color: #ffffff;
+	color: var(--text-color);
 	font-size: 20px;
 }
 .developer span {
@@ -319,13 +313,13 @@ ul.news-text li{
 		font-size: 16px;
 		font-family: 'Balsamiq Sans', cursive;
 		position: absolute;
-		background-color: #213242;
+		background-color: var(--bg-color);
 		z-index: 3;
-		border: 4px solid #05EFD4;
+		border: 4px solid var(--main-color);
 		border-radius: 15px;
 		width: 300px;
 		height: 340px;
-		color: #fff;
+		color: var(--text-color);
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -336,15 +330,15 @@ ul.news-text li{
 	display: flex;
 	justify-content: center;
 	border-radius: 10px;
-	color: red;
 	font-size: 26px;
 	margin: 0px 0 10px 0;
 	box-shadow: -1px -1px 2px rgb(255 255 255 / 10%), 2px 3px 1px rgb(1 1 1 / 25%);
+	border: 2px solid var(--main-color);
 }
 .close-about-us:active{ 
 	transform: scale(0.95);
-	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
-	background-color: #05EFD4;
+	box-shadow: 0px -1px 20px 0px var(--main-color);
+	background-color: var(--main-color);
 	color: #000000;
 	transition: 0.4s;
 }
@@ -365,12 +359,12 @@ justify-content: center;
 	flex-direction: column;
 	font-size: 16px;
 	position: absolute;
-	background-color:#213242;
+	background-color: var(--bg-color);
 	z-index: 3;
-	border: 4px solid #05EFD4;
+	border: 4px solid var(--main-color);
 	border-radius: 15px;
 	width: 200px;
-	color: #fff;
+	color: var(--text-color);
 	top:50%;
 	left:50%;
 	transform:translate(-50%, -50%);
@@ -384,24 +378,24 @@ justify-content: center;
 	transition: 0.4s;
 	border-radius: 10px;
 	color: #000000;
-	background-color: #05EFD4;
+	background-color: var(--main-color);
 }
 .close-language{
 	display: flex;
 	justify-content: center;
-	border: 3px solid #05EFD4;
+	border: 3px solid var(--main-color);
 	border-radius: 10px;
-	box-shadow: 0px -1px 4px rgb(0 255 5 / 30%), 0px 3px 0px rgb(0 241 255 / 25%);
-	color: red;
+	box-shadow: 0px -1px 4px var(--main-color);
 	font-size: 26px;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	margin: 10px 0 0 0;
+	background-color: #00000000;
 }
 .close-language:active{ 
-	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
-	background-color: #05EFD4;
+	box-shadow: 0px -1px 20px 0px var(--main-color);
+	background-color: var(--main-color);
 	color: #000000;
 	transition: 0.4s;
 }
@@ -414,7 +408,7 @@ justify-content: center;
 }
 .RU.active{
 	color: #000000;
-	background-color: #05EFD4;
+	background-color: var(--main-color);
 	border-radius: 10px;
 }
 .settings-top-icon{
@@ -455,7 +449,7 @@ justify-content: center;
 
 .img-icon{
 	width: 35px;
-	filter: invert(1);
+	filter: var(--icon-color);
 }
 
 
