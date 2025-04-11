@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/pages/Games/Chill/math3/css/math3.css">
-	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=2.0">
     <title>Memory Game</title>
     <link rel="canonical" href="https://brainrim.site">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">

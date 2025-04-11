@@ -84,7 +84,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/system/css/global.css?v=2.0">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=5.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=2.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
@@ -904,7 +904,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="/system/js/global.js"></script>
-      <script src="/pages/main-page/js/main-page.js?v=1.0"></script>
+      <script src="/pages/main-page/js/main-page.js?v=2.0"></script>
 </body>
 
 </html>

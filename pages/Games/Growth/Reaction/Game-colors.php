@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/system/css/global.css?v=1.0">
+   <link rel="stylesheet" href="/system/css/global.css?v=2.0">
    <link rel="stylesheet" href="/pages/Games/Growth/Reaction/css/Game-colors.css">
    <title>Игра - цвета</title>
    <link rel="canonical" href="https://brainrim.site">
