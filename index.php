@@ -183,14 +183,14 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
          </div>
-         <div class="player-level">Уровень
+
+		 <div class="player-level">Уровень
             <?php if (isset($_SESSION['id'])): ?>
                <span class="playerLvlCounterBody"></span>
             <?php else: ?>
                <span class="playerLvlCounterBody"></span>
             <?php endif; ?>
          </div>
-
          <div id="loading-bar" class="player-exp-scale">
             <div id="progress" class="player-exp__line-blue"></div>
             <p class="player-exp__text"><?php if (isset($_SESSION['id'])): ?> <span class="expValueFromDB"></span>
@@ -387,7 +387,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <div class="game-item">
                      <h2 class="title">Найди цвет</h2>
                      <p class="subtitle">Проверяет <span class="backlight">моторику</span> и <span
-                           class="backlight">Внимательность</span>. Найдите фигуру, которая отличается по цвету. Каждые
+                           class="backlight">Внимательность</span>. Найдите отличную по цвету фигуру. Каждые
                         5 правильных ответов сетка повышается до 6x6!⚙️🔍</p>
                      <img src="/img/Games/DiffColorgm.svg" alt="картинка">
                      <div class="game-item__category">мини-игра</div>

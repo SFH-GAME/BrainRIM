@@ -63,7 +63,7 @@ z-index: 1;
 	color: var(--text-color);
  }
 .header-score-container{
-	margin: 20px 0 ;
+	margin: 15px 0 ;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -180,7 +180,7 @@ z-index: 1;
 .player-level {
 	display: flex;
 	align-items: center;
-	margin: 20px auto 0 auto;
+	margin: 0 auto 0 auto;
 	justify-content: center;
 	width: fit-content;
 	padding: 10px 20px;
@@ -198,15 +198,15 @@ z-index: 1;
 	gap: 5px;
 }
 #loading-bar {
-	box-sizing: border-box;
-	width: 60%;
-	height: 25px;
-	background-color: #212121;
-	border-radius: 7px;
-	text-align: center;
-	margin: 10px auto;
-	overflow: hidden;
-	box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.40), -1px -1px 2px rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    width: 60%;
+    height: 25px;
+    background-color: #212121;
+    border-radius: 7px;
+    text-align: center;
+    margin: 5px auto 7px auto;
+    overflow: hidden;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.40), -1px -1px 2px rgba(255, 255, 255, 0.35);
 }
  #progress{
 	width: 10px;
@@ -925,6 +925,7 @@ z-index: 1;
 	height: 50px;
 	border-radius: 15px;
 	background: var(--btn-bg-color-dark);
+	max-width: 420px;
 }
 .switch-btn {
 	display: flex;
@@ -955,19 +956,21 @@ z-index: 1;
 	overflow: auto;
 }
 
-.game-item{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--btn-bg-color-none);
-	border: var(--btn-border);
-	width: 75%;
-	border-radius: 20px;
-	padding: 30px 20px 20px 20px;
-	margin: 0 auto;
-	gap: 20px;
-	transition: 0.05s linear;
+.game-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--btn-bg-color-none);
+    border: var(--btn-border);
+    width: 75%;
+    border-radius: 20px;
+    padding: 30px 20px 20px 20px;
+    margin: 0 auto;
+    gap: 20px;
+    transition: 0.05s linear;
+    max-width: 350px;
+    min-height: 400px;
 }
 .game-item:active{
    transform: scale(0.95);
