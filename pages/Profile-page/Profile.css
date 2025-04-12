@@ -144,6 +144,7 @@ main {
     width: 40px;
     height: 40px;
     filter: var(--icon-color);
+	pointer-events:all;
 }
 .comeback-button:active{
     transform: scale(0.8);
@@ -639,7 +640,7 @@ button.claim-reward {
     height: 100%;
     background-color: var(--text-color);
     background:  var(--bg-color);
- border: 1px solid var(--main-color);
+    border: 1px solid var(--main-color);
     flex-direction: column;
     overflow: hidden;
     z-index: 1;
@@ -671,7 +672,7 @@ button.claim-reward {
 }
 .message {
     background:  var(--bg-color);
- border: 1px solid var(--main-color);
+    border: 1px solid var(--main-color);
     box-shadow: -1px -2px 4px -2px rgba(255, 255, 255, 0.25), 1px 5px 10px 1px rgba(1, 1, 1, 0.25);
     max-width: 330px;
     margin: 20px auto;
@@ -708,7 +709,9 @@ button.claim-reward {
     color: #05EFD4;
     font-size: 17px;
 }
-
+.currency-icons{
+width: 22px;
+}
 .user-messages .hints {
     display: flex;
     align-items: center;

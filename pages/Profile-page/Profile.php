@@ -372,7 +372,7 @@ $achievements = getUserAchievements($_SESSION['id']);//запрашиваем с
                         <div class="currency"><img class="currency-memoney-icon" src="/img/Menu/Memoney.png"
                                 alt="memoney"> 10
                         </div>
-                        <div class="hints"><img class="currency-icons" src="img/Hints.svg" alt="hints"> 20</div>
+                        <div class="hints"><img class="currency-icons" src="/img/Menu/icon-hints.png" alt="hints"> 20</div>
                         <div class="iq"><span class="iq-name">IQ</span> 10</div>
                     </div>
                     <div class="message-description">Мы рады приветствовать вас в приложении BrainRIM. Благодарим вас и

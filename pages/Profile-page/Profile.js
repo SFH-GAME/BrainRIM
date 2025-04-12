@@ -17,7 +17,6 @@ function toggleMailContainer() {
   body.classList.toggle('no-scroll', mailContainer.classList.contains('show'));
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const messages = document.querySelectorAll('.message');
   const container = document.querySelector('.user-messages');

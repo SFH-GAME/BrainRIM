@@ -562,7 +562,7 @@ height: 40px;
    display: flex;
    justify-content: center;
    align-items: center;
-   background: var(--bg-color);
+   background: #161618;
    width: 25%;
    height:15%;
    margin: 5px;
