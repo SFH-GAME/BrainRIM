@@ -15,6 +15,7 @@
     height: 50px;
     border-radius: 15px;
     z-index: 5;
+	border: 2px solid var(--main-color);
 }
 .alert-text{
 	font-family: 'Balsamiq Sans', cursive;
@@ -47,8 +48,7 @@ z-index: 1;
 }
  .header{
 	width: 100%;
-	background: var(--main-gradient);
-	background-image: url('/img/Menu/upperwallpaper.svg');
+	background: var(--main-header-bg);
     border-style: solid;
 	border-radius: 0px 0px 30px 30px;
 	padding: 0 0 10px 0;
@@ -528,7 +528,7 @@ z-index: 1;
 }
  .everyday_text_body:active{
 	 transform: scale(0.9);
-	 border: 2px solid #00ffe1;
+	 border: 2px solid var(--main-color);
  }
  .day_history{
 	 display: flex;
@@ -1863,7 +1863,7 @@ text-decoration: none;
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	color: var(--text-color);
+	color: #fff;
 	flex-direction: row;
     flex-wrap: wrap;
 	gap: 15px;
@@ -1886,7 +1886,6 @@ text-decoration: none;
 .pack-name{
 	position: absolute;
     top: 0;
-    /* border-bottom: 1px solid #05EFD4; */
     width: 100%;
     display: flex;
     align-items: center;
