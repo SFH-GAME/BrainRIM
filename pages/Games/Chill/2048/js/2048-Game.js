@@ -24,6 +24,34 @@ let winForResults = 0;
 let looseForResults = 0;
 let statusLoosOrWin;
 
+
+
+// Объявление объекта results
+let results = {};
+
+// Функция для обновления объекта results
+function updateResults() {
+   results = {
+      difficulty: 'Средний', // Пример сложности
+      activity_type: 'upgrade', // 'upgrade' или 'rest'
+      upgrade: 'Память', // Пример улучшения
+      exp: '+50',
+      money: '100',
+      hints: '3',
+      iq: '15',
+      enemies: undefined,
+      time: { sec: timerCount % 60, min: Math.floor(timerCount / 60) },
+      score: game.score,
+      level: undefined,
+      moves: undefined,
+      best_enemies: undefined,
+      best_time: { sec: bestTimeRes % 60, min: Math.floor(bestTimeRes / 60) },
+      best_score: bestScoreRes,
+      best_level: undefined,
+      best_moves: undefined
+   };
+}
+
 function doAjaxExperience() {
    let expUpForModeAjax;
    if (statusLoosOrWin == "win") {//проверка на победу или луз
@@ -239,6 +267,12 @@ var game = {
           }*/
          resultContainer.style = "display: block;";
          doAjaxResults();
+
+
+
+         // Обновляем объект results с актуальными данными
+         updateResults();
+         showResults();
       }
    },
 
@@ -525,22 +559,3 @@ BUTTON_START.onclick = function () {
    }
 }
 
-let results = {
-   difficulty: '',
-   activity_type: 'rest', // 'upgrade' или 'rest'
-   upgrade: '',
-   exp: '+50',
-   money: '100',
-   hints: '3',
-   iq: '15',
-   enemies: undefined,
-   time: timerCount,
-   score: game.score,
-   level: undefined,
-   moves: undefined,
-   best_enemies: undefined,
-   best_time: bestTimeRes,
-   best_score: bestScoreRes,
-   best_level: undefined,
-   best_moves: undefined
-};

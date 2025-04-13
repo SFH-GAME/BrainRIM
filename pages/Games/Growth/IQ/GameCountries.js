@@ -346,7 +346,7 @@ const resultsMenuWinLooseIcon = document.querySelector('.items-container__win-lo
 const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
-const hintsButton = document.querySelector('.hints');
+const hintsButton = document.querySelector('.hints-container');
 let hintCounter = document.querySelector('.hint-counter');
 let eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
 

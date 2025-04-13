@@ -12,7 +12,7 @@
 
     <div class="activity block-item-column">
       <div class="activity-block">
-        <span class="head-span">Активность:</span>
+        <span class="head-span"></span>
         <div class="activity-item"></div>
       </div>
       <div class="exp-wrapper">
@@ -47,35 +47,57 @@
 
     <div class="results-count-container block-item-column">
       <span class="head-span">Результаты</span>
-      <div class="enemies" style="display:none;">✅ Врагов пройдено:<div class="enemies-count"></div>
+      <div class="enemies result-item" style="display:none;">
+        <div class="title">✅ Врагов пройдено:</div>
+        <div class="enemies-count"></div>
       </div>
-      <div class="time" style="display:none;">⏳ Время:<div class="time-count">
+      <div class="time result-item" style="display:none;">
+        <div class="title">⏳ Время:</div>
+        <div class="time-count">
           <div class="sec"></div>
           <div class="min"></div>
         </div>
       </div>
-      <div class="score" style="display:none;">✅ Счёт:<div class="score-count"></div>
-        <div class="level" style="display:none;">📶 Уровень:<div class="level-count"></div>
-        </div>
-        <div class="moves" style="display:none;">🏆 Счёт:<div class="moves-count"></div>
-        </div>
+      <div class="score result-item" style="display:none;">
+        <div class="title">✅ Счёт:</div>
+        <div class="score-count"></div>
+      </div>
+      <div class="level result-item" style="display:none;">
+        <div class="title">📶 Уровень:</div>
+        <div class="level-count"></div>
+      </div>
+      <div class="moves result-item" style="display:none;">
+        <div class="title">🏆 Счёт:</div>
+        <div class="moves-count"></div>
       </div>
 
       <div class="best-results block-item-column">
         <span class="head-span">Ваш лучший результат:</span>
-        <div class="best-enemies" style="display:none;">✅ Врагов пройдено:<div class="best-enemies-count"></div>
+        <div class="best-enemies result-item" style="display:none;">
+          <div class="title">✅ Врагов пройдено:</div>
+          <div class="best-enemies-count">
+          </div>
         </div>
-        <div class="best-time" style="display:none;">⏳ Время:<div class="best-time-count">
+        <div class="best-time result-item" style="display:none;">
+          <div class="title">⏳ Время:</div>
+          <div class="best-time-count">
             <div class="best-sec"></div>
             <div class="best-min"></div>
           </div>
         </div>
-        <div class="best-score" style="display:none;">✅ Счёт:<div class="best-score-count"></div>
-          <div class="best-level" style="display:none;">📶 Уровень:<div class="best-level-count"></div>
-          </div>
-          <div class="best-moves" style="display:none;">🏆 Счёт:<div class="best-moves-count"></div>
-          </div>
+        <div class="best-score result-item" style="display:none;">
+          <div class="title">✅ Счёт:</div>
+          <div class="best-score-count"></div>
         </div>
+        <div class="best-level result-item" style="display:none;">
+          <div class="title">📶 Уровень:</div>
+          <div class="best-level-count"></div>
+        </div>
+        <div class="best-moves result-item" style="display:none;">
+          <div class="title">🏆 Счёт:</div>
+          <div class="best-moves-count"></div>
+        </div>
+
       </div>
       <div class="results-menu__buttons-container">
         <div onclick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img
@@ -279,15 +301,17 @@
 
   .reward-block {
     display: flex;
-    border-radius: 15px;
-    width: 300px;
     justify-content: flex-start;
-    margin-bottom: 20px;
-    gap: 13%;
+    gap: 25px;
   }
 
   .reward-item img {
     height: 25px;
+  }
+
+  .result-item {
+    gap: 15px;
+    align-items: center;
   }
 
   .reward-item {
@@ -319,6 +343,14 @@
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;
+      color: white;
+    }
+
+    .activity-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 20px;
     }
 
     .results-menu__buttons-container {
@@ -342,6 +374,7 @@
 
     .results-head-text {
       font-size: 28px;
+      color: white;
     }
 
     .head-span,

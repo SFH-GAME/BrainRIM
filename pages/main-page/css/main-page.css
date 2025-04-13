@@ -60,7 +60,6 @@ z-index: 1;
 	align-items: center;
 	margin: 15px 0 0 0;
 	font-size: 18px;
-	color: var(--text-color);
  }
 .header-score-container{
 	margin: 15px 0 ;
@@ -755,7 +754,7 @@ z-index: 1;
 	height: 40px;
 	width: 40px;
 	transition: 1s;
-	filter: var(--icon-color);
+	filter: invert(1);
 }
 
 

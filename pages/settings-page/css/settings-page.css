@@ -67,7 +67,7 @@ ul.news-text li{
 }
 .mark-icon{
 	width: 25px;
-	filter: var(--icon-color);
+	filter: invert(1);
 	transition: 0.4s;
 }
 .mark-icon:hover {
