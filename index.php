@@ -208,7 +208,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             <button class="level-up magic" style="display:none;">Улучшить</button>
             <?php if (isset($_SESSION['id'])): ?>
                <div class="tree-button">
-                  <img src="/img/Menu/Tree.png" alt="Дерево навыков">
+                  <img src="/img/Menu/Tree.svg" alt="Дерево навыков">
                   <span class="tree-span">Дерево навыков</span>
                </div>
             <?php else: ?>
@@ -559,7 +559,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                         <div class="improve">Зона роста<img src="/img/icons/book-outline.svg"
                               class="improve-icon img-icon" alt="иконка книги" title="иконка книги">
                         </div>
-                        <div class="forimprove">Свежие идеи, ценные знания и мощные инсайты для тех, кто хочет большего!
+                        <div class="forimprove">Свежие идеи, ценные знания и мощные инсайды для тех, кто хочет большего!
                            🚀🔥</div>
                      </div>
                   </a>
