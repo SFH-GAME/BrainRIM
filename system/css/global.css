@@ -11,21 +11,23 @@
 --icon-color: brightness(0);
 --main-color: #7655f5;
 --main-gradient: linear-gradient(0deg, rgba(118, 85, 245, 1) 30%, rgba(118, 85, 245, 1) 40%, rgba(255, 253, 253, 1) 140%);
+--main-header-bg: linear-gradient(to bottom, #d5a6ff, #a478ffad);
 }
 
 /* Тёмная тема */
 :root[data-theme="dark"] {
 --bg-color: #161618;
 --btn-bg-color-none: #2B2A31;
---btn-active-color: #ffffff;
 --btn-bg-color-dark: #2B2A31;
 --btn-bg-color-light: #212121;
+--btn-active-color: #ffffff;
 --btn-border: 0px solid gray;
 --text-color: #ffffff;
 --text-color-gray: #ababab;
+--icon-color: brightness(0) invert(1);
 --main-color: #7655f5;
 --main-gradient: linear-gradient(-20deg, rgb(55 30 145) 30%, rgb(43 20 137) 40%, rgb(0 0 0) 140%);
---icon-color: brightness(0) invert(1);
+--main-header-bg: url(/img/Menu/upperwallpaper.svg);
 }
 
 
