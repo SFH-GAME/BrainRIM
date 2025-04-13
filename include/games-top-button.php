@@ -10,61 +10,58 @@
 </div>
 
 <style>
-    .topButton-gameWords {
-        position: absolute;
-        top: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-tap-highlight-color: transparent;
-        z-index: 2;
-		filter: var(--icon-color);
-    }
+.topButton-gameWords {
+	position: absolute;
+	top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	z-index: 2;
+	filter: var(--icon-color);
+}
 
-    .comeback-button-body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-        transition: 0.1s;
-        margin: 0px 0px 0px 5px;
-    }
+.comeback-button-body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 2;
+	transition: 0.1s;
+	margin: 0px 0px 0px 5px;
+}
+.comeback-button-body:active {
+	transform: scale(0.8);
+}
 
-    .comeback-button-body:active {
-        transform: scale(0.8);
-    }
+.linkToTheSettings {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 1.2s;
+}
+.linkToTheSettings:hover {
+	transform: rotate(180deg);
+}
 
-    .linkToTheSettings {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: 1.2s;
-    }
+.linkToTheRestart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 5px 0 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	transition: 1.2s;
+}
+.linkToTheRestart:hover {
+	transform: rotate(540deg);
+}
 
-    .linkToTheSettings:hover {
-        transform: rotate(180deg);
-    }
-
-    .linkToTheRestart {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px 5px 0 0;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-tap-highlight-color: transparent;
-        transition: 1.2s;
-    }
-
-    .linkToTheRestart:hover {
-        transform: rotate(540deg);
-    }
-
-    .img-icon {
-        width: 40px;
-        height: 40px;
-		filter: var(--icon-color);
-    }
+.img-icon {
+	width: 40px;
+	height: 40px;
+	filter: var(--icon-color);
+}
 </style>

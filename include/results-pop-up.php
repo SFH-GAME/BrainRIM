@@ -367,11 +367,6 @@
       margin: 10px 0;
     }
 
-    .img-icon {
-      width: 30px;
-      height: 30px;
-    }
-
     .results-head-text {
       font-size: 28px;
       color: white;

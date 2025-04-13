@@ -74,38 +74,9 @@ try {
 </script>
 
 <body>
-	<div class="leaderboard-container">
-		<div class="leaderboard__back-button"><img class="img-icon" src="/img/icons/arrow-back-outline.svg"
-				alt="иконка-назад" title="иконка-назад"></div>
-		<h2>Лидеры</h2>
-		<div class="leaderboard-list-container">
-			<h3>2048</h3>
-			<span>(Топ 10)</span>
-			<div class="leaderboard-items-container">
-				<?php foreach ($results as $index => $row): ?>
-					<div class="leaderboard-item">
-						<div class="leaderboard-item__id"><?php echo $index + 1; ?></div>
-						<div class="leaderboard-item__name"><?php echo htmlspecialchars($row['user_name']); ?></div>
-						<div class="leaderboard-item__score"><?php echo htmlspecialchars($row['best_score']); ?></div>
-						<div class="leaderboard-item__img"><img class="img-icon comeback-icon"
-								src="/img/icons/ribbon-outline.svg" alt="иконка-заслуги" title="иконка-заслуги"></div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</div>
-	<div class="button-start-container">
-		<div class="start-menu">
-			<div class="leaderboard-button"><img src="/img/ranking_pe6ng5yn5vbm.svg" alt="Список лидеров"></div>
-			<!-- добавлять опционально, только если нужен список лидеров-->
-			<div class="button-start">START</div>
-			<div class="game-info-title">
-				<span class="game-info-name">2048</span>
-				<span class="game-info">В этой игре вам надо дойти до кубика с числом "2048"</span>
-			</div>
-		</div>
-	</div>
-	</div>
+
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/results-pop-up.php"); ?>
