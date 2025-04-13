@@ -83,8 +83,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/system/css/global.css?v=2.0">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=2.0">
+   <link rel="stylesheet" href="/system/css/global.css?v=3.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=3.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
@@ -184,7 +184,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
 
-		 <div class="player-level">Уровень
+         <div class="player-level">Уровень
             <?php if (isset($_SESSION['id'])): ?>
                <span class="playerLvlCounterBody"></span>
             <?php else: ?>
@@ -355,10 +355,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/2048/2048-Game.php">
                   <div class="game-item">
                      <h2 class="title">2048</h2>
-                     <p class="subtitle">Тренирует <span class="backlight">логику</span>, <span
-                           class="backlight">внимательность</span> и <span class="backlight">стратегическое</span>
-                        мышление.
-                        Объединяйте числа, чтобы достичь заветной плитки 2048! 🧩🔍🧠</p>
+                     <ul>
+                        <li><span>Логика</span></li>
+                        <li><span>Внимательность</span></li>
+                     </ul>
+                     <p class="mark-icon">🧩🔍🧠</p>
                      <img src="/img/Games/2048gameImage.svg" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -366,9 +367,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/TilesLabirint/tilesMaze.php">
                   <div class="game-item">
                      <h2 class="title">Лабиринт</h2>
-                     <p class="subtitle">Развивает <span class="backlight">память</span> и <span
-                           class="backlight">концентрацию</span>. Запомните расположение тайлов, а затем восстановите
-                        путь из памяти! 🧠🧘</p>
+                     <ul>
+                        <li><span>Память</span></li>
+                        <li><span>Концентрация</span></li>
+                     </ul>
+                     <p class="mark-icon">🧠🧘</p>
                      <img src="/img/Games/mazeGameImage.svg" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
                   </div>
@@ -376,9 +379,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/runingGame/runingGame.php">
                   <div class="game-item">
                      <h2 class="title">Забег</h2>
-                     <p class="subtitle">Проверяет <span class="backlight">реакцию</span> и <span
-                           class="backlight">скорость</span>. Уворачивайтесь от падающих кубиков, пока темп игры не
-                        станет по-настоящему безумным! ⚡🚀</p>
+                     <ul>
+                        <li><span>Реакция</span></li>
+                     </ul>
+                     <p class="mark-icon">⚡🚀</p>
                      <img src="/img/Games/runnerImg.svg" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -386,9 +390,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/DifferentColor/Diffcolor.php">
                   <div class="game-item">
                      <h2 class="title">Найди цвет</h2>
-                     <p class="subtitle">Проверяет <span class="backlight">моторику</span> и <span
-                           class="backlight">Внимательность</span>. Найдите отличную по цвету фигуру. Каждые
-                        5 правильных ответов сетка повышается до 6x6!⚙️🔍</p>
+                     <ul>
+                        <li><span>Внимательность</span></li>
+                     </ul>
+                     <p class="mark-icon">⚙️🔍</p>
                      <img src="/img/Games/DiffColorgm.svg" alt="картинка">
                      <div class="game-item__category">мини-игра</div>
                   </div>
@@ -396,9 +401,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/Connections/Connections.php">
                   <div class="game-item">
                      <h2 class="title">Соединения</h2>
-                     <p class="subtitle">Тренирует <span class="backlight">логику </span> и <span
-                           class="backlight">стратегическое </span>мышление.
-                        Создавайте соединения, но чтобы они не касались друг друга! 🧩🧠</p>
+                     <ul>
+                        <li><span>Логика</span></li>
+                        <li><span>Стратегическое мышление</span></li>
+                     </ul>
+                     <p class="mark-icon">🧩🧠</p>
                      <img src="/img/Games/Connections.svg" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
                      <div class="game-item__category_spotlight_second">есть баги!</div>
@@ -407,9 +414,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
                   <div class="game-item">
                      <h2 class="title">Найди шарик</h2>
-                     <p class="subtitle">Тренирует <span class="backlight">Внимательность </span> и <span
-                           class="backlight">Память.</span>
-                        Найдите шарик в стаканах, которые перемешиваются! 🔍🧠</p>
+                     <ul>
+                        <li><span>Внимательность</span></li>
+                        <li><span>Память</span></li>
+                     </ul>
+                     <p class="mark-icon">🔍🧠</p>
                      <img src="/img/Games/Cupgame.svg" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
                   </div>
@@ -417,29 +426,30 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <a href="/pages/Games/Chill/TapCircle/Tapcircle.php">
                   <div class="game-item">
                      <h2 class="title">Тап ось</h2>
-                     <p class="subtitle"> Тренирует<span class="backlight"> Реакцию</span> и <span
-                           class="backlight">скорость.</span>
-                        Попадите кружком в зелёную зону круга ⚡🚀</p>
+                     <ul>
+                        <li><span>Реакция</span></li>
+                     </ul>
+                     <p class="mark-icon">⚡🚀</p>
                      <img src="/img/Games/TapCircle.svg" alt="картинка">
                      <div class="game-item__category spotlight">в разработке</div>
                   </div>
                </a>
-
-
-
             </div>
+
+
             <div class="games-growth-container hidden">
                <div class="game-item-block">
                   <h2 class="title">Память</h2>
-                  <h2 class="icon"><span>4</span><img src="/img/Games/gamesCount.svg" alt="иконка игр"></h2>
+                  <h2 class="icon"><span>5</span><img src="/img/Games/gamesCount.svg" alt="иконка игр"></h2>
                </div>
                <div class="game-item-block__content">
                   <a href="/pages/Games/Growth/Memory/saymonSays-game.php">
                      <div class="game-item">
                         <h2 class="title">Саймон говорит</h2>
-                        <p class="subtitle">Тренирует <span class="backlight">память</span>. Запомни цвета и повтори
-                           последовательность! 🎯🧠
-                        </p>
+                        <ul>
+                           <li><span>Краткосрочная Память</span></li>
+                        </ul>
+                        <p class="mark-icon">🎯🧠</p>
                         <img src="/img/Games/GameSaymonSays.svg" alt="память картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
@@ -447,9 +457,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Growth/Memory/Memory-game.php">
                      <div class="game-item">
                         <h2 class="title">Зеркальная память</h2>
-                        <p class="subtitle">Тренирует <span class="backlight">внимание</span> и <span
-                              class="backlight">память</span>. Найдите пары перевернутых карт как можно быстрее! 🃏🔍
-                        </p>
+                        <ul>
+                           <li><span>Внимательность</span></li>
+                           <li><span>Память</span></li>
+                        </ul>
+                        <p class="mark-icon">🃏🔍</p>
                         <img src="/img/Games/memoryGameImg.svg" alt="память картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
@@ -457,9 +469,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Chill/math3/math3.php">
                      <div class="game-item">
                         <h2 class="title">Числовой штурм</h2>
-                        <p class="subtitle">Испытание для <span class="backlight">памяти</span>! Запомните числа за
-                           <span class="backlight">20</span> секунд и восстановите их без ошибок! 🔢🧠⏳
-                        </p>
+                        <ul>
+                           <li><span>Внимательность</span></li>
+                           <li><span>Память</span></li>
+                        </ul>
+                        <p class="mark-icon">🔢🧠⏳</p>
                         <img src="/img/Games/gameNumbrsImage.svg" alt="числа картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
@@ -467,26 +481,42 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Chill/TilesLabirint/tilesMaze.php">
                      <div class="game-item">
                         <h2 class="title">Лабиринт</h2>
-                        <p class="subtitle">Развивает <span class="backlight">память</span> и <span
-                              class="backlight">концентрацию</span>. Запомните расположение тайлов, а затем восстановите
-                           путь из памяти! 🧩🧠</p>
+                        <ul>
+                           <li><span>Память</span></li>
+                           <li><span>Концентрация</span></li>
+                        </ul>
+                        <p class="mark-icon">🧩🧠</p>
                         <img src="/img/Games/mazeGameImage.svg" alt="лабиринт картинка">
                         <div class="game-item__category">мини-игра</div>
+                     </div>
+                  </a>
+                  <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
+                     <div class="game-item">
+                        <h2 class="title">Найди шарик</h2>
+                        <ul>
+                           <li><span>Внимательность</span></li>
+                           <li><span>Память</span></li>
+                        </ul>
+                        <p class="mark-icon">🔍🧠</p>
+                        <img src="/img/Games/Cupgame.svg" alt="картинка">
+                        <div class="game-item__category spotlight">в разработке</div>
                      </div>
                   </a>
                </div>
 
                <div class="game-item-block">
                   <h2 class="title">Внимательность</h2>
-                  <h2 class="icon"><span>2</span><img src="/img/Games/gamesCount.svg" alt="иконка игр"></h2>
+                  <h2 class="icon"><span>3</span><img src="/img/Games/gamesCount.svg" alt="иконка игр"></h2>
                </div>
                <div class="game-item-block__content">
                   <a href="/pages/Games/Growth/Reaction/Game-colors.php">
                      <div class="game-item">
                         <h2 class="title">Верю - Не Верю</h2>
-                        <p class="subtitle">Проверка <span class="backlight">внимательности</span> и <span
-                              class="backlight">реакции</span>! Совпадают ли цвет и его название? Решайте мгновенно и
-                           нажимайте правильную кнопку! 🔴🟢⚡</p>
+                        <ul>
+                           <li><span>Реакция</span></li>
+                           <li><span>Внимательность</span></li>
+                        </ul>
+                        <p class="mark-icon">🔴🟢⚡</p>
                         <img src="/img/Games/colorGameImage.svg" alt="верю - не верю картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
@@ -494,10 +524,24 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Growth/Memory/Memory-game.php">
                      <div class="game-item">
                         <h2 class="title">Зеркальная память</h2>
-                        <p class="subtitle">Тренирует <span class="backlight">внимание</span> и <span
-                              class="backlight">память</span>. Найдите пары перевернутых карт как можно быстрее! 🃏🔍
+                        <ul>
+                           <li><span>Внимательность</span></li>
+                           <li><span>Память</span></li>
+                        </ul>
+                        <p class="mark-icon">🃏🔍
                         </p>
                         <img src="/img/Games/memoryGameImg.svg" alt="память картинка">
+                        <div class="game-item__category">мини-игра</div>
+                     </div>
+                  </a>
+                  <a href="/pages/Games/Chill/DifferentColor/Diffcolor.php">
+                     <div class="game-item">
+                        <h2 class="title">Найди цвет</h2>
+                        <ul>
+                           <li><span>Внимательность</span></li>
+                        </ul>
+                        <p class="mark-icon">⚙️🔍</p>
+                        <img src="/img/Games/DiffColorgm.svg" alt="картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
                   </a>
@@ -505,17 +549,30 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
                <div class="game-item-block">
                   <h2 class="title">Реакция</h2>
-                  <h2 class="icon"><span>1</span><img src="/img/Games/gamesCount.svg" alt="иконка игр"></h2>
+                  <h2 class="icon"><span>2</span><img src="/img/Games/gamesCount.svg" alt="иконка игр"></h2>
                </div>
                <div class="game-item-block__content">
                   <a href="/pages/Games/Growth/Reaction/Game-colors.php">
                      <div class="game-item">
                         <h2 class="title">Верю - Не Верю</h2>
-                        <p class="subtitle">Проверка <span class="backlight">внимательности</span> и <span
-                              class="backlight">реакции</span>! Совпадают ли цвет и его название? Решайте мгновенно и
-                           нажимайте правильную кнопку! 🔴🟢⚡</p>
+                        <ul>
+                           <li><span>Реакция</span></li>
+                           <li><span>Внимательность</span></li>
+                        </ul>
+                        <p class="mark-icon">🔴🟢⚡</p>
                         <img src="/img/Games/colorGameImage.svg" alt="верю - не верю картинка">
                         <div class="game-item__category">мини-игра</div>
+                     </div>
+                  </a>
+                  <a href="/pages/Games/Chill/TapCircle/Tapcircle.php">
+                     <div class="game-item">
+                        <h2 class="title">Тап ось</h2>
+                        <ul>
+                           <li><span>Реакция</span></li>
+                        </ul>
+                        <p class="mark-icon">⚡🚀</p>
+                        <img src="/img/Games/TapCircle.svg" alt="картинка">
+                        <div class="game-item__category spotlight">в разработке</div>
                      </div>
                   </a>
                </div>
@@ -527,9 +584,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Growth/IQ/GameCountries.php">
                      <div class="game-item">
                         <h2 class="title">Угадай страну</h2>
-                        <p class="subtitle">Выбери свой режим! От <span class="backlight_green">лёгкого</span> до <span
-                              class="backlight_purple">безумного</span> – угадывай флаги и проверь свои знания и реакцию
-                           на всех уровнях! 🌍⚡</p>
+                        <ul>
+                           <li><span>Интеллект</span></li>
+                        </ul>
+                        <p class="mark-icon">🌍⚡</p>
                         <img src="/img/Games/countriesGameImage.svg" alt="верю - не верю картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>
@@ -537,9 +595,11 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   <a href="/pages/Games/Chill/2048/2048-Game.php">
                      <div class="game-item">
                         <h2 class="title">2048</h2>
-                        <p class="subtitle">Тренирует <span class="backlight">логику</span>, <span
-                              class="backlight">внимание</span> и <span class="backlight">стратегическое</span>
-                           мышление. Объединяйте числа, чтобы достичь заветной плитки 2048! 🚀🧠</p>
+                        <ul>
+                           <li><span>Логика</span></li>
+                           <li><span>Внимательность</span></li>
+                        </ul>
+                        <p class="mark-icon">🚀🧠</p>
                         <img src="/img/Games/2048gameImage.svg" alt="2048 картинка">
                         <div class="game-item__category">мини-игра</div>
                      </div>

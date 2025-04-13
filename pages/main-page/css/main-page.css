@@ -205,7 +205,6 @@ z-index: 1;
     text-align: center;
     margin: 5px auto 7px auto;
     overflow: hidden;
-    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.40), -1px -1px 2px rgba(255, 255, 255, 0.35);
 }
  #progress{
 	width: 10px;
@@ -950,35 +949,53 @@ z-index: 1;
 	flex-direction: column;
 	margin: 30px 0 30px 0;
 	padding: 20px 0 20px 0;
-	gap: 50px;
+	gap: 30px;
 	height: 75vh;
 	overflow: auto;
 }
-
 .game-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--btn-bg-color-none);
-    border: var(--btn-border);
-    width: 75%;
-    border-radius: 20px;
-    padding: 30px 20px 20px 20px;
-    margin: 0 auto;
-    gap: 20px;
-    transition: 0.05s linear;
-    max-width: 350px;
-    min-height: 400px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--btn-bg-color-none);
+   border: var(--btn-border);
+   width: 75%;
+   border-radius: 20px;
+   padding: 50px 20px 70px 20px;
+   margin: 0 auto;
+   gap: 30px;
+   transition: 0.05s linear;
 }
 .game-item:active{
    transform: scale(0.95);
 }
-
-.game-item .title{
+.game-item ul {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	padding: 0 0 0 15px;
+}
+.game-item ul li {
+	list-style: disc;
+	color: var(--main-color);
+	font-size: 18px;
+}
+.game-item ul li span {
+	font-size: 18px;
+	color: var(--text-color);
+}
+.game-item .mark-icon {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 16px;
+}
+.game-item .title {
 	font-size: 26px;
 	width: 100%;
-	text-align: left;
+	text-align: center;
 	color: var(--main-color);
 }
 .game-item .subtitle{
@@ -989,8 +1006,8 @@ z-index: 1;
 	color: var(--text-color);
 	line-height: 130%;
 }
-.game-item img{
-	max-width: 130px;
+.game-item img {
+	height: 90px;
 }
 .game-item__category{
 	position: absolute;
@@ -1027,7 +1044,9 @@ z-index: 1;
 }
 .game-item-block.active {
 	width: 80%;
-	border-radius: 10px 10px 5px 5px;
+	border-radius: 20px 20px 5px 5px;
+	padding: 20px 20px 35px 20px;
+	background: var(--main-color);
 }
 .game-item-block .title{
 	font-size: 22px;
@@ -1038,8 +1057,8 @@ z-index: 1;
    justify-content: center;
    align-items: center;
    gap: 5px;
-   font-size: 22px;
-   color: #898989;
+   font-size: 20px;
+   color: #a1a1a1;
 }
 .game-item-block .icon img{
 	width: 22px;
