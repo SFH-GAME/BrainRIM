@@ -12,7 +12,7 @@
 --main-color: #7655f5;
 --main-gradient: linear-gradient(0deg, rgba(118, 85, 245, 1) 30%, rgba(118, 85, 245, 1) 40%, rgba(255, 253, 253, 1) 140%);
 --main-header-bg: linear-gradient(to bottom, #d5a6ff, #a478ffad);
---games-start-page: url(/img/games/StartLight.svg);
+--games-start-page: url(/img/Games/StartLight.svg);
 }
 
 /* Тёмная тема */
@@ -29,7 +29,7 @@
 --main-color: #7655f5;
 --main-gradient: linear-gradient(-20deg, rgb(55 30 145) 30%, rgb(43 20 137) 40%, rgb(0 0 0) 140%);
 --main-header-bg: url(/img/Menu/upperwallpaper.svg);
---games-start-page: url(/img/games/StartDark.svg);
+--games-start-page: url(/img/Games/StartDark.svg);
 }
 
 
