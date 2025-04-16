@@ -77,19 +77,20 @@ const overlay = document.querySelector('.popup-overlay');
 document.body.appendChild(overlay);
 
 brainButton.onclick = function () {
-    currencypopup.style.display = 'flex';
-    brainButtonafter.style.display = 'flex';
-    brainButton.style.display = 'none';
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+  console.log('op')
+  currencypopup.style.display = 'flex';
+  brainButtonafter.style.display = 'flex';
+  brainButton.style.display = 'none';
+  overlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 };
 
 function closePopup() {
-    currencypopup.style.display = 'none';
-    brainButtonafter.style.display = 'none';
-    brainButton.style.display = 'flex';
-    overlay.style.display = 'none';
-	document.body.style.overflow = '';
+  currencypopup.style.display = 'none';
+  brainButtonafter.style.display = 'none';
+  brainButton.style.display = 'flex';
+  overlay.style.display = 'none';
+  document.body.style.overflow = '';
 }
 
 brainButtonafter.onclick = closePopup;

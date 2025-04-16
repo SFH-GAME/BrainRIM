@@ -21,21 +21,31 @@ function getUserAchievements($user_id)
 }
 
 // Обновление достижения (увеличение прогресса)
-function updateAchievement($user_id, $achievement_id, $progress_increase = 1)
+/**
+ * Обновляет достижение пользователя.
+ *
+ * @param int $user_id ID пользователя
+ * @param int $achievement_id ID достижения
+ * @param int $progress_change Сколько прогресса добавить или установить
+ * @param string $mode Режим: 'add' (добавить к текущему) или 'set' (установить напрямую)
+ */
+function updateAchievement($user_id, $achievement_id, $progress_change = 1, $mode = 'add')
 {
     global $pdo;
 
-    // Получаем тип и цель достижения
+    // Получаем тип (single или progress) и цель (goal) достижения
     $query = $pdo->prepare("SELECT type, goal FROM achievements WHERE id = :achievement_id");
     $query->execute(['achievement_id' => $achievement_id]);
     $achievement = $query->fetch(PDO::FETCH_ASSOC);
 
+    // Если достижение не найдено — выходим
     if (!$achievement) {
-        return; // Если достижения нет, выходим
+        return;
     }
 
+    // Если достижение одноразовое (например: "Пройти обучение")
     if ($achievement['type'] === 'single') {
-        // Одноразовое достижение: сразу считаем выполненным
+        // Просто сразу отмечаем как выполненное
         $pdo->prepare("
             INSERT INTO user_achievements (user_id, achievement_id, status, progress, reward_claimed) 
             VALUES (:user_id, :achievement_id, 'completed', 1, 0)
@@ -44,16 +54,35 @@ function updateAchievement($user_id, $achievement_id, $progress_increase = 1)
                     'user_id' => $user_id,
                     'achievement_id' => $achievement_id
                 ]);
-    } elseif ($achievement['type'] === 'progress') {
-        // Достижение с прогрессом
+    }
+
+    // Если достижение с прогрессом (например: "Набрать 20 000 очков")
+    elseif ($achievement['type'] === 'progress') {
+
+        // Получаем текущий прогресс пользователя по этому достижению
         $query = $pdo->prepare("SELECT progress FROM user_achievements WHERE user_id = :user_id AND achievement_id = :achievement_id");
-        $query->execute(['user_id' => $user_id, 'achievement_id' => $achievement_id]);
+        $query->execute([
+            'user_id' => $user_id,
+            'achievement_id' => $achievement_id
+        ]);
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
+        // Если прогресс есть — берём его, иначе 0
         $current_progress = $result ? $result['progress'] : 0;
-        $new_progress = min($achievement['goal'], $current_progress + $progress_increase);
+
+        // Вычисляем новый прогресс в зависимости от режима
+        if ($mode === 'set') {
+            // Устанавливаем прогресс напрямую (например, текущий уровень игрока)
+            $new_progress = min($achievement['goal'], $progress_change);
+        } else {
+            // Прибавляем прогресс (например, очки в игре)
+            $new_progress = min($achievement['goal'], $current_progress + $progress_change);
+        }
+
+        // Статус зависит от того, достигнута ли цель
         $status = ($new_progress >= $achievement['goal']) ? 'completed' : 'inprogress';
 
+        // Обновляем или создаём запись в таблице user_achievements
         $pdo->prepare("
             INSERT INTO user_achievements (user_id, achievement_id, status, progress, reward_claimed) 
             VALUES (:user_id, :achievement_id, :status, :progress, 0)
@@ -66,6 +95,7 @@ function updateAchievement($user_id, $achievement_id, $progress_increase = 1)
                 ]);
     }
 }
+
 
 // Функция для получения награды за достижение
 function claimReward($user_id, $achievement_id)
@@ -189,34 +219,19 @@ function checkAllAchievements($user_id)
     global $pdo;
 
     // Проверяем достижение "Первые шаги" (первый вход в систему)
+    // Если пользователь существует (проверка на наличие $user_id)
     if ($user_id) {
-        updateAchievement($user_id, 1); // ID 1 — достижение "Первые шаги"
+        updateAchievement($user_id, 1, 1, 'set'); // ID 1 — достижение "Первые шаги" (устанавливаем прогресс)
     }
 
     // Проверяем достижение "Первые очки опыта" (первое получение опыта)
     $query = $pdo->prepare("SELECT experience FROM usersLvl WHERE user_id = :user_id");
     $query->execute(['user_id' => $user_id]);
     $experience = $query->fetchColumn();
-
+    // Если у пользователя есть опыт (т.е. он его получил)
     if ($experience > 0) {
-        updateAchievement($user_id, 2); // ID 4 — достижение "Первые очки опыта"
+        updateAchievement($user_id, 2, 1, 'set'); // ID 2 — достижение "Первые очки опыта" (устанавливаем прогресс)
     }
-
-    // Проверяем достижение "Марафонец" (сыграть 50 игр)
-    /*$query = $pdo->prepare("SELECT COUNT(*) FROM game_sessions WHERE user_id = :user_id");
-    $query->execute(['user_id' => $user_id]);
-    $games_played = $query->fetchColumn();
-    
-    updateAchievement($user_id, 2, $games_played); // ID 2 — достижение "Марафонец"
-
-    // Проверяем достижение "Гуру" (1000 опыта)
-    $query = $pdo->prepare("SELECT SUM(points) FROM user_experience WHERE user_id = :user_id");
-    $query->execute(['user_id' => $user_id]);
-    $total_xp = $query->fetchColumn();
-    
-    updateAchievement($user_id, 3, $total_xp); // ID 3 — достижение "Гуру"
-    */
-
 }
 
 function checkLevelAchievement($user_id)
@@ -228,11 +243,14 @@ function checkLevelAchievement($user_id)
     $query->execute(['user_id' => $user_id]);
     $level = $query->fetchColumn();
 
-    // ID достижения "Достигнуть 3 уровня" 
-    $achievement_id = 3;
+    // ID достижения "Достигнуть 3 уровня"
+    $achievement_id3 = 3;
+    // ID достижения "Достигнуть 5 уровня"
+    $achievement_id5 = 5;
 
     // Обновляем прогресс достижения
-    updateAchievement($user_id, $achievement_id, $level);
+    updateAchievement($user_id, $achievement_id3, $level, 'set');
+    updateAchievement($user_id, $achievement_id5, $level, 'set');
 }
 
 //проверяем достижения для игры 2048
@@ -251,5 +269,5 @@ function check2048Achievement($user_id, $score)
     // Убеждаемся, что прогресс увеличивается, но не превышает цель
     $new_progress = ($current_progress ? $current_progress : 0) + $score;
 
-    updateAchievement($user_id, $achievement_id, $score);
+    updateAchievement($user_id, $achievement_id, $score, 'add');
 }

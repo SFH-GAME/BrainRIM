@@ -140,7 +140,10 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
             <div class="Profile-anim"><a href="/pages/Profile-page/Profile.php" class="profile-page"><img
-                     src="/img/Menu/brain.svg" alt="#" class="profile"></a></div>
+                     src="/img/Menu/brain.svg" alt="#" class="profile"></a>
+               <div class="unread-mark"></div>
+            </div>
+
          </div>
          <div class="header-score-container">
             <div class="memany-container currency-container">
@@ -961,7 +964,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                "АНАЛИТИКА"</div> и в ближайшее время порадуем вас обновлением!"</div>
       </div>
 
-
+      <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/include/checks/checkingUnread.php'; ?><!--Проверка нужен ли маркер непрачитанного-->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="/system/js/global.js"></script>
       <script src="/pages/main-page/js/main-page.js?v=2.0"></script>
