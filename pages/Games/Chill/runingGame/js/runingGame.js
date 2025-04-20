@@ -1,44 +1,5 @@
-let settings = document.querySelector(".pop-up__container");
-let comeback = document.querySelector(".pop-up__container2");
-let restart = document.querySelector(".pop-up__container3");
-
-let ResultsGameOver = document.querySelector(".results-gameover");
-
-//при нажатии на отмену вспл окна настройки 
-document.querySelector('.pop-up__cancel').onclick = function () {
-   settings.style = 'visibility:hidden;';
-};
-//при нажатии на иконку настроек
-document.querySelector('.linkToTheSettings').onclick = function () {
-   settings.style = 'visibility:visible;';
-};
-//при нажатии на отмену вспл окна назад
-document.querySelector('.pop-up__cancel2').onclick = function () {
-   comeback.style = 'visibility:hidden;';
-};
-//при нажатии на иконку назад
-document.querySelector('.comeback-button').onclick = function () {
-   comeback.style = 'visibility:visible;';
-};
-//при нажатии на отмену вспл окна рестарт
-document.querySelector('.pop-up__cancel3').onclick = function () {
-   restart.style = 'visibility:hidden;';
-};
-//при нажатии на иконку рестарт
-document.querySelector('.linkToTheRestart').onclick = function () {
-   restart.style = 'visibility:visible;';
-};
-
-
 const gameContainer = document.querySelector(".game-container");
-const bestResBody = document.querySelector(".best-res__value");
-const timerCountResultsValue = document.querySelector(".time-count");
-const enemyCountResultsValue = document.querySelector(".moves-count");
-const bestTimerCountResultsValue = document.querySelector(".best-time-count");
-const bestEnemyCountResultsValue = document.querySelector(".best-moves-count");
-const winOrLooseResultsValue = document.querySelector(".loose-win-value");
 const score = document.querySelector("#score-num");
-const BUTTON_START = document.querySelector('.button-start');
 const livesCounter = document.getElementById("lives-count");
 const timerDisplay = document.getElementById("timer");
 
@@ -51,13 +12,17 @@ let maxEnemies = 16;
 let currentEnemies = 0;
 let enemyIntervalId = null;
 
-let winForResults = 0;
-let looseForResults = 0;
-let statusLoosOrWin = "";
-
 let playerLives = 1; // Количество жизней
 let isSpeedBoostActive = false; // Флаг замедления врагов
 const boostTypes = ["heart", "boost-container"]; // Доступные бусты
+
+class Game {
+	start() {
+		startGame(); // Основная функция запуска
+	}
+}
+
+let game = new Game(); // Создаём объект заранее
 
 
 // Функция для AJAX-запроса
@@ -76,24 +41,27 @@ function sendAjaxRequest(url, data) {
    });
 }
 
-// Функция обновления опыта
+
+/*НУЖНО ПЕРЕДЕЛАТЬ ПОД НОВЫЙ КОД
+
+Функция обновления опыта
 function updateExperience() {
    sendAjaxRequest('/dataBase/controllers/bonusSystem/experience.php', {
       expUpForModeAjax: statusLoosOrWin === "win" ? 15 : 2
    });
 }
 
-// Бонус за победу
+Бонус за победу
 function updateWinBonus() {
    sendAjaxRequest('/dataBase/controllers/bonusSystem/bonusForWin.php', { IqUpForModeAjax: 15 });
 }
 
-// Бонус за проигрыш
+Бонус за проигрыш
 function updateLooseBonus() {
    sendAjaxRequest('/dataBase/controllers/bonusSystem/bonusForLoose.php', { IqUpForModeAjax: 2 });
 }
 
-// Сохранение результатов игры
+Сохранение результатов игры
 function saveGameResults() {
    sendAjaxRequest('/dataBase/resultsGames/resultsRuningGame.php', {
       win: winForResults,
@@ -102,6 +70,9 @@ function saveGameResults() {
       enemiesPassed: enemiesPassedCount
    });
 }
+
+НУЖНО ПЕРЕДЕЛАТЬ ПОД НОВЫЙ КОД*/
+
 
 // Движение игрока, cмещение относительно элемента игрока
 let offsetX = 0;
@@ -248,59 +219,35 @@ function startGame() {
 
 // Конец игры
 function gameOver() {
-   isGameOver = true;
-   clearInterval(enemyIntervalId);
-   enemySpeed = 0;
-   showMessageLoose();
-   statusLoosOrWin = "loose";
-   looseForResults = 1;
-   updateLooseBonus();
-   updateExperience();
-   saveGameResults();
+	isGameOver = true;
+	clearInterval(enemyIntervalId);
+	enemySpeed = 0;
+
+	// Показываем контейнер с результатами через инклюд
+	const resultData = {
+		score: enemiesPassedCount,
+		level: Math.floor(timerCount / 10), // пример: уровень = каждые 10 сек
+		reward: {
+			money: 0,
+			hints: 0,
+			iq: 0,
+			exp: 0
+		},
+		best: {
+			score: bestEnemiesPassedRes,
+			level: Math.floor(bestTimeRes / 10)
+		}
+	};
+	showResults(resultData);
 }
 
-// Отображение результатов
-function showMessageLoose() {
-   ResultsGameOver.style.display = 'block';
-   timerCountResultsValue.innerHTML = timerCount;
-   enemyCountResultsValue.innerHTML = enemiesPassedCount;
-   bestTimerCountResultsValue.innerHTML = bestTimeRes;
-   bestEnemyCountResultsValue.innerHTML = bestEnemiesPassedRes;
-
-   if (comparisonResBetterOrNot()) {
-      winOrLooseResultsValue.classList.add('congrats');
-      winOrLooseResultsValue.innerHTML = 'Вы победили!';
-      statusLoosOrWin = "win";
-      winForResults = 1;
-      updateWinBonus();
-      updateExperience();
-      saveGameResults();
-   } else {
-      winOrLooseResultsValue.classList.add('loose');
-      winOrLooseResultsValue.innerHTML = 'Вы проиграли!';
-   }
-}
 
 // Проверка результата
 function comparisonResBetterOrNot() {
    return enemiesPassedCount > bestEnemiesPassedRes;
 }
 
-// Обработчик нажатия кнопки "Старт"
-BUTTON_START.onclick = function () {
-   document.querySelector('.start-menu').classList.add('activated');
-   BUTTON_START.classList.add('activated');
-   if (BUTTON_START.classList.contains('activated')) {
-      startGame();
-   }
-};
-
 gameContainer.addEventListener("touchmove", movePlayer);
-
-
-
-
-
 
 
 function createBoost() {

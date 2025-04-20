@@ -26,7 +26,7 @@
  }
  html,
  body {
-	 background-color: var(--bg-color);
+	background-color: var(--bg-color);
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -699,7 +699,7 @@
 	 width: 180px;
 	 font-weight: bold;
 	 font-family: 'Balsamiq Sans', cursive;
-	 color: #ffffff;
+	 color: var(--main-color);
 	 font-size: 38px;
 	 border: 6px solid var(--main-color);
 	 background-color: black;
@@ -735,7 +735,7 @@
 }
 .game-info{
     max-width: 350px;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 18px;
 }
  
@@ -746,12 +746,7 @@
 	font-weight: 800;
 	font-size: 29px;
 	margin: 40px 0 0 0;
- }
- .counter-complited__number{
-	color: #ffffff;
- }
- .schet{
-	 color: #ffffff;
+	color: var(--text-color);
  }
  .conntainer-rectangle{
 	display: flex;
@@ -1017,9 +1012,6 @@
 	margin: 10px 0 0 0 ;
 	font-size: 26px;
 	color: #8619B9;
- }
- .results-menu__items-container {
- 
  }
  .win-loose-screen{
 	 clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);

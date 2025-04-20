@@ -120,7 +120,7 @@
 	font-family: 'Balsamiq Sans', cursive;
 	text-align: center;
 	padding: 0 20px ;
-	color: #ffffff;
+	color: var(--text-color);
  }
  .wrap__button{
 	
@@ -208,7 +208,7 @@
 	font-family: 'Balsamiq Sans', cursive;
 	text-align: center;
 	padding: 0 20px ;
-	color: #ffffff;
+	color: var(--text-color);
  }
  .wrap__button2{
 	
@@ -295,7 +295,7 @@
 	font-family: 'Balsamiq Sans', cursive;
 	text-align: center;
 	padding: 0 20px ;
-	color: #ffffff;
+	color: var(--text-color);
  }
  .wrap__button3{
 	
@@ -599,7 +599,7 @@
 	align-items: center;
 	justify-content: center;
     font-size: 28px;
-	color: #fff;
+	color: var(--text-color);
 	margin: 30px auto;
 	gap: 5px;
  } 
@@ -637,7 +637,7 @@ text-align: center;
 align-items: center;
 justify-content: center;
 font-size: 30px;
-color: #ffffff;
+color: var(--text-color);
  }
  .flags-container{
 display: flex;
@@ -660,7 +660,7 @@ border-radius: 5px;
  }
  .country-answers-container{
 width: 100%;
-color: #ffffff;
+color: var(--text-color);
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -668,6 +668,9 @@ justify-content: space-around;
 text-align: center;
  }
  .country-button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
     font-size: 20px;
     min-width: 40%;
     border: 2px solid var(--main-color);
@@ -677,7 +680,7 @@ text-align: center;
     transition: 0.2s;
     max-width: 150px;
     max-height: 40px;
-    overflow: scroll;
+    overflow: hidden;
  }
  .country-button:active{
     transform: scale(0.8);
@@ -689,7 +692,7 @@ text-align: center;
 	display: none;
 	flex-wrap: wrap;
 	width: 100%;
-	color: #ffffff;
+	color: var(--text-color);
 	align-items: center;
 	justify-content: space-around;
 	text-align: center;
@@ -798,7 +801,7 @@ text-align: center;
 	width: 180px;
 	font-weight: bold;
 	font-family: 'Balsamiq Sans', cursive;
-	color: #ffffff;
+	color: var(--main-color);
 	font-size: 38px;
 	border: 6px solid var(--main-color);
 	background-color: black;
@@ -834,7 +837,7 @@ text-align: center;
 }
 .game-info{
     max-width: 350px;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 18px;
 }
 
@@ -980,7 +983,7 @@ text-align: center;
    margin: 10% 0 0 0;
    text-align: center;
    font-size: 38px;
-   color: #ffffff;
+   color: var(--text-color);
 }
 .results-menu__mode-container {
    margin: 15% 0 0 0;
@@ -1040,7 +1043,7 @@ color: yellow;
 }
 .screen-title{
 display: flex;
-color: #ffffff;
+color: var(--text-color);
 }
 
 .items-container {
@@ -1064,7 +1067,7 @@ color: #ffffff;
 	border-radius: 10px;
 	padding: 7px;
    font-size: 34px;
-   color: #ffffff;
+   color: var(--icon-color);
 }
 .items-container__win-loose-item {
    font-style: normal;
@@ -1087,7 +1090,7 @@ color: #ffffff;
 .items-container__done-cards-icon {
 	display: flex;
     font-size: 42px;
-    color: #ffffff;
+    color: var(--icon-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     width: 60px;
@@ -1103,7 +1106,7 @@ color: #ffffff;
     display: flex;
     align-items: center;
     letter-spacing: 0.095em;
-    color: #ffffff;
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     padding: 0 10px;
@@ -1123,7 +1126,7 @@ color: #ffffff;
 .items-container__time-icon {
 	display: flex;
 	font-size: 42px;
-	color: #ffffff;
+	color: var(--text-color);
 	border: 2px solid var(--main-color);
 	border-radius: 10px;
 	width: 60px;
@@ -1139,7 +1142,7 @@ color: #ffffff;
     display: flex;
     align-items: center;
     letter-spacing: 0.095em;
-    color: #ffffff;
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     padding: 0 10px;
@@ -1162,7 +1165,7 @@ color: #ffffff;
     line-height: 29px;
     letter-spacing: 0.095em;
     display: flex;
-    color: #ffffff;
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     width: 60px;
@@ -1178,7 +1181,7 @@ color: #ffffff;
     display: flex;
     align-items: center;
     letter-spacing: 0.095em;
-    color: #ffffff;
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     padding: 0 10px;
@@ -1192,7 +1195,7 @@ color: #ffffff;
    line-height: 29px;
    letter-spacing: 0.095em;
    display: flex;
-   color: #ffffff;
+   color: var(--text-color);
    border: 2px solid var(--main-color);
    border-radius: 10px;
    width: 60px;
@@ -1208,7 +1211,7 @@ color: #ffffff;
     display: flex;
     align-items: center;
     letter-spacing: 0.095em;
-    color: #ffffff;
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     padding: 0 10px;

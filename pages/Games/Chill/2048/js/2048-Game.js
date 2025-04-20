@@ -3,16 +3,12 @@ let audioClick = new Audio('/pages/main-page/sounds/mixkit-modern-click-box-chec
 let audioSwapeLeftRight = new Audio('/sound/korotkiy-moschnyiy-zamah.mp3');
 let audioSwapeTopBottom = new Audio('/sound/zvuk-kogda-razrubili-vozduh.mp3');
 
-let settings = document.querySelector(".pop-up__container");
-let comeback = document.querySelector(".pop-up__container2");
-let restart = document.querySelector(".pop-up__container3");
-const resultContainer = document.querySelector('.results-container');
 const timerCountResultsValue = document.querySelector(".time-count");
 const scoreResultsValue = document.querySelector(".moves-count");
 const bestTimerCountResultsValue = document.querySelector(".best-time-count");
 const bestScoreCountResultsValue = document.querySelector(".best-moves-count");
-const winOrLooseResultsValue = document.querySelector(".loose-win-value");
 const bestResultGameContainerValue = document.querySelector(".value-best");
+const resultsContainer = document.querySelector('.results-container');
 let timerCount = 0;
 
 
@@ -20,8 +16,6 @@ let timerCount = 0;
 let winForResults = 0;
 let looseForResults = 0;
 let statusLoosOrWin;
-
-
 
 // Объявление объекта results
 let results = {};
@@ -139,40 +133,6 @@ function doAjaxResults() {
       }
    })
 }
-//z
-
-
-//при нажатии на отмену вспл окна настройки 
-document.querySelector('.pop-up__cancel').onclick = function () {
-   settings.style = 'visibility:hidden;';
-
-};
-//при нажатии на иконку настроек
-document.querySelector('.linkToTheSettings').onclick = function () {
-   settings.style = 'visibility:visible;';
-};
-
-//при нажатии на отмену вспл окна назад
-document.querySelector('.pop-up__cancel2').onclick = function () {
-   comeback.style = 'visibility:hidden;';
-};
-//при нажатии на иконку назад
-document.querySelector('.comeback-button').onclick = function () {
-   comeback.style = 'visibility:visible;';
-};
-
-//при нажатии на отмену вспл окна рестарт
-document.querySelector('.pop-up__cancel3').onclick = function () {
-   restart.style = 'visibility:hidden;';
-
-};
-//при нажатии на иконку рестарт
-document.querySelector('.linkToTheRestart').onclick = function () {
-   restart.style = 'visibility:visible;';
-};
-
-
-
 
 function comparisonResBetterOrNot() {//возвращает правду или ложь
    if (game.score > bestScoreRes) {
@@ -242,27 +202,7 @@ var game = {
 
       // При завершении игры
       if (this.status == this.gameover && !isResultSent) {
-         /* isResultSent = true; // Устанавливаем флаг, чтобы не отправлять запрос повторно
-          timerCountResultsValue.innerHTML = timerCount;
-          scoreResultsValue.innerHTML = this.score;
-          bestTimerCountResultsValue.innerHTML = bestTimeRes; // из базы данных
-          bestScoreCountResultsValue.innerHTML = bestScoreRes;
- 
-          if (comparisonResBetterOrNot() == true) { // Если результат лучше
-             winOrLooseResultsValue.classList.add('congrats');
-             winOrLooseResultsValue.innerHTML = 'Лучший результат!';
-             statusLoosOrWin = "win";
-             winForResults = 1;
-             doAjaxWinBonuse();
-          } else {
-             winOrLooseResultsValue.classList.add('loose');
-             winOrLooseResultsValue.innerHTML = 'Вы проиграли';
-             looseForResults = 1;
-             statusLoosOrWin = "loose";
-             doAjaxLooseBonuse();
-             doAjaxExperience();
-          }*/
-         resultContainer.style = "display: block;";
+		resultsContainer.style = "display: block;";
          doAjaxResults();
 
 

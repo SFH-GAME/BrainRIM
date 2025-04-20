@@ -1,5 +1,9 @@
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicTapcircleGame.php";
+
+$game_name = "Тап ось";
+$game_description = "Кружок движется по оси — нажми, когда он окажется в фиолетовом диапазоне. Тренируй свою скорость и меткость!";
+$leaderboard_name = "Тап ось";
 ?>
 
 <?php
@@ -57,6 +61,12 @@ try {
 	<title>Tap Circle</title>
 </head>
 
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/results-pop-up.php"); ?>
+
 <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
 <script>
 		(function () {
@@ -74,64 +84,7 @@ try {
 </script>
 
 <body>
-	<div class="leaderboard-container">
-		<div class="leaderboard__back-button"><img class="img-icon" src="/img/icons/arrow-back-outline.svg"
-				alt="иконка-назад" title="иконка-назад"></div>
-		<h2>Лидеры</h2>
-		<div class="leaderboard-list-container">
-			<h3>Тап ось</h3>
-			<span>(Топ 10)</span>
-			<div class="leaderboard-items-container">
-				<?php foreach ($results as $index => $row): ?>
-					<div class="leaderboard-item">
-						<div class="leaderboard-item__id"><?php echo $index + 1; ?></div>
-						<div class="leaderboard-item__name"><?php echo htmlspecialchars($row['user_name']); ?></div>
-						<div class="leaderboard-item__score"><?php echo htmlspecialchars($row['best_score']); ?></div>
-						<div class="leaderboard-item__img"><img class="img-icon comeback-icon"
-								src="/img/icons/ribbon-outline.svg" alt="иконка-заслуги" title="иконка-заслуги"></div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</div>
-	<div class="button-start-container">
-		<div class="start-menu">
-			<div class="leaderboard-button"><img src="/img/ranking_pe6ng5yn5vbm.svg" alt="Список лидеров"></div>
-			<!-- добавлять опционально, только если нужен список лидеров-->
-			<div class="button-start">START</div>
-			<div class="game-info-title">
-				<span class="game-info-name">Тап ось</span>
-				<span class="game-info">В этой игре вам надо словить шарик в зелёной зоне</span>
-			</div>
-		</div>
-	</div>
-
-	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
-	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
-
 	<canvas id="gameCanvas"></canvas>
-
-	<div class="results-gameover results-container">
-		<h1 class="results-head-text">Результаты</h1>
-		<div class="results">
-			<div class="time">Время:<div class="time-count"></div>c.</div>
-			<div class="moves">Счёт:<div class="moves-count"></div>
-			</div>
-			<div class="best-results">Ваш лучший результат:</div>
-			<div class="time">Время: <div class="best-time-count">0</div>с.</div>
-			<div class="moves">Счёт: <div class="best-moves-count">0</div>
-			</div>
-			<div class="loose-win-value">Вы проиграли</div>
-		</div>
-		<div class="results-menu__buttons-container">
-			<div onclick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img
-					src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
-			</div>
-			<a href="/index.php" class=" results-menu__button result-menu__button-home"><img
-					src="/img/icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
-		</div>
-	</div>
-	</div>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="/pages/Games/Chill/TapCircle/js/Tapcircle.js"></script>

@@ -1,20 +1,4 @@
-// логика для всплывающих окон
-let settings = document.querySelector(".pop-up__container");
-let comeback = document.querySelector(".pop-up__container2");
-let restart = document.querySelector(".pop-up__container3");
-
-// результаты 
-let ResultsGameOver = document.querySelector(".results-gameover");
-const gameContainer = document.querySelector(".game-container");
-const bestResBody = document.querySelector(".best-res__value");
-const timerCountResultsValue = document.querySelector(".time-count");
-const levelCountResultsValue = document.querySelector(".level-count");
-const bestTimerCountResultsValue = document.querySelector(".best-time-count");
-const bestlevelCountResultsValue = document.querySelector(".best-level-count");
-const winOrLooseResultsValue = document.querySelector(".loose-win-value");
-
-
-
+/*НУЖНО ПЕРЕДЕЛАТЬ ПОД НОВЫЙ КОД
 //AJAX запрос на сервер для добавления в базу данных инфы 
 let winForResults = 0;
 let looseForResults = 0;
@@ -119,34 +103,7 @@ function comparisonResBetterOrNot() {//возвращает правду или 
       return false;
    }
 }
-
-
-//при нажатии на отмену вспл окна настройки 
-document.querySelector('.pop-up__cancel').onclick = function () {
-   settings.style = 'visibility:hidden;';
-};
-//при нажатии на иконку настроек
-document.querySelector('.linkToTheSettings').onclick = function () {
-   settings.style = 'visibility:visible;';
-};
-//при нажатии на отмену вспл окна назад
-document.querySelector('.pop-up__cancel2').onclick = function () {
-   comeback.style = 'visibility:hidden;';
-};
-//при нажатии на иконку назад
-document.querySelector('.comeback-button').onclick = function () {
-   comeback.style = 'visibility:visible;';
-};
-//при нажатии на отмену вспл окна рестарт
-document.querySelector('.pop-up__cancel3').onclick = function () {
-   restart.style = 'visibility:hidden;';
-};
-//при нажатии на иконку рестарт
-document.querySelector('.linkToTheRestart').onclick = function () {
-   restart.style = 'visibility:visible;';
-};
-
-
+НУЖНО ПЕРЕДЕЛАТЬ ПОД НОВЫЙ КОД*/
 
 const board = document.getElementById('game-board');
 const levelTimerElement = document.getElementById('level-timer');
@@ -163,6 +120,18 @@ let currentLevel = 1; // Current level number
 let levelTimer;
 let totalTimer;
 let gameOver = false;
+let score = 0;
+
+// Загружаем лучший результат из localStorage
+let bestScore = localStorage.getItem("bestScore") || 0;
+let bestTime = localStorage.getItem("bestTime") || 0;
+
+
+const game = {
+	start: function () {
+	   startGame();  // Запуск игры
+	}
+ };
 
 function generateMaze(size) {
    board.innerHTML = '';
@@ -260,13 +229,86 @@ function startTotalTimer() {
 }
 
 function endGame() {
-    if (!gameOver) {
-        clearInterval(levelTimer);
-        clearInterval(totalTimer);
-        gameOver = true;
-        showMessageLoose();
-    }
-}
+	if (!gameOver) {
+	   gameOver = true;
+	   clearInterval(levelTimer);
+	   clearInterval(totalTimer);
+ 
+	   // Подсчёт уровня и времени
+	   let level = currentLevel;
+	   let time_sec = totalTime;
+ 
+	   // Условная награда
+	   let reward = {
+		  iq: Math.floor(level * 1.5), // IQ
+		  exp: Math.floor(level * 2),   // Опыт
+		  money: Math.floor(level * 10), // Деньги
+		  hints: Math.floor(level * 2)  // Подсказки (например)
+	   };
+ 
+	   // Сохраняем лучшие результаты
+	   if (level > bestTime) {
+		  bestTime = level;
+		  localStorage.setItem("bestTime", bestTime);
+	   }
+	   if (score > bestScore) {
+		  bestScore = score;
+		  localStorage.setItem("bestScore", bestScore);
+	   }
+ 
+	   // Передаем результат в функцию для отображения
+	   showResults({
+		  score: score, // Подсчитываем очки
+		  level: level, // Текущий уровень
+		  reward: reward, // Награды
+		  best: {
+			 score: bestScore,  // Лучшие очки
+			 level: bestTime    // Лучший уровень
+		  }
+	   });
+ 
+	   // Отправка данных на сервер
+	   sendGameResults(time_sec, level, reward.exp);
+	}
+ }
+
+ function sendGameResults(time_sec, level, exp) {
+	$.ajax({
+	   url: '/dataBase/resultsGames/resultsMazeGame.php',
+	   type: 'POST',
+	   dataType: 'json',
+	   data: {
+		  win: 0,
+		  loose: 1,
+		  time_sec: time_sec,
+		  level: level
+	   },
+	   success: function (data) {
+		  console.log('Результат отправлен:', data);
+	   },
+	   error: function () {
+		  console.log('Ошибка отправки результата');
+	   }
+	});
+ 
+	$.ajax({
+	   url: '/dataBase/controllers/bonusSystem/experience.php',
+	   type: 'POST',
+	   dataType: 'json',
+	   data: {
+		  expUpForModeAjax: exp
+	   },
+	   success: function (data) {
+		  console.log('Exp:', data);
+	   },
+	   error: function () {
+		  console.log('Ошибка отправки опыта');
+	   }
+	});
+ }
+ 
+ 
+
 
 function restartGame() {
    location.reload();
@@ -307,19 +349,6 @@ function comparisonResBetterOrNot() {//возвращает правду или 
    //   return false;
    //}
 }
-
-
-//активация кнопки старт при нажатии
-const BUTTON_START = document.querySelector('.button-start');
-BUTTON_START.onclick = function () {
-   document.querySelector('.start-menu').classList.add('activated');
-   BUTTON_START.classList.add('activated');
-   if (BUTTON_START.classList.contains('activated')) {
-      startGame();
-
-   }
-}
-
 
 function nextLevel() {
 	levelTime = 40; // Reset level time

@@ -13,9 +13,6 @@ let lastClickTime = Date.now(); // Время последнего клика
 let colorDifficulty = 80; // Начальная сложность различия цветов
 let isPaused = false; // Флаг паузы
 
-generateGrid();
-startTimer();
-
 function generateGrid() {
     grid.innerHTML = "";
     grid.style.gridTemplateColumns = `repeat(${level}, 50px)`;
@@ -43,25 +40,26 @@ function generateGrid() {
 function checkChoice(isCorrect) {
     if (isCorrect && !isPaused) {
         score++;
-        
+
         // Увеличиваем уровень КАЖДЫЕ 5 очков
         if (score % 5 === 0 && level < maxLevel) {
             level++;
-            animateGridChange(); // Запускаем анимацию смены уровня
+            animateGridChange(); // Анимация смены уровня
         } else {
             generateGrid();
         }
-        
-        // Каждые 10 правильных ответов усложняем различие оттенка
-        if (score % 10 === 0 && colorDifficulty > 10) {
-            colorDifficulty -= 3;
+
+        // Усложняем различие оттенка каждые 10 очков, но не ниже 15
+        if (score % 10 === 0) {
+            colorDifficulty = Math.max(10, colorDifficulty - 3);
         }
-        
-        resetTimer(); // Сбрасываем таймер на 5 секунд после каждого правильного ответа
+
+        resetTimer();
     } else if (!isPaused) {
         gameOver();
     }
 }
+
 
 function animateGridChange() {
     document.querySelectorAll(".square").forEach(square => {
@@ -108,25 +106,40 @@ function togglePause() {
 document.querySelector(".pause-button").addEventListener("click", togglePause);
 
 function gameOver() {
-    clearInterval(timer);
-    let message = `Время вышло! Итоговый счёт: ${score}`;
-    
-    // Проверяем рекорд
-    if (score > highScore) {
-        highScore = score;
-        localStorage.setItem("highScore", highScore);
-        message += `\n🎉 Новый рекорд: ${highScore} очков!`;
-    }
-    
-    alert(message);
-    level = 2;
-    score = 0;
-    timeLeft = 5;
-    colorDifficulty = 40; // Сбрасываем сложность различения цвета
-    isPaused = false;
-    generateGrid();
-    startTimer();
-}
+	clearInterval(timer);
+  
+	// Обновляем рекорд
+	if (score > highScore) {
+	  highScore = score;
+	  localStorage.setItem("highScore", highScore);
+	}
+  
+	// Сбор данных для результатов
+	const data = {
+	  score: score,
+	  level: level,
+	  reward: {
+		money: Math.floor(score * 1.5),
+		hints: Math.floor(score / 10),
+		iq: Math.floor(score / 5),
+		exp: Math.min(score * 2, 100) // до 100%
+	  },
+	  best: {
+		score: highScore,
+		level: level // Можешь добавить сохранение best level, если нужно
+	  }
+	};
+  
+	showResults(data); // Показываем результаты
+  
+	// Сброс для новой игры (можно перенести в рестарт кнопку)
+	level = 2;
+	score = 0;
+	timeLeft = 5;
+	colorDifficulty = 80;
+	isPaused = false;
+  }
+  
 
 function getRandomColor() {
     let r = rand(100, 255);
@@ -147,35 +160,11 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+const game = {
+    start() {
+        isPaused = false;
 
-
-
-// логика для всплывающих окон
-let settings = document.querySelector(".pop-up__container");
-let comeback = document.querySelector(".pop-up__container2");
-let restart = document.querySelector(".pop-up__container3");
-
-//при нажатии на отмену вспл окна настройки 
-document.querySelector('.pop-up__cancel').onclick = function () {
-	settings.style = 'visibility:hidden;';
- };
- //при нажатии на иконку настроек
- document.querySelector('.linkToTheSettings').onclick = function () {
-	settings.style = 'visibility:visible;';
- };
- //при нажатии на отмену вспл окна назад
- document.querySelector('.pop-up__cancel2').onclick = function () {
-	comeback.style = 'visibility:hidden;';
- };
- //при нажатии на иконку назад
- document.querySelector('.comeback-button').onclick = function () {
-	comeback.style = 'visibility:visible;';
- };
- //при нажатии на отмену вспл окна рестарт
- document.querySelector('.pop-up__cancel3').onclick = function () {
-	restart.style = 'visibility:hidden;';
- };
- //при нажатии на иконку рестарт
- document.querySelector('.linkToTheRestart').onclick = function () {
-	restart.style = 'visibility:visible;';
- };
+        generateGrid();
+        startTimer();
+    }
+};

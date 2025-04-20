@@ -1,3 +1,9 @@
+<?php
+$game_name = "Игра цветов";
+$game_description = "Найдите отличный от остальных цвет!";
+$leaderboard_name = "Игра цветов";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +13,14 @@
     <link rel="canonical" href="https://brainrim.site">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/system/css/global.css?v=2.0">
+<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 	<title>Color Different Game</title>
+
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/results-pop-up.php"); ?>
 </head>
 
 <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
@@ -28,13 +40,11 @@
 </script>
 
 <body>
-<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
-<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-top-button.php"); ?>
 <div class="pause-button"><img src="/img/icons/pause-circle-outline.svg" class="img-icon" alt="иконка-паузы" title="иконка-паузы"></div>
 	<div class="pause-alert"><span class="alert-span">На паузе</span></div>
 	<h1>Найди отличающийся квадрат!</h1>
 	<div class="game">
-		<div id="timer">Оставшееся время: <span>5</span> сек</div>
+		<div id="timer">Времени осталось: <span>5</span> сек</div>
 		<div id="score">Найдено: <span>0</span></div>
 	<div class="grid"></div>
 	</div>

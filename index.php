@@ -392,7 +392,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </a>
                <a href="/pages/Games/Chill/DifferentColor/Diffcolor.php">
                   <div class="game-item">
-                     <h2 class="title">Найди цвет</h2>
+                     <h2 class="title">Игра цветов</h2>
                      <ul>
                         <li><span>Внимательность</span></li>
                      </ul>
@@ -416,7 +416,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </a>
                <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
                   <div class="game-item">
-                     <h2 class="title">Найди шарик</h2>
+                     <h2 class="title">Найти шарик</h2>
                      <ul>
                         <li><span>Внимательность</span></li>
                         <li><span>Память</span></li>
@@ -495,7 +495,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   </a>
                   <a href="/pages/Games/Chill/Cupgame/Cupgame.php">
                      <div class="game-item">
-                        <h2 class="title">Найди шарик</h2>
+                        <h2 class="title">Найти шарик</h2>
                         <ul>
                            <li><span>Внимательность</span></li>
                            <li><span>Память</span></li>
@@ -539,7 +539,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                   </a>
                   <a href="/pages/Games/Chill/DifferentColor/Diffcolor.php">
                      <div class="game-item">
-                        <h2 class="title">Найди цвет</h2>
+                        <h2 class="title">Игра цветов</h2>
                         <ul>
                            <li><span>Внимательность</span></li>
                         </ul>
@@ -586,7 +586,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                <div class="game-item-block__content">
                   <a href="/pages/Games/Growth/IQ/GameCountries.php">
                      <div class="game-item">
-                        <h2 class="title">Угадай страну</h2>
+                        <h2 class="title">Страны</h2>
                         <ul>
                            <li><span>Интеллект</span></li>
                         </ul>

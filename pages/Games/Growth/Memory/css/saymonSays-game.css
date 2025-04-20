@@ -34,6 +34,7 @@ body {
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
+   font-family: 'Balsamiq Sans', cursive;
 }
 input,
 button,
@@ -98,104 +99,6 @@ h2 {
    margin: 30px 0;
 }
 
-/*Стили кнопки СТАРТ начало*/
-.button-start-container{
-   display: flex;
-}
-.start-menu__game-mode-container{
-   position: absolute;
-   top: 40px;
-}
-.start-menu__game-mode-title{
-   margin: 10px auto;
-   font-size: 38px;
-   color: var(--main-color);
-}
-.start-menu__game-mode{
-   display: flex;
-   justify-content: center;
-   font-size: 30px;
-   font-weight: 700;
-}
-.start-menu__easy-game-mode{
-   color: rgb(102, 236, 25);
-}
-.start-menu__normal-game-mode{
-   color: #E27B02;
-} 
-.start-menu__hard-game-mode{
-   color:  #FA4B00;
-}
-.start-menu__crazy-game-mode{
-   color: #8619B9;
-}
-
-.start-menu{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   height: 100%;
-   width: 100%;
-   background-color: var(--bg-color);
-   z-index: 3;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   -webkit-tap-highlight-color: transparent;
-}
-.button-start {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
-   border: none;
-   height: 180px;
-   width: 180px;
-   font-weight: bold;
-   font-family: 'Balsamiq Sans', cursive;
-   color: #ffffff;
-   font-size: 38px;
-   background-color: var(--bg-color);
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   -webkit-tap-highlight-color: transparent;
-   box-shadow: 2px 3px 2px 5px rgba(0, 0, 0, 0.25), -2px -1px 8px rgba(255, 255, 255, 0.25);
-}
-.start-menu.activated{
-   transition: all 0.5s ;
-   visibility: hidden;
-}
-.button-start.activated{
-   transform: scale(0.0,0.0);
-   transition: 0.7s ;
-   color: rgba(240, 255, 255, 0);
-   background-color: rgba(115, 113, 114, 0);
-   height: 0px;
-   width: 0px;
-   font-size: 0px;
-}
-.game-info-title{
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    bottom: 20%;
-    position: absolute;
-    text-align: center;
-    gap: 15px;
-} 
-.game-info-name {
-    color: var(--main-color);
-	font-size: 24px;
-}
-.game-info{
-    max-width: 350px;
-    color: #ffffff;
-    font-size: 18px;
-}
-/*Стили кнопки СТАРТ конец*/
-
 .game-container {
    display: grid;
    grid-template-columns: repeat(2, 100px);
@@ -214,12 +117,12 @@ div#status {
    border-radius: 10px;
    border: none;
    cursor: pointer;
-   opacity: 0.5;
-   transition: all 0.5s ease;
+   opacity: 1;
+   transition: all 0.1s ease;
 }
 
 .btn.active {
-   opacity: 1;
+   opacity: 0.5;
    transform: scale(0.85);
 }
 

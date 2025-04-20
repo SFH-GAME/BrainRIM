@@ -1,115 +1,119 @@
 /* Светлая тема по умолчанию */
 :root[data-theme="light"] {
---bg-color: #ffffff;
---btn-bg-color-none: white;
---btn-bg-color-dark: #2B2A31;
---btn-bg-color-light: #c4c4c4;
---btn-active-color: #ffffff;
---btn-border: 1px solid #a2a2a2;
---text-color: #000000;
---text-color-gray: #ababab;
---icon-color: brightness(0);
---main-color: #7655f5;
---main-gradient: linear-gradient(0deg, rgba(118, 85, 245, 1) 30%, rgba(118, 85, 245, 1) 40%, rgba(255, 253, 253, 1) 140%);
---main-header-bg: linear-gradient(to bottom, #d5a6ff, #a478ffad);
---games-start-page: url(/img/Games/StartLight.svg);
-}
-
-/* Тёмная тема */
-:root[data-theme="dark"] {
---bg-color: #161618;
---btn-bg-color-none: #2B2A31;
---btn-bg-color-dark: #2B2A31;
---btn-bg-color-light: #212121;
---btn-active-color: #ffffff;
---btn-border: 0px solid gray;
---text-color: #ffffff;
---text-color-gray: #ababab;
---icon-color: brightness(0) invert(1);
---main-color: #7655f5;
---main-gradient: linear-gradient(-20deg, rgb(55 30 145) 30%, rgb(43 20 137) 40%, rgb(0 0 0) 140%);
---main-header-bg: url(/img/Menu/upperwallpaper.svg);
---games-start-page: url(/img/Games/StartDark.svg);
-}
-
-
-
-
-* {
-	padding: 0;
-	margin: 0;
-	border: 0;
- }
- *,
- *:before,
- *:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
- }
- :focus,
- :active {
-	outline: none;
- }
- a, a:focus,
- a:active {
-	outline: none;
-	color: #fff;
- }
- html,
- body {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	transition: background-color 1s, color 1s;
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	flex-direction: column;
-	align-items: center;
-	user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	outline: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-tap-highlight-color: transparent;
- }
- 
- input,
- button,
- textarea {
-	font-family: 'Balsamiq Sans', cursive;
-	-webkit-appearance: none;
-    appearance: none;
- }
- input::-ms-clear {
-	display: none;
- }
- button {
-	cursor: pointer;
- }
- button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
- }
- a,
- a:visited {
-	text-decoration: none;
- }
- a:active {
-	text-decoration: none;
- }
- ul li {
-	list-style: none;
- }
- img {
-	vertical-align: top;
-	pointer-events: none; /* Запрещает взаимодействие с изображением */
-	user-select: none; /* Запрещает выделение изображения */
- }
+	--bg-color: #ffffff;
+	--btn-bg-color-none: white;
+	--btn-bg-color-dark: #2B2A31;
+	--btn-bg-color-light: #c4c4c4;
+	--btn-active-color: #ffffff;
+	--btn-border: 1px solid #a2a2a2;
+	--text-color: #000000;
+	--text-color-gray: #ababab;
+	--icon-color: brightness(0);
+	--main-color: #7655f5;
+	--main-gradient: linear-gradient(0deg, rgba(118, 85, 245, 1) 30%, rgba(118, 85, 245, 1) 40%, rgba(255, 253, 253, 1) 140%);
+	--main-header-bg: linear-gradient(to bottom, #d5a6ff, #a478ffad);
+	--games-start-page-mobile: url(/img/Games/StartLight720.svg);
+	--games-start-page-tab: url(/img/Games/StartLight1280.svg);
+	--games-start-page-pc: url(/img/Games/StartLight2K.svg);
+	}
+	
+	/* Тёмная тема */
+	:root[data-theme="dark"] {
+	--bg-color: #161618;
+	--btn-bg-color-none: #2B2A31;
+	--btn-bg-color-dark: #2B2A31;
+	--btn-bg-color-light: #212121;
+	--btn-active-color: #ffffff;
+	--btn-border: 0px solid gray;
+	--text-color: #ffffff;
+	--text-color-gray: #ababab;
+	--icon-color: brightness(0) invert(1);
+	--main-color: #7655f5;
+	--main-gradient: linear-gradient(-20deg, rgb(55 30 145) 30%, rgb(43 20 137) 40%, rgb(0 0 0) 140%);
+	--main-header-bg: url(/img/Menu/upperwallpaper.svg);
+	--games-start-page-mobile: url(/img/Games/StartDark720.svg);
+	--games-start-page-tab: url(/img/Games/StartDark1280.svg);
+	--games-start-page-pc: url(/img/Games/StartDark2K.svg);
+	}
+	
+	
+	
+	
+	* {
+		padding: 0;
+		margin: 0;
+		border: 0;
+	 }
+	 *,
+	 *:before,
+	 *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+	 }
+	 :focus,
+	 :active {
+		outline: none;
+	 }
+	 a, a:focus,
+	 a:active {
+		outline: none;
+		color: #fff;
+	 }
+	 html,
+	 body {
+		background-color: var(--bg-color);
+		color: var(--text-color);
+		transition: background-color 1s, color 1s;
+		height: 100%;
+		width: 100%;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 14px;
+		-ms-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+		flex-direction: column;
+		align-items: center;
+		user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		outline: none;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-tap-highlight-color: transparent;
+	 }
+	 
+	 input,
+	 button,
+	 textarea {
+		font-family: 'Balsamiq Sans', cursive;
+		-webkit-appearance: none;
+		appearance: none;
+	 }
+	 input::-ms-clear {
+		display: none;
+	 }
+	 button {
+		cursor: pointer;
+	 }
+	 button::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	 }
+	 a,
+	 a:visited {
+		text-decoration: none;
+	 }
+	 a:active {
+		text-decoration: none;
+	 }
+	 ul li {
+		list-style: none;
+	 }
+	 img {
+		vertical-align: top;
+		pointer-events: none; /* Запрещает взаимодействие с изображением */
+		user-select: none; /* Запрещает выделение изображения */
+	 }

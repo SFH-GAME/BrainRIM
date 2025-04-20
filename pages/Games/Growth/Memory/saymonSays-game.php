@@ -2,15 +2,20 @@
 <html lang="ru">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/pages/Games/Growth/Memory/css/saymonSays-game.css">
-   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/system/css/global.css?v=2.0">
-   <link rel="canonical" href="https://brainrim.site">
-   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
-   <title>Игра - "Саймон говорит"</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/pages/Games/Growth/Memory/css/saymonSays-game.css">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+	<link rel="canonical" href="https://brainrim.site">
+	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
+	<title>Игра - "Саймон говорит"</title>
 
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/results-pop-up.php"); ?>
 </head>
 
 <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
@@ -30,23 +35,6 @@
 </script>
 
 <body>
-   <?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
-   <div class="button-start-container">
-      <div class="start-menu">
-         <div class="start-menu__game-mode-container">
-            <div class="start-menu__game-mode"></div>
-         </div>
-         <button class="button-start">START</button>
-         <div class="game-info-title">
-            <span class="game-info-name">Саймон говорит</span>
-            <span class="game-info">Твоя задача — запомнить последовательность мигающих цветов и повторить её. С каждым
-               раундом становится сложнее</span>
-         </div>
-      </div>
-   </div>
-
-   <?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
-
    <div id="status">Запомни</div>
    <h2>Ход: <span id="round">0</span></h2>
    <div class="game-container">

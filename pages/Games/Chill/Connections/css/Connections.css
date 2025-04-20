@@ -21,10 +21,10 @@ body {
 h1 {
 	margin: 0% 0 0 0;
     color: var(--main-color);
-    font-size: 18px;
+    font-size: 24px;
     opacity: 1;
     visibility: visible;
-    animation: text-focus-in 1s linear, 2s fadeOut 2s forwards;
+    animation: text-focus-in 1s linear, 3s fadeOut 3s forwards;
 	width: 100%;
 	position: fixed;
     top: 15%;
@@ -36,12 +36,12 @@ h1 {
 	0% {
 	  filter: blur(12px);
 	  opacity: 0;
-	  font-size: 24px;
+	  font-size: 30px;
 	}
 	100% {
 	  filter: blur(0px);
 	  opacity: 1;
-	  font-size: 18px;
+	  font-size: 24px;
 	}
   }
   @keyframes fadeOut {

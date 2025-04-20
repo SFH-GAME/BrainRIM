@@ -1,3 +1,9 @@
+<?php
+$game_name = "Найдите шарик";
+$game_description = "Запомните расположение шарика и найдите его!";
+$leaderboard_name = "Найдите шарик";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +13,14 @@
     <link rel="canonical" href="https://brainrim.site">
     <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/system/css/global.css?v=2.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 	<title>Cup Game</title>
+
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-top-button.php"); ?>
+	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/results-pop-up.php"); ?>
 </head>
 
 <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
@@ -28,9 +40,6 @@
 </script>
 
 <body>
-<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
-<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-top-button.php"); ?>
-
 <div class="score-container">Угадал: <span id="score">0 раз</span></div>
 
 <div class="game-container">

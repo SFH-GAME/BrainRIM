@@ -1,33 +1,3 @@
-// логика для всплывающих окон
-let settings = document.querySelector(".pop-up__container");
-let comeback = document.querySelector(".pop-up__container2");
-let restart = document.querySelector(".pop-up__container3");
-
-//при нажатии на отмену вспл окна настройки 
-document.querySelector('.pop-up__cancel').onclick = function () {
-	settings.style = 'visibility:hidden;';
- };
- //при нажатии на иконку настроек
- document.querySelector('.linkToTheSettings').onclick = function () {
-	settings.style = 'visibility:visible;';
- };
- //при нажатии на отмену вспл окна назад
- document.querySelector('.pop-up__cancel2').onclick = function () {
-	comeback.style = 'visibility:hidden;';
- };
- //при нажатии на иконку назад
- document.querySelector('.comeback-button').onclick = function () {
-	comeback.style = 'visibility:visible;';
- };
- //при нажатии на отмену вспл окна рестарт
- document.querySelector('.pop-up__cancel3').onclick = function () {
-	restart.style = 'visibility:hidden;';
- };
- //при нажатии на иконку рестарт
- document.querySelector('.linkToTheRestart').onclick = function () {
-	restart.style = 'visibility:visible;';
- };
-
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -194,3 +164,16 @@ canvas.addEventListener("dragstart", (e) => e.preventDefault());
 document.addEventListener("selectstart", (e) => e.preventDefault());
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
+
+function startGame() {
+    generatePoints(); // Эта функция будет генерировать точки
+    // Здесь можно добавить дополнительную логику, например, сбросить переменные или запустить таймер
+}
+
+class Game {
+	start() {
+		startGame(); // Основная функция запуска
+	}
+}
+
+let game = new Game(); // Создаём объект заранее

@@ -97,84 +97,7 @@ body {
 	-ms-user-select: none;
 	outline: none;
 }
-.start-menu{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   height: 100%;
-   width: 100%;
-   background-color: var(--bg-color);
-   z-index: 3;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   -webkit-tap-highlight-color: transparent;
-}
-.button-start{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50%;
-   height: 180px;
-   width: 180px;
-   font-weight: bold;
-   font-family: 'Balsamiq Sans', cursive;
-   color: #ffffff;
-   font-size: 38px;
-   border: 6px solid var(--main-color);
-   background-color: black;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   -webkit-tap-highlight-color: transparent;
-}
-.start-menu.activated{
-   transition: all 0.5s ;
-   visibility: hidden;
-}
-.button-start.activated{
-   transform: scale(0.0,0.0);
-   transition: 0.7s ;
-   color: rgba(240, 255, 255, 0);
-   background-color: rgba(115, 113, 114, 0);
-   height: 0px;
-   width: 0px;
-   font-size: 0px;
-}
-.game-info-title{
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    bottom: 10%;
-    position: absolute;
-    text-align: center;
-    gap: 15px;
-} 
-.game-info-name {
-    color: var(--main-color);
-	font-size: 24px;
-}
-.game-info{
-    max-width: 350px;
-    color: #ffffff;
-    font-size: 18px;
-}
-.start-menu__best-res-title{
-	display: flex;
-    justify-content: center;
-    position: absolute;
-	 top: 130px;
-	 flex-wrap: wrap;
-	 width: 80%;
-	 font-size: 23px;
-    text-align: center;
-    gap: 15px;
-	 color: var(--bg-color);
-}
-.best-res__value{
-	color: chartreuse;
-}
+
 .game-container {
   position: relative;
   width: 100%;
@@ -225,97 +148,6 @@ body {
   border-radius: 5px;
   filter: blur(1px);
 }
-
-
-
-
-.results-gameover{
-	display: none;
-}
-
-.results-container{
-	position: absolute;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    background-color: var(--bg-color);
-    z-index: 99;
-	font-size: 24px;
-	color: var(--bg-color);
-
-}
-.results-head-text{
-    margin: 10% 0 0 0;
-    text-align: center;
-    font-size: 38px;
-}
-.results{
-	margin: 15% auto;
-	display: flex;
-	align-items: center;
-    justify-content: center;
-    flex-direction: column;
-	box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
-    border-radius: 26px;
-    width: 350px;
-	height: 450px;
-}
-.time{
-	display: flex;
-	margin: 10px auto;
-	gap:  10px;
-}
-.moves{
-	display: flex;
-	margin: 10px auto;
-	gap:  10px;
-}
-.best-results{
-	margin: 20px auto;
-}
-.time-count{
-	color: var(--main-color);
-}
-.moves-count{
-	color: var(--main-color);
-}
-.best-time-count{
-	color: rgb(0, 255, 0);
-}
-.best-moves-count{
-	color: rgb(0, 255, 0);
-}
-.congrats{
-    color: rgb(0, 255, 0);
-}
-.loose{
-	color: #ff0000;
-}
-.loose-win-value{
-	font-size: 28px;
-    margin: 20px 0;
-}
-.results-menu__buttons-container {
-    display: flex;
-    justify-content: space-around;
-}
-.results-menu__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 42px;
-    width: 140px;
-    height: 60px;
-    color: var(--main-color);
-    transition: 0.2s;
-    background: var(--bg-color);
-    box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
-}
-
 
 /* Стили верхних кнопок начало*/ 
   .pop-up__container {
@@ -444,12 +276,11 @@ body {
 	color: #ffffff;
  }
  .wrap__button2{
-	
 	display: flex;
 	justify-content: center;
-	 align-items: center;
- width: 100%;
- height: 40px;
+	align-items: center;
+	width: 100%;
+	height: 40px;
  }
  .pop-up__form2{
 	display: flex;
@@ -582,52 +413,6 @@ body {
  }
 /* Стили верхних кнопок конец*/ 
 
-/*Информация о бустах на старте*/ 
-.game-info-boosts{
-	display: flex;
-    width: 350px;
-    color: #ffffff;
-    font-size: 18px;
-	align-items: center;
-	justify-content: center;
-	gap: 5px;
-}
-.heart-info{
-	height: 40px;
-	width: 40px;
-	aspect-ratio: 1;
-	--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
-	-webkit-mask-box-image: var(--_m);
-	mask-border: var(--_m);
-	clip-path: polygon(-41% 0,50% 91%, 141% 0);
-	background: #cc333f;
-}
-
-@supports not (-webkit-mask-box-image: var(--_m)) { 
-	.heart {
-	mask:
-	radial-gradient(at 70% 31%,#000 29%,#0000 30%),
-	radial-gradient(at 30% 31%,#000 29%,#0000 30%),
-	conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
-	}
-}
-.boost-container-info {
-    width: 40px;
-    height: 40px;
-    display: flex;
-}
-.triangle-info {
-    width: 20px;
-    height: 30px;
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-    background: linear-gradient(60deg, #cb00ff66, #000000);
-    margin-left: -8px;
-    border: 1px solid #c50d0d;
-}
-
-.triangle-info:first-child {
-    margin-left: 0;
-}
 
 /*Информация о бустах в игре*/ 
 .boosts-ui {

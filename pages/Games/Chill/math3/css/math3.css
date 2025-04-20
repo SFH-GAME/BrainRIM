@@ -52,7 +52,7 @@ body {
 
 .key {
 	background-color: var(--bg-color);
-	color: #fff;
+	color: var(--text-color);
 	width: auto;
 	text-align: center;
 	border: none;
@@ -67,6 +67,7 @@ body {
 }
 .key img {
 	width: 40px;
+	filter: var(--icon-color);
 }
 
 #timer {
@@ -75,6 +76,7 @@ body {
 	margin-bottom: 20px;
 	text-align: center;
 	padding: 0 20px;
+	color: var(--text-color);
 }
 
 #endGame {

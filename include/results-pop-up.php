@@ -3,7 +3,7 @@
   <div class="results">
     <video autoplay muted playsinline class="target">
       <source src="/img/target.webm" type="video/webm">
-      Ваш браузер не поддерживает воспроизведение видео.
+      Ваше устройство не поддерживает воспроизведение видео.
     </video>
 
     <div class="difficult block-item head-span" style="display:none;">Сложность:
@@ -120,12 +120,25 @@
     font-size: 24px;
     color: var(--bg-color);
     overflow: auto;
+	padding: 40px 0;
   }
 
   .results-head-text {
     text-align: center;
     font-size: 38px;
+	animation: text-focus-in 2s linear, ease-in-out;
   }
+  @keyframes text-focus-in {
+	0% {
+	filter: blur(12px);
+	opacity: 0;
+	font-size: 0px;
+	}
+	100% {
+	filter: blur(0px);
+	opacity: 1;
+}
+}
 
   .results {
     display: flex;
@@ -226,7 +239,7 @@
   .img-icon {
     width: 40px;
     height: 40px;
-    filter: invert(1);
+	color: var(--icon-color);
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -448,4 +461,60 @@
     }, stepTime);
   });
 
+</script>
+
+<script>
+  function showResults(data) {
+    const resultsContainer = document.querySelector('.results-container');
+    if (!resultsContainer) return;
+
+    resultsContainer.style.display = 'block';
+
+    // Основные данные
+    document.querySelector('.score').style.display = 'flex';
+    document.querySelector('.score-count').textContent = data.score;
+
+    document.querySelector('.level').style.display = 'flex';
+    document.querySelector('.level-count').textContent = data.level;
+
+    // Награды
+    document.querySelector('.money').textContent = data.reward.money;
+    document.querySelector('.hints').textContent = data.reward.hints;
+    document.querySelector('.iq').textContent = data.reward.iq;
+    document.querySelector('.exp').textContent = data.reward.exp;
+
+    // Лучшие
+    document.querySelector('.best-score').style.display = 'flex';
+    document.querySelector('.best-score-count').textContent = data.best.score;
+
+    document.querySelector('.best-level').style.display = 'flex';
+    document.querySelector('.best-level-count').textContent = data.best.level;
+
+    // Показываем прогресс опыта (если хочешь заново проигрывать анимацию)
+    const progressBar = document.getElementById('progress');
+    const expValue = document.getElementById('exp-value');
+    const percent = Math.min(data.reward.exp, 100); // ограничение
+
+    progressBar.style.width = '0';
+    expValue.textContent = '+0';
+
+    setTimeout(() => {
+      progressBar.style.width = percent + '%';
+    }, 400);
+
+    let currentXP = 0;
+    const duration = 1200;
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = data.reward.exp / steps;
+
+    const counter = setInterval(() => {
+      currentXP += increment;
+      if (currentXP >= data.reward.exp) {
+        currentXP = data.reward.exp;
+        clearInterval(counter);
+      }
+      expValue.textContent = `+${Math.floor(currentXP)}`;
+    }, stepTime);
+  }
 </script>

@@ -319,7 +319,7 @@ html,body {
    font-family: 'Balsamiq Sans', cursive;
    text-align: center;
    padding: 0 20px ;
-   color: #ffffff;
+   color: var(--text-color);
 }
 .wrap__button{
    
@@ -407,7 +407,7 @@ height: 40px;
    font-family: 'Balsamiq Sans', cursive;
    text-align: center;
    padding: 0 20px ;
-   color: #ffffff;
+   color: var(--text-color);
 }
 .wrap__button2{
    
@@ -494,7 +494,7 @@ height: 40px;
    font-family: 'Balsamiq Sans', cursive;
    text-align: center;
    padding: 0 20px ;
-   color: #ffffff;
+   color: var(--text-color);
 }
 .wrap__button3{
    
@@ -724,7 +724,7 @@ height: 40px;
 .hint-counter{
    font-size: 26px;
    font-weight: 700;
-   color: #ffffff;
+   color: var(--text-color);
 }
 .deadLineWrapper{
 	margin: 10px auto;
@@ -811,7 +811,7 @@ height: 40px;
    width: 180px;
    font-weight: bold;
    font-family: 'Balsamiq Sans', cursive;
-   color: #ffffff;
+   color: var(--main-color);
    font-size: 38px;
    border: 6px solid var(--main-color);
    background-color: black;
@@ -847,7 +847,7 @@ height: 40px;
 }
 .game-info{
     max-width: 350px;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 18px;
 }
 
@@ -990,7 +990,7 @@ height: 40px;
 	margin: 10% 0 0 0;
 	text-align: center;
 	font-size: 38px;
-	color: #ffffff;
+	color: var(--text-color);
  }
  .results-menu__mode-container {
 	margin: 15% 0 0 0;
@@ -1050,7 +1050,7 @@ height: 40px;
  }
  .screen-title{
  display: flex;
- color: #ffffff;
+ color: var(--text-color);
  }
  
  .items-container {
@@ -1074,7 +1074,7 @@ height: 40px;
 	 border-radius: 10px;
 	 padding: 7px;
 	font-size: 34px;
-	color: #ffffff;
+	color: var(--icon-color);
  }
  .items-container__win-loose-item {
 	font-style: normal;
@@ -1097,7 +1097,7 @@ height: 40px;
  .items-container__done-cards-icon {
 	 display: flex;
 	 font-size: 42px;
-	 color: #ffffff;
+	 color: var(--icon-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 width: 60px;
@@ -1113,7 +1113,7 @@ height: 40px;
 	 display: flex;
 	 align-items: center;
 	 letter-spacing: 0.095em;
-	 color: #ffffff;
+	 color: var(--text-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 padding: 0 10px;
@@ -1133,7 +1133,7 @@ height: 40px;
  .items-container__time-icon {
 	 display: flex;
 	 font-size: 42px;
-	 color: #ffffff;
+	 color: var(--text-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 width: 60px;
@@ -1149,7 +1149,7 @@ height: 40px;
 	 display: flex;
 	 align-items: center;
 	 letter-spacing: 0.095em;
-	 color: #ffffff;
+	 color: var(--text-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 padding: 0 10px;
@@ -1172,7 +1172,7 @@ height: 40px;
 	 line-height: 29px;
 	 letter-spacing: 0.095em;
 	 display: flex;
-	 color: #ffffff;
+	 color: var(--text-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 width: 60px;
@@ -1188,7 +1188,7 @@ height: 40px;
 	 display: flex;
 	 align-items: center;
 	 letter-spacing: 0.095em;
-	 color: #ffffff;
+	 color: var(--text-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 padding: 0 10px;
@@ -1202,7 +1202,7 @@ height: 40px;
 	line-height: 29px;
 	letter-spacing: 0.095em;
 	display: flex;
-	color: #ffffff;
+	color: var(--text-color);
 	border: 2px solid var(--main-color);
 	border-radius: 10px;
 	width: 60px;
@@ -1218,7 +1218,7 @@ height: 40px;
 	 display: flex;
 	 align-items: center;
 	 letter-spacing: 0.095em;
-	 color: #ffffff;
+	 color: var(--text-color);
 	 border: 2px solid var(--main-color);
 	 border-radius: 10px;
 	 padding: 0 10px;

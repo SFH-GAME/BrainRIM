@@ -5,8 +5,10 @@
 		<div class="leaderboard-button"><img src="/img/ranking_pe6ng5yn5vbm.svg" alt="Список лидеров"></div> <!--список лидеров-->
 		<div class="start-wrapper"><div class="button-start">START</div></div>
 	<div class="game-info-title">
-		<span class="game-info-name">2048</span>
-		<span class="game-info">Соединяйте кубики, чтобы дойти до заветного числа - 2048!</span>
+		<span class="game-info-name"><?php echo isset($game_name) ? $game_name : "Без названия"; ?></span>
+		<span class="game-info"><?php echo isset($game_description) ? $game_description : "Описание недоступно."; ?></span>
+
+		<?php echo isset($game_boosts) ? $game_boosts : ""; ?>
 	</div>
 </div>
 
@@ -17,39 +19,40 @@
     justify-content: center;
 	font-family: 'Balsamiq Sans', cursive;
 	position: fixed;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 	z-index: 3;
 	width: 100%;
 	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 /* Для больших экранов (десктоп) */
 @media (min-width: 1200px) {
 	.start-container {
-		background-image: var(--games-start-page-large);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+		background-image: var(--games-start-page-pc);
 }
 }
 
 /* Для средних экранов (планшеты) */
 @media (min-width: 768px) and (max-width: 1199px) {
 	.start-container {
-		background-image: var(--games-start-page-medium);
+		background-image: var(--games-start-page-tab);
 }
 }
 
 /* Для маленьких экранов (телефоны) */
 @media (max-width: 767px) {
 	.start-container {
-	background-image: var(--games-start-page);
+	background-image: var(--games-start-page-mobile);
 }
 }
 
 /* Назад */
 .start-comeback-button-body {
-	display: flex;
-	align-items: center;
 	transition: 0.1s;
 	position: fixed;
     top: 2%;
@@ -113,7 +116,7 @@
 .game-info-title{
 	display: flex;
     flex-direction: column;
-    bottom: 20%;
+    bottom: 15%;
     position: absolute;
     text-align: center;
     gap: 15px;
@@ -132,11 +135,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 4;
 	height: 50px;
 	width: 50px;
 	border-radius: 10px;
-	box-shadow: 0px 0px 0px 1px rgb(107 9 127 / 25%), 3px 3px 6px 0px rgb(66 14 101 / 30%);
+	box-shadow: 0px 0px 0px 2px rgb(107 9 127 / 25%), 3px 3px 6px 0px rgb(66 14 101 / 30%);
 	border: 2px solid var(--main-color);
 	position: fixed;
     top: 20%;
@@ -152,6 +154,53 @@
 	height: 30px;
 	width: 30px;
 	filter: var(--icon-color);
+}
+
+/*Информация о бустах на старте*/ 
+.game-info-boosts{
+	display: flex;
+    width: 350px;
+    color: #ffffff;
+    font-size: 18px;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.heart-info{
+	height: 40px;
+	width: 40px;
+	aspect-ratio: 1;
+	--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+	-webkit-mask-box-image: var(--_m);
+	mask-border: var(--_m);
+	clip-path: polygon(-41% 0,50% 91%, 141% 0);
+	background: #cc333f;
+}
+
+@supports not (-webkit-mask-box-image: var(--_m)) { 
+	.heart {
+	mask:
+	radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+	radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+	conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+	}
+}
+.boost-container-info {
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+.triangle-info {
+    width: 20px;
+    height: 30px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background: linear-gradient(60deg, #cb00ff66, #000000);
+    margin-left: -8px;
+    border: 1px solid #c50d0d;
+}
+
+.triangle-info:first-child {
+    margin-left: 0;
 }
 </style>
 

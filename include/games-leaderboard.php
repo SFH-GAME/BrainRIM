@@ -3,7 +3,7 @@
 				alt="иконка-назад" title="иконка-назад"></div>
 		<h2>Лидеры</h2>
 		<div class="leaderboard-list-container">
-			<h3>2048</h3>
+			<h3><?php echo isset($leaderboard_name) ? $leaderboard_name : ""; ?></h3>
 			<span>(Топ 10)</span>
 			<div class="leaderboard-items-container">
 				<?php foreach ($results as $index => $row): ?>
@@ -57,7 +57,7 @@
 }
 .leaderboard-list-container h3{
 	font-size: 24px;
-	color: #fff;
+	color: var(--text-color);
 	text-align: center;
 }
 .leaderboard-list-container span {

@@ -96,45 +96,6 @@ p{
 	line-height: 80px;
 }
 
- /* Устанавливаем стиль маскирующего слоя */
-.gameover{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(55,55,55,0.3);
-	display: none;	
-}
-.over{
-	width: 300px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: #fff;
-	text-align: center;
-	font-size: 30px;
-	margin-left: -150px;
-	margin-top: -120px; 
-}
-.over a{
-	display: inline-block;
-	text-decoration:none;
-	width: 150px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 30px;
-	font-weight: bold;
-	color: var(--text-color);
-	outline: none;
-	border: none;
-	border-radius: 4px;
-	background-color: #9F8D77;
-	margin-bottom: 5px;
-	cursor: pointer;
-}
 .best-score{
     width: 350px;
     font-size: 22px;
@@ -142,47 +103,6 @@ p{
     text-align: center;
 	margin: 40px auto;
  }
-
-
-.results-gameover{
-	display: none;
-}
-.results-container {
-	position: absolute;
-	display: none;
-	height: 100%;
-	width: 100%;
-	background-color: var(--bg-color);
-	z-index: 99;
-	font-size: 24px;
-	color: var(--bg-color);
-	overflow: auto;
-	padding: 40px 0;
-}
-.results-head-text{
-    text-align: center;
-    font-size: 38px;
-}
-
-.results-menu__buttons-container {
-    display: flex;
-    justify-content: space-around;
-}
-.results-menu__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 42px;
-    width: 140px;
-    height: 60px;
-    color: var(--main-color);
-    transition: 0.2s;
-    background: var(--bg-color);
-    box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
-}
-
-
 
  /* Устанавливаем в игре, при изменении данных в сетке соответствующий стиль */
 .n2{background-color:#eee3da}

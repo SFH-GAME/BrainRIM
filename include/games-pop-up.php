@@ -4,7 +4,7 @@
          Внимание
       </div>
       <div class="pop-up__description">
-         Если вы перейдёте-результат не сохраниться
+         Если вы перейдёте-результат не сохраниться<div class="notpause">Игра не на паузе.</div>
       </div>
       <div class="wrap__button">
          <form class="pop-up__form" action="#">
@@ -88,6 +88,10 @@
       text-align: center;
       padding: 0 20px;
 	  color: var(--text-color);
+   }
+
+   .notpause{
+	color: grey;
    }
 
    .wrap__button {
