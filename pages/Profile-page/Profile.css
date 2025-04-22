@@ -296,7 +296,7 @@ main {
     color:  var(--main-color);
     padding: 8px 15px;
     border-bottom-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-right-radius: 8px;
     font-weight: 600;
     font-size: 14px;
 }
@@ -641,7 +641,6 @@ button.claim-reward {
     height: 100%;
     background-color: var(--text-color);
     background:  var(--bg-color);
-    border: 1px solid var(--main-color);
     flex-direction: column;
     overflow: hidden;
     z-index: 1;
