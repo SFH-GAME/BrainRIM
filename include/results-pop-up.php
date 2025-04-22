@@ -71,41 +71,41 @@
         <div class="moves-count"></div>
       </div>
 
-      <div class="best-results block-item-column">
-        <span class="head-span">Ваш лучший результат:</span>
-        <div class="best-enemies result-item" style="display:none;">
-          <div class="title">✅ Врагов пройдено:</div>
-          <div class="best-enemies-count">
-          </div>
+    </div>
+    <div class="best-results block-item-column">
+      <span class="head-span">Ваш лучший результат:</span>
+      <div class="best-enemies result-item" style="display:none;">
+        <div class="title">✅ Врагов пройдено:</div>
+        <div class="best-enemies-count">
         </div>
-        <div class="best-time result-item" style="display:none;">
-          <div class="title">⏳ Время:</div>
-          <div class="best-time-count">
-            <div class="best-sec"></div>
-            <div class="best-min"></div>
-          </div>
+      </div>
+      <div class="best-time result-item" style="display:none;">
+        <div class="title">⏳ Время:</div>
+        <div class="best-time-count">
+          <div class="best-sec"></div>
+          <div class="best-min"></div>
         </div>
-        <div class="best-score result-item" style="display:none;">
-          <div class="title">✅ Счёт:</div>
-          <div class="best-score-count"></div>
-        </div>
-        <div class="best-level result-item" style="display:none;">
-          <div class="title">📶 Уровень:</div>
-          <div class="best-level-count"></div>
-        </div>
-        <div class="best-moves result-item" style="display:none;">
-          <div class="title">🏆 Счёт:</div>
-          <div class="best-moves-count"></div>
-        </div>
+      </div>
+      <div class="best-score result-item" style="display:none;">
+        <div class="title">✅ Счёт:</div>
+        <div class="best-score-count"></div>
+      </div>
+      <div class="best-level result-item" style="display:none;">
+        <div class="title">📶 Уровень:</div>
+        <div class="best-level-count"></div>
+      </div>
+      <div class="best-moves result-item" style="display:none;">
+        <div class="title">🏆 Счёт:</div>
+        <div class="best-moves-count"></div>
+      </div>
 
+    </div>
+    <div class="results-menu__buttons-container">
+      <div onclick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img
+          src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
       </div>
-      <div class="results-menu__buttons-container">
-        <div onclick="window.location.reload();" class="results-menu__button results-menu__button-restart"><img
-            src="/img/icons/refresh-outline.svg" class="img-icon" alt="иконка-обновить" title="иконка-обновить">
-        </div>
-        <a href="/index.php" class=" results-menu__button result-menu__button-home"><img
-            src="/img/icons/home-outline.svg" class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
-      </div>
+      <a href="/index.php" class=" results-menu__button result-menu__button-home"><img src="/img/icons/home-outline.svg"
+          class="img-icon" alt="иконка-дома" title="иконка-дома"></a>
     </div>
   </div>
 </div>
@@ -120,25 +120,27 @@
     font-size: 24px;
     color: var(--bg-color);
     overflow: auto;
-	padding: 40px 0;
+    padding: 40px 0;
   }
 
   .results-head-text {
     text-align: center;
     font-size: 38px;
-	animation: text-focus-in 2s linear, ease-in-out;
+    animation: text-focus-in 2s linear, ease-in-out;
   }
+
   @keyframes text-focus-in {
-	0% {
-	filter: blur(12px);
-	opacity: 0;
-	font-size: 0px;
-	}
-	100% {
-	filter: blur(0px);
-	opacity: 1;
-}
-}
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+      font-size: 0px;
+    }
+
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
 
   .results {
     display: flex;
@@ -239,7 +241,7 @@
   .img-icon {
     width: 40px;
     height: 40px;
-	color: var(--icon-color);
+    color: var(--icon-color);
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
