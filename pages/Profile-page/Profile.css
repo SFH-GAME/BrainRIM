@@ -450,7 +450,7 @@ span.exp-value {
     width: 80%;
 }
 .achieve-progress{
-    color: #05EFD4;
+    color: var(--main-color);
     font-size: 16px;
 }
 .completed{

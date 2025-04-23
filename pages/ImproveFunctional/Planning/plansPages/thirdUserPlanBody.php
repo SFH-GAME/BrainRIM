@@ -7,9 +7,27 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/plansPages/css/firstPlan.css">
+   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/system/css/global.css?v=1.0">
+   <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/plansPages/css/PlanBody.css">
    <title>Document</title>
 </head>
+
+<script>
+		(function () {
+		try {
+			const userPref = localStorage.getItem('theme');
+			let theme;
+			if (userPref) {
+				theme = userPref;
+			} else {
+				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (e) { }
+		})();
+</script>
+
 <body>
 <div class="change-plan-body">
             <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><img src="/img/icons/chevron-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
@@ -29,5 +47,5 @@
 			</form>
 		</div>
 </body>
-<script src="/pages/ImproveFunctional/Planning/plansPages/js/firstPlan.js"></script>
+<script src="/pages/ImproveFunctional/Planning/plansPages/js/PlanBody.js"></script>
 </html>

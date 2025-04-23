@@ -142,7 +142,7 @@ h3 {
     margin: 20px 0 0 0;
 }
 .text-block__bold {
-    color: #05EFD4;
+    color: var(--main-color);
     display: inline;
 }
 

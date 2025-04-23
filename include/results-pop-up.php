@@ -232,7 +232,6 @@
     font-size: 42px;
     width: 140px;
     height: 60px;
-    color: #05EFD4;
     transition: 0.2s;
     background: #2B2A31;
     margin: 50px 0;
