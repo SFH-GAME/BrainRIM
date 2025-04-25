@@ -2,6 +2,7 @@
 $game_name = "Числовой штурм";
 $game_description = "Запомните цифры, а потом введите их!";
 $leaderboard_name = "Числовой штурм";
+$game_boosts = "";
 ?>
 
 <!DOCTYPE html>

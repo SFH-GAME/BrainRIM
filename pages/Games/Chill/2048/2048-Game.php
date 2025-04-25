@@ -4,6 +4,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logic2048Game.php";
 $game_name = "2048";
 $game_description = "Соединяйте кубики, чтобы дойти до заветного числа - 2048!";
 $leaderboard_name = "2048";
+$game_boosts = "";
 ?>
 
 <?php

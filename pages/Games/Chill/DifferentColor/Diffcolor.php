@@ -2,6 +2,7 @@
 $game_name = "Игра цветов";
 $game_description = "Найдите отличный от остальных цвет!";
 $leaderboard_name = "Игра цветов";
+$game_boosts = "";
 ?>
 
 <!DOCTYPE html>

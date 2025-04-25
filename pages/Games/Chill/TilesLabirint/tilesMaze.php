@@ -3,7 +3,7 @@
 $game_name = "Лабиринт";
 $game_description = "Запомните подсвеченные кубики и найдите их";
 $leaderboard_name = "Лабиринт";
-
+$game_boosts = "";
 ?>
 
 <!DOCTYPE html>

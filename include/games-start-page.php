@@ -7,8 +7,7 @@
 	<div class="game-info-title">
 		<span class="game-info-name"><?php echo isset($game_name) ? $game_name : "Без названия"; ?></span>
 		<span class="game-info"><?php echo isset($game_description) ? $game_description : "Описание недоступно."; ?></span>
-
-		<?php echo isset($game_boosts) ? $game_boosts : ""; ?>
+		<span class="game-info-boosts"><?php if (!empty($game_boosts)) {echo $game_boosts;} else {echo '';}?> <!-- Убирает пустые бусты -->
 	</div>
 </div>
 
@@ -160,11 +159,16 @@
 .game-info-boosts{
 	display: flex;
     width: 350px;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 18px;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+}
+.container-boost{
+	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 5px;
+    gap: 10px;
 }
 .heart-info{
 	height: 40px;
@@ -173,7 +177,7 @@
 	--_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
 	-webkit-mask-box-image: var(--_m);
 	mask-border: var(--_m);
-	clip-path: polygon(-41% 0,50% 91%, 141% 0);
+	clip-path: polygon(-38% 0,50% 91%, 138% 0);
 	background: #cc333f;
 }
 
@@ -185,7 +189,7 @@
 	conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
 	}
 }
-.boost-container-info {
+.boost-info {
     width: 40px;
     height: 40px;
     display: flex;

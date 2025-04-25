@@ -2,6 +2,7 @@
 $game_name = "Найдите шарик";
 $game_description = "Запомните расположение шарика и найдите его!";
 $leaderboard_name = "Найдите шарик";
+$game_boosts = "";
 ?>
 
 <!DOCTYPE html>

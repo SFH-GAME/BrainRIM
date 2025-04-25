@@ -15,9 +15,6 @@
 
 <?php
 include $_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php";
-
-$game_name = "2fsdfsd";
-
 ?>
 
 <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->

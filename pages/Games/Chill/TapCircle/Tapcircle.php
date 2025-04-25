@@ -4,6 +4,7 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicTapcircleGame.php";
 $game_name = "Тап ось";
 $game_description = "Кружок движется по оси — нажми, когда он окажется в фиолетовом диапазоне. Тренируй свою скорость и меткость!";
 $leaderboard_name = "Тап ось";
+$game_boosts = "";
 ?>
 
 <?php

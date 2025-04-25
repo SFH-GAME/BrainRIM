@@ -4,6 +4,15 @@ include $_SERVER['DOCUMENT_ROOT'] . "/dataBase/games/logicRuningGame.php";
 $game_name = "Забег";
 $game_description = "Уклоняйтесь от врагов и продержитесь как можно дольше";
 $leaderboard_name = "Забег";
+$game_boosts = '
+	<div class="container-boost"><div class="heart-info"></div> - доп. жизнь при столкновении</div>
+	<div class="container-boost">
+		<div class="boost-info">
+			<div class="triangle-info"></div>
+			<div class="triangle-info"></div>
+			<div class="triangle-info"></div>
+		</div> - замедление врагов (5 секунд)
+	</div>';
 ?>
 <!DOCTYPE html>
 <html lang="en">

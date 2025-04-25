@@ -2,7 +2,7 @@
 $game_name = "Соединения";
 $game_description = "Проводите линии между точками, чтобы победить!";
 $leaderboard_name = "Соединения";
-
+$game_boosts = "";
 ?>
 
 <!DOCTYPE html>
