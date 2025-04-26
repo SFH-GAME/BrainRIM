@@ -22,7 +22,6 @@ header,
 aside {
     display: block;
 }
-
 html,
 body {
     user-select: none;
@@ -36,13 +35,11 @@ body {
 	color: var(--text-color);
     padding: 10px;
 }
-
 input,
 button,
 textarea {
     font-family: 'Balsamiq Sans', cursive;
 }
-
 button {
     cursor: pointer;
 }
@@ -58,7 +55,6 @@ img {
     height: auto;
     max-width: 500px;
 }
-
 h1,
 h2,
 h3,
@@ -68,15 +64,6 @@ h6 {
     font-size: inherit;
     font-weight: 400;
 }
-
-
-header {
-    display: flex;
-    width: 100%;
-    font-size: 32px;
-    justify-content: space-between;
-}
-
 h3 {
     font-size: 20px;
     font-weight: 500;
@@ -84,16 +71,15 @@ h3 {
 
 
 .comeback-button {
-    display: flex;
-    font-size: 36px;
-    transition: 0.1s;
-    align-items: center;
+	transition: 0.1s;
     justify-content: center;
+    position: fixed;
+    top: 32px;
+    left: 15px;
 }
 .comeback-button:active {
     transform: scale(0.85);
 }
-
 
 .article-container {
     display: flex;
@@ -106,6 +92,8 @@ h3 {
 .page-title {
     color: var(--main-color);
     font-size: 28px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .hashtags {
@@ -189,15 +177,9 @@ h3 {
     header {
         font-size: 28px;
     }
-
-    .comeback-button {
-        font-size: 32px;
-    }
-
     .page-title {
         font-size: 24px;
     }
-
     .step-number {
         font-size: 18px;
     }
@@ -221,8 +203,8 @@ h3 {
 	width: 40px;
     height: 40px;
 	filter: var(--icon-color);
-	 user-select: none;
-	 -webkit-user-select: none;
-	 -moz-user-select: none;
-	 -ms-user-select: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }

@@ -14,13 +14,10 @@
 <script src="/system/js/global.js"></script>
 
 <body>
-    <header>
-        <a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.php"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
-    </header>
-
     <main>
+	<a class="comeback-button" href="/pages/ImproveFunctional/Articles/ArticleMain.php"><img src="/img/icons/arrow-back-outline.svg" class="img-icon" alt="иконка-назад" title="иконка-назад"></a>
         <div class="article-container">
-            <h1 class="page-title">Как перестать откладывать дела на потом?</h1>
+            <h1 class="page-title">Как перестать <br> откладывать дела на потом?</h1>
             <div class="hashtags">#Статья #Рекомендации</div>
             <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/Things.svg"
                     alt="Как перестать лениться?" loading="lazy"></div>
