@@ -38,6 +38,15 @@ const InfoWordDayButton = document.querySelector('.word-day-info-button');
 const InfoTasksButton = document.querySelector('.tasks-info-button');
 const CloseInfoForTasks = document.querySelector('.close-every-day-tasks-info');
 const EverydayInfoButton = document.querySelector('.everyday-info-button-body');
+const WordInfoButton = document.querySelector('.word-info-button');
+const DateInfoButton = document.querySelector('.date-info-button');
+const EngInfoButton = document.querySelector('.eng-info-button');
+const WordInfoButtonBody = document.querySelector('.word-info-button-body');
+const DateInfoButtonBody = document.querySelector('.date-info-button-body');
+const EngInfoButtonBody = document.querySelector('.eng-info-button-body');
+const CloseWordInfoButton = document.querySelector('.close-word-info-button-body');
+const CloseDateInfoButton = document.querySelector('.close-date-info-button-body');
+const CloseEngInfoButton = document.querySelector('.close-eng-info-button-body');
 const CloseInfoForEverydayWords = document.querySelector('.close-everyday-info-button-body');
 const AllLevelsButton = document.querySelector('.player-level');
 const AllLevels = document.querySelector('.all-lvls-container');
@@ -357,7 +366,7 @@ everydayTasksCloseButton.onclick = function () { //при закрытии еж�
 }
 InfoTasksButton.onclick = function () { //при нажатии на кнопку инфы ежедневных заданий
   InfoForTasks.style = 'display: flex; z-index:6;';
-  containerGrayBackground.style = 'display: block; z-index:5;';
+  containerGrayBackground.style = 'display: block; z-index:6;';
   audioClick.play();
 }
 CloseInfoForTasks.onclick = function () { //при закрытии инфы ежедневных заданий
@@ -376,8 +385,8 @@ wordDayCloseButton.onclick = function () { //при закрытии ежедн�
   audioClick.play();
 }
 InfoWordDayButton.onclick = function () { //при нажатии на кнопку инфы ежедневных фактов
-  EverydayInfoButton.style = 'display: flex; z-index: 6;';
-  containerGrayBackground.style = 'display: block; z-index: 5;';
+  EverydayInfoButton.style = 'display: flex; z-index: 7;';
+  containerGrayBackground.style = 'display: block; z-index: 6;';
   wordDayContainer.style = 'display: block;';
   audioClick.play();
 }
@@ -388,33 +397,64 @@ CloseInfoForEverydayWords.onclick = function () { //при закрытии ин
 }
 everydayWord.onclick = function () { //при нажатии на кнопку слова дня
   containerGrayBackground.style = 'display: block;';
-  everydayWordButton.style = 'display: block; z-index: 4;';
+  everydayWordButton.style = 'display: block; z-index: 5;';
   audioClick.play();
 }
 everydayWordCloseButton.onclick = function () { //при закрытии слова дня
   everydayWordButton.style = 'display: none';
   audioClick.play();
 }
+WordInfoButton.onclick = function () { //при нажатии на кнопку инфы дня
+	WordInfoButtonBody.style = 'display: flex; z-index: 7;';
+	containerGrayBackground.style = 'display: block; z-index: 6;';
+	audioClick.play();
+  }
+CloseWordInfoButton.onclick = function () { //при закрытии инфы дня
+	WordInfoButtonBody.style = 'display: none;';
+	containerGrayBackground.style = 'display: block; z-index: 3;';
+	audioClick.play();
+  }
 
 dayHistoryButton.onclick = function () { //при нажатии на кнопку исторической даты
   containerGrayBackground.style = 'display: block;';
-  everydayDateButton.style = 'display: block; z-index: 4;';
+  everydayDateButton.style = 'display: block; z-index: 5;';
   audioClick.play();
 }
 everydayDateCloseButton.onclick = function () { //при закрытии инфы исторической даты
   everydayDateButton.style = 'display: none';
   audioClick.play();
 }
+DateInfoButton.onclick = function () { //при нажатии на кнопку инфы даты
+	DateInfoButtonBody.style = 'display: flex; z-index: 7;';
+	containerGrayBackground.style = 'display: block; z-index: 6;';
+	audioClick.play();
+  }
+CloseDateInfoButton.onclick = function () { //при закрытии инфы даты
+	DateInfoButtonBody.style = 'display: none;';
+	containerGrayBackground.style = 'display: block; z-index: 3;';
+	audioClick.play();
+  }
 
 newWordButton.onclick = function () { //при нажатии на кнопку нового английского слова
   containerGrayBackground.style = 'display: block;';
-  everydayNewWordButton.style = 'display: block; z-index: 4;';
+  everydayNewWordButton.style = 'display: block; z-index: 5;';
   audioClick.play();
 }
 everydayNewWordCloseButton.onclick = function () { //при закрытии нового английского слова
   everydayNewWordButton.style = 'display: none';
   audioClick.play();
 }
+EngInfoButton.onclick = function () { //при нажатии на кнопку инфы Англ
+	EngInfoButtonBody.style = 'display: flex; z-index: 7;';
+	containerGrayBackground.style = 'display: block; z-index: 6;';
+	audioClick.play();
+  }
+CloseEngInfoButton.onclick = function () { //при закрытии инфы Англ
+	EngInfoButtonBody.style = 'display: none;';
+	containerGrayBackground.style = 'display: block; z-index: 6;';
+	containerGrayBackground.style = 'display: block; z-index: 3;';
+	audioClick.play();
+  }
 
 //код для свайпов по играм
 document.addEventListener('DOMContentLoaded', function () {

@@ -913,16 +913,17 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                </div>
             </div>
          </div>
-         <div class="everyday-info-button-body">
+
+      </div>
+	  <div class="everyday-info-button-body">
             <span>Каждый день здесь будет появляться новая интересная и полезная информация.
                <br>Она будет расширять ваш кругозор.
                <br>Не пропустите!</span>
             <div class="close-everyday-info-button-body"><img src="/img/icons/close-outline.svg" class="img-icon"
                   alt="иконка закрытия" title="иконка закрытия"></div>
          </div>
-      </div>
       <div class="everyday_day-word-container">
-         <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
+         <div class="word-info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
                alt="иконка информации" title="иконка информации"></div>
          <div class="close-window everyday_day-word-close-button"><img src="/img/icons/arrow-forward-outline.svg"
                class="img-icon" alt="иконка назад" title="иконка назад"></div>
@@ -934,8 +935,14 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
       </div>
+		<div class="word-info-button-body second-info-button-body">
+			<span>Здесь располагаются интересные и не частые в употреблении слова и их первоисточник.</span>
+			<div class="close-word-info-button-body close-second-info-body">
+				<img src="/img/icons/close-outline.svg" class="img-icon"alt="иконка закрытия" title="иконка закрытия">
+			</div>
+		</div>
       <div class="everyday_date-container">
-         <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
+         <div class="date-info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
                alt="иконка информации" title="иконка информации"></div>
          <div class="close-window everyday_date-close-button"><img src="/img/icons/arrow-forward-outline.svg"
                class="img-icon" alt="иконка назад" title="иконка назад"></div>
@@ -946,8 +953,14 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
       </div>
+	  <div class="date-info-button-body second-info-button-body">
+			<span>Здесь располагаются исторические даты дня их значимость.</span>
+			<div class="close-date-info-button-body close-second-info-body">
+				<img src="/img/icons/close-outline.svg" class="img-icon"alt="иконка закрытия" title="иконка закрытия">
+			</div>
+		</div>
       <div class="everyday_new-word-container">
-         <div class="info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
+         <div class="eng-info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
                alt="иконка информации" title="иконка информации"></div>
          <div class="close-window everyday_new-word-close-button"><img src="/img/icons/arrow-forward-outline.svg"
                class="img-icon" alt="иконка назад" title="иконка назад"></div>
@@ -958,6 +971,12 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
       </div>
+	  <div class="eng-info-button-body second-info-button-body">
+			<span>Здесь располагаются английские слова дня, их применение в предложениях, перевод и транскрипция для правильного произношения.</span>
+			<div class="close-eng-info-button-body close-second-info-body">
+				<img src="/img/icons/close-outline.svg" class="img-icon"alt="иконка закрытия" title="иконка закрытия">
+			</div>
+		</div>
       <div class="analytic-container">
          <div class="games-title">Аналитика</div>
          <div class="analytics-in-development">"Мы ведём активную разработку над разделом <div class="neoncolor">

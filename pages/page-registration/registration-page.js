@@ -7,7 +7,7 @@ const pgAuthorisContainer = document.querySelector('.pg-authoris-container');
 
 //pop-up alert
 const facebookButton = document.querySelectorAll('.facebook');
-const twitterButton = document.querySelectorAll('.twitter');
+const twitterButton = document.querySelectorAll('.x');
 const alertContainer = document.querySelector('.pop-up-alert-container');
 
 facebookButton.forEach(element => {

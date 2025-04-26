@@ -692,6 +692,7 @@ z-index: 1;
     margin: 10px;
     color: var(--text-color);
     border: 1px solid  var(--main-color);
+	transition: 0.1s;
 }
  .everyday-info-button-body{
 	display: none;
@@ -724,11 +725,48 @@ z-index: 1;
 	color: red;
   }
   .close-everyday-info-button-body:active{
-	background-color:  var(--main-color);
-	color: #000;
+  background-color:  var(--main-color);
+  color: #000;
   transition: 0.2s;
   box-shadow: 0px -1px 20px 0px  var(--main-color);
   }
+
+.second-info-button-body{
+		display: none;
+		flex-direction: column;
+		border: 2px solid var(--main-color);
+		border-radius: 10px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 15px;
+		background-color: var(--bg-color);
+		color: var(--text-color);
+		line-height: 130%;
+		font-size: 18px;
+		width: 250px;
+		z-index: 4;
+		gap: 20px;
+		text-align: left;
+}
+.close-second-info-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    font-weight: 900;
+    font-size: 47px;
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+}
+.close-second-info-body:active {
+	background-color:  var(--main-color);
+	color: #000;
+	transition: 0.2s;
+	box-shadow: 0px -1px 20px 0px  var(--main-color);
+}
 
  .icon-settings{
 	animation-name: icon-settings;
@@ -1474,7 +1512,11 @@ flex-direction: column;
 	transition: 0.1s;
 	border: 1px solid  var(--main-color);
  }
- .info-button:active{
+ .word-day-info-button:active{
+    transform: scale(0.80);
+    box-shadow: 0px 0px 10px -2px var(--main-color);
+ }
+ .tasks-info-button:active{
     transform: scale(0.80);
     box-shadow: 0px 0px 10px -2px var(--main-color);
  }
