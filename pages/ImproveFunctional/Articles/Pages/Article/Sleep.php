@@ -10,7 +10,7 @@
     <title>Интересные статьи</title>
 </head>
 
-<link rel="stylesheet" href="/system/css/global.css?v=4.0">
+<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 <script src="/system/js/global.js"></script>
 
 <body>

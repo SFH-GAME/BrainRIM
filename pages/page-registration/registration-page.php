@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="/pages/page-registration/css/registration-page.css">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.png" type="image/png">
-	<link rel="stylesheet" href="/system/css/global.css?v=4.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 	<title>Регистрация</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
 		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />

@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/plansPages/css/PlanBody.css">
-   <link rel="stylesheet" href="/system/css/global.css?v=4.0">
+   <link rel="stylesheet" href="/system/css/global.css?v=1.0">
    <title>Первый план</title>
 </head>
 

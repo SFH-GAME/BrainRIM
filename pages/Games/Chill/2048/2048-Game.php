@@ -55,10 +55,10 @@ try {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/pages/Games/Chill/2048/css/2048-Game.css?v=4.0">
+	<link rel="stylesheet" href="/pages/Games/Chill/2048/css/2048-Game.css?v=1.0">
 	<link rel="canonical" href="https://brainrim.site">
 	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/system/css/global.css?v=4.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 	<title>2048</title>
 	
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>

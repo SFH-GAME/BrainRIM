@@ -10,8 +10,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css?v=4.0">
-   <link rel="stylesheet" href="/system/css/global.css?v=4.0">
+   <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css?v=1.0">
+   <link rel="stylesheet" href="/system/css/global.css?v=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link rel="stylesheet" href="/BrimFont/css/brim.css">
    <link rel="canonical" href="https://brainrim.site">
@@ -251,7 +251,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/controllers/settings/userQuestion
          </a>
       </footer>
       <script src="/system/js/global.js"></script>
-      <script src="/pages/settings-page/settings-page.js?v=4.0"></script>
+      <script src="/pages/settings-page/settings-page.js?v=1.0"></script>
 </body>
 
 </html>
