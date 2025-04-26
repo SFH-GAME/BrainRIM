@@ -86,7 +86,7 @@
  }
  .skip-button {
 	 display: inline;
-	 color: #00dfc4;
+	 color: var(--main-color);
 	 margin: 13px 20px 0 auto;
 	 text-align: right;
 	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -158,8 +158,8 @@
  }
  .container .form .inputBox input:valid ~ span,
  .container .form .inputBox input:focus ~ span{
-	 color: #00dfc4;
-	 border: 1px solid #00dfc4;
+	 color: var(--main-color);
+	 border: 1px solid var(--main-color);
 	 background: #223243;
 	 transform: translateX(25px) translateY(-7px);
 	 font-size: 0.7em;
@@ -169,7 +169,7 @@
  }
  .container .form .inputBox input:valid,
  .container .form .inputBox input:focus{
-	 border: 1px solid #00dfc4;
+	 border: 1px solid var(--main-color);
  
  }
  .container .form .inputBox i{
@@ -179,11 +179,11 @@
 	 width: 25px;
 	 padding: 3px 0;
 	 padding-right: 8px;
-	 color: #00dfc4;
-	 border-right: 1px solid #00dfc4;
+	 color: var(--main-color);
+	 border-right: 1px solid var(--main-color);
  }
  .btn-send{
-	 background: #00dfc4;
+	 background: var(--main-color);
 	 color: #161618;
 	 padding: 10px 0;
 	 font-weight: 500;
@@ -220,7 +220,7 @@
 	 -webkit-tap-highlight-color: transparent;
  }
  .Support{
-	 color: #00dfc4;
+	 color: var(--main-color);
 	 font-size: 20px;
 	 margin: 0 20px 15px auto;
  }
