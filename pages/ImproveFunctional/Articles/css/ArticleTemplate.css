@@ -34,6 +34,7 @@ body {
     font-family: 'Balsamiq Sans', sans-serif;
 	color: var(--text-color);
     padding: 10px;
+	overflow-x: hidden;
 }
 input,
 button,
@@ -76,6 +77,8 @@ h3 {
     position: fixed;
     top: 30px;
     left: 15px;
+	will-change: transform;
+    transform: translateZ(0);
 }
 .comeback-button:active {
     transform: scale(0.85);

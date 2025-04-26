@@ -63,6 +63,7 @@
 	 }
 	 html,
 	 body {
+		height: 100vh;
 		background-color: var(--bg-color);
 		color: var(--text-color);
 		transition: background-color 1s, color 1s;
