@@ -36,7 +36,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
-	<link rel="stylesheet" href="/system/css/global.css?v=2.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=4.0">
     <link rel="stylesheet" href="/pages/ImproveFunctional/Articles/css/ArticleMain.css">
     <script src="/pages/ImproveFunctional/Articles//js/ArticleMain.js" defer></script>
 </head>

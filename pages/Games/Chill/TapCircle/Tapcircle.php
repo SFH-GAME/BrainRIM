@@ -58,7 +58,7 @@ try {
 	<link rel="canonical" href="https://brainrim.site">
 	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/system/css/global.css?v=2.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=4.0">
 	<title>Tap Circle</title>
 </head>
 

@@ -32,10 +32,10 @@ $game_boosts = '
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Игра - бега</title>
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/pages/Games/Chill/runingGame/css/runingGame.css?v=2.0" />
+	<link rel="stylesheet" href="/pages/Games/Chill/runingGame/css/runingGame.css?v=4.0" />
 	<link rel="canonical" href="https://brainrim.site">
 	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
+	<link rel="stylesheet" href="/system/css/global.css?v=4.0">
 
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
@@ -74,7 +74,7 @@ $game_boosts = '
 	</div>
   </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="/pages/Games/Chill/runingGame/js/runingGame.js?v=2.0"></script>
+  <script src="/pages/Games/Chill/runingGame/js/runingGame.js?v=4.0"></script>
   <script src="/system/js/global.js"></script>
 </body>
 
