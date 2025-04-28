@@ -1,4 +1,6 @@
-
+body{
+	height: 100vh;
+}
  /* pop-up */
 .pop-up-alert-container{
 	display: none;

@@ -101,6 +101,8 @@ h3 {
     align-items: center;
     justify-content: center;
 	position: fixed;
+	will-change: transform;
+    transform: translateZ(0);
 }
 .comeback-button:active {
     transform: scale(0.85);
