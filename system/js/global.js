@@ -99,3 +99,14 @@ function animateCountUp(element, endValue, duration = 1500) {
 
    requestAnimationFrame(step);
 }
+
+// Для высоты экрана устройства
+function setVH() {
+	const vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  
+  window.addEventListener('resize', setVH);
+  window.addEventListener('orientationchange', setVH);
+  setVH();
+  

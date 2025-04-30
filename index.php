@@ -47,7 +47,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <!-- Основные метатеги -->
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
    <meta name="description"
       content="BrainRim — приложение для самосовершенствования и развития! Ежедневные интересные слова, исторические даты, английский словарный запас. Мини-игры на логику, память и отдых. Система баллов и наград для мотивации!">
