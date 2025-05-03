@@ -812,12 +812,14 @@ z-index: 1;
 	opacity: 0;
  }
  .footer { 
-	 display: flex;
-	 justify-content: space-around;
-	 align-items: center;
-	 width: 100%;
-	 height: 80px;
-	 margin: 0 auto;
+	position: fixed;
+   bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	margin: 0 auto;
 	flex-direction: row;
 	z-index: 1;
  }

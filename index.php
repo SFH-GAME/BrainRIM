@@ -47,7 +47,8 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
    <!-- Основные метатеги -->
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+   <meta name="viewport"
+      content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
    <meta name="description"
       content="BrainRim — приложение для самосовершенствования и развития! Ежедневные интересные слова, исторические даты, английский словарный запас. Мини-игры на логику, память и отдых. Система баллов и наград для мотивации!">
@@ -84,7 +85,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/system/css/global.css?v=1.0">
-   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=1.0">
+   <link rel="stylesheet" href="/pages/main-page/css/main-page.css?v=10.0">
    <link rel="manifest" href="/manifest.json">
    <title>Развитие и самосовершенствование - BrainRim</title>
    <link rel="canonical" href="https://brainrim.site">
@@ -125,7 +126,6 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          <div class="header__top-button-container">
             <a href="/pages/settings-page/settings-page.php" class="settings"><img src="/img/icons/settings-outline.svg"
                   class="icon-settings" alt="иконка настроек" title="иконка настроек"></a>
-            <!--<span class="header__top-button-title">BrainRIM</span>-->
             <div class="card">
                <div class="loader">
                   <p>Улучши</p>
@@ -376,7 +376,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
                      </ul>
                      <p class="mark-icon">🧠🧘</p>
                      <img src="/img/Games/mazeGameImage.svg" alt="картинка">
-                     <div class="game-item__category spotlight">в разработке</div>
+                     <div class="game-item__category">мини-игра</div>
                   </div>
                </a>
                <a href="/pages/Games/Chill/runingGame/runingGame.php">
@@ -915,16 +915,16 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
          </div>
 
       </div>
-	  <div class="everyday-info-button-body">
-            <span>Каждый день здесь будет появляться новая интересная и полезная информация.
-               <br>Она будет расширять ваш кругозор.
-               <br>Не пропустите!</span>
-            <div class="close-everyday-info-button-body"><img src="/img/icons/close-outline.svg" class="img-icon"
-                  alt="иконка закрытия" title="иконка закрытия"></div>
-         </div>
+      <div class="everyday-info-button-body">
+         <span>Каждый день здесь будет появляться новая интересная и полезная информация.
+            <br>Она будет расширять ваш кругозор.
+            <br>Не пропустите!</span>
+         <div class="close-everyday-info-button-body"><img src="/img/icons/close-outline.svg" class="img-icon"
+               alt="иконка закрытия" title="иконка закрытия"></div>
+      </div>
       <div class="everyday_day-word-container">
-         <div class="word-info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
-               alt="иконка информации" title="иконка информации"></div>
+         <div class="word-info-button word-day-info-button"><img src="/img/icons/information-outline.svg"
+               class="img-icon" alt="иконка информации" title="иконка информации"></div>
          <div class="close-window everyday_day-word-close-button"><img src="/img/icons/arrow-forward-outline.svg"
                class="img-icon" alt="иконка назад" title="иконка назад"></div>
 
@@ -935,15 +935,15 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
       </div>
-		<div class="word-info-button-body second-info-button-body">
-			<span>Здесь располагаются интересные и не частые в употреблении слова и их первоисточник.</span>
-			<div class="close-word-info-button-body close-second-info-body">
-				<img src="/img/icons/close-outline.svg" class="img-icon"alt="иконка закрытия" title="иконка закрытия">
-			</div>
-		</div>
+      <div class="word-info-button-body second-info-button-body">
+         <span>Здесь располагаются интересные и не частые в употреблении слова и их первоисточник.</span>
+         <div class="close-word-info-button-body close-second-info-body">
+            <img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия">
+         </div>
+      </div>
       <div class="everyday_date-container">
-         <div class="date-info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
-               alt="иконка информации" title="иконка информации"></div>
+         <div class="date-info-button word-day-info-button"><img src="/img/icons/information-outline.svg"
+               class="img-icon" alt="иконка информации" title="иконка информации"></div>
          <div class="close-window everyday_date-close-button"><img src="/img/icons/arrow-forward-outline.svg"
                class="img-icon" alt="иконка назад" title="иконка назад"></div>
          <div class="everyday-title">Историческая дата</div>
@@ -953,15 +953,15 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
       </div>
-	  <div class="date-info-button-body second-info-button-body">
-			<span>Здесь располагаются исторические даты дня их значимость.</span>
-			<div class="close-date-info-button-body close-second-info-body">
-				<img src="/img/icons/close-outline.svg" class="img-icon"alt="иконка закрытия" title="иконка закрытия">
-			</div>
-		</div>
+      <div class="date-info-button-body second-info-button-body">
+         <span>Здесь располагаются исторические даты дня их значимость.</span>
+         <div class="close-date-info-button-body close-second-info-body">
+            <img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия">
+         </div>
+      </div>
       <div class="everyday_new-word-container">
-         <div class="eng-info-button word-day-info-button"><img src="/img/icons/information-outline.svg" class="img-icon"
-               alt="иконка информации" title="иконка информации"></div>
+         <div class="eng-info-button word-day-info-button"><img src="/img/icons/information-outline.svg"
+               class="img-icon" alt="иконка информации" title="иконка информации"></div>
          <div class="close-window everyday_new-word-close-button"><img src="/img/icons/arrow-forward-outline.svg"
                class="img-icon" alt="иконка назад" title="иконка назад"></div>
          <div class="everyday-title">Англ. слово дня</div>
@@ -971,12 +971,13 @@ include($_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
             </div>
          </div>
       </div>
-	  <div class="eng-info-button-body second-info-button-body">
-			<span>Здесь располагаются английские слова дня, их применение в предложениях, перевод и транскрипция для правильного произношения.</span>
-			<div class="close-eng-info-button-body close-second-info-body">
-				<img src="/img/icons/close-outline.svg" class="img-icon"alt="иконка закрытия" title="иконка закрытия">
-			</div>
-		</div>
+      <div class="eng-info-button-body second-info-button-body">
+         <span>Здесь располагаются английские слова дня, их применение в предложениях, перевод и транскрипция для
+            правильного произношения.</span>
+         <div class="close-eng-info-button-body close-second-info-body">
+            <img src="/img/icons/close-outline.svg" class="img-icon" alt="иконка закрытия" title="иконка закрытия">
+         </div>
+      </div>
       <div class="analytic-container">
          <div class="games-title">Аналитика</div>
          <div class="analytics-in-development">"Мы ведём активную разработку над разделом <div class="neoncolor">

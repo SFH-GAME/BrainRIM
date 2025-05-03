@@ -19,7 +19,6 @@
         <div class="loading-bar">
           <div id="progress" class="player-exp__line-blue"></div>
         </div>
-        <div id="exp-value" class="exp-value"></div>
       </div>
     </div>
 
@@ -51,24 +50,20 @@
         <div class="title">✅ Врагов пройдено:</div>
         <div class="enemies-count"></div>
       </div>
+      <div class="level result-item" style="display:none;">
+        <div class="title">📶 Уровень:</div>
+        <div class="level-count"></div>
+      </div>
       <div class="time result-item" style="display:none;">
         <div class="title">⏳ Время:</div>
         <div class="time-count">
-          <div class="sec"></div>
           <div class="min"></div>
+          <div class="sec"></div>
         </div>
       </div>
       <div class="score result-item" style="display:none;">
         <div class="title">✅ Счёт:</div>
         <div class="score-count"></div>
-      </div>
-      <div class="level result-item" style="display:none;">
-        <div class="title">📶 Уровень:</div>
-        <div class="level-count"></div>
-      </div>
-      <div class="moves result-item" style="display:none;">
-        <div class="title">🏆 Счёт:</div>
-        <div class="moves-count"></div>
       </div>
 
     </div>
@@ -79,24 +74,20 @@
         <div class="best-enemies-count">
         </div>
       </div>
+      <div class="best-level result-item" style="display:none;">
+        <div class="title">📶 Уровень:</div>
+        <div class="best-level-count"></div>
+      </div>
       <div class="best-time result-item" style="display:none;">
         <div class="title">⏳ Время:</div>
         <div class="best-time-count">
-          <div class="best-sec"></div>
           <div class="best-min"></div>
+          <div class="best-sec"></div>
         </div>
       </div>
       <div class="best-score result-item" style="display:none;">
         <div class="title">✅ Счёт:</div>
         <div class="best-score-count"></div>
-      </div>
-      <div class="best-level result-item" style="display:none;">
-        <div class="title">📶 Уровень:</div>
-        <div class="best-level-count"></div>
-      </div>
-      <div class="best-moves result-item" style="display:none;">
-        <div class="title">🏆 Счёт:</div>
-        <div class="best-moves-count"></div>
       </div>
 
     </div>
@@ -175,10 +166,6 @@
   .level {
     display: flex;
     gap: 10px;
-  }
-
-  .best-results {
-    margin: 20px auto;
   }
 
   .enemies-count {
@@ -411,111 +398,20 @@
     align-items: center;
     gap: 10px;
   }
-
-  .exp-value {
-    font-size: 18px;
-    color: #05EFD4;
-    font-weight: bold;
-    animation: floatIn 0.8s ease-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes floatIn {
-    0% {
-      transform: translateY(10px);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 </style>
 
 <script>
   window.addEventListener('load', () => {
     const progressBar = document.getElementById('progress');
-    const expValue = document.getElementById('exp-value');
     const targetPercentage = 72; // Процент ширины полоски
-    const targetXP = 120;        // Реальное значение XP (можешь подставлять)
-
-    let currentXP = 0;
-    const duration = 1200; // общая длительность (мс)
-    const stepTime = 20;
-    const steps = duration / stepTime;
-    const increment = targetXP / steps;
 
     // Запуск прогресс-бара
     setTimeout(() => {
       progressBar.style.width = targetPercentage + '%';
     }, 400);
 
-    // Анимация XP чисел
-    const counter = setInterval(() => {
-      currentXP += increment;
-      if (currentXP >= targetXP) {
-        currentXP = targetXP;
-        clearInterval(counter);
-      }
-      expValue.textContent = `+${Math.floor(currentXP)}`;
-    }, stepTime);
   });
 
-</script>
 
-<script>
-  function showResults(data) {
-    const resultsContainer = document.querySelector('.results-container');
-    if (!resultsContainer) return;
 
-    resultsContainer.style.display = 'block';
-
-    // Основные данные
-    document.querySelector('.score').style.display = 'flex';
-    document.querySelector('.score-count').textContent = data.score;
-
-    document.querySelector('.level').style.display = 'flex';
-    document.querySelector('.level-count').textContent = data.level;
-
-    // Награды
-    document.querySelector('.money').textContent = data.reward.money;
-    document.querySelector('.hints').textContent = data.reward.hints;
-    document.querySelector('.iq').textContent = data.reward.iq;
-    document.querySelector('.exp').textContent = data.reward.exp;
-
-    // Лучшие
-    document.querySelector('.best-score').style.display = 'flex';
-    document.querySelector('.best-score-count').textContent = data.best.score;
-
-    document.querySelector('.best-level').style.display = 'flex';
-    document.querySelector('.best-level-count').textContent = data.best.level;
-
-    // Показываем прогресс опыта (если хочешь заново проигрывать анимацию)
-    const progressBar = document.getElementById('progress');
-    const expValue = document.getElementById('exp-value');
-    const percent = Math.min(data.reward.exp, 100); // ограничение
-
-    progressBar.style.width = '0';
-    expValue.textContent = '+0';
-
-    setTimeout(() => {
-      progressBar.style.width = percent + '%';
-    }, 400);
-
-    let currentXP = 0;
-    const duration = 1200;
-    const stepTime = 20;
-    const steps = duration / stepTime;
-    const increment = data.reward.exp / steps;
-
-    const counter = setInterval(() => {
-      currentXP += increment;
-      if (currentXP >= data.reward.exp) {
-        currentXP = data.reward.exp;
-        clearInterval(counter);
-      }
-      expValue.textContent = `+${Math.floor(currentXP)}`;
-    }, stepTime);
-  }
 </script>

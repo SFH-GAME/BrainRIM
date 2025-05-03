@@ -60,7 +60,7 @@ try {
 	<link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/system/css/global.css?v=1.0">
 	<title>2048</title>
-	
+
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-leaderboard.php"); ?>
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-start-page.php"); ?>
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/include/games-pop-up.php"); ?>
@@ -71,23 +71,23 @@ try {
 <!-- Этот код нужен для предварительного запуска темы(чтобы не было вспышки)-->
 <script>
 		(function () {
-		try {
-			const userPref = localStorage.getItem('theme');
-			let theme;
-			if (userPref) {
-				theme = userPref;
-			} else {
-				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-			}
-			document.documentElement.setAttribute('data-theme', theme);
-		} catch (e) { }
+			try {
+				const userPref = localStorage.getItem('theme');
+				let theme;
+				if (userPref) {
+					theme = userPref;
+				} else {
+					theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				}
+				document.documentElement.setAttribute('data-theme', theme);
+			} catch (e) { }
 		})();
 </script>
 
 <body>
 	<div class="wrapper">
 		<div class="score_container">
-			<div class="best-score">Лучший результат: <span class="value-best">00</span></div>
+			<div class="best-score-text">Лучший результат: <span class="value-best">00</span></div>
 			<p>Счёт: <span id="score01"> 0</span></p>
 		</div>
 		<div class="main">

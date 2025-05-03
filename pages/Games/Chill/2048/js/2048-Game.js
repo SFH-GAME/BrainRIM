@@ -8,7 +8,6 @@ const scoreResultsValue = document.querySelector(".moves-count");
 const bestTimerCountResultsValue = document.querySelector(".best-time-count");
 const bestScoreCountResultsValue = document.querySelector(".best-moves-count");
 const bestResultGameContainerValue = document.querySelector(".value-best");
-const resultsContainer = document.querySelector('.results-container');
 let timerCount = 0;
 
 
@@ -23,24 +22,25 @@ let results = {};
 // Функция для обновления объекта results
 function updateResults() {
    results = {
-      difficulty: 'Средний', // Пример сложности
-      activity_type: 'upgrade', // 'upgrade' или 'rest'
-      upgrade: 'Память', // Пример улучшения
-      exp: '+50',
-      money: '100',
-      hints: '3',
-      iq: '15',
+      difficulty: undefined, // Пример сложности 'Средняя'
+      activity_type: 'rest', // 'upgrade' или 'rest'
+      upgrade: undefined, // Пример улучшения 'Память'
+      exp: '8',
+      money: '0',
+      hints: '0',
+      iq: '10',
       enemies: undefined,
-      time: { sec: timerCount % 60, min: Math.floor(timerCount / 60) },
+      time: { min: Math.floor(timerCount / 60), sec: timerCount % 60 },
       score: game.score,
       level: undefined,
       moves: undefined,
       best_enemies: undefined,
-      best_time: { sec: bestTimeRes % 60, min: Math.floor(bestTimeRes / 60) },
+      best_time: { min: Math.floor(bestTimeRes / 60), sec: bestTimeRes % 60 },
       best_score: bestScoreRes,
       best_level: undefined,
       best_moves: undefined
    };
+   console.log(bestScoreRes);
 }
 
 function doAjaxExperience() {
@@ -72,7 +72,7 @@ function doAjaxExperience() {
 function doAjaxWinBonuse() {
    let IqUpForModeAjax = 15;
    $.ajax({
-      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      url: '/dataBase/controllers/bonusSystem/bonusForWin.php',
       type: 'POST',
       dataType: "json",
       data: {
@@ -202,7 +202,7 @@ var game = {
 
       // При завершении игры
       if (this.status == this.gameover && !isResultSent) {
-		resultsContainer.style = "display: block;";
+
          doAjaxResults();
 
 

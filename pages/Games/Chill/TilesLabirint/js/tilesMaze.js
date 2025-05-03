@@ -1,110 +1,3 @@
-/*НУЖНО ПЕРЕДЕЛАТЬ ПОД НОВЫЙ КОД
-//AJAX запрос на сервер для добавления в базу данных инфы 
-let winForResults = 0;
-let looseForResults = 0;
-let statusLoosOrWin;
-
-function doAjaxExperience() {
-   let expUpForModeAjax;
-   if (statusLoosOrWin == "win") {//проверка на победу или луз
-      expUpForModeAjax = 15;
-   } else {
-      expUpForModeAjax = 2;
-   }
-
-   $.ajax({
-      url: '/dataBase/controllers/bonusSystem/experience.php',
-      type: 'POST',
-      dataType: "json",
-      data: {
-         expUpForModeAjax: expUpForModeAjax,
-
-      },
-      success: function (data) {
-         console.log(data.expUpForModeAjax);
-      },
-      error: function () {
-         console.log('ERROR');
-      }
-   })
-}
-
-//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-function doAjaxWinBonuse() {
-   let IqUpForModeAjax = 15;
-   $.ajax({
-      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
-      type: 'POST',
-      dataType: "json",
-      data: {
-         IqUpForModeAjax: IqUpForModeAjax,
-
-      },
-      success: function (data) {
-         console.log(data.IqUpForModeAjax);
-      },
-      error: function () {
-         console.log('ERROR');
-      }
-   })
-}
-
-function doAjaxLooseBonuse() {
-   let IqUpForModeAjax = 2;
-
-   $.ajax({
-      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
-      type: 'POST',
-      dataType: "json",
-      data: {
-         IqUpForModeAjax: IqUpForModeAjax,
-
-      },
-      success: function (data) {
-         console.log(data.IqUpForModeAjax);
-      },
-      error: function () {
-         console.log('ERROR');
-      }
-   })
-}
-
-//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-function doAjaxResults() {
-   let win = `0`;
-   let loose = `1`;
-   let time_sec = `${totalTime}`;
-   let level = `${currentLevel}`;
-
-   $.ajax({
-      url: '/dataBase/resultsGames/resultsMazeGame.php',
-      type: 'POST',
-      dataType: "json",
-      data: {
-         win: win,
-         loose: loose,
-         time_sec: time_sec,
-         level: level,
-      },
-      success: function (data) {
-         console.log(data);
-      },
-      error: function () {
-         console.log('ERRORчик');
-      }
-   })
-}
-//z
-
-function comparisonResBetterOrNot() {//возвращает правду или ложь
-   if (game.score > bestScoreRes) {
-      return true;
-   } else {
-      return false;
-   }
-}
-НУЖНО ПЕРЕДЕЛАТЬ ПОД НОВЫЙ КОД*/
-
 const board = document.getElementById('game-board');
 const levelTimerElement = document.getElementById('level-timer');
 const totalTimerElement = document.getElementById('total-timer');
@@ -121,17 +14,16 @@ let levelTimer;
 let totalTimer;
 let gameOver = false;
 let score = 0;
+let time_sec = 0;
 
-// Загружаем лучший результат из localStorage
-let bestScore = localStorage.getItem("bestScore") || 0;
-let bestTime = localStorage.getItem("bestTime") || 0;
-
+// Объявление объекта results
+let results = {};
 
 const game = {
-	start: function () {
-	   startGame();  // Запуск игры
-	}
- };
+   start: function () {
+      startGame();  // Запуск игры
+   }
+};
 
 function generateMaze(size) {
    board.innerHTML = '';
@@ -148,6 +40,13 @@ function generateMaze(size) {
    createPath(size);
    showPathPreview();
 }
+
+function calculateLevelTime(level) {
+   // Уменьшение времени от 40 до 7 секунд по мере роста уровня
+   let time = 40 - (level - 1) * 3; // уменьшаем по 2 сек за уровень
+   return Math.max(7, time); // минимально 7 секунд
+}
+
 
 function createPath(size) {
    let x = 0, y = 0;
@@ -179,185 +78,214 @@ function enableTiles() {
 }
 
 function handleTileClick(index) {
-    const tiles = document.querySelectorAll('.tile');
-    if (path.includes(index) && !selectedTiles.has(index)) {
-        tiles[index].classList.add('correct');
-        selectedTiles.add(index);
-        if (selectedTiles.size === path.length) {
-            clearInterval(levelTimer); // Остановить таймер уровня
+   const tiles = document.querySelectorAll('.tile');
+   if (path.includes(index) && !selectedTiles.has(index)) {
+      tiles[index].classList.add('correct');
+      selectedTiles.add(index);
+      if (selectedTiles.size === path.length) {
+         clearInterval(levelTimer); // Остановить таймер уровня
+         setTimeout(() => {
+            messageElement.style.visibility = 'visible';
             setTimeout(() => {
-                messageElement.style.visibility = 'visible';
-                setTimeout(() => {
-                    messageElement.style.visibility = 'hidden';
-                    nextLevel();
-                }, 2000);
-            }, 300);
-        }
-    } else if (!path.includes(index)) {
-        tiles[index].classList.add('incorrect');
-        endGame(); // Завершаем игру при неверном ответе
-    }
+               messageElement.style.visibility = 'hidden';
+               nextLevel();
+            }, 2000);
+         }, 300);
+      }
+   } else if (!path.includes(index)) {
+      tiles[index].classList.add('incorrect');
+      endGame(); // Завершаем игру при неверном ответе
+   }
 }
 
 function resetMaze() {
-    setTimeout(() => {
-        clearInterval(levelTimer); // Остановить текущий таймер уровня
-        levelTime = 40; // Сбросить время уровня
-        levelTimerElement.textContent = `Осталось: ${levelTime} сек.`; // Обновить отображение времени
+   setTimeout(() => {
+      clearInterval(levelTimer); // Остановить текущий таймер уровня
+      levelTime = 40; // Сбросить время уровня
+      levelTimerElement.textContent = `Осталось: ${levelTime} сек.`; // Обновить отображение времени
 
-        generateMaze(gridSize);
-        selectedTiles.clear();
+      generateMaze(gridSize);
+      selectedTiles.clear();
 
-        startLevelTimer(); // Запуск нового таймера уровня
-    }, 500);
+      startLevelTimer(); // Запуск нового таймера уровня
+   }, 500);
 }
 function startLevelTimer() {
-    clearInterval(levelTimer); // Очистка предыдущего таймера, если он существует
-    levelTimer = setInterval(() => {
-        levelTime--;
-        levelTimerElement.textContent = `Осталось: ${levelTime} сек.`;
-        if (levelTime <= 0) {
-            endGame(); // Заканчиваем игру, если время на уровне закончилось
-        }
-    }, 1000);
+   clearInterval(levelTimer); // Очистка предыдущего таймера, если он существует
+   levelTimer = setInterval(() => {
+      levelTime--;
+      levelTimerElement.textContent = `Осталось: ${levelTime} сек.`;
+      if (levelTime <= 0) {
+         endGame(); // Заканчиваем игру, если время на уровне закончилось
+      }
+   }, 1000);
 }
 
 function startTotalTimer() {
-    totalTimer = setInterval(() => {
-        totalTime++;
-    }, 1000);
+   totalTimer = setInterval(() => {
+      totalTime++;
+   }, 1000);
 }
 
 function endGame() {
-	if (!gameOver) {
-	   gameOver = true;
-	   clearInterval(levelTimer);
-	   clearInterval(totalTimer);
- 
-	   // Подсчёт уровня и времени
-	   let level = currentLevel;
-	   let time_sec = totalTime;
- 
-	   // Условная награда
-	   let reward = {
-		  iq: Math.floor(level * 1.5), // IQ
-		  exp: Math.floor(level * 2),   // Опыт
-		  money: Math.floor(level * 10), // Деньги
-		  hints: Math.floor(level * 2)  // Подсказки (например)
-	   };
- 
-	   // Сохраняем лучшие результаты
-	   if (level > bestTime) {
-		  bestTime = level;
-		  localStorage.setItem("bestTime", bestTime);
-	   }
-	   if (score > bestScore) {
-		  bestScore = score;
-		  localStorage.setItem("bestScore", bestScore);
-	   }
- 
-	   // Передаем результат в функцию для отображения
-	   showResults({
-		  score: score, // Подсчитываем очки
-		  level: level, // Текущий уровень
-		  reward: reward, // Награды
-		  best: {
-			 score: bestScore,  // Лучшие очки
-			 level: bestTime    // Лучший уровень
-		  }
-	   });
- 
-	   // Отправка данных на сервер
-	   sendGameResults(time_sec, level, reward.exp);
-	}
- }
+   if (!gameOver) {
+      gameOver = true;
 
- function sendGameResults(time_sec, level, exp) {
-	$.ajax({
-	   url: '/dataBase/resultsGames/resultsMazeGame.php',
-	   type: 'POST',
-	   dataType: 'json',
-	   data: {
-		  win: 0,
-		  loose: 1,
-		  time_sec: time_sec,
-		  level: level
-	   },
-	   success: function (data) {
-		  console.log('Результат отправлен:', data);
-	   },
-	   error: function () {
-		  console.log('Ошибка отправки результата');
-	   }
-	});
- 
-	$.ajax({
-	   url: '/dataBase/controllers/bonusSystem/experience.php',
-	   type: 'POST',
-	   dataType: 'json',
-	   data: {
-		  expUpForModeAjax: exp
-	   },
-	   success: function (data) {
-		  console.log('Exp:', data);
-	   },
-	   error: function () {
-		  console.log('Ошибка отправки опыта');
-	   }
-	});
- }
- 
- 
+      // Подсчёт уровня и времени
+      let level = currentLevel;
+      time_sec = totalTime;
 
+      // Условная награда за игру
+      let reward = {
+         iq: Math.floor(level * 1.2),
+         exp: Math.floor(level * 1.5),
+         money: level >= 8 ? Math.floor((level - 7) / 3) : 0,
+         hints: level >= 8 ? Math.floor((level - 7) / 2) : 0
+      };
+
+      clearInterval(levelTimer);
+      clearInterval(totalTimer);
+
+      // Функция для обновления объекта results
+      function updateResults() {
+
+         results = {
+            difficulty: undefined, // Пример сложности 'Средний'
+            activity_type: 'upgrade', // 'upgrade' или 'rest'
+            upgrade: 'Память', // Пример улучшения
+            exp: reward.exp,
+            money: reward.money,
+            hints: reward.hints,
+            iq: reward.iq,
+            enemies: undefined,
+            time: { min: Math.floor(time_sec / 60), sec: time_sec % 60 },
+            score: undefined,
+            level: currentLevel,
+            moves: undefined,
+            best_enemies: undefined,
+            best_time: { min: Math.floor(bestTimeRes / 60), sec: bestTimeRes % 60 },
+            best_score: undefined,
+            best_level: bestLevelRes,
+            best_moves: undefined
+         };
+      }
+      updateResults();//обновляем результаты
+      showResults();
+
+
+      animateCountUpWhenVisible('.money');
+      animateCountUpWhenVisible('.hints');
+      animateCountUpWhenVisible('.iq');
+      animateCountUpWhenVisible('.exp');
+
+      // Отправка данных на сервер
+      sendGameResults(time_sec, level, reward);
+
+   }
+}
+
+function sendGameResults(time_sec, level, reward) {
+   $.ajax({
+      url: '/dataBase/resultsGames/resultsMazeGame.php',
+      type: 'POST',
+      dataType: 'json',
+      data: {
+         win: 0,
+         loose: 0,
+         time_sec: time_sec,
+         level: level
+      },
+      success: function (data) {
+         console.log('Результат отправлен:', data);
+      },
+      error: function () {
+         console.log('Ошибка отправки результата');
+      }
+   });
+
+   //обновляем Опыт в базе
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: 'json',
+      data: {
+         expUpForModeAjax: reward.exp
+      },
+      success: function (data) {
+         console.log('Exp:', data);
+      },
+      error: function () {
+         console.log('Ошибка отправки опыта');
+      }
+   });
+
+   //обновляем IQ в базе
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/iqIncrease.php',
+      type: 'POST',
+      dataType: 'json',
+      data: {
+         IqUpForModeAjax: reward.iq
+      },
+      success: function (data) {
+         console.log('IQ:', data);
+      },
+      error: function () {
+         console.log('Ошибка отправки IQ');
+      }
+   });
+
+   //обновляем HINTS в базе
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/HintsIncrease.php',
+      type: 'POST',
+      dataType: 'json',
+      data: {
+         HintsUpForModeAjax: reward.hints
+      },
+      success: function (data) {
+         console.log('hints:', data);
+      },
+      error: function () {
+         console.log('Ошибка отправки IQ');
+      }
+   });
+   //обновляем HINTS в базе
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/MoneyIncrease.php',
+      type: 'POST',
+      dataType: 'json',
+      data: {
+         MoneyUpForModeAjax: reward.money
+      },
+      success: function (data) {
+         console.log('hints:', data);
+      },
+      error: function () {
+         console.log('Ошибка отправки IQ');
+      }
+   });
+}
 
 function restartGame() {
    location.reload();
 }
 
 function startGame() {
+   levelTime = calculateLevelTime(currentLevel);
    generateMaze(gridSize);
    startTotalTimer(); // Start total timer at the beginning of the game
 }
 
 
-//показывает результаты
-function showMessageLoose() {
-   ResultsGameOver.style = 'display:block;';
-   timerCountResultsValue.innerHTML = totalTime;
-   levelCountResultsValue.innerHTML = currentLevel;
-   //bestTimerCountResultsValue.innerHTML = bestTimeRes;//из базы данных
-   //bestlevelCountResultsValue.innerHTML = bestEnemiesPassedRes;
-   doAjaxResults();
-   if (comparisonResBetterOrNot() == true) {//если результат лучше
-      winOrLooseResultsValue.classList.add('congrats');
-      winOrLooseResultsValue.innerHTML = 'вы победили';
-      doAjaxWinBonuse();
-      statusLoosOrWin = "win";
-      winForResults = 1;
-      doAjaxWinBonuse();
-      doAjaxExperience();
-
-   } else {
-      winOrLooseResultsValue.classList.add('loose');
-      winOrLooseResultsValue.innerHTML = 'вы проиграли';
-   }
-}
-function comparisonResBetterOrNot() {//возвращает правду или ложь
-   //if (enemiesPassedCount > bestEnemiesPassedRes) {
-   //   return true;
-   //} else {
-   //   return false;
-   //}
-}
-
 function nextLevel() {
-	levelTime = 40; // Reset level time
-	if (gridSize < 8) { // Ограничение размера сетки
-	   gridSize++;
-	}
-	currentLevel++;
-	levelElement.textContent = `Уровень: ${currentLevel}`;
-	generateMaze(gridSize);
- }
+   levelTime = calculateLevelTime(currentLevel); // Reset level time
+   if (gridSize < 8) { // Ограничение размера сетки
+      gridSize++;
+   }
+   currentLevel++;
+   levelElement.textContent = `Уровень: ${currentLevel}`;
+   generateMaze(gridSize);
+}
 
 
