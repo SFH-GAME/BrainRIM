@@ -19,7 +19,7 @@
         <div class="article-container">
             <h1 class="page-title">Борьба с тревожностью</h1>
             <div class="hashtags">#Психология #Здоровье</div>
-            <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/article1.svg"
+            <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/Anxiety.svg"
                     alt="Как справиться с тревогой" loading="lazy"></div>
             <div class="title1">
                 <div class="divider"></div>

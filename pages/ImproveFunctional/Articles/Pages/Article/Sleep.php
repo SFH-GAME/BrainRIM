@@ -19,7 +19,7 @@
         <div class="article-container">
             <h1 class="page-title">Методы хорошего сна</h1>
             <div class="hashtags">#Статья #Здоровье</div>
-            <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/article2.svg"
+            <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/Sleep.svg"
                     alt="Как быстро заснуть и выспаться" loading="lazy"></div>
             <div class="title1">
                 <div class="divider"></div>

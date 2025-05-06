@@ -19,7 +19,7 @@
         <div class="article-container">
             <h1 class="page-title">Почему курение убивает?</h1>
             <div class="hashtags">#Статья #Здоровье</div>
-            <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/article3.svg"
+            <div class="picture"><img src="/pages/ImproveFunctional/Articles/images/Smoking.svg"
                     alt="Как бросить курить" loading="lazy"></div>
             <div class="title1">
                 <div class="divider"></div>
