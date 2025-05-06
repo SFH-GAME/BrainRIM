@@ -83,7 +83,7 @@
                 <a href="/pages/ImproveFunctional/Articles/Pages/Article/Anxiety.php" class="block" data-category="articles important">
                     <div class="block-title">Борьба c тревожностью😟</div>
                     <div class="description">Как побороть тревожность за три простых шага.</div>
-                    <div class="block-picture"><img src="/pages/ImproveFunctional/Articles/images/article1.svg" alt="">
+                    <div class="block-picture"><img src="/pages/ImproveFunctional/Articles/images/Anxiety.svg" alt="">
                     </div>
                     <div class="block-tags">#Статья #Здоровье</div>
                 </a>
@@ -91,7 +91,7 @@
                 <a href="/pages/ImproveFunctional/Articles/Pages/Article/Sleep.php" class="block" data-category="articles health">
                     <div class="block-title">Методы хорошего сна😴</div>
                     <div class="description">Как засыпать если у тебя рой мыслей в голове и сон просто не идёт.</div>
-                    <div class="block-picture"><img src="/pages/ImproveFunctional/Articles/images/article2.svg" alt="">
+                    <div class="block-picture"><img src="/pages/ImproveFunctional/Articles/images/Sleep.svg" alt="">
                     </div>
                     <div class="block-tags">#Статья #Здоровье</div>
                 </a>
@@ -100,7 +100,7 @@
                     <div class="block-title">Почему курение убивает?🚬</div>
                     <div class="description">Учёные из Гарварда рассказали про эксперимент с курящими. <p class="smoke">В конце выжил
                         лишь 1% курящих.</p></div>
-                    <div class="block-picture"><img src="/pages/ImproveFunctional/Articles/images/Article3.svg" alt="">
+                    <div class="block-picture"><img src="/pages/ImproveFunctional/Articles/images/Smoking.svg" alt="">
                     </div>
                     <div class="block-tags">#Статья #Здоровье</div>
                 </a>
